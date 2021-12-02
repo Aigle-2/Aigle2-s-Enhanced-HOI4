@@ -44,7 +44,7 @@
  STAT_AIR_GROUND_ATTACK:0 "£cas_texticon  Ground Attack: "
  STAT_COMMON_MAX_STRENGTH:0 "£strenght_texticon  HP: "
  STAT_COMMON_BUILD_COST_IC:0 "£production_cost  Production Cost: "
- STAT_COMMON_MAXIMUM_SPEED:0 "£attacker_speed_texticon  Max Speed: "
+ STAT_COMMON_MAXIMUM_SPEED:0 "£attacker_speed_texticon  Speed: "
  STAT_NAVY_MAXIMUM_SPEED:0 "£attacker_speed_texticon  Max Speed: "
  STAT_NAVY_RANGE:0 "£navy_anchor_texticon  Max Range: "
  STAT_COMMON_ARMOR:0 "£armor_texticon  Armor: "
