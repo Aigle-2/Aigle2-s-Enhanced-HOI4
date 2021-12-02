@@ -1,0 +1,122 @@
+spriteTypes = {	
+	########################### ARMY SITUATION
+	spriteType = {
+		name = "GFX_idea_army_situation_g5"
+		texturefile = "gfx/interface/ideas/idea_army_situation_g5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_g4"
+		texturefile = "gfx/interface/ideas/idea_army_situation_g4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_g3"
+		texturefile = "gfx/interface/ideas/idea_army_situation_g3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_g2"
+		texturefile = "gfx/interface/ideas/idea_army_situation_g2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_g1"
+		texturefile = "gfx/interface/ideas/idea_army_situation_g1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_n0"
+		texturefile = "gfx/interface/ideas/idea_army_situation_n0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_b1"
+		texturefile = "gfx/interface/ideas/idea_army_situation_b1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_b2"
+		texturefile = "gfx/interface/ideas/idea_army_situation_b2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_b3"
+		texturefile = "gfx/interface/ideas/idea_army_situation_b3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_b4"
+		texturefile = "gfx/interface/ideas/idea_army_situation_b4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_situation_b5"
+		texturefile = "gfx/interface/ideas/idea_army_situation_b5.dds"
+	}
+	
+	### OTHER ARMY
+	
+	
+	
+	########################### INDUSTRIAL SITUATION
+	spriteType = {
+		name = "GFX_idea_industrial_situation_g3"
+		texturefile = "gfx/interface/ideas/idea_industrial_situation_g3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_industrial_situation_g2"
+		texturefile = "gfx/interface/ideas/idea_industrial_situation_g2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_industrial_situation_g1"
+		texturefile = "gfx/interface/ideas/idea_industrial_situation_g1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_industrial_situation_n0"
+		texturefile = "gfx/interface/ideas/idea_industrial_situation_n0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_industrial_situation_b1"
+		texturefile = "gfx/interface/ideas/idea_industrial_situation_b1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_industrial_situation_b2"
+		texturefile = "gfx/interface/ideas/idea_industrial_situation_b2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_industrial_situation_b3"
+		texturefile = "gfx/interface/ideas/idea_industrial_situation_b3.dds"
+	}
+	
+	
+	
+	########################### GENERAL STAFF
+	spriteType = {
+		name = "GFX_idea_general_staff_eng"
+		texturefile = "gfx/interface/ideas/idea_general_staff_eng.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_general_staff_fra"
+		texturefile = "gfx/interface/ideas/idea_general_staff_fra.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_general_staff_ger"
+		texturefile = "gfx/interface/ideas/idea_general_staff_ger.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_general_staff_ita"
+		texturefile = "gfx/interface/ideas/idea_general_staff_ita.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_general_staff_jap"
+		texturefile = "gfx/interface/ideas/idea_general_staff_jap.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_general_staff_sov"
+		texturefile = "gfx/interface/ideas/idea_general_staff_sov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_general_staff_usa"
+		texturefile = "gfx/interface/ideas/idea_general_staff_usa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_general_staff_domestic"
+		texturefile = "gfx/interface/ideas/idea_general_staff_domestic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_general_staff_lack"
+		texturefile = "gfx/interface/ideas/idea_general_staff_lack.dds"
+	}
+	
+}

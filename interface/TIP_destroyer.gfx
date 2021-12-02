@@ -1,0 +1,137 @@
+spriteTypes = {	
+
+#### #### ###  #   #  ##  #  # #   #
+#    #    #  # ## ## #  # ## #  # #
+# ## ##   ###  # # # #### # ##   #
+#  # #    #  # #   # #  # #  #   #
+#### #### #  # #   # #  # #  #   #
+
+	### Hull ###
+	
+	SpriteType = {
+		name = "GFX_GER_early_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/GER_early_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/GER_basic_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/GER_improved_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/GER_advanced_ship_hull_light_medium.dds"
+	}
+	
+	### Ship ###
+	
+	SpriteType = {
+		name = "GFX_GER_early_destroyer_medium"
+		texturefile = "gfx/interface/technologies/GER_early_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_destroyer_medium"
+		texturefile = "gfx/interface/technologies/GER_basic_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_destroyer_medium"
+		texturefile = "gfx/interface/technologies/GER_improved_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_destroyer_medium"
+		texturefile = "gfx/interface/technologies/GER_advanced_ship_hull_light_medium.dds"
+	}
+	
+	
+#### #  # #### #     ##  #  # ###
+#    ## # #    #    #  # ## # #  #
+##   # ## # ## #    #### # ## #  #
+#    #  # #  # #    #  # #  # #  #
+#### #  # #### #### #  # #  # ###
+
+	### Hull ###
+
+	SpriteType = {
+		name = "GFX_ENG_early_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/ENG_early_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_basic_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/ENG_basic_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_improved_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/ENG_improved_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_advanced_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/ENG_advanced_ship_hull_light_medium.dds"
+	}
+	
+	### Ship ###
+	
+	SpriteType = {
+		name = "GFX_ENG_early_destroyer_medium"
+		texturefile = "gfx/interface/technologies/ENG_early_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_basic_destroyer_medium"
+		texturefile = "gfx/interface/technologies/ENG_basic_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_improved_destroyer_medium"
+		texturefile = "gfx/interface/technologies/ENG_improved_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_advanced_destroyer_medium"
+		texturefile = "gfx/interface/technologies/ENG_advanced_ship_hull_light_medium.dds"
+	}
+	
+				
+#  # ####  ##
+#  # #    #  #
+#  # #### ####
+#  #    # #  #
+#### #### #  #
+
+	### Hull ###
+
+	SpriteType = {
+		name = "GFX_USA_early_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/USA_early_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_basic_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/USA_basic_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_improved_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/USA_improved_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_advanced_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/USA_advanced_ship_hull_light_medium.dds"
+	}
+	
+	### Ship ###
+	
+	SpriteType = {
+		name = "GFX_USA_early_destroyer_medium"
+		texturefile = "gfx/interface/technologies/USA_early_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_basic_destroyer_medium"
+		texturefile = "gfx/interface/technologies/USA_basic_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_improved_destroyer_medium"
+		texturefile = "gfx/interface/technologies/USA_improved_ship_hull_light_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_advanced_destroyer_medium"
+		texturefile = "gfx/interface/technologies/USA_advanced_ship_hull_light_medium.dds"
+	}
+
+}

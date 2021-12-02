@@ -1,0 +1,53 @@
+spriteTypes = {	
+
+#### #### ###  #   #  ##  #  # #   #
+#    #    #  # ## ## #  # ## #  # #
+# ## ##   ###  # # # #### # ##   #
+#  # #    #  # #   # #  # #  #   #
+#### #### #  # #   # #  # #  #   #
+
+
+	SpriteType = {	
+		name = "GFX_GER_early_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/GER_early_battlecruiser.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/GER_basic_battlecruiser.dds"
+	}
+
+	
+#### #  # #### #     ##  #  # ###
+#    ## # #    #    #  # ## # #  #
+##   # ## # ## #    #### # ## #  #
+#    #  # #  # #    #  # #  # #  #
+#### #  # #### #### #  # #  # ###
+
+	SpriteType = {	
+		name = "GFX_ENG_early_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/ENG_early_battlecruiser.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_basic_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/ENG_basic_battlecruiser.dds"
+	}
+
+
+
+#  # ####  ##
+#  # #    #  #
+#  # #### ####
+#  #    # #  #
+#### #### #  #
+
+	SpriteType = {	
+		name = "GFX_USA_early_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/USA_early_battlecruiser.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_basic_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/USA_basic_battlecruiser.dds"
+	}
+
+
+}

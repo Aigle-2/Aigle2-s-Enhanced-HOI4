@@ -1,0 +1,23 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					NOT = {
+						tag = SOV
+						tag = CHI
+					}
+				}
+				
+				add_ideas = AIQ_industrial_policy_balanced
+			}
+			
+			CHI = {				
+				add_ideas = AIQ_industrial_policy_quantity
+			}
+			SOV = {				
+				add_ideas = AIQ_industrial_policy_quantity
+			}
+		}
+	}
+}

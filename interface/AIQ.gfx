@@ -1,0 +1,30 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_AIQ_industrial_policy_quality"
+		texturefile = "gfx/interface/ideas/idea_AIQ_industrial_policy_quality.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIQ_industrial_policy_balanced"
+		texturefile = "gfx/interface/ideas/idea_AIQ_industrial_policy_balanced.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIQ_industrial_policy_quantity"
+		texturefile = "gfx/interface/ideas/idea_AIQ_industrial_policy_quantity.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIQ_industrial_policy_forced_labor"
+		texturefile = "gfx/interface/ideas/idea_AIQ_industrial_policy_forced_labor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIQ_industrial_policy_quality_effect"
+		texturefile = "gfx/interface/ideas/idea_AIQ_industrial_policy_quality.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIQ_industrial_policy_quantity_effect"
+		texturefile = "gfx/interface/ideas/idea_AIQ_industrial_policy_quantity.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIQ_industrial_policy_forced_labor_effect"
+		texturefile = "gfx/interface/ideas/idea_AIQ_industrial_policy_forced_labor.dds"
+	}
+}

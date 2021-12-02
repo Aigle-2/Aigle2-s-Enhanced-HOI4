@@ -1,0 +1,36 @@
+
+
+add_namespace = spy_reminder
+
+
+
+
+
+		#Beispiel wie Events richtig gehen: (Beispiel Ger-Sov Forschungsabkommen)
+		#SOV = {
+		#	country_event = { id = germany.75 days = 1 }
+		#	custom_effect_tooltip = needs_approval
+		#}
+		#
+		#effect_tooltip = {			#This is the command for previewing stuff
+		#	give_SOV_armor_research_bonuses = yes
+		#}
+
+
+
+
+
+
+country_event = {
+	id = spy_reminder.1
+	title = "Operation completed!"
+	desc = "Our spies have completed their task in [victim_nation.GetName]. Don't forget to reassign your spies to a new operation."
+	is_triggered_only = yes
+	fire_only_once = no
+	picture = GFX_report_event_finnish_letter
+
+	option = {
+		name = "Thank you!"
+	}
+}
+

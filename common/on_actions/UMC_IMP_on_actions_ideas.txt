@@ -1,0 +1,510 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			##### MAJORS
+			FRA = {
+				add_ideas = {
+					army_situation_g1
+					industrial_situation_n0
+					general_staff_fra
+				}
+			}
+			USA = {
+				add_ideas = {
+					army_situation_n0
+					industrial_situation_g1
+					general_staff_usa
+				}
+			}
+			ENG = {
+				add_ideas = {
+					army_situation_b1
+					industrial_situation_n0
+					general_staff_eng
+				}
+			}
+			GER = {
+				add_ideas = {
+					army_situation_g3
+					industrial_situation_g1
+					general_staff_ger
+				}
+			}
+			ITA = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_b1
+					general_staff_ita
+				}
+			}
+			JAP = {
+				add_ideas = {
+					army_situation_g1
+					industrial_situation_n0
+					general_staff_jap
+				}
+			}
+			SOV = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b1
+					general_staff_sov
+					
+					partial_economic_mobilisation
+				}
+			}
+			
+			##### SCANDINAVIAN
+			DEN = {
+				add_ideas = {
+					army_situation_b1
+					industrial_situation_n0
+					
+				}
+			}
+			NOR = {
+				add_ideas = {
+					army_situation_b1
+					industrial_situation_n0
+					
+				}
+			}
+			SWE = {
+				add_ideas = {
+					army_situation_g1
+					industrial_situation_g2
+					general_staff_domestic
+				}
+			}
+			FIN = {
+				add_ideas = {
+					army_situation_g1
+					industrial_situation_n0
+					general_staff_domestic
+				}
+			}
+			
+			##### NORTH and WESTERN EUROPE
+			HOL = {
+				add_war_support = 0.1		### WAR SUPPORT TO NEGATE MODIFIED IDEAS
+			
+				add_ideas = {
+				
+					army_situation_b2
+					industrial_situation_g1
+					general_staff_domestic
+				}
+			}
+			BEL = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_g2
+					
+				}
+			}
+			LUX = {
+				add_ideas = {
+					army_situation_n0
+					industrial_situation_g3
+					
+				}
+			}
+			
+			IRE = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_g1
+					
+				}
+			}
+			
+			SWI = {
+				add_ideas = {
+					army_situation_b1
+					industrial_situation_g2
+					
+				}
+			}
+			AUS = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_g1
+					
+				}
+			}
+			
+			SPR = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_n0
+					general_staff_domestic
+				}
+			}
+			POR = {
+				add_ideas = {
+					army_situation_b1
+					industrial_situation_n0
+					general_staff_domestic
+				}
+			}
+			
+			##### MIDDLE and BALKANS EUROPE
+			POL = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_b1
+					general_staff_domestic
+				}
+			}
+			
+			CZE = {
+				add_manpower = 15000 ### MANPOWER TO NEGATE MODIFIED IDEAS
+		
+				add_ideas = {
+					army_situation_g1
+					industrial_situation_g2
+					general_staff_fra
+				}
+			}
+			HUN = {
+				add_manpower = 15000 ### MANPOWER TO NEGATE MODIFIED IDEAS
+			
+				add_ideas = {
+					army_situation_n0
+					industrial_situation_b1
+					general_staff_domestic
+				}
+			}
+			ROM = {
+				add_ideas = {
+					army_situation_n0
+					industrial_situation_b1
+					general_staff_domestic
+				}
+			}
+			YUG = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_b1
+					general_staff_domestic
+				}
+			}
+			BUL = {
+				add_ideas = {
+					army_situation_b1
+					industrial_situation_b2
+					general_staff_ita
+				}
+			}
+			ALB = {
+				add_ideas = {
+					army_situation_b4
+					industrial_situation_b2
+					general_staff_ita
+				}
+			}
+			GRE = {
+				add_ideas = {
+					army_situation_b1
+					industrial_situation_b1
+					
+				}
+			}
+			
+			LIT = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b1
+					
+				}
+			}
+			LAT = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b1
+					
+				}
+			}
+			EST = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_b1
+					
+				}
+			}
+			
+			##### MIDDLE EAST
+			TUR = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_b1
+					general_staff_domestic
+				}
+			}
+			IRQ = {
+				add_ideas = {
+					army_situation_b4
+					industrial_situation_b3
+					
+				}
+			}
+			PER = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					
+				}
+			}
+			AFG = {
+				add_ideas = {
+					army_situation_b4
+					industrial_situation_b3
+					
+				}
+			}
+			SAU = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b3
+					
+				}
+			}
+			OMA = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b3
+					
+				}
+			}
+			YEM = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b3
+					
+				}
+			}
+			
+			ETH = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					
+				}
+			}
+			LIB = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b3
+					
+				}
+			}
+			
+			##### CHINA
+			### Swap army situation for the Chinese one
+			CHI = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					general_staff_ger
+				}
+			}
+			PRC = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					general_staff_domestic
+				}
+			}
+			MAN = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					general_staff_jap
+				}
+			}
+			MEN = {
+				add_ideas = {
+					army_situation_b4
+					industrial_situation_b3
+					general_staff_jap
+				}
+			}
+			GXC = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_b3
+					
+				}
+			}
+			YUN = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					
+				}
+			}
+			XSM = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					
+				}
+			}
+			SHX = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b2
+					
+				}
+			}
+			SIK = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					
+				}
+			}
+			
+			##### Other ASIAN nations
+			MON = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b3
+					
+				}
+			}
+			TAN = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b3
+					
+				}
+			}
+			
+			TIB = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b3
+					
+				}
+			}
+			NEP = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b3
+					
+				}
+			}
+			BHU = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b3
+					
+				}
+			}
+			
+			SIA = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b2
+					
+				}
+			}
+			
+			INS = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_b2
+					
+				}
+			}
+			
+			PHI = {
+				add_ideas = {
+					army_situation_b4
+					industrial_situation_b2
+					general_staff_usa
+				}
+			}
+			
+			##### AMERICA
+			MEX = {
+				add_ideas = {
+					army_situation_b5
+					industrial_situation_b2
+					
+				}
+			}
+			BRA = {
+				add_ideas = {
+					army_situation_b2
+					industrial_situation_b1
+					
+				}
+			}
+			ARG = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b1
+					
+				}
+			}
+			PRU = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b2
+					
+				}
+			}
+			VEN = {
+				add_ideas = {
+					army_situation_b4
+					industrial_situation_b1
+					
+				}
+			}
+			COL = {
+				add_ideas = {
+					army_situation_b4
+					industrial_situation_b1
+					
+				}
+			}
+			CHL = {
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					general_staff_ger
+				}
+			}
+			
+			every_country = {
+				limit = {
+					OR = {
+						tag = GUA
+						tag = ELS
+						tag = HON
+						tag = NIC
+						tag = COS
+						tag = PAN
+						
+						tag = CUB
+						tag = HAI
+						tag = DOM
+						
+						tag = ECU
+						tag = BOL
+						tag = PAR
+						tag = URG
+					}
+				}
+				
+				add_ideas = {
+					army_situation_b3
+					industrial_situation_b3
+					
+				}
+			}
+		}
+	}
+}

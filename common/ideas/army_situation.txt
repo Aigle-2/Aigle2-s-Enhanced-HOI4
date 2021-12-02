@@ -1,0 +1,317 @@
+ideas = {
+	army_situation = {
+		law = yes
+	
+		army_situation_g5 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.03
+
+				army_org_factor = 0.1
+		
+				land_reinforce_rate = 0.03
+				experience_loss_factor = -0.1
+				
+				supply_consumption_factor = -0.05
+
+				training_time_factor = -0.1
+
+				mobilization_speed = 0.1
+				conscription_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_g4 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 20
+
+				army_attack_factor = 0.08
+				army_defence_factor = 0.08
+				army_speed_factor = 0.02
+
+				army_org_factor = 0.08
+		
+				land_reinforce_rate = 0.02
+				experience_loss_factor = -0.08
+				
+				supply_consumption_factor = -0.04
+
+				training_time_factor = -0.08
+
+				mobilization_speed = 0.08
+				conscription_factor = 0.04
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_g3 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 15
+
+				army_attack_factor = 0.06
+				army_defence_factor = 0.06
+				army_speed_factor = 0.01
+
+				army_org_factor = 0.06
+		
+				land_reinforce_rate = 0.01
+				experience_loss_factor = -0.06
+				
+				supply_consumption_factor = -0.03
+
+				training_time_factor = -0.06
+
+				mobilization_speed = 0.06
+				conscription_factor = 0.03
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_g2 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 10
+
+				army_attack_factor = 0.04
+				army_defence_factor = 0.04
+
+				army_org_factor = 0.04
+		
+				experience_loss_factor = -0.04
+				
+				supply_consumption_factor = -0.02
+
+				training_time_factor = -0.04
+
+				mobilization_speed = 0.04
+				conscription_factor = 0.02
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_g1 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 5
+
+				army_attack_factor = 0.02
+				army_defence_factor = 0.02
+
+				army_org_factor = 0.02
+		
+				experience_loss_factor = -0.02
+				
+				supply_consumption_factor = -0.01
+
+				training_time_factor = -0.02
+
+				mobilization_speed = 0.02
+				conscription_factor = 0.01
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_n0 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_b1 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.03
+				army_defence_factor = -0.03
+				army_speed_factor = -0.01
+				
+				supply_consumption_factor = 0.02
+
+				army_org_factor = -0.03
+				
+				training_time_factor = 0.02
+
+				mobilization_speed = -0.01
+				conscription_factor = -0.02
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_b2 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.06
+				army_defence_factor = -0.06
+				army_speed_factor = -0.02
+				
+				supply_consumption_factor = 0.04
+
+				army_org_factor = -0.06
+				
+				training_time_factor = 0.04
+
+				mobilization_speed = -0.02
+				conscription_factor = -0.04
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_b3 = {
+		
+			default = yes
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.09
+				army_defence_factor = -0.09
+				army_speed_factor = -0.03
+				
+				supply_consumption_factor = 0.06
+
+				army_org_factor = -0.09
+
+				foreign_subversive_activites = 0.5
+				resistance_damage_to_garrison = 0.05
+				
+				training_time_factor = 0.06
+
+				mobilization_speed = -0.03
+				conscription_factor = -0.06
+				surrender_limit = -0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_b4 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.12
+				army_defence_factor = -0.12
+				army_speed_factor = -0.04
+				
+				supply_consumption_factor = 0.08
+
+				army_org_factor = -0.12
+
+				foreign_subversive_activites = 0.10
+				resistance_damage_to_garrison = 0.1
+				
+				training_time_factor = 0.08
+
+				mobilization_speed = -0.04
+				conscription_factor = -0.08
+				surrender_limit = -0.10
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		army_situation_b5 = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.005
+			
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				army_speed_factor = -0.05
+				
+				supply_consumption_factor = 0.1
+
+				army_org_factor = -0.15
+
+				foreign_subversive_activites = 0.15
+				resistance_damage_to_garrison = 0.15
+				
+				training_time_factor = 0.1
+
+				mobilization_speed = -0.05
+				conscription_factor = -0.1
+				surrender_limit = -0.15
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+}

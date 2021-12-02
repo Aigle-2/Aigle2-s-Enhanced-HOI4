@@ -1,0 +1,991 @@
+political_actions = {
+	### IMPROVE ARMY SITUATION
+	GIP_as_improve_good_4_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_g4
+        }
+		
+		available = {
+            has_war_support > 0.75
+			
+			land_doctrine_level > 9
+			
+			any_unit_leader = {
+				skill > 8
+			}
+			
+			manpower_per_military_factory < 10000
+			
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 499
+		}
+		custom_cost_text = UMC_army_xp_more_than_500
+
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -500
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+        remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_as_improve_good_3_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_g3
+        }
+		
+		available = {
+            has_war_support > 0.70
+			
+			land_doctrine_level > 8
+			
+			any_unit_leader = {
+				skill > 7
+			}
+			
+			manpower_per_military_factory < 10000
+			
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 449
+		}
+		custom_cost_text = UMC_army_xp_more_than_450
+		
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -450
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+		remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_as_improve_good_2_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_g2
+        }
+		
+		available = {
+            has_war_support > 0.65
+			
+			land_doctrine_level > 7
+			
+			any_unit_leader = {
+				skill > 6
+			}
+			
+			manpower_per_military_factory < 10000
+			
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 399
+		}
+		custom_cost_text = UMC_army_xp_more_than_400
+		
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -400
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+        remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_as_improve_good_1_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_g1
+        }
+		
+		available = {
+            has_war_support > 0.60
+			
+			land_doctrine_level > 6
+			
+			any_unit_leader = {
+				skill > 5
+			}
+
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 349
+		}
+		custom_cost_text = UMC_army_xp_more_than_350
+		
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -350
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+		remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+
+	GIP_as_improve_neutral_0_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_n0
+        }
+		
+		available = {
+            has_war_support > 0.55
+			
+			land_doctrine_level > 5
+			
+			any_unit_leader = {
+				skill > 5
+			}
+			
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 299
+		}
+		custom_cost_text = UMC_army_xp_more_than_300
+		
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -300
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+        remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+
+	GIP_as_improve_bad_1_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_b1
+        }
+		
+		available = {
+            has_war_support > 0.50
+			
+			land_doctrine_level > 4
+			
+			any_unit_leader = {
+				skill > 4
+			}
+			
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 249
+		}
+		custom_cost_text = UMC_army_xp_more_than_250
+		
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -250
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+        remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_as_improve_bad_2_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_b2
+        }
+		
+		available = {
+            has_war_support > 0.45
+			
+			land_doctrine_level > 3
+			
+			any_unit_leader = {
+				skill > 3
+			}
+			
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 199
+		}
+		custom_cost_text = UMC_army_xp_more_than_200
+		
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -200
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+        remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_as_improve_bad_3_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_b3
+        }
+		
+		available = {
+            has_war_support > 0.40
+			
+			land_doctrine_level > 2
+			
+			any_unit_leader = {
+				skill > 2
+			}
+			
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 149
+		}
+		custom_cost_text = UMC_army_xp_more_than_150
+		
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -150
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+        remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+
+	GIP_as_improve_bad_4_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_b4
+        }
+		
+		available = {
+            has_war_support > 0.35
+			
+			land_doctrine_level > 1
+			
+			any_unit_leader = {
+				skill > 2
+			}
+			
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = UMC_army_xp_more_than_100
+		
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -100
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+        remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+
+    GIP_as_improve_bad_5_dec = {
+		icon = generic_prepare_civil_war
+	
+        visible = {
+            has_idea = army_situation_b5
+        }
+		
+		available = {
+            has_war_support > 0.30
+			
+			land_doctrine_level > 0
+			
+			any_unit_leader = {
+				skill > 1
+			}
+			
+			NOT = { 
+				has_idea = all_adults_serve
+				has_idea = service_by_requirement
+			}
+        }
+
+        days_remove = 120
+		
+		custom_cost_trigger = {
+			has_army_experience > 49
+		}
+		custom_cost_text = UMC_army_xp_more_than_50
+		
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -50
+			}
+        }
+		
+		modifier = {
+			war_support_weekly = 0.001 
+			experience_gain_army = 0.1
+			
+			max_command_power = -25
+			
+            army_org_factor = -0.04 
+        }
+		
+        remove_effect = {
+            GIP_army_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	
+	### IMPROVE INDUSTRIAL SITUATION
+	GIP_is_improve_good_2_dec = {
+		icon = generic_construction
+	
+        visible = {
+            has_idea = industrial_situation_g2
+        }
+		
+		available = {
+			OR = {
+				has_tech = flexible_line
+				has_tech = streamlined_line
+			}
+			has_tech = construction5
+			
+			NOT = { 
+				has_idea = tot_economic_mobilisation
+			}
+			
+			amount_research_slots > 4
+        }
+
+        days_remove = 120
+
+		modifier = {
+			stability_weekly = 0.001 
+			
+			production_speed_buildings_factor = -0.5
+			
+			industrial_capacity_factory = -0.25
+			industrial_capacity_dockyard = -0.25
+			production_factory_efficiency_gain_factor = -0.25
+			
+			consumer_goods_factor = 0.10
+        }
+		
+        remove_effect = {
+            GIP_industrial_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_is_improve_good_1_dec = {
+		icon = generic_construction
+	
+        visible = {
+            has_idea = industrial_situation_g1
+        }
+		
+		available = {
+			has_tech = assembly_line_production
+			has_tech = construction4
+			
+			NOT = { 
+				has_idea = tot_economic_mobilisation
+			}
+			
+			amount_research_slots > 3
+        }
+
+        days_remove = 120
+
+		modifier = {
+			stability_weekly = 0.001 
+			
+			production_speed_buildings_factor = -0.5
+			
+			industrial_capacity_factory = -0.25
+			industrial_capacity_dockyard = -0.25
+			production_factory_efficiency_gain_factor = -0.25
+			
+			consumer_goods_factor = 0.10
+        }
+		
+        remove_effect = {
+            GIP_industrial_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_is_improve_neutral_0_dec = {
+		icon = generic_construction
+	
+        visible = {
+            has_idea = industrial_situation_n0
+        }
+		
+		available = {
+			has_tech = advanced_machine_tools
+			has_tech = construction3
+			
+			NOT = { 
+				has_idea = tot_economic_mobilisation
+			}
+			
+			amount_research_slots > 3
+        }
+
+        days_remove = 120
+
+		modifier = {
+			stability_weekly = 0.001 
+			
+			production_speed_buildings_factor = -0.5
+			
+			industrial_capacity_factory = -0.25
+			industrial_capacity_dockyard = -0.25
+			production_factory_efficiency_gain_factor = -0.25
+			
+			consumer_goods_factor = 0.10
+        }
+		
+        remove_effect = {
+            GIP_industrial_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_is_improve_bad_1_dec = {
+		icon = generic_construction
+	
+        visible = {
+            has_idea = industrial_situation_b1
+        }
+		
+		available = {
+			has_tech = advanced_machine_tools
+			has_tech = construction3
+			
+			NOT = { 
+				has_idea = tot_economic_mobilisation
+			}
+        }
+
+        days_remove = 120
+
+		modifier = {
+			stability_weekly = 0.001 
+			
+			production_speed_buildings_factor = -0.5
+			
+			industrial_capacity_factory = -0.25
+			industrial_capacity_dockyard = -0.25
+			production_factory_efficiency_gain_factor = -0.25
+			
+			consumer_goods_factor = 0.10
+        }
+		
+        remove_effect = {
+            GIP_industrial_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_is_improve_bad_2_dec = {
+		icon = generic_construction
+	
+        visible = {
+            has_idea = industrial_situation_b2
+        }
+		
+		available = {
+			has_tech = improved_machine_tools
+			has_tech = construction2
+			
+			NOT = { 
+				has_idea = tot_economic_mobilisation
+			}
+        }
+
+        days_remove = 120
+
+		modifier = {
+			stability_weekly = 0.001 
+			
+			production_speed_buildings_factor = -0.5
+			
+			industrial_capacity_factory = -0.25
+			industrial_capacity_dockyard = -0.25
+			production_factory_efficiency_gain_factor = -0.25
+			
+			consumer_goods_factor = 0.10
+        }
+		
+        remove_effect = {
+            GIP_industrial_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+	
+	GIP_is_improve_bad_3_dec = {
+		icon = generic_construction
+	
+        visible = {
+            has_idea = industrial_situation_b3
+        }
+		
+		available = {
+			has_tech = basic_machine_tools
+			has_tech = construction1
+			
+			NOT = { 
+				has_idea = tot_economic_mobilisation
+			}
+        }
+
+        days_remove = 120
+
+		modifier = {
+			stability_weekly = 0.001 
+			
+			production_speed_buildings_factor = -0.5
+			
+			industrial_capacity_factory = -0.25
+			industrial_capacity_dockyard = -0.25
+			production_factory_efficiency_gain_factor = -0.25
+			
+			consumer_goods_factor = 0.10
+        }
+		
+        remove_effect = {
+            GIP_industrial_situation_get_better = yes
+        }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					surrender_progress > 0
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+				
+			}
+		}
+    }
+}

@@ -1,0 +1,163 @@
+﻿l_english:
+################################### TRAITS                \n   §H§!
+ ##### ARMY SITUATION 
+ army_situation:0 "Military Situation"
+ army_situation_desc:0 ""
+ 
+ army_situation_g5:0 "(§G+5§!) Glorious M.S."
+ army_situation_g5_desc:0 ""
+ army_situation_g4:0 "(§G+4§!) Grand M.S."
+ army_situation_g4_desc:0 ""
+ army_situation_g3:0 "(§G+3§!) Excellent M.S."
+ army_situation_g3_desc:0 ""
+ army_situation_g2:0 "(§G+2§!) Great M.S."
+ army_situation_g2_desc:0 ""
+ army_situation_g1:0 "(§G+1§!) Good M.S."
+ army_situation_g1_desc:0 ""
+ 
+ army_situation_n0:0 "(§H0§!) Basic M.S."
+ army_situation_n0_desc:0 ""
+ 
+ army_situation_b1:0 "(§R-1§!) Lacking M.S."
+ army_situation_b1_desc:0 ""
+ army_situation_b2:0 "(§R-2§!) Poor M.S."
+ army_situation_b2_desc:0 ""
+ army_situation_b3:0 "(§R-3§!) Unorganized M.S."
+ army_situation_b3_desc:0 ""
+ army_situation_b4:0 "(§R-4§!) Chaotic M.S."
+ army_situation_b4_desc:0 ""
+ army_situation_b5:0 "(§R-5§!) Rebellious M.S."
+ army_situation_b5_desc:0 ""
+ 
+ GIP_army_situation_get_better_EXPL:0 "The level of §HArmy Situation§! will be §GImproved§!.\n"
+ 
+ GIP_as_improve_good_4_dec:0 "Improve Army Situation"
+ GIP_as_improve_good_4_dec_desc:0 ""
+ GIP_as_improve_good_3_dec:0 "Improve Army Situation"
+ GIP_as_improve_good_3_dec_desc:0 ""
+ GIP_as_improve_good_2_dec:0 "Improve Army Situation"
+ GIP_as_improve_good_2_dec_desc:0 ""
+ GIP_as_improve_good_1_dec:0 "Improve Army Situation"
+ GIP_as_improve_good_1_dec_desc:0 ""
+ GIP_as_improve_neutral_0_dec:0 "Improve Army Situation"
+ GIP_as_improve_neutral_0_dec_desc:0 ""
+ GIP_as_improve_bad_1_dec:0 "Improve Army Situation"
+ GIP_as_improve_bad_1_dec_desc:0 ""
+ GIP_as_improve_bad_2_dec:0 "Improve Army Situation"
+ GIP_as_improve_bad_2_dec_desc:0 ""
+ GIP_as_improve_bad_3_dec:0 "Improve Army Situation"
+ GIP_as_improve_bad_3_dec_desc:0 ""
+ GIP_as_improve_bad_4_dec:0 "Improve Army Situation"
+ GIP_as_improve_bad_4_dec_desc:0 ""
+ GIP_as_improve_bad_5_dec:0 "Improve Army Situation"
+ GIP_as_improve_bad_5_dec_desc:0 ""
+ 
+ 
+ ##### INDUSTRIAL SITUATION
+ industrial_situation:0 "Industrial Situation"
+ industrial_situation_desc:0 ""
+ 
+ industrial_situation_g3:0 "(§G+3§!) Modern I."
+ industrial_situation_g3_desc:0 ""
+ industrial_situation_g2:0 "(§G+2§!) Excellent I."
+ industrial_situation_g2_desc:0 ""
+ industrial_situation_g1:0 "(§G+1§!) Good I."
+ industrial_situation_g1_desc:0 ""
+ 
+ industrial_situation_n0:0 "(§H0§!) Basic I."
+ industrial_situation_n0_desc:0 ""
+ 
+ industrial_situation_b1:0 "(§R-1§!) Aged I."
+ industrial_situation_b1_desc:0 ""
+ industrial_situation_b2:0 "(§R-2§!) Backward I."
+ industrial_situation_b2_desc:0 ""
+ industrial_situation_b3:0 "(§R-3§!) Obsolete I."
+ industrial_situation_b3_desc:0 ""
+ 
+ GIP_industrial_situation_get_better_EXPL:0 "The level of §HIndustrial Situation§! will be §GImproved§!.\n"
+ 
+ GIP_is_improve_good_2_dec:0 "Improve Industrial Situation"
+ GIP_is_improve_good_2_dec_desc:0 ""
+ GIP_is_improve_good_1_dec:0 "Improve Industrial Situation"
+ GIP_is_improve_good_1_dec_desc:0 ""
+ GIP_is_improve_neutral_0_dec:0 "Improve Industrial Situation"
+ GIP_is_improve_neutral_0_dec_desc:0 ""
+ GIP_is_improve_bad_1_dec:0 "Improve Industrial Situation"
+ GIP_is_improve_bad_1_dec_desc:0 ""
+ GIP_is_improve_bad_2_dec:0 "Improve Industrial Situation"
+ GIP_is_improve_bad_2_dec_desc:0 ""
+ GIP_is_improve_bad_3_dec:0 "Improve Industrial Situation"
+ GIP_is_improve_bad_3_dec_desc:0 ""
+ 
+ GIP_is_neutral_or_better_TRIG:0 "Has §HIndustrial Situation§! level (§H0§!) or better."
+ 
+ 
+ ##### GENERAL STAFF                                     \n   §H§!
+ general_staff_eng:0 "British General Staff"
+ general_staff_eng_desc:0 "The General Staff in Britain was officially formed in 1905, and reorganized again in 1908, although its origins dates as far as to the Crimean War in 1853. In the British system, staff are outranked by command officers. This ensured a clear chain of command, and reinforced the idea that staff do not command, but exercise control on behalf of their commander.\n\nIt also includes the Admiralty Naval Staff department, that is a the senior command, operational planning, policy and strategy department within the British Admiralty.\n\nBritish military as a whole focuses on development of strong navy - the plan which is marked by refiting of old ships, because of the limitations caused by London Naval Treaty."
+ general_staff_fra:0 "French General Staff"
+ general_staff_fra_desc:0 ""
+ general_staff_ger:0 "German General Staff"
+ general_staff_ger_desc:0 ""
+ general_staff_ita:0 "Italian General Staff"
+ general_staff_ita_desc:0 ""
+ general_staff_jap:0 "Japanese General Staff"
+ general_staff_jap_desc:0 ""
+ general_staff_sov:0 "Soviet General Staff"
+ general_staff_sov_desc:0 ""
+ general_staff_usa:0 "American General Staff"
+ general_staff_usa_desc:0 ""
+ general_staff_domestic:0 "Domestic General Staff"
+ general_staff_domestic_desc:0 ""
+ general_staff_lack:0 "Lack of General Staff"
+ general_staff_lack_desc:0 ""
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ GIP_government_lobby_dec:0 "Government Lobby"
+ GIP_government_lobby_dec_desc:0 ""
+ GIP_increase_of_civilian_funding_dec:0 "Increase of Civilian Funding"
+ GIP_increase_of_civilian_funding_dec_desc:0 ""
+ 
+ GIP_counter_negative_effects_of_war_economy_dec:0 "Counter the Negative Effects of War Economy"
+ GIP_counter_negative_effects_of_war_economy_dec_desc:0 "All resources are constantly pumped into a production of War Materials and other things are often neglected. That causes a exhaustion of the populace and is constantly lowering the will of the people to continue in this state for a longer time.\n\nBy the extensive use of propaganda and other government efforts we can at least particularly counter these negative effects."
+ 
+ 
+################################### TRAITS                \n   §H§!
+ air_force_ties:0 "Air Force Ties"
+ air_force_ties_desc:0 ""
+ 
+ artillerist:0 "Artillerist"
+ artillerist_desc:0 ""
+ 
+ caring_leader:0 "Caring Leader"
+ caring_leader_desc:0 ""
+ 
+ meticulous:0 "Meticulous"
+ meticulous_desc:0 ""
+ 
+ decided_planner:0 "Decided Planner"
+ decided_planner_desc:0 ""
+ 
+ homeland_connoisseur:0 "Homeland Connoisseur"
+ homeland_connoisseur_desc:0 ""
+ 
+ unpopular:0 "Unpopular in Government"
+ unpopular_desc:0 ""
+ 
+ 
+ 
+ ################################### DECISIONS              \n   §H§!
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,17 @@
+	
+	# GIP_is_0_or_better
+
+
+	### 
+	GIP_is_neutral_or_better = {
+		custom_trigger_tooltip = {
+			tooltip = GIP_is_neutral_or_better_TRIG
+	
+			OR = {
+				has_idea = industrial_situation_g3
+				has_idea = industrial_situation_g2
+				has_idea = industrial_situation_g1
+				has_idea = industrial_situation_n0
+			}
+		}
+	}

@@ -1,0 +1,381 @@
+ideas = {
+	AIQ_industrial_policy = {
+		law = yes
+	
+		AIQ_industrial_policy_quality = {
+		
+			available = {
+				OR = {
+					has_idea = industrial_situation_g3
+					has_idea = industrial_situation_g2
+					has_idea = industrial_situation_g1
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			on_add = {
+				custom_effect_tooltip = AIQ_industrial_policy_quality_tt
+				add_ideas = AIQ_industrial_policy_quality_effect
+			}
+			on_remove = {
+				remove_ideas = AIQ_industrial_policy_quality_effect
+			}
+			modifier = {}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 5
+					surrender_progress < 0.1
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio < 0.5
+						}
+					}
+					NOT = {
+						tag = CHI
+						tag = SOV
+						tag = GER
+					}
+				}
+			}
+		}
+
+		AIQ_industrial_policy_balanced = {
+		
+			available = {
+				always = yes
+			}
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+			}
+			on_add = {
+				custom_effect_tooltip = AIQ_industrial_policy_balanced_tt
+			}
+			on_remove = {
+			}
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 5
+					surrender_progress < 0.1
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio < 1
+						}
+					}
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 0.5
+						}
+					}
+					NOT = {
+						tag = CHI
+						tag = SOV
+					}
+				}
+			}
+		}
+
+		AIQ_industrial_policy_quantity = {
+		
+			available = {
+				always = yes
+			}
+			cost = 150
+			removal_cost = -1
+			on_add = {
+				custom_effect_tooltip = AIQ_industrial_policy_quantity_tt
+				add_ideas = AIQ_industrial_policy_quantity_effect
+			}
+			on_remove = {
+				remove_ideas = AIQ_industrial_policy_quantity_effect
+			}
+			modifier = {}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 5
+					OR = {
+						AND = {
+							surrender_progress > 0.1
+							any_enemy_country = {
+								ic_ratio = { 
+									tag = ROOT 
+									ratio > 1
+								}
+							}
+						}
+						OR = {
+							tag = CHI
+							tag = SOV
+						}
+					}
+				}
+			}
+		}
+
+		AIQ_industrial_policy_forced_labor = {
+		
+			available = {
+				tag = GER
+				OR = {
+					surrender_progress > 0.1
+					any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			on_add = {
+				custom_effect_tooltip = AIQ_industrial_policy_forced_labor_tt
+				add_ideas = AIQ_industrial_policy_forced_labor_effect
+			}
+			on_remove = {
+				remove_ideas = AIQ_industrial_policy_forced_labor_effect
+			}
+			modifier = {}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+
+	country = {
+		AIQ_industrial_policy_quality_effect = {
+			allowed = {
+				always = yes
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				anti_tank_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				anti_air_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				motorized_rocket_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				amphibious_mechanized_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				armor = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				armored_car_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				fighter_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				heavy_fighter_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				nav_bomber_equipment = { 
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				cv_nav_bomber_equipment = { 
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+				scout_plane_equipment = {
+					build_cost_ic = 0.2 reliability = 0.25 instant = yes
+				}
+			}
+			modifier = {}
+			removal_cost = -1
+		}
+		AIQ_industrial_policy_quantity_effect = {
+			allowed = {
+				always = yes
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				anti_tank_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				anti_air_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				motorized_rocket_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				amphibious_mechanized_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				armored_car_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				fighter_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				heavy_fighter_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				nav_bomber_equipment = { 
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				cv_nav_bomber_equipment = { 
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+				scout_plane_equipment = {
+					build_cost_ic = -0.2 reliability = -0.25 instant = yes
+				}
+			}
+			modifier = {}
+			removal_cost = -1
+		}
+		AIQ_industrial_policy_forced_labor_effect = {
+			allowed = {
+				always = yes
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				anti_tank_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				anti_air_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				motorized_rocket_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				amphibious_mechanized_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				armored_car_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				fighter_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				heavy_fighter_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				nav_bomber_equipment = { 
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				cv_nav_bomber_equipment = { 
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+				scout_plane_equipment = {
+					build_cost_ic = -0.25 reliability = -0.3 instant = yes
+				}
+			}
+			modifier = {}
+			removal_cost = -1
+		}
+	}
+}

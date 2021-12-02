@@ -1,0 +1,129 @@
+GIP_industrial_situation_get_better = {
+
+	custom_effect_tooltip = GIP_industrial_situation_get_better_EXPL
+
+	hidden_effect = {
+		if = {
+			limit = { has_idea = industrial_situation_g2 }
+			swap_ideas = {
+				remove_idea = industrial_situation_g2
+				add_idea = industrial_situation_g3
+			}
+		}
+		if = {
+			limit = { has_idea = industrial_situation_g1 }
+			swap_ideas = {
+				remove_idea = industrial_situation_g1
+				add_idea = industrial_situation_g2
+			}
+		}
+		if = {
+			limit = { has_idea = industrial_situation_n0 }
+			swap_ideas = {
+				remove_idea = industrial_situation_n0
+				add_idea = industrial_situation_g1
+			}
+		}
+		if = {
+			limit = { has_idea = industrial_situation_b1 }
+			swap_ideas = {
+				remove_idea = industrial_situation_b1
+				add_idea = industrial_situation_n0
+			}
+		}
+		if = {
+			limit = { has_idea = industrial_situation_b2 }
+			swap_ideas = {
+				remove_idea = industrial_situation_b2
+				add_idea = industrial_situation_b1
+			}
+		}
+		if = {
+			limit = { has_idea = industrial_situation_b3 }
+			swap_ideas = {
+				remove_idea = industrial_situation_b3
+				add_idea = industrial_situation_b2
+			}		
+		}
+	}
+}
+
+
+
+GIP_army_situation_get_better = {
+
+	custom_effect_tooltip = GIP_army_situation_get_better_EXPL
+
+	hidden_effect = {
+		if = {
+			limit = { has_idea = army_situation_g4 }
+			swap_ideas = {
+				remove_idea = army_situation_g4
+				add_idea = army_situation_g5
+			}
+		}
+		if = {
+			limit = { has_idea = army_situation_g3 }
+			swap_ideas = {
+				remove_idea = army_situation_g3
+				add_idea = army_situation_g4
+			}
+		}
+		if = {
+			limit = { has_idea = army_situation_g2 }
+			swap_ideas = {
+				remove_idea = army_situation_g2
+				add_idea = army_situation_g3
+			}
+		}
+		if = {
+			limit = { has_idea = army_situation_g1 }
+			swap_ideas = {
+				remove_idea = army_situation_g1
+				add_idea = army_situation_g2
+			}
+		}
+		if = {
+			limit = { has_idea = army_situation_n0 }
+			swap_ideas = {
+				remove_idea = army_situation_n0
+				add_idea = army_situation_g1
+			}
+		}
+		if = {
+			limit = { has_idea = army_situation_b1 }
+			swap_ideas = {
+				remove_idea = army_situation_b1
+				add_idea = army_situation_n0
+			}
+		}
+		if = {
+			limit = { has_idea = army_situation_b2 }
+			swap_ideas = {
+				remove_idea = army_situation_b2
+				add_idea = army_situation_b1
+			}
+		}
+		if = {
+			limit = { has_idea = army_situation_b3 }
+			swap_ideas = {
+				remove_idea = army_situation_b3
+				add_idea = army_situation_b2
+			}
+		}
+		if = {
+			limit = { has_idea = army_situation_b4 }
+			swap_ideas = {
+				remove_idea = army_situation_b4
+				add_idea = army_situation_b3
+			}
+		}
+		if = {
+			limit = { has_idea = army_situation_b5 }
+			swap_ideas = {
+				remove_idea = army_situation_b5
+				add_idea = army_situation_b4
+			}		
+		}
+	}
+}

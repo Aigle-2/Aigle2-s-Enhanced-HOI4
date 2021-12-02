@@ -1,0 +1,9 @@
+GIM_as_improve_cat = {
+	allowed = {
+		
+	}
+	
+	available = {
+		
+	}
+}

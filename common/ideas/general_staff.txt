@@ -1,0 +1,294 @@
+ideas = {
+	general_staff = {
+		general_staff_eng = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+			
+				experience_gain_army = 0.05
+				experience_gain_air = 0.05
+				experience_gain_navy = 0.05
+				
+				army_leader_start_level = 1
+
+				army_leader_start_planning_level = 2
+				army_leader_start_logistics_level = 1
+				
+				planning_speed = 0.04
+				max_planning = 0.08
+				
+				refit_ic_cost = -0.1
+			}
+			
+			research_bonus = {
+				cat_grand_battle_plan = 0.08
+				cat_fleet_in_being = 0.08
+				cat_strategic_destruction = 0.08
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		general_staff_fra = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+			
+				experience_gain_army = 0.05
+				experience_gain_air = 0.05
+				experience_gain_navy = 0.05
+				
+				army_leader_start_level = 1
+
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+				
+				max_dig_in = 3
+				dig_in_speed_factor = 0.05
+				
+				max_planning = 0.12
+			}
+			
+			research_bonus = {
+				cat_grand_battle_plan = 0.08
+				cat_fleet_in_being = 0.08
+				cat_operational_integrity = 0.08
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		general_staff_ger = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+			
+				experience_gain_army = 0.05
+				experience_gain_air = 0.05
+				experience_gain_navy = 0.05
+				
+				army_leader_start_level = 1
+
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+				
+				planning_speed = 0.08
+				max_planning = 0.06
+
+				land_equipment_upgrade_xp_cost = -0.15
+			}
+			
+			research_bonus = {
+				cat_mobile_warfare = 0.08
+				cat_trade_interdiction = 0.08
+				cat_battlefield_support = 0.08
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		general_staff_ita = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+			
+				experience_gain_army = 0.01
+				experience_gain_air = 0.05
+				experience_gain_navy = 0.05
+				
+				army_leader_start_level = 1
+
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				
+				heat_attrition_factor = -0.05
+			}
+			
+			research_bonus = {
+				cat_grand_battle_plan = 0.08
+				cat_fleet_in_being = 0.08
+				cat_operational_integrity = 0.08
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		general_staff_jap = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+			
+				experience_gain_army = 0.05
+				experience_gain_air = 0.05
+				experience_gain_navy = 0.05
+				
+				army_leader_start_level = 1
+
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+				
+				refit_speed = 0.1
+				naval_strike_attack_factor = 0.05
+				naval_strike_agility_factor = 0.05
+			}
+			
+			research_bonus = {
+				cat_grand_battle_plan = 0.08
+				cat_base_strike = 0.08
+				cat_operational_integrity = 0.08
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		general_staff_sov = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+			
+				experience_gain_army = 0.05
+				experience_gain_air = 0.05
+				experience_gain_navy = 0.01
+				
+				army_leader_start_level = 1
+
+				army_leader_start_attack_level = 2
+				army_leader_start_planning_level = 1
+				
+				planning_speed = 0.04
+
+				attrition = 0.02
+				winter_attrition_factor = -0.15
+
+				resistance_damage_to_garrison_on_our_occupied_states = 0.05
+			}
+			
+			research_bonus = {
+				cat_mass_assault = 0.08
+				cat_fleet_in_being = 0.08
+				cat_battlefield_support = 0.08
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		general_staff_usa = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+			
+				experience_gain_army = 0.05
+				experience_gain_air = 0.05
+				experience_gain_navy = 0.05
+				
+				army_leader_start_level = 1
+
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 2
+				
+				planning_speed = 0.02
+				max_planning = 0.10
+
+				air_night_penalty = -0.05
+				air_cas_present_factor = 0.05
+				naval_strike_targetting_factor = 0.05
+			}
+			
+			research_bonus = {
+				cat_superior_firepower = 0.08
+				cat_base_strike = 0.08
+				cat_strategic_destruction = 0.08
+			}
+			
+			cancel_if_invalid = no
+		}
+	
+		general_staff_domestic = {
+		
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 15
+			
+				military_leader_cost_factor = -0.50
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.05
+				naval_doctrine = 0.05
+				air_doctrine = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+	
+		general_staff_lack = {
+		
+			default = yes
+		
+			cost = 150
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+			
+			research_bonus = {
+				
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+}

@@ -1,0 +1,304 @@
+	# GER_is_eastern_RK
+	
+	
+	
+	### RKs
+	GER_is_eastern_RK = {
+		OR = {
+			tag = RPO
+			tag = ROS
+			tag = RUK
+			tag = RWO
+			tag = RMO
+			tag = RKA
+			tag = RUR
+		}
+	}
+	
+	GER_is_eastern_RK_not_GG = {
+		OR = {
+			tag = ROS
+			tag = RUK
+			tag = RWO
+			tag = RMO
+			tag = RKA
+			tag = RUR
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RMA_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RMA
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RFR_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RFR
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RNA_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RNA
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RIN_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RIN
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_REN_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = REN
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RMI_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RMI
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RPO_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RPO
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_ROS_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = ROS
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RUK_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RUK
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RWO_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RWO
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RMO_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RMO
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RKA_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RKA
+				}
+			}
+		}
+	}
+	
+	GER_is_controlled_by_ROOT_or_puppet_not_RUR_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = UMC_is_controlled_by_ROOT_or_puppet_st_EXPL
+			
+			controller = {
+				OR = {
+					tag = GER
+					is_subject_of = GER
+				}
+			}
+			
+			owner = {
+				NOT = {
+					tag = RUR
+				}
+			}
+		}
+	}
+	
+	
+	
+	# SOV
+	SOV_is_owned_by_SOV_or_puppet_st = {
+
+		custom_trigger_tooltip = {
+			tooltip = SOV_is_owned_by_SOV_or_puppet_st_EXPL
+			
+			owner = {
+				OR = {
+					tag = SOV
+					is_subject_of = SOV
+				}
+			}
+		}
+	}

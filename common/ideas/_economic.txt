@@ -1,0 +1,819 @@
+ideas = {
+
+	economy = { 
+		law = yes
+		use_list_view = yes
+
+		undisturbed_isolation = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		
+			modifier = {
+				consumer_goods_factor = 0.50
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				production_speed_dockyard_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.75
+				max_fuel_factor = -0.45
+				fuel_gain_factor = -0.6
+				agency_upgrade_time = 1.0
+			}
+			
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.5
+					has_war = yes
+					has_completed_focus = USA_limited_intervention
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		isolation = {
+			
+			
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
+				conversion_cost_civ_to_mil_factor= 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.5
+			}
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.75
+					has_war = yes					
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		civilian_economy = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+			
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor = 0.3
+				
+				research_speed_factor = 0.05
+				
+				MONTHLY_POPULATION = 0.15
+				
+				consumer_goods_factor = 0.5
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+		}
+		
+		low_economic_mobilisation = {
+			
+			available = {
+				has_war_support > 0.15
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					NOT = { has_idea = HUN_treaty_of_triannon }
+				}
+				if = {
+					limit = {
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					has_war_support > 0.3
+					congress_high_support_trigger = yes
+				}	
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus" 
+					}
+					NOT = { 
+						OR = {
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_3
+							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
+				
+				##### COUNTRY SPECIFIC
+				### FRA
+				# NAPOLEONIC Post-CW Reorganization
+				# if = {
+				# 	limit = {
+				# 		original_tag = FRA
+				# 	}
+				# 	NOT = { has_idea = FRA_state_reorganization_I }
+				# }
+			}
+			
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.1
+				
+				consumer_goods_factor = 0.3
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+					
+					is_major = yes
+				}
+   			}
+		}
+		
+		partial_economic_mobilisation = {
+			
+			available = {
+				has_war_support > 0.25
+
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					OR = {
+						has_completed_focus = HUN_secret_rearmament
+						NOT = { has_idea = HUN_treaty_of_triannon }
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					has_war_support > 0.5
+					congress_high_support_trigger = yes
+				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus" 
+					}
+					NOT = { 
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_3
+							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
+				
+				##### COUNTRY SPECIFIC
+				### FRA
+				# NAPOLEONIC Post-CW Reorganization
+				# if = {
+				# 	limit = {
+				# 		original_tag = FRA
+				# 	}
+				# 	NOT = { has_idea = FRA_state_reorganization_I }
+				# }
+			}
+
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.05
+			
+				production_speed_arms_factory_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				
+				consumer_goods_factor = 0.25
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+					
+					is_major = yes
+				}
+				
+				modifier = {	### NOT select this if you have less than 40% STABILITY
+					factor = 25
+					
+					OR = {
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation
+					}
+					
+					OR = {
+						has_stability < 0.35
+						has_war_support < 0.35
+					}
+				}
+   			}
+		}
+		
+		war_economy = {
+			available = {
+				has_war_support > 0.5
+				OR = {
+					has_government = fascism
+					has_government = communism
+					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = { 
+								tag = ROOT 
+								ratio > 0.4
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					NOT = { has_idea = HUN_treaty_of_triannon }
+				}
+				if = {
+					limit = {
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					has_war_support > 0.75
+					congress_high_support_trigger = yes
+				}		
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus" 
+					}
+					NOT = { 
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
+
+				##### COUNTRY SPECIFIC
+				### FRA
+				# NAPOLEONIC Post-CW Reorganization
+				# if = {
+				# 	limit = {
+				# 		original_tag = FRA
+				# 	}
+				# 	NOT = { has_idea = FRA_state_reorganization_I }
+				# }
+				
+				### RKs
+				if = {
+					limit = {
+						GER_is_eastern_RK_not_GG = yes
+					}
+					always = no
+				}
+			}
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.15
+			
+				stability_weekly = -0.001
+				war_support_weekly = -0.001
+			
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor = -0.2
+				
+				conscription_factor = -0.05
+				
+				consumer_goods_factor = 0.20
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 5
+
+				modifier = {
+					#High prio on production
+					factor = 20
+					manpower_per_military_factory >  1000
+				}
+				
+				modifier = {	### NOT select this if you have less than 40% STABILITY
+					factor = 0
+					
+					has_stability < 0.4
+				}
+				modifier = {	### NOT select this if you have less than 40% WAR SUPPORT
+					factor = 0
+					
+					has_war_support < 0.4
+				}
+				
+				# modifier = {	### NOT select if you are GER and not completed focus
+				# 	factor = 0
+					
+				# 	tag = GER
+				# 	has_government = fascism
+				# 	NOT = { has_completed_focus = GER_fuel_the_deutsche_militarwirtschaft }
+				# }
+   			}
+		}
+		
+		tot_economic_mobilisation = {
+			available = {
+				has_war = yes
+				has_war_support > 0.8
+				any_enemy_country = {
+					ic_ratio = { 
+						tag = ROOT 
+						ratio > 0.5
+					}
+				}
+
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					NOT = { has_idea = HUN_treaty_of_triannon }
+				}
+				if = {
+					limit = {
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					has_war_support > 0.9
+					congress_high_support_trigger = yes
+				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus" 
+					}
+					NOT = { 
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_3
+						}
+					}
+				}
+				
+				##### COUNTRY SPECIFIC
+				### FRA
+				# NAPOLEONIC Post-CW Reorganization
+				# if = {
+				# 	limit = {
+				# 		original_tag = FRA
+				# 	}
+				# 	NOT = { has_idea = FRA_state_reorganization_I }
+				# }
+				
+				### RKs
+				if = {
+					limit = {
+						GER_is_eastern_RK_not_GG = yes
+					}
+					always = no
+				}
+			}
+			
+			on_add = {
+				if = {
+					limit = {
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					USA_congress_large_opposition = yes
+				}
+			}
+
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.25
+				stability_weekly = -0.003
+				war_support_weekly = -0.003
+			
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor = -0.3
+				
+				conscription_factor = -0.1
+				
+				consumer_goods_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 1
+
+				modifier = {
+					factor = 25
+					#Prio this if nation has a lot of manpower compared to MIC
+					manpower_per_military_factory >  10000
+				}
+
+				modifier = {
+					#Block  unless nation has a lot of manpower
+					factor = 0
+					manpower_per_military_factory <  3000
+				}
+
+				
+				modifier = {
+					# never take this if we are on low conscription laws for safety
+					factor = 0
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}
+				
+				modifier = {	### NOT select this if you have less than 40% STABILITY
+					factor = 0
+					
+					has_stability < 0.4
+				}
+				modifier = {	### NOT select this if you have less than 40% WAR SUPPORT
+					factor = 0
+					
+					has_war_support < 0.4
+				}
+   			}
+		}
+
+		new_economic_policy = {
+
+			picture = new_economic_policy
+			
+			allowed = {
+				always = no
+			}
+			allowed_to_remove = {
+				OR = {
+					surrender_progress > 0.75
+					NOT = { has_government = communism }				
+				}
+			}
+	
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15	
+				production_speed_buildings_factor = -0.15 
+				
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+		new_economic_policy_2 = {
+			name = new_economic_policy
+
+			picture = new_economic_policy
+			
+			allowed = {
+				always = no
+			}
+			allowed_to_remove = {
+				OR = {
+					surrender_progress > 0.75
+					NOT = { has_government = communism }				
+				}
+			}
+	
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10	
+				production_speed_buildings_factor = -0.2 
+				global_building_slots_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+	}
+	
+	trade_laws = { 
+		law = yes
+		use_list_view = yes
+
+		uncontrolled_exports = {
+			
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = isolation
+		
+			modifier = {
+				min_export = 0.25
+				consumer_goods_factor = 0.05
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 40.0
+				agency_upgrade_time = 0.15
+			}
+			
+			allowed_to_remove = {
+				OR = {
+					has_war = yes
+					has_completed_focus = POL_integrate_gdansk_industries
+					has_completed_focus = POL_expand_gdynia_seaport
+					NOT = {
+						owns_state = 85
+						owns_state = 807
+					}
+					any_owned_state = {
+						NOT = {
+							state = 85
+							state = 807
+						}
+						is_coastal = yes
+					}
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		free_trade = {
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+			}
+			
+			modifier = {
+				political_power_gain = 0.1
+			
+				min_export = 0.8
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		export_focus = {
+			
+			available = {
+				if = {
+					limit = {
+						original_tag = CHI
+						has_dlc = "Waking the Tiger"
+					}
+					NOT = { has_idea = CHI_nine_power_treaty }
+				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+			}
+			
+			
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+			
+				min_export = 0.5
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 10.0
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+				# portugal and sweden are special tungsten snowflakes
+				modifier = {
+					factor = 0
+					
+					is_major = no
+					has_war = no
+					is_in_faction = no
+					OR = {
+						tag = POR
+						tag = SWE
+					}
+				}
+   			}
+		}
+		
+		limited_exports = {
+			available = {
+				OR = {
+					AND = {
+						has_government = democratic
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = { 
+								tag = ROOT 
+								ratio > 0.2
+							}
+						}
+					}
+					AND = {
+						NOT = { has_government = democratic }
+						OR = {
+							has_idea = partial_economic_mobilisation
+							has_idea = war_economy
+							has_idea = tot_economic_mobilisation
+						}
+					}
+				}
+
+
+				if = {
+					limit = {
+						original_tag = CHI
+						has_dlc = "Waking the Tiger"
+					}
+					NOT = { has_idea = CHI_nine_power_treaty }
+				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+			}
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+
+				min_export = 0.25
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.01
+				civilian_intel_to_others = 10.0
+				navy_intel_to_others = 5
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 0
+					
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+
+				# minors not at war should want to get the bonuses from free trade
+				modifier = {
+					factor = 0
+					
+					is_major = no
+					has_war = no
+				}
+   			}
+		}
+		
+		closed_economy = {
+			available = {
+				has_war = yes
+				OR = { 
+					has_government = fascism
+					has_government = communism
+				}
+				OR = {
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+				OR = {
+					NOT = {	tag = SOV }
+					NOT = { has_opinion_modifier = MR_pact }
+				}
+
+				if = {
+					limit = {
+						original_tag = CHI
+						has_dlc = "Waking the Tiger"
+					}
+					NOT = { has_idea = CHI_nine_power_treaty }
+				}
+			}
+			
+			cost = 150
+			removal_cost = -1
+			
+			
+			modifier = {
+				political_power_gain = -0.25
+			
+				min_export = 0
+			}
+			
+			on_add = {
+				custom_effect_tooltip = closed_economy_TT
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 0
+					
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+
+				# minors not at war should want to get the bonuses from free trade
+				modifier = {
+					factor = 0
+					
+					is_major = no
+					has_war = no
+				}
+   			}
+		}
+	}
+}
