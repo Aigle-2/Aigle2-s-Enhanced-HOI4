@@ -1,0 +1,30 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_GER_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/GER_naval_bomber2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_basic_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/ENG_heavy_tank_chassis_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_improved_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/ENG_heavy_tank_chassis_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_basic_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/FRA_heavy_tank_chassis_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_basic_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/USA_heavy_tank_chassis_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_improved_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/USA_heavy_tank_chassis_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_improved_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/USA_heavy_tank_chassis_2.dds"
+	}
+}

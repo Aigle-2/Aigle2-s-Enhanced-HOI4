@@ -56,3 +56,5 @@
   AIR_WING_LEVEL_2:0 "Regular"
   AIR_WING_LEVEL_3:0 "Seasoned"
   AIR_WING_LEVEL_4:0 "Veterans"
+  GER_nav_bomber_equipment_2:0 "Focke-Wulf Fw 200 Condor"
+  GER_nav_bomber_equipment_2_short:0 "Fw 200"
