@@ -12,19 +12,20 @@ NDefines.NGame.EVENT_TIMEOUT_DEFAULT = 7											-- Default days before an eve
 
 -- Diplomacy
 
-NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0						-- Each province owned by the target country contributes this amount of volunteers to the limit.
+NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0						        -- Each province owned by the target country contributes this amount of volunteers to the limit.
 NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.02								-- Each army unit owned by the source country contributes this amount of volunteers to the limit.
 
 -- Military
 
 NDefines.NMilitary.TRAINING_MAX_LEVEL = 15
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 10
-NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.10,	0.12,	0.13,	0.14,	0.15,	0.16,	0.17,	0.18,	0.19,	0.2,	0.25,	0.3,	0.35,	0.4,	0.45,	0.5,	0.55,	0.6,	0.65,	0.7,	0.75,	0.8,	0.85,	0.9,	0.95 }		-- Experience needed to progress to the next level
+NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.10,0.12,0.13,0.14,0.15,0.16,0.17,0.18,0.19,0.2,0.25,0.3,	0.35,	0.4,	0.45,	0.5,	0.55,	0.6,	0.65,	0.7,	0.75,	0.8,	0.85,	0.9,	0.95 }		-- Experience needed to progress to the next level
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 30.0
 NDefines.NMilitary.TRAINING_ATTRITION = 0.12			
 NDefines.NMilitary.TRAINING_MIN_STRENGTH = 0.95										-- if strength is less than this, the unit will pause training until it's been reinforced
 NDefines.NMilitary.UNIT_EXPERIENCE_SCALE = 0.3
+NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 7
 -- Navy
 
 NDefines.NNavy.RELATIVE_SURFACE_DETECTION_TO_POSITIONING_FACTOR	= 0.01				-- multiples the surface detection difference between two sides. the side with higher detection will get a bonus of this value

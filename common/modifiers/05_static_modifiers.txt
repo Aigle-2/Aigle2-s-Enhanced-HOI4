@@ -36,7 +36,7 @@ war_support_bad_modifier = {
 	army_attack_factor = -0.15
 	army_speed_factor = -0.05
 	command_power_gain_mult = -0.95
-	conscription_factor = -0.5
+	conscription_factor = -0.25
 	surrender_limit = -0.5
 }
 

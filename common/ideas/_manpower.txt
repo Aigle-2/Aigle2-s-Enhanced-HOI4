@@ -23,7 +23,6 @@ ideas = {
 				training_time_factor = -0.2
 	
 				conscription = 0.01
-				conscription_factor = -0.25
 			}
 			
 			cancel_if_invalid = no
