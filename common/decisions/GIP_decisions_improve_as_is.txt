@@ -17,7 +17,7 @@ political_actions = {
 			}
 			
 			manpower_per_military_factory < 10000
-			
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement
@@ -85,7 +85,7 @@ political_actions = {
 			}
 			
 			manpower_per_military_factory < 10000
-			
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement
@@ -153,7 +153,7 @@ political_actions = {
 			}
 			
 			manpower_per_military_factory < 10000
-			
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement
@@ -219,7 +219,7 @@ political_actions = {
 			any_unit_leader = {
 				skill > 5
 			}
-
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement
@@ -285,7 +285,7 @@ political_actions = {
 			any_unit_leader = {
 				skill > 5
 			}
-			
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement
@@ -351,7 +351,7 @@ political_actions = {
 			any_unit_leader = {
 				skill > 4
 			}
-			
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement
@@ -417,7 +417,7 @@ political_actions = {
 			any_unit_leader = {
 				skill > 3
 			}
-			
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement
@@ -483,7 +483,7 @@ political_actions = {
 			any_unit_leader = {
 				skill > 2
 			}
-			
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement
@@ -549,7 +549,7 @@ political_actions = {
 			any_unit_leader = {
 				skill > 2
 			}
-			
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement
@@ -615,7 +615,7 @@ political_actions = {
 			any_unit_leader = {
 				skill > 1
 			}
-			
+			AEH_can_use_army_system = yes
 			NOT = { 
 				has_idea = all_adults_serve
 				has_idea = service_by_requirement

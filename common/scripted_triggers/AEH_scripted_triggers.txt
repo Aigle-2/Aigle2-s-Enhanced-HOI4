@@ -1,0 +1,5 @@
+AEH_can_use_army_system = {
+	NOT = {
+		tag = SOV
+	}
+}

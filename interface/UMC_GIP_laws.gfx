@@ -81,41 +81,41 @@ spriteTypes = {
 	
 	
 	
-	########################### GENERAL STAFF
+	########################### Designers
 	spriteType = {
-		name = "GFX_idea_general_staff_eng"
+		name = "GFX_idea_designer_eng"
 		texturefile = "gfx/interface/ideas/idea_general_staff_eng.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_general_staff_fra"
+		name = "GFX_idea_designer_fra"
 		texturefile = "gfx/interface/ideas/idea_general_staff_fra.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_general_staff_ger"
+		name = "GFX_idea_designer_ger"
 		texturefile = "gfx/interface/ideas/idea_general_staff_ger.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_general_staff_ita"
+		name = "GFX_idea_designer_ita"
 		texturefile = "gfx/interface/ideas/idea_general_staff_ita.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_general_staff_jap"
+		name = "GFX_idea_designer_jap"
 		texturefile = "gfx/interface/ideas/idea_general_staff_jap.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_general_staff_sov"
+		name = "GFX_idea_designer_sov"
 		texturefile = "gfx/interface/ideas/idea_general_staff_sov.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_general_staff_usa"
+		name = "GFX_idea_designer_usa"
 		texturefile = "gfx/interface/ideas/idea_general_staff_usa.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_general_staff_domestic"
+		name = "GFX_idea_designer_domestic"
 		texturefile = "gfx/interface/ideas/idea_general_staff_domestic.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_general_staff_lack"
+		name = "GFX_idea_designer_lack"
 		texturefile = "gfx/interface/ideas/idea_general_staff_lack.dds"
 	}
 	

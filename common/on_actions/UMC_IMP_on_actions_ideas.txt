@@ -6,49 +6,48 @@ on_actions = {
 				add_ideas = {
 					army_situation_g1
 					industrial_situation_n0
-					general_staff_fra
+					designer_fra
 				}
 			}
 			USA = {
 				add_ideas = {
 					army_situation_n0
 					industrial_situation_g1
-					general_staff_usa
+					designer_usa
 				}
 			}
 			ENG = {
 				add_ideas = {
 					army_situation_b1
 					industrial_situation_n0
-					general_staff_eng
+					designer_eng
 				}
 			}
 			GER = {
 				add_ideas = {
 					army_situation_g3
 					industrial_situation_g1
-					general_staff_ger
+					designer_ger
 				}
 			}
 			ITA = {
 				add_ideas = {
 					army_situation_b2
 					industrial_situation_b1
-					general_staff_ita
 				}
 			}
 			JAP = {
 				add_ideas = {
 					army_situation_g1
 					industrial_situation_n0
-					general_staff_jap
+					designer_jap
 				}
 			}
 			SOV = {
 				add_ideas = {
-					army_situation_b3
+					army_situation_n0
 					industrial_situation_b1
-					general_staff_sov
+					designer_sov
 					
 					partial_economic_mobilisation
 				}
@@ -73,14 +72,14 @@ on_actions = {
 				add_ideas = {
 					army_situation_g1
 					industrial_situation_g2
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			FIN = {
 				add_ideas = {
 					army_situation_g1
 					industrial_situation_n0
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			
@@ -92,7 +91,7 @@ on_actions = {
 				
 					army_situation_b2
 					industrial_situation_g1
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			BEL = {
@@ -137,14 +136,14 @@ on_actions = {
 				add_ideas = {
 					army_situation_b2
 					industrial_situation_n0
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			POR = {
 				add_ideas = {
 					army_situation_b1
 					industrial_situation_n0
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			
@@ -153,7 +152,7 @@ on_actions = {
 				add_ideas = {
 					army_situation_b2
 					industrial_situation_b1
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			
@@ -163,7 +162,7 @@ on_actions = {
 				add_ideas = {
 					army_situation_g1
 					industrial_situation_g2
-					general_staff_fra
+					designer_fra
 				}
 			}
 			HUN = {
@@ -172,35 +171,35 @@ on_actions = {
 				add_ideas = {
 					army_situation_n0
 					industrial_situation_b1
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			ROM = {
 				add_ideas = {
 					army_situation_n0
 					industrial_situation_b1
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			YUG = {
 				add_ideas = {
 					army_situation_b2
 					industrial_situation_b1
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			BUL = {
 				add_ideas = {
 					army_situation_b1
 					industrial_situation_b2
-					general_staff_ita
+					designer_ita
 				}
 			}
 			ALB = {
 				add_ideas = {
 					army_situation_b4
 					industrial_situation_b2
-					general_staff_ita
+					designer_ita
 				}
 			}
 			GRE = {
@@ -238,7 +237,7 @@ on_actions = {
 				add_ideas = {
 					army_situation_b2
 					industrial_situation_b1
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			IRQ = {
@@ -305,28 +304,28 @@ on_actions = {
 				add_ideas = {
 					army_situation_b3
 					industrial_situation_b3
-					general_staff_ger
+					designer_ger
 				}
 			}
 			PRC = {
 				add_ideas = {
 					army_situation_b3
 					industrial_situation_b3
-					general_staff_domestic
+					designer_domestic
 				}
 			}
 			MAN = {
 				add_ideas = {
 					army_situation_b3
 					industrial_situation_b3
-					general_staff_jap
+					designer_jap
 				}
 			}
 			MEN = {
 				add_ideas = {
 					army_situation_b4
 					industrial_situation_b3
-					general_staff_jap
+					designer_jap
 				}
 			}
 			GXC = {
@@ -423,7 +422,7 @@ on_actions = {
 				add_ideas = {
 					army_situation_b4
 					industrial_situation_b2
-					general_staff_usa
+					designer_usa
 				}
 			}
 			
@@ -474,7 +473,7 @@ on_actions = {
 				add_ideas = {
 					army_situation_b3
 					industrial_situation_b3
-					general_staff_ger
+					designer_ger
 				}
 			}
 			

@@ -119,7 +119,7 @@
  UMC_destroy_two_early_battleships_tt:0 "Destroy §H2§! Early Battleships.\n"
  
  ### AVAILABLE AS
- UMC_available_as_general_staff_tt:0 "This §HGeneral Staff§! will become available:\n"
+ UMC_available_as_designer_tt:0 "This §HDesigners§! will become available:\n"
  UMC_available_as_political_advisor_tt:0 "This figure will be available as §HPolitical Advisor§!:\n"
  UMC_available_as_chief_of_army_tt:0 "This figure will be available as §HChief of Army§!:\n"
  UMC_available_as_high_command_tt:0 "This figure will be available as §HMilitary High Command§!:\n"
@@ -495,7 +495,7 @@
  COM_is_JAP_hachi_go_sakusen_mis:0 "Operation Hachi-gō"
  COM_is_JAP_hachi_go_sakusen_mis_TRIG1:0 "We or our Puppets controls all former eastern states of [SOV.GetFlag]§H[SOV.GetName]§! up to the §H[657.GetName]§!."
  COM_is_JAP_hachi_go_sakusen_mis_TRIG2:0 "We or our Puppets controls all former states of [MON.GetFlag]§H[MON.GetName]§!."
- COM_is_JAP_hachi_go_sakusen_mis_desc:0 "Operation Ichi-Go, or the 'Operational Plan no. 8', is a plan prepared by the shared Operations Bureau of the Japanese Army General Staff and the Kwantung Army for invasion into the eastern parts of the Soviet Union. The scope of operations was enormous: the plan envisions a commitment of 50 IJA divisions to fight over a frontage nearly 5,000 kilometers in length, with Japan's final objectives being up to 1,200 km deep into Soviet territory."
+ COM_is_JAP_hachi_go_sakusen_mis_desc:0 "Operation Ichi-Go, or the 'Operational Plan no. 8', is a plan prepared by the shared Operations Bureau of the Japanese Army Designers and the Kwantung Army for invasion into the eastern parts of the Soviet Union. The scope of operations was enormous: the plan envisions a commitment of 50 IJA divisions to fight over a frontage nearly 5,000 kilometers in length, with Japan's final objectives being up to 1,200 km deep into Soviet territory."
  
  JCD_unrest_on_the_home_islands_dec:0 "Unrest on the Home Islands"
  JCD_unrest_on_the_home_islands_dec_EXPL1:0 "Random §HGeneral§! will lose §HSamurai Lineage§! Trait.\n"
@@ -712,7 +712,7 @@
  COM_p_lorenz_munch_dec:0 "Mobilize Lorenz Münch"
  COM_p_lorenz_munch_dec_desc:0 ""
  COM_p_sepp_rosen_dec:0 "Promote Sepp for the Panzerwaffe"
- COM_p_sepp_rosen_dec_desc:0 "Born in 1890, Captain Rosen went into the trenches of the Great War a bright and cautious young man. He left the trenches an effective and brutal Colonel with a massive chip on his shoulder. No amount of medals or honors could soothe the anger he felt for Germany’s failure to adopt armored warfare in the Great War. The future lay in the treaded armored monsters that the british and french crushed his precious infantrymen underneath.\n\nColonel Rosen remained with the Reichswehr after the formation of the Weimar Republic though his loyalty to the authoritarian Kaiser saw him often moved further away from positions to influence Germany’s military future. Then he finally got the opportunity to violate that infernal Versailles Treaty and begin Germany’s path down armored warfare. German-Soviet Cooperation in armored development allowed the Colonel to not only get the ball rolling with tanks but also develop new doctrines. \n\nIn 1934, the worst befell the patriotic Colonel, he was fired by the new Third Reich thanks to his outspoken anti-nazi views. His loudmouth and unwillingness to adorn himself with the Nazi’s regalia and uniform cost him his job and his beloved Panzerwaffe. His reputation as a brutal and effective leader in the field as well as his close relationship with many in the General Staff have kept him close enough that should the need arise, the Bloody Rose can be granted the position he’s dreamed of, A Panzer Army crushing the Allies."
+ COM_p_sepp_rosen_dec_desc:0 "Born in 1890, Captain Rosen went into the trenches of the Great War a bright and cautious young man. He left the trenches an effective and brutal Colonel with a massive chip on his shoulder. No amount of medals or honors could soothe the anger he felt for Germany’s failure to adopt armored warfare in the Great War. The future lay in the treaded armored monsters that the british and french crushed his precious infantrymen underneath.\n\nColonel Rosen remained with the Reichswehr after the formation of the Weimar Republic though his loyalty to the authoritarian Kaiser saw him often moved further away from positions to influence Germany’s military future. Then he finally got the opportunity to violate that infernal Versailles Treaty and begin Germany’s path down armored warfare. German-Soviet Cooperation in armored development allowed the Colonel to not only get the ball rolling with tanks but also develop new doctrines. \n\nIn 1934, the worst befell the patriotic Colonel, he was fired by the new Third Reich thanks to his outspoken anti-nazi views. His loudmouth and unwillingness to adorn himself with the Nazi’s regalia and uniform cost him his job and his beloved Panzerwaffe. His reputation as a brutal and effective leader in the field as well as his close relationship with many in the Designers have kept him close enough that should the need arise, the Bloody Rose can be granted the position he’s dreamed of, A Panzer Army crushing the Allies."
  COM_p_michael_von_polnitz_dec:0 "Promote Michael von Pölnitz"
  COM_p_michael_von_polnitz_dec_desc:0 ""
  

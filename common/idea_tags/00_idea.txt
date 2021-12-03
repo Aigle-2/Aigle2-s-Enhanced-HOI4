@@ -30,7 +30,7 @@ idea_categories = {
 		character_slot = political_advisor
 		character_slot = political_advisor
 		character_slot = political_advisor
-		slot = general_staff
+		slot = designer
 		slot = industrial_concern
 		character_slot = theorist
 		

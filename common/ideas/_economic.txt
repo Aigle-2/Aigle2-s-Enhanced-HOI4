@@ -602,6 +602,11 @@ ideas = {
 					}
 					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
 				}
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+				
 			}
 			
 			modifier = {
