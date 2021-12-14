@@ -102,6 +102,7 @@ ideas = {
 				join_faction_tension = 0.25
 				send_volunteers_tension = 0.5
 				guarantee_tension = 0.5
+				defensive_war_stability_factor = 0.3
 			}
 		}
 		# version if player went down limited intervention
