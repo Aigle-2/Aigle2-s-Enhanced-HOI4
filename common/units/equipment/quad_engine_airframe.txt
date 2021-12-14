@@ -226,5 +226,6 @@ equipments = {
 		maximum_speed = 300
 		air_agility = 10
 		air_defence = 20
+		fuel_consumption = 0.4
 	}
 }
