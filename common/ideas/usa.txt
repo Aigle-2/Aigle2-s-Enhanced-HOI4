@@ -146,6 +146,7 @@ ideas = {
 				join_faction_tension = 0.25
 				send_volunteers_tension = 0.5
 				guarantee_tension = 0.5
+				defensive_war_stability_factor = 0.3
 			}
 		}
 		USA_lend_lease_act_dummy = { #dummy version to show effects
@@ -1202,7 +1203,6 @@ ideas = {
 	
 	}
 
-
 	tank_manufacturer = { 
 	
 		designer = yes
@@ -1223,6 +1223,9 @@ ideas = {
 			
 			modifier = {
 			}
+			ai_will_do = { #EAI
+				factor = 0
+			}
 		}
 		
 		chrysler = {
@@ -1241,6 +1244,18 @@ ideas = {
 			traits = { medium_tank_manufacturer }
 			
 			modifier = {
+			}
+
+			ai_will_do = { #EAI
+				base = 0
+				modifier = {
+					add = 1
+
+					OR = {
+						check_variable = { EAI_FOCUS/LAND/armor_focus = global.EAI_MARM_FOCUS }
+						check_variable = { EAI_FOCUS/LAND/armor_focus = global.EAI_HARM_FOCUS }
+					}
+				}
 			}
 		}
 		detroit_arsenal = {
@@ -1330,6 +1345,17 @@ ideas = {
 			
 			modifier = {
 			}
+			ai_will_do = { #EAI
+				base = 0
+				modifier = {
+					add = 1
+
+					OR = {
+						check_variable = { EAI_FOCUS/LAND/armor_focus = global.EAI_MARM_FOCUS }
+						check_variable = { EAI_FOCUS/LAND/armor_focus = global.EAI_HARM_FOCUS }
+					}
+				}
+			}
 		}	
 	}
 	
@@ -1354,6 +1380,9 @@ ideas = {
 			
 			modifier = {
 			}
+			ai_will_do = { #EAI
+				factor = 0
+			}
 		}
 		
 		electric_boat_company = {
@@ -1372,6 +1401,9 @@ ideas = {
 			traits = { raiding_fleet_naval_manufacturer }
 			
 			modifier = {
+			}
+			ai_will_do = { #EAI
+				factor = 0
 			}
 		}
 		
@@ -1392,6 +1424,9 @@ ideas = {
 			
 			modifier = {
 			}
+			ai_will_do = { #EAI
+				factor = 0
+			}
 		}
 		
 		newport_news_shipbuilding = {
@@ -1410,6 +1445,9 @@ ideas = {
 			traits = { pacific_fleet_naval_manufacturer }
 			
 			modifier = {
+			}
+			ai_will_do = { #EAI
+				factor = 1
 			}
 		}
 	}
@@ -1434,6 +1472,9 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 			
 			modifier = {
+			}
+			ai_will_do = { #EAI
+				factor = 0
 			}
 		}
 		
@@ -1473,6 +1514,9 @@ ideas = {
 			
 			modifier = {
 			}
+			ai_will_do = { #EAI
+				factor = 0
+			}
 		}
 		
 		douglas_aircraft_company = {
@@ -1491,6 +1535,9 @@ ideas = {
 			traits = { CAS_manufacturer }
 			
 			modifier = {
+			}
+			ai_will_do = { #EAI
+				factor = 0
 			}
 		}
 
@@ -1511,6 +1558,21 @@ ideas = {
 			traits = { heavy_aircraft_manufacturer }
 			
 			modifier = {
+			}
+			ai_will_do = { #EAI
+				factor = 1
+
+				modifier = {
+					factor = 0
+					check_variable = { EAI_FOCUS/AIR/strategic_bomber = global.EAI_OFF }
+				}
+				modifier = {
+					factor = 50000
+					OR = {
+						has_tech = strategic_bomber2
+						is_researching_technology = strategic_bomber2
+					}
+				}
 			}
 		}
 		
@@ -1549,6 +1611,9 @@ ideas = {
 			
 			modifier = {
 			}
+			ai_will_do = { #EAI
+				factor = 0
+			}
 		}		
 	}
 	
@@ -1574,6 +1639,9 @@ ideas = {
 			
 			modifier = {
 			}
+			ai_will_do = { #EAI
+				factor = 1
+			}
 		}
 		
 		ford_motor_company = {
@@ -1592,6 +1660,9 @@ ideas = {
 			traits = { motorized_equipment_manufacturer }
 			
 			modifier = {
+			}
+			ai_will_do = { #EAI
+				factor = 0
 			}
 		}
 		
@@ -1613,6 +1684,9 @@ ideas = {
 			traits = { artillery_manufacturer }
 			
 			modifier = {
+			}
+			ai_will_do = { #EAI
+				factor = 0
 			}
 		}
 	}
@@ -1639,6 +1713,9 @@ ideas = {
 			
 			modifier = {
 			}
+			ai_will_do = { #EAI
+				factor = 0
+			}
 		}
 		
 		general_electric = {
@@ -1658,6 +1735,9 @@ ideas = {
 			
 			modifier = {
 			}
+			ai_will_do = { #EAI
+				factor = 0
+			}
 		}
 		USA_general_motors = {
 			
@@ -1667,6 +1747,10 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = USA_wartime_industry
+			}
+
+			ai_will_do = { #EAI
+				factor = 10
 			}
 			
 
