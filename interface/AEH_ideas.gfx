@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_BEL_belgian_stubbornness"
+		texturefile = "gfx/interface/ideas/belgian_stubbornness.dds"
+	}
+}

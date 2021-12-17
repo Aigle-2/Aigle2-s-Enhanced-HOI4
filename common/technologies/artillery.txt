@@ -36,24 +36,17 @@ technologies = {
 		categories = {
 			artillery
 		}
+		
+		ai_will_do = { #EAI
+			factor = 1
 
-		ai_will_do = {
-			factor = 2
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1937.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1936.6.1 } }
 
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.1"
-			}
+			#WEIGHT
+			modifier = { factor = 20 date > 1937.1.1 }
+			modifier = { factor = 6 EAI_artillery_tech_focus = yes }
+			modifier = { factor = 2 EAI_medium_armor_tank_design_focus = yes }
 		}
 	}
 
@@ -107,24 +100,17 @@ technologies = {
 		categories = {
 			artillery
 		}
+		
+		ai_will_do = { #EAI
+			factor = 1
 
-		ai_will_do = {
-			factor = 2
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1937.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1936.6.1 } }
 
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.1"
-			}
+			#WEIGHT
+			modifier = { factor = 20 date > 1937.1.1 }
+			modifier = { factor = 6 EAI_artillery_tech_focus = yes }
+			modifier = { factor = 2 EAI_medium_armor_tank_design_focus = yes }
 		}
 	}
 
@@ -156,24 +142,22 @@ technologies = {
 		categories = {
 			artillery
 		}
+		
+		ai_will_do = { #EAI
+			factor = 20
 
-		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-				date > "1938.1.9"
+			#DATE
+			modifier = { 
+				factor = 0 
+				OR = { 
+					AND = { date < 1939.1.1 NOT = { has_country_flag = EAI_unused_research_slots EAI_medium_armor_tank_design_focus = yes } } 
+					date < 1938.6.1 
+				} 
 			}
 
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.6"
-			}
+			#WEIGHT
+			modifier = { factor = 6 EAI_artillery_tech_focus = yes }
+			modifier = { add = 90 date > 1939.6.1 }
 		}
 	}
 
@@ -226,24 +210,17 @@ technologies = {
 		categories = {
 			artillery
 		}
+		
+		ai_will_do = { #EAI
+			factor = 10
 
-		ai_will_do = {
-			factor = 2
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } }
 
-			modifier = {
-				factor = 2
-				date > "1940.1.6"
-			}
+			#WEIGHT
+			modifier = { factor = 4 EAI_artillery_tech_focus = yes }
 
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1942.1.1"
-			}
+			modifier = { add = 90 date > 1941.1.1 }
 		}
 	}
 
@@ -294,19 +271,17 @@ technologies = {
 		categories = {
 			artillery
 		}
+		
+		ai_will_do = { #EAI
+			factor = 10
 
-		ai_will_do = {
-			factor = 2
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1941.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1940.6.1 } }
 
-			modifier = {
-				factor = 2
-				date > "1941.1.6"
-			}
+			#WEIGHT
+			modifier = { factor = 4 EAI_artillery_tech_focus = yes }
 
-			modifier = {
-				factor = 5
-				date > "1942.1.1"
-			}
+			modifier = { add = 90 date > 1942.1.1 }
 		}
 	}
 
@@ -336,24 +311,17 @@ technologies = {
 		categories = {
 			artillery
 		}
+		
+		ai_will_do = { #EAI
+			factor = 10
 
-		ai_will_do = {
-			factor = 2
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1942.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1941.6.1 } }
 
-			modifier = {
-				factor = 2
-				date > "1941.1.9"
-			}
+			#WEIGHT
+			modifier = { factor = 4 EAI_artillery_tech_focus = yes }
 
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1942.1.6"
-			}
+			modifier = { add = 90 date > 1943.1.1 }
 		}
 	}
 
@@ -401,24 +369,17 @@ technologies = {
 		categories = {
 			artillery
 		}
+		
+		ai_will_do = { #EAI
+			factor = 10
 
-		ai_will_do = {
-			factor = 2
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1943.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1942.6.1 } }
 
-			modifier = {
-				factor = 2
-				date > "1943.1.6"
-			}
+			#WEIGHT
+			modifier = { factor = 4 EAI_artillery_tech_focus = yes }
 
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1945.1.1"
-			}
+			modifier = { add = 90 date > 1944.1.1 }
 		}
 	}
 
@@ -470,14 +431,17 @@ technologies = {
 			name = artillery_folder
 			position = { x = 3 y = 6 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 10
 
-		ai_will_do = {
-			factor = 1
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } }
 
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_rart_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 
 		categories = {
@@ -513,14 +477,17 @@ technologies = {
 			name = artillery_folder
 			position = { x = 3 y = 8 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 10
 
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1941.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1940.6.1 } }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_rart_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 
 		categories = {
@@ -556,14 +523,17 @@ technologies = {
 			name = artillery_folder
 			position = { x = 3 y = 10 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
 
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1942.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1941.6.1 } }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_rart_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 
 		categories = {
@@ -590,14 +560,17 @@ technologies = {
 			name = artillery_folder
 			position = { x = 3 y = 12 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
 
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1943.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1942.6.1 } }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_rart_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 
 		categories = {
@@ -636,37 +609,19 @@ technologies = {
 			name = artillery_folder
 			position = { x = -3 y = 2 }
 		}
-
-		ai_will_do = {
+		
+		ai_will_do = { #EAI
 			factor = 1
 
-			modifier = {
-				factor = 0.5
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1937.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1936.6.1 } }
 
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
-			}
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
+			#WEIGHT
+			modifier = { factor = 50 date > 1937.6.1 }
+			modifier = { factor = 4 date > 1939.6.1 }
 
-			modifier = {
-				factor = 5
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_aa_tech_focus = yes } }
 		}
 
 		categories = {
@@ -702,22 +657,15 @@ technologies = {
 			name = artillery_folder
 			position = { x = -3 y = 4 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
+			
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1939.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1938.6.1 } }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_aa_tech_focus = yes } }
 		}
 
 		categories = {
@@ -753,22 +701,15 @@ technologies = {
 			name = artillery_folder
 			position = { x = -3 y = 6 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
+			
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } }
 
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_aa_tech_focus = yes } }
 		}
 
 		categories = {
@@ -808,22 +749,15 @@ technologies = {
 			name = artillery_folder
 			position = { x = -3 y = 8 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
+			
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1941.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1940.6.1 } }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_aa_tech_focus = yes } }
 		}
 
 		categories = {
@@ -859,22 +793,15 @@ technologies = {
 			name = artillery_folder
 			position = { x = -3 y = 10 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
+			
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1942.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1941.6.1 } }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_aa_tech_focus = yes } }
 		}
 
 		categories = {
@@ -906,22 +833,15 @@ technologies = {
 			name = artillery_folder
 			position = { x = -3 y = 12 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
+			
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1943.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1942.6.1 } }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = ENG
-					tag = USA
-				}
-				OR = {
-					has_war_with = JAP
-					has_war_with = USA
-					has_war_with = ENG
-				}
-				factor = 5
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_aa_tech_focus = yes } }
 		}
 
 		categories = {
@@ -952,58 +872,22 @@ technologies = {
 			name = artillery_folder
 			position = { x = 7 y = 2 }
 		}
-
-		ai_will_do = {
+		
+		ai_will_do = { #EAI
 			factor = 1
 
-			modifier = {
-				factor = 0.2
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1937.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1936.6.1 } }
 
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
+			#WEIGHT
+			modifier = {
+				add = 150
+				OR = { 
+					date > 1937.6.1
+					AND = { is_major = yes any_enemy_country = { is_major = yes } } 
 				}
 			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.1"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 30
-						}
-					}
-				}
-			}
+			modifier = { factor = 2 check_variable = { EAI_max_armor_seen > 0 } }
 		}
 
 		categories = {
@@ -1064,41 +948,21 @@ technologies = {
 			name = artillery_folder
 			position = { x = 7 y = 4 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 30
-						}
-					}
-				}
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1939.1.6"
-			}
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1939.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1938.6.1 } NOT = { EAI_anti_tank_tech_focus = yes } }
+			modifier = { factor = 0 OR = { AND = { date < 1938.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1937.6.1 } OR = { EAI_anti_tank_tech_focus = yes } }
 
-			modifier = {
-				factor = 5
-				date > "1940.1.1"
-			}
+			#WEIGHT
+			modifier = { factor = 4 EAI_anti_tank_tech_focus = yes }
+			modifier = { factor = 1.5 EAI_anti_tank_tech_focus_2 = yes }
+
+			modifier = { add = 70 date > 1940.1.1 }
 		}
-
+		
 		categories = {
 			artillery
 			cat_anti_tank
@@ -1132,50 +996,21 @@ technologies = {
 			name = artillery_folder
 			position = { x = 7 y = 6 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
 
-		ai_will_do = {
-			factor = 1
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } NOT = { EAI_anti_tank_tech_focus = yes } }
+			modifier = { factor = 0 OR = { AND = { date < 1939.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1938.6.1 } OR = { EAI_anti_tank_tech_focus = yes } }
 
-			modifier = {
-				factor = 2
-				date > "1939.1.9"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1940.1.1"
-			}
-			modifier = {
-				tag = USA
-				has_War = no
-				factor = 0.5 #this tank nonsense will never catch on
-			}
-			modifier = {
-				factor = 5
-				date > "1940.1.6"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 32
-						}
-					}
-				}
-			}
+			#WEIGHT
+			modifier = { factor = 4 EAI_anti_tank_tech_focus = yes }
+			modifier = { factor = 1.5 EAI_anti_tank_tech_focus_2 = yes }
+
+			modifier = { add = 70 date > 1941.1.1 }
 		}
-
+		
 		categories = {
 			artillery
 			cat_anti_tank
@@ -1232,44 +1067,19 @@ technologies = {
 			name = artillery_folder
 			position = { x = 7 y = 8 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
 
-		ai_will_do = {
-			factor = 1
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1941.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1940.6.1 } NOT = { EAI_anti_tank_tech_focus = yes } }
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } OR = { EAI_anti_tank_tech_focus = yes } }
 
-			modifier = {
-				factor = 2
-				date > "1941.1.6"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
+			#WEIGHT
+			modifier = { factor = 4 EAI_anti_tank_tech_focus = yes }
+			modifier = { factor = 1.5 EAI_anti_tank_tech_focus_2 = yes }
 
-			modifier = {
-				factor = 5
-				date > "1943.1.1"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 32
-						}
-					}
-				}
-			}
+			modifier = { add = 70 date > 1942.1.1 }
 		}
 
 		categories = {
@@ -1326,41 +1136,21 @@ technologies = {
 			name = artillery_folder
 			position = { x = 7 y = 10 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
 
-		ai_will_do = {
-			factor = 1
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1942.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1941.6.1 } NOT = { EAI_anti_tank_tech_focus = yes } }
+			modifier = { factor = 0 OR = { AND = { date < 1941.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1940.6.1 } OR = { EAI_anti_tank_tech_focus = yes } }
 
-			modifier = {
-				factor = 2
-				date > "1942.1.6"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 5
-				date > "1943.1.1"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 35
-						}
-					}
-				}
-			}
+			#WEIGHT
+			modifier = { factor = 4 EAI_anti_tank_tech_focus = yes }
+			modifier = { factor = 1.5 EAI_anti_tank_tech_focus_2 = yes }
+
+			modifier = { add = 70 date > 1943.1.1 }
 		}
-
+		
 		categories = {
 			artillery
 			cat_anti_tank
@@ -1386,44 +1176,19 @@ technologies = {
 			name = artillery_folder
 			position = { x = 7 y = 12 }
 		}
+		
+		ai_will_do = { #EAI
+			factor = 50
 
-		ai_will_do = {
-			factor = 1
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1943.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1942.6.1 } NOT = { EAI_anti_tank_tech_focus = yes } }
+			modifier = { factor = 0 OR = { AND = { date < 1942.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1941.6.1 } OR = { EAI_anti_tank_tech_focus = yes } }
 
-			modifier = {
-				factor = 2
-				date > "1942.1.9"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
+			#WEIGHT
+			modifier = { factor = 4 EAI_anti_tank_tech_focus = yes }
+			modifier = { factor = 1.5 EAI_anti_tank_tech_focus_2 = yes }
 
-			modifier = {
-				factor = 5
-				date > "1943.1.6"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 35
-						}
-					}
-				}
-			}
+			modifier = { add = 70 date > 1944.1.1 }
 		}
 
 		categories = {

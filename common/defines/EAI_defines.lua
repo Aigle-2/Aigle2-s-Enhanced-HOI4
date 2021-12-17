@@ -50,6 +50,9 @@ NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.1 -- AA penalty 
 NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.05
 NDefines.NNavy.TRAINING_EXPERIENCE_FACTOR = 0.1 -- Amount of exp each ship gain every 24h while training (before modifiers)
 
+NDefines.NProduction.MIN_FIELD_TO_TRAINING_MANPOWER_RATIO = 0.2
+NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 30000		
+
 
 -- EAI Defines 
 
