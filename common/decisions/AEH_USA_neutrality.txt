@@ -1,0 +1,58 @@
+AEH_USA_neutrality_category = {
+	AEH_limited_philippines_occupation = {
+		icon = generic_political_discourse
+		available = {
+			has_war = no
+			PHI = {
+				has_war = no
+				is_subject_of = USA
+			}
+			is_ai = no
+			OR = {
+				divisions_in_state = {
+					size > 1
+					state = 623
+				}
+				divisions_in_state = {
+					size > 1
+					state = 624
+				}
+				divisions_in_state = {
+					size > 1
+					state = 625
+				}
+				divisions_in_state = {
+					size > 1
+					state = 626
+				}
+				divisions_in_state = {
+					size > 1
+					state = 627
+				}
+				divisions_in_state = {
+					size > 1
+					state = 628
+				}
+				divisions_in_state = {
+					size > 1
+					state = 327
+				}
+			}
+		}
+		activation = {
+			tag = USA
+		}
+		is_good = yes
+		days_mission_timeout = 1825
+		timeout_effect = {
+			# What happens when we fail the mission?
+			add_political_power = 25
+		}
+		complete_effect = {
+			# What happens when we activate the mission i.e. mission success?
+			add_war_support = -0.10
+			add_stability = -0.20
+			add_political_power = -100
+		}
+	}
+}
