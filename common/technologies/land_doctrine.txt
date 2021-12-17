@@ -22,7 +22,7 @@ technologies = {
 		army_speed_factor = 0.10
 		enable_tactic = tactic_unexpected_thrust
 		org_loss_when_moving = -0.1
-		minimum_training_level = 0.8
+		minimum_training_level = 0.6
 
 		doctrine = yes	
 		research_cost = 2.25
@@ -701,7 +701,7 @@ technologies = {
 		category_front_line = {
 			 soft_attack = 0.1
 		}
-		minimum_training_level = 0.8
+		minimum_training_level = 0.6
 		supply_consumption_factor = 0.05
 		enable_tactic = tactic_barrage
 			
@@ -1321,7 +1321,7 @@ technologies = {
 	
 		max_dig_in = 10
 		dig_in_speed_factor = 0.25 #25% bonus
-		minimum_training_level = 0.6
+		minimum_training_level = 0.4
 		
 		path = {
 			leads_to_tech = grand_battle_plan 
@@ -1904,7 +1904,7 @@ technologies = {
 		}
 		
 		land_reinforce_rate = 0.02
-		minimum_training_level = 0.4	
+		minimum_training_level = 0.2
 
 		doctrine = yes	
 		research_cost = 2.25
