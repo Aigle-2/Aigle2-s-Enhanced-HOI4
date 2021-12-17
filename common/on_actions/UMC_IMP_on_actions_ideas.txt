@@ -18,7 +18,7 @@ on_actions = {
 			}
 			ENG = {
 				add_ideas = {
-					army_situation_b1
+					army_situation_g1
 					industrial_situation_n0
 					designer_eng
 				}

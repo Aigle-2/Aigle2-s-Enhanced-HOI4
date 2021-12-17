@@ -27,13 +27,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 499
+			has_army_experience > 249
 		}
 		custom_cost_text = UMC_army_xp_more_than_500
 
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -500
+				army_experience = -250
 			}
         }
 		
@@ -95,13 +95,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 449
+			has_army_experience > 224
 		}
 		custom_cost_text = UMC_army_xp_more_than_450
 		
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -450
+				army_experience = -225
 			}
         }
 		
@@ -163,13 +163,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 399
+			has_army_experience > 199
 		}
 		custom_cost_text = UMC_army_xp_more_than_400
 		
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -400
+				army_experience = -200
 			}
         }
 		
@@ -229,13 +229,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 349
+			has_army_experience > 174
 		}
 		custom_cost_text = UMC_army_xp_more_than_350
 		
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -350
+				army_experience = -175
 			}
         }
 		
@@ -295,13 +295,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 299
+			has_army_experience > 149
 		}
 		custom_cost_text = UMC_army_xp_more_than_300
 		
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -300
+				army_experience = -150
 			}
         }
 		
@@ -361,13 +361,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 249
+			has_army_experience > 124
 		}
 		custom_cost_text = UMC_army_xp_more_than_250
 		
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -250
+				army_experience = -125
 			}
         }
 		
@@ -427,13 +427,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 199
+			has_army_experience > 99
 		}
 		custom_cost_text = UMC_army_xp_more_than_200
 		
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -200
+				army_experience = -100
 			}
         }
 		
@@ -493,13 +493,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 149
+			has_army_experience > 74
 		}
 		custom_cost_text = UMC_army_xp_more_than_150
 		
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -150
+				army_experience = -75
 			}
         }
 		
@@ -559,13 +559,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 99
+			has_army_experience > 49
 		}
 		custom_cost_text = UMC_army_xp_more_than_100
 		
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -100
+				army_experience = -50
 			}
         }
 		
@@ -625,13 +625,13 @@ political_actions = {
         days_remove = 120
 		
 		custom_cost_trigger = {
-			has_army_experience > 49
+			has_army_experience > 24
 		}
 		custom_cost_text = UMC_army_xp_more_than_50
 		
 		complete_effect = {
 			hidden_effect = {
-				army_experience = -50
+				army_experience = -25
 			}
         }
 		
