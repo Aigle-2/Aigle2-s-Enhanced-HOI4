@@ -319,7 +319,7 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.15
 			
-				stability_weekly = -0.001
+				stability_weekly = -0.0005
 				war_support_weekly = -0.001
 			
 				production_speed_arms_factory_factor = 0.2
@@ -437,13 +437,13 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = -0.25
-				stability_weekly = -0.002
-				war_support_weekly = -0.003
+				stability_weekly = -0.001
+				war_support_weekly = -0.002
 			
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor = -0.3
 				
-				conscription_factor = -0.1
+				conscription = -0.03
 				
 				consumer_goods_factor = 0.1
 			}
