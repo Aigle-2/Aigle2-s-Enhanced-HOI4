@@ -53,6 +53,8 @@ NDefines.NNavy.TRAINING_EXPERIENCE_FACTOR = 0.1 -- Amount of exp each ship gain 
 NDefines.NProduction.MIN_FIELD_TO_TRAINING_MANPOWER_RATIO = 0.2
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 30000		
 
+NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.2 	--Higher value = more shot down planes / was 0.1
+
 
 -- EAI Defines 
 
