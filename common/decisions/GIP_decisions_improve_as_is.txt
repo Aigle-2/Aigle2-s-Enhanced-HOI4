@@ -29,7 +29,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 249
 		}
-		custom_cost_text = UMC_army_xp_more_than_500
+		custom_cost_text = UMC_army_xp_more_than_250
 
 		complete_effect = {
 			hidden_effect = {
@@ -97,7 +97,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 224
 		}
-		custom_cost_text = UMC_army_xp_more_than_450
+		custom_cost_text = UMC_army_xp_more_than_225
 		
 		complete_effect = {
 			hidden_effect = {
@@ -165,7 +165,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 199
 		}
-		custom_cost_text = UMC_army_xp_more_than_400
+		custom_cost_text = UMC_army_xp_more_than_200
 		
 		complete_effect = {
 			hidden_effect = {
@@ -231,7 +231,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 174
 		}
-		custom_cost_text = UMC_army_xp_more_than_350
+		custom_cost_text = UMC_army_xp_more_than_175
 		
 		complete_effect = {
 			hidden_effect = {
@@ -297,7 +297,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 149
 		}
-		custom_cost_text = UMC_army_xp_more_than_300
+		custom_cost_text = UMC_army_xp_more_than_150
 		
 		complete_effect = {
 			hidden_effect = {
@@ -363,7 +363,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 124
 		}
-		custom_cost_text = UMC_army_xp_more_than_250
+		custom_cost_text = UMC_army_xp_more_than_125
 		
 		complete_effect = {
 			hidden_effect = {
@@ -429,7 +429,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 99
 		}
-		custom_cost_text = UMC_army_xp_more_than_200
+		custom_cost_text = UMC_army_xp_more_than_100
 		
 		complete_effect = {
 			hidden_effect = {
@@ -495,7 +495,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 74
 		}
-		custom_cost_text = UMC_army_xp_more_than_150
+		custom_cost_text = UMC_army_xp_more_than_75
 		
 		complete_effect = {
 			hidden_effect = {
@@ -561,7 +561,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 49
 		}
-		custom_cost_text = UMC_army_xp_more_than_100
+		custom_cost_text = UMC_army_xp_more_than_50
 		
 		complete_effect = {
 			hidden_effect = {
@@ -627,7 +627,7 @@ political_actions = {
 		custom_cost_trigger = {
 			has_army_experience > 24
 		}
-		custom_cost_text = UMC_army_xp_more_than_50
+		custom_cost_text = UMC_army_xp_more_than_25
 		
 		complete_effect = {
 			hidden_effect = {

@@ -1,0 +1,382 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_ita
+							tag = ITA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_ita
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_eng
+							tag = ENG
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_eng
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_fra
+							tag = FRA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_fra
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_ger
+							tag = GER
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_ger
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_jap
+							tag = JAP
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_jap
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_sov
+							tag = SOV
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_sov
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_usa
+							tag = USA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_usa
+				}
+			}
+		}
+	}
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_ita
+							tag = ITA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_ita
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_eng
+							tag = ENG
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_eng
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_fra
+							tag = FRA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_fra
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_ger
+							tag = GER
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_ger
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_jap
+							tag = JAP
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_jap
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_sov
+							tag = SOV
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_sov
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_usa
+							tag = USA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_usa
+				}
+			}
+		}
+	}
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_ita
+							tag = ITA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_ita
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_eng
+							tag = ENG
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_eng
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_fra
+							tag = FRA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_fra
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_ger
+							tag = GER
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_ger
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_jap
+							tag = JAP
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_jap
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_sov
+							tag = SOV
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_sov
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_usa
+							tag = USA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_usa
+				}
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_ita
+							tag = ITA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_ita
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_eng
+							tag = ENG
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_eng
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_fra
+							tag = FRA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_fra
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_ger
+							tag = GER
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_ger
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_jap
+							tag = JAP
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_jap
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_sov
+							tag = SOV
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_sov
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_idea = designer_usa
+							tag = USA
+						}
+					}
+				}
+				FROM = {
+					set_country_flag = AEH_designer_usa
+				}
+			}
+		}
+	}
+}
