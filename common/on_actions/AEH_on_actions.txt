@@ -380,26 +380,28 @@ on_actions = {
 		}
 	}
 	on_startup = {
-		USA = {
-			set_country_flag = AEH_designer_usa
-		}
-		ITA = {
-			set_country_flag = AEH_designer_ita
-		}
-		GER = {
-			set_country_flag = AEH_designer_ger
-		}
-		ENG = {
-			set_country_flag = AEH_designer_eng
-		}
-		JAP = {
-			set_country_flag = AEH_designer_jap
-		}
-		FRA = {
-			set_country_flag = AEH_designer_fra
-		}
-		SOV = {
-			set_country_flag = AEH_designer_sov
+		effect = {
+			USA = {
+				set_country_flag = AEH_designer_usa
+			}
+			ITA = {
+				set_country_flag = AEH_designer_ita
+			}
+			GER = {
+				set_country_flag = AEH_designer_ger
+			}
+			ENG = {
+				set_country_flag = AEH_designer_eng
+			}
+			JAP = {
+				set_country_flag = AEH_designer_jap
+			}
+			FRA = {
+				set_country_flag = AEH_designer_fra
+			}
+			SOV = {
+				set_country_flag = AEH_designer_sov
+			}
 		}
 	}
 }
