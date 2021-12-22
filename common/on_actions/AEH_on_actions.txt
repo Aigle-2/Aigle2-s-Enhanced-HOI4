@@ -289,94 +289,340 @@ on_actions = {
 			if = {
 				limit = {
 					ROOT = {
-						OR = {
-							has_idea = designer_ita
-							tag = ITA
-						}
+						has_country_flag = color_changed
 					}
 				}
-				FROM = {
-					set_country_flag = AEH_designer_ita
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						OR = {
-							has_idea = designer_eng
-							tag = ENG
+				clr_country_flag = color_changed
+				if = {
+					limit = {
+						ROOT = {
+							tag = INS
 						}
 					}
-				}
-				FROM = {
-					set_country_flag = AEH_designer_eng
-				}
-			}
-			if = {
-				limit = {
 					ROOT = {
-						OR = {
-							has_idea = designer_fra
-							tag = FRA
-						}
+						drop_cosmetic_tag = yes
 					}
 				}
-				FROM = {
-					set_country_flag = AEH_designer_fra
-				}
-			}
-			if = {
-				limit = {
+				if = {
+					limit = {
+						ROOT = {
+							tag = MAL
+						}
+					}
 					ROOT = {
-						OR = {
-							has_idea = designer_ger
+						drop_cosmetic_tag = yes
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							tag = CAN
+						}
+					}
+					ROOT = {
+						drop_cosmetic_tag = yes
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							tag = RAJ
+						}
+					}
+					ROOT = {
+						drop_cosmetic_tag = yes
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
 							tag = GER
 						}
 					}
-				}
-				FROM = {
-					set_country_flag = AEH_designer_ger
-				}
-			}
-			if = {
-				limit = {
 					ROOT = {
-						OR = {
-							has_idea = designer_jap
-							tag = JAP
-						}
+						set_cosmetic_tag = GER_PUPPET
+						set_country_flag = color_changed
 					}
 				}
-				FROM = {
-					set_country_flag = AEH_designer_jap
-				}
-			}
-			if = {
-				limit = {
-					ROOT = {
-						OR = {
-							has_idea = designer_sov
+				if = {
+					limit = {
+						FROM = {
 							tag = SOV
 						}
 					}
-				}
-				FROM = {
-					set_country_flag = AEH_designer_sov
-				}
-			}
-			if = {
-				limit = {
 					ROOT = {
-						OR = {
-							has_idea = designer_usa
+						set_cosmetic_tag = SOV_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = AUS
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = AUS_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = JAP
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = JAP_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = ENG
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = ENG_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
 							tag = USA
 						}
 					}
+					ROOT = {
+						set_cosmetic_tag = USA_PUPPET
+						set_country_flag = color_changed
+					}
 				}
-				FROM = {
-					set_country_flag = AEH_designer_usa
+				if = {
+					limit = {
+						FROM = {
+							tag = FRA
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = FRA_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = POL
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = POL_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = HUN
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = HUN_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = ITA
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = ITA_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = AST
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = AST_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = RUS
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = RUS_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = SPR
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = SPR_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = ROM
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = ROM_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = CHI
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = CHI_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							OR = {
+								tag = PRC
+								has_cosmetic_tag = CHI_warlord_PRC
+							}
+						}
+					}
+					ROOT = {
+						set_cosmetic_tag = PRC_PUPPET
+						set_country_flag = color_changed
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								has_idea = designer_ita
+								tag = ITA
+							}
+						}
+					}
+					FROM = {
+						set_country_flag = AEH_designer_ita
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								has_idea = designer_eng
+								tag = ENG
+							}
+						}
+					}
+					FROM = {
+						set_country_flag = AEH_designer_eng
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								has_idea = designer_fra
+								tag = FRA
+							}
+						}
+					}
+					FROM = {
+						set_country_flag = AEH_designer_fra
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								has_idea = designer_ger
+								tag = GER
+							}
+						}
+					}
+					FROM = {
+						set_country_flag = AEH_designer_ger
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								has_idea = designer_jap
+								tag = JAP
+							}
+						}
+					}
+					FROM = {
+						set_country_flag = AEH_designer_jap
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								has_idea = designer_sov
+								tag = SOV
+							}
+						}
+					}
+					FROM = {
+						set_country_flag = AEH_designer_sov
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								has_idea = designer_usa
+								tag = USA
+							}
+						}
+					}
+					FROM = {
+						set_country_flag = AEH_designer_usa
+					}
 				}
 			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			FROM = {
+				set_country_flag = {
+					flag = AEH_frontline_movement
+					days = 7
+					value = 1
+				}
+			}
+			ROOT = {
+				set_country_flag = {
+					flag = AEH_frontline_movement
+					days = 7
+					value = 1
+				}
+			}
+
 		}
 	}
 	on_startup = {

@@ -33,7 +33,7 @@ upgrades = {
 		
 		cost = air
 
-		air_range = 0.8
+		air_range = 0.07
 		reliability = -0.1
 	}
 	plane_engine_upgrade = {

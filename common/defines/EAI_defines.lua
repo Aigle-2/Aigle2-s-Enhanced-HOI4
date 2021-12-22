@@ -53,7 +53,7 @@ NDefines.NNavy.TRAINING_MAX_DAILY_COUNTRY_EXP = 0.3
 NDefines.NProduction.MIN_FIELD_TO_TRAINING_MANPOWER_RATIO = 0.2
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 30000		
 
-NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.2 	--Higher value = more shot down planes / was 0.1
+NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.3 	--Higher value = more shot down planes / was 0.1
 
 
 -- EAI Defines 
