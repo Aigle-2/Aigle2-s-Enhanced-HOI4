@@ -689,12 +689,12 @@ political_actions = {
 			amount_research_slots > 4
         }
 
-        days_remove = 120
-
+        days_remove = 90
+		cost = 150
 		modifier = {
 			stability_weekly = 0.001 
 			
-			production_speed_buildings_factor = -0.5
+			# production_speed_buildings_factor = -0.5
 			
 			industrial_capacity_factory = -0.25
 			industrial_capacity_dockyard = -0.25
@@ -743,12 +743,13 @@ political_actions = {
 			amount_research_slots > 3
         }
 
-        days_remove = 120
+		days_remove = 90
+		cost = 150
 
 		modifier = {
 			stability_weekly = 0.001 
 			
-			production_speed_buildings_factor = -0.5
+			# production_speed_buildings_factor = -0.5
 			
 			industrial_capacity_factory = -0.25
 			industrial_capacity_dockyard = -0.25
@@ -797,12 +798,13 @@ political_actions = {
 			amount_research_slots > 3
         }
 
-        days_remove = 120
+		days_remove = 90
+		cost = 150
 
 		modifier = {
 			stability_weekly = 0.001 
 			
-			production_speed_buildings_factor = -0.5
+			# production_speed_buildings_factor = -0.5
 			
 			industrial_capacity_factory = -0.25
 			industrial_capacity_dockyard = -0.25
@@ -849,12 +851,13 @@ political_actions = {
 			}
         }
 
-        days_remove = 120
+		days_remove = 90
+		cost = 150
 
 		modifier = {
 			stability_weekly = 0.001 
 			
-			production_speed_buildings_factor = -0.5
+			# production_speed_buildings_factor = -0.5
 			
 			industrial_capacity_factory = -0.25
 			industrial_capacity_dockyard = -0.25
@@ -901,12 +904,13 @@ political_actions = {
 			}
         }
 
-        days_remove = 120
+		days_remove = 90
+		cost = 150
 
 		modifier = {
 			stability_weekly = 0.001 
 			
-			production_speed_buildings_factor = -0.5
+			# production_speed_buildings_factor = -0.5
 			
 			industrial_capacity_factory = -0.25
 			industrial_capacity_dockyard = -0.25
@@ -953,12 +957,13 @@ political_actions = {
 			}
         }
 
-        days_remove = 120
+		days_remove = 90
+		cost = 150
 
 		modifier = {
 			stability_weekly = 0.001 
 			
-			production_speed_buildings_factor = -0.5
+			# production_speed_buildings_factor = -0.5
 			
 			industrial_capacity_factory = -0.25
 			industrial_capacity_dockyard = -0.25

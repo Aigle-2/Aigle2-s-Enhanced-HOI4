@@ -78,8 +78,9 @@ AEH_peace_category = {
 			has_war = yes
 		}
 		allowed = {
-			AEH_is_stalemate = yes
-			has_war = yes
+			always = yes
+			
+			# has_war = yes
 		}
 		complete_effect = {
 			AEH_return_stalemate = yes
