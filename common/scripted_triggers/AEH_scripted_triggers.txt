@@ -3,3 +3,36 @@ AEH_can_use_army_system = {
 		tag = SOV
 	}
 }
+
+AEH_is_stalemate = {
+	#test if there is a frontline in enemy territory
+	any_country = {
+		AEH_is_fighting_in_alliance = yes
+		all_enemy_country = {
+			NOT = {
+				AEH_has_frontline = yes
+			}
+		}
+	}
+}
+
+AEH_is_fighting_in_alliance = {
+	OR = {
+		is_ally_with = ROOT
+		tag = ROOT
+	}
+	has_war = yes
+}
+
+AEH_has_frontline = {
+	OR = {
+		has_country_flag = AEH_frontline_movement
+		any_controlled_state = {
+			any_neighbor_state = {
+				CONTROLLER = {
+					has_war_with = PREV.PREV.PREV
+				}
+			}
+		}
+	}
+}

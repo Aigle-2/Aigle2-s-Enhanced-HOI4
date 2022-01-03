@@ -1,0 +1,89 @@
+AEH_peace_category = {
+	AEH_stalemate = {
+		icon = generic_political_actions
+		activation = {
+			has_war = yes
+			is_faction_leader = yes
+			AEH_is_stalemate = yes
+		}
+		available = {
+			has_war = yes
+			is_faction_leader = yes
+			hidden_trigger = {
+				NOT = {
+					AEH_is_stalemate = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AEH_NOT_is_stalemate_tt
+			}
+		}
+		is_good = no
+		days_mission_timeout = 365		#545
+		timeout_effect = {
+			custom_effect_tooltip = AEH_is_stalemate_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						is_ally_with = PREV
+					}
+					every_enemy_country = {
+						PREV = {
+							every_controlled_state = {
+								limit = {
+									OWNER = {
+										tag = ROOT
+									}
+								}
+								PREV = {
+									transfer_state = PREV
+								}
+							}
+						}
+						white_peace = PREV
+						set_truce = {
+							target = PREV
+							days = 365
+						}
+					}
+				}
+				every_enemy_country = {
+					PREV = {
+						every_controlled_state = {
+							limit = {
+								OWNER = {
+									tag = ROOT
+								}
+							}
+							PREV = {
+								transfer_state = PREV
+							}
+						}
+					}
+					white_peace = PREV
+					set_truce = {
+						target = PREV
+						days = 365
+					}
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+	AEH_debug = {
+		icon = generic_political_actions
+		visible = {
+			is_debug = yes
+			has_war = yes
+		}
+		allowed = {
+			always = yes
+			
+			# has_war = yes
+		}
+		complete_effect = {
+			AEH_return_stalemate = yes
+		}
+	}
+}

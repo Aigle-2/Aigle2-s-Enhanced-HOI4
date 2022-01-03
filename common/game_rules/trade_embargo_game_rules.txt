@@ -1,0 +1,15 @@
+allow_ai_embargo = {
+	name = "ALLOW_AI_EMBARGO"
+	group = "RULE_GROUP_EMBARGO_POLICY"
+	icon = ""
+	option = {
+		name = "DONT_ALLOW_AI_EMBARGO"
+		text = "DONT_ALLOW_AI_EMBARGO_TEXT"
+		allow_achievements = no
+	}
+	default = {
+		name = "ALLOW_AI_EMBARGO"
+		text = "ALLOW_AI_EMBARGO_TEXT"
+		allow_achievements = no
+	}
+}

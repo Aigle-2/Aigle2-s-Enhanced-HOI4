@@ -1,0 +1,29 @@
+AEH_return_stalemate = {
+	#test if there is a frontline in enemy territory
+	every_country = {
+		limit = {
+			AEH_is_fighting_in_alliance = yes
+		}
+		every_enemy_country = {
+			limit = {
+				AEH_has_frontline = yes
+			}
+			log = "[?THIS.GetName] Enemy"
+			AEH_has_frontline_log = yes
+		}
+	}
+	log = "DONE"
+}
+
+AEH_has_frontline_log = {
+	every_controlled_state = {
+		every_neighbor_state = {
+			limit = {
+				CONTROLLER = {
+					has_war_with = PREV.PREV.PREV
+				}
+			}
+			log = "[?THIS.GetName] State Frontline"
+		}
+	}
+}

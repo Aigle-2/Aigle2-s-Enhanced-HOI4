@@ -365,8 +365,8 @@ ideas = {
 			
 
 			modifier = {
-				army_core_defence_factor = 0.2
-				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
 			}
 		}
 		USA_armed_forces_desegregation = {
@@ -784,7 +784,7 @@ ideas = {
 			
 			equipment_bonus = {
 				strat_bomber_equipment = {
-					air_range = 0.2 instant = yes
+					air_range = 0.1 instant = yes
 				}	
 			}
 		}

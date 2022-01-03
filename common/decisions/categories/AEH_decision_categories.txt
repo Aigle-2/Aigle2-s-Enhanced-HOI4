@@ -10,3 +10,16 @@ AEH_USA_neutrality_category = {
 		tag = USA
 	}
 }
+
+AEH_peace_category = {
+	icon = generic_political_actions
+	
+	priority = 1000
+
+	allowed = {
+		always = yes
+	}
+	visible = {
+		always = yes
+	}
+}
