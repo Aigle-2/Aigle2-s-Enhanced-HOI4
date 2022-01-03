@@ -2,6 +2,7 @@ ideas = {
 
 	mobilization_laws = { 
 		law = yes
+		use_list_view = yes
 
 		disarmed_nation = {
 			cost = 150
@@ -302,6 +303,82 @@ ideas = {
 					tag = CHI
 					has_manpower < 500000
 				}
+			}
+		}
+
+		AEH_mandatory_army_service = {
+			
+			available = {
+				has_idea = AEH_national_mobilization
+				has_war = no
+			}
+			
+			cost = 0
+			removal_cost = -1
+			level = 4
+			
+			modifier = {
+				political_power_gain = -0.15
+
+			#	industrial_capacity_factory = -0.05
+			#	industrial_capacity_dockyard = -0.05
+				
+				production_speed_buildings_factor = -0.05
+				industry_repair_factor = -0.05
+				
+				conscription = 0.1
+
+				army_attack_factor = -0.75
+				army_defence_factor = -0.75
+				army_org_factor = -0.75
+				
+				training_time_factor = -0.95
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 1000
+			}
+		}
+
+		AEH_national_mobilization = {
+			
+			available = {
+				has_idea = AEH_mandatory_army_service
+				has_war = yes
+			}
+			
+			cost = 0
+			removal_cost = -1
+			level = 3
+			
+			modifier = {
+				political_power_gain = -0.25
+
+				stability_weekly = -0.001
+				war_support_weekly = -0.002
+				
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				
+				production_speed_buildings_factor = -0.15
+				industry_repair_factor = -0.1
+				
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				
+				army_org_factor = -0.05
+				
+				training_time_factor = -0.95
+				
+				conscription = 0.1
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 1000
 			}
 		}
 		

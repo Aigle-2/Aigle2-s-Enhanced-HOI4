@@ -86,8 +86,11 @@ EAI_can_upgrade_manpower_law = {
 	else_if = { limit = { has_idea = volunteer_only } EAI_can_take_limited_conscription = yes }
 	else_if = { limit = { has_idea = limited_conscription } EAI_can_take_extensive_conscription = yes }
 	else_if = { limit = { has_idea = extensive_conscription } EAI_can_take_service_by_requirement = yes }
+	else_if = { limit = { has_idea = AEH_mandatory_army_service } EAI_can_take_AEH_national_mobilization = yes }
+	else_if = { limit = { has_idea = AEH_national_mobilization } EAI_can_take_all_adults_serve = yes }
 	else_if = { limit = { has_idea = service_by_requirement } EAI_can_take_all_adults_serve = yes }
 	else_if = { limit = { has_idea = all_adults_serve } EAI_can_take_scraping_the_barrel = yes }
+	else_if = { limit = { has_idea = AEH_national_mobilization } EAI_can_take_AEH_mandatory_army_service = yes }
 }
 EAI_can_upgrade_trade_law = {
 	OR = {
@@ -633,6 +636,19 @@ EAI_can_take_extensive_conscription = {
 		NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 	}
 }
+
+EAI_can_take_AEH_mandatory_army_service = {
+	########## AI LOGIC
+
+	has_idea = AEH_national_mobilization
+	has_war = no
+
+	########## LAW REQUIREMENTS
+
+	NOT = { has_idea = AEH_mandatory_army_service }
+
+}
+
 EAI_can_take_service_by_requirement = {
 	########## AI LOGIC
 
@@ -659,6 +675,8 @@ EAI_can_take_service_by_requirement = {
 	########## LAW REQUIREMENTS
 
 	NOT = { has_idea = service_by_requirement }
+	NOT = { has_idea = AEH_mandatory_army_service }
+	NOT = { has_idea = AEH_national_mobilization }
 
 	### copy from idea file
 	
@@ -725,10 +743,26 @@ EAI_can_take_service_by_requirement = {
 		NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 	}
 }
-EAI_can_take_all_adults_serve = {
+
+EAI_can_take_AEH_national_mobilization = {
 	########## AI LOGIC
 
-	has_idea = service_by_requirement
+	has_idea = AEH_mandatory_army_service
+	has_war = yes
+
+	########## LAW REQUIREMENTS
+
+	NOT = { has_idea = AEH_national_mobilization }
+
+}
+
+EAI_can_take_all_adults_serve = {
+	########## AI LOGIC
+	OR = {
+		has_idea = service_by_requirement
+		has_idea = AEH_national_mobilization
+	}
+	
 
 	NOT = { has_tech = modern_blitzkrieg } # mobile warfare countries should get manpower techs before getting this law
 

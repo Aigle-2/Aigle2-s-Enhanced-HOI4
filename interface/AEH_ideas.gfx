@@ -3,4 +3,12 @@ spriteTypes = {
 		name = "GFX_idea_BEL_belgian_stubbornness"
 		texturefile = "gfx/interface/ideas/belgian_stubbornness.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_AEH_mandatory_army_service"
+		texturefile = "gfx/interface/ideas/idea_extensive_conscription.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AEH_national_mobilization"
+		texturefile = "gfx/interface/ideas/idea_all_adults_serve.dds"
+	}
 }
