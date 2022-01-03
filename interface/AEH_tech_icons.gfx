@@ -9,6 +9,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_high_velocity_cannon_3.dds"
 		legacy_lazy_load = no
 	}
+	SpriteType = {
+		name = "GFX_semi_automatic_rifle_medium"
+		texturefile = "gfx/interface/technologies/semi_automatic_rifle.dds"
+	}
 	# spriteType = {
 	# 	name = "GFX_ENG_basic_heavy_tank_chassis_medium"
 	# 	texturefile = "gfx/interface/technologies/ENG_heavy_tank_chassis_1.dds"

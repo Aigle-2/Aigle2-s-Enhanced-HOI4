@@ -160,3 +160,7 @@
 
   AEH_NOT_is_stalemate_tt:0 "§Y Stalemate will end if a new frontlines appears in an enemy state§!."
   AEH_is_stalemate_tt:0 "A peace will be signed between our alliances, where everyone will conserve their current gains. The truce will last for 1 year."
+
+  semi_automatic_rifle:0 "Semi-Automatic Rifles"
+  semi_automatic_rifle_desc:0 "Investing into semi-automatic rifles will increase the firepower of our soldiers, at the expense of the increased production cost."
+  AEH_semi_automatic_rifles:0 "Semi-Automatic Rifles"
