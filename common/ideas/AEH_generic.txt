@@ -18,6 +18,9 @@ ideas = {
 					reliability = -0.1
 				}
 			}
+			modifier = {
+				supply_consumption_factor = 0.05
+			}
 		}
 	}
 }
