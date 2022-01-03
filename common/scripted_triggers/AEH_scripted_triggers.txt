@@ -31,6 +31,7 @@ AEH_has_frontline = {
 			any_neighbor_state = {
 				CONTROLLER = {
 					has_war_with = PREV.PREV.PREV
+					is_major = yes
 				}
 			}
 		}
