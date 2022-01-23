@@ -445,7 +445,7 @@ ideas = {
 				
 				conscription = -0.03
 				
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.15
 			}
 			
 			cancel_if_invalid = no

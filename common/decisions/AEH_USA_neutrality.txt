@@ -41,6 +41,11 @@ AEH_USA_neutrality_category = {
 		}
 		activation = {
 			tag = USA
+			has_war = no
+			PHI = {
+				has_war = no
+				is_subject_of = USA
+			}
 		}
 		is_good = yes
 		days_mission_timeout = 1825

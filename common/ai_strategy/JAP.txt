@@ -1,0 +1,28 @@
+JAP_war_on_USA_fix = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		AND = {
+			is_historical_focus_on = yes
+			date < 1941.12.1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = USA			
+		value = -2000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = PHI			
+		value = -2000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = ENG			
+		value = -2000 
+	}
+}

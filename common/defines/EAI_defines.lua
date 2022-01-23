@@ -7,7 +7,7 @@ NDefines.NGame.EVENT_TIMEOUT_DEFAULT = 7 -- Default days before an event times o
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Diplomacy
 
-NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.5
+NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.35
 -- Diplomacy
 
 NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0 -- Each province owned by the target country contributes this amount of volunteers to the limit.

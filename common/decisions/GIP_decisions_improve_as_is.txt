@@ -689,7 +689,7 @@ political_actions = {
 			amount_research_slots > 4
         }
 
-        days_remove = 90
+        days_remove = 60
 		cost = 150
 		modifier = {
 			stability_weekly = 0.001 
@@ -743,7 +743,7 @@ political_actions = {
 			amount_research_slots > 3
         }
 
-		days_remove = 90
+		days_remove = 60
 		cost = 150
 
 		modifier = {
@@ -798,7 +798,7 @@ political_actions = {
 			amount_research_slots > 3
         }
 
-		days_remove = 90
+		days_remove = 60
 		cost = 150
 
 		modifier = {
@@ -851,7 +851,7 @@ political_actions = {
 			}
         }
 
-		days_remove = 90
+		days_remove = 60
 		cost = 150
 
 		modifier = {
@@ -904,7 +904,7 @@ political_actions = {
 			}
         }
 
-		days_remove = 90
+		days_remove = 60
 		cost = 150
 
 		modifier = {
@@ -957,7 +957,7 @@ political_actions = {
 			}
         }
 
-		days_remove = 90
+		days_remove = 60
 		cost = 150
 
 		modifier = {
