@@ -4909,15 +4909,15 @@ ASG_civilian_add_point_to_line = {
 	set_variable = {
 		GLOBAL.ASG_civilian_y_position_light_white = ASG_civilian_light_white_pixel_value
 	}
-	log = "ASG : NEW CIVILIAN GRAPH UPDATE : [GetDateText]"
-	log = "ASG : ITA.ASG_civilian_score = [?ITA.ASG_civilian_score]    ITA Y Value = [?GLOBAL.ASG_civilian_y_position_green]       "
-	log = "ASG : SOV.ASG_civilian_score = [?SOV.ASG_civilian_score]    SOV Y Value = [?GLOBAL.ASG_civilian_y_position_red]         "
-	log = "ASG : FRA.ASG_civilian_score = [?FRA.ASG_civilian_score]    FRA Y Value = [?GLOBAL.ASG_civilian_y_position_light_blue]  "
-	log = "ASG : USA.ASG_civilian_score = [?USA.ASG_civilian_score]    USA Y Value = [?GLOBAL.ASG_civilian_y_position_blue]        "
-	log = "ASG : JAP.ASG_civilian_score = [?JAP.ASG_civilian_score]    JAP Y Value = [?GLOBAL.ASG_civilian_y_position_light_white] "
-	log = "ASG : ENG.ASG_civilian_score = [?ENG.ASG_civilian_score]    ENG Y Value = [?GLOBAL.ASG_civilian_y_position_light_Red]   "
-	log = "ASG : GER.ASG_civilian_score = [?GER.ASG_civilian_score]    GER Y Value = [?GLOBAL.ASG_civilian_y_position_grey]        "
-	log = "ASG : END OF CIVILIAN GRAPH UPDATE"
+	# log = "ASG : NEW CIVILIAN GRAPH UPDATE : [GetDateText]"
+	# log = "ASG : ITA.ASG_civilian_score = [?ITA.ASG_civilian_score]    ITA Y Value = [?GLOBAL.ASG_civilian_y_position_green]       "
+	# log = "ASG : SOV.ASG_civilian_score = [?SOV.ASG_civilian_score]    SOV Y Value = [?GLOBAL.ASG_civilian_y_position_red]         "
+	# log = "ASG : FRA.ASG_civilian_score = [?FRA.ASG_civilian_score]    FRA Y Value = [?GLOBAL.ASG_civilian_y_position_light_blue]  "
+	# log = "ASG : USA.ASG_civilian_score = [?USA.ASG_civilian_score]    USA Y Value = [?GLOBAL.ASG_civilian_y_position_blue]        "
+	# log = "ASG : JAP.ASG_civilian_score = [?JAP.ASG_civilian_score]    JAP Y Value = [?GLOBAL.ASG_civilian_y_position_light_white] "
+	# log = "ASG : ENG.ASG_civilian_score = [?ENG.ASG_civilian_score]    ENG Y Value = [?GLOBAL.ASG_civilian_y_position_light_Red]   "
+	# log = "ASG : GER.ASG_civilian_score = [?GER.ASG_civilian_score]    GER Y Value = [?GLOBAL.ASG_civilian_y_position_grey]        "
+	# log = "ASG : END OF CIVILIAN GRAPH UPDATE"
 	# The y position offset is the inverse of the y position
 	set_temp_variable = {
 		civilian_offset_green = GLOBAL.ASG_civilian_last_y_position_green
@@ -5319,15 +5319,15 @@ ASG_casualties_add_point_to_line = {
 			GLOBAL.ASG_casualties_y_position_light_white = ASG_casualties_light_white_pixel_value
 		}
 	}
-	log = "ASG : NEW casualties GRAPH UPDATE : [GetDateText]"
-	log = "ASG : ITA.ASG_casualties_score = [?ITA.ASG_casualties_score]    ITA Y Value = [?GLOBAL.ASG_casualties_y_position_green]       "
-	log = "ASG : SOV.ASG_casualties_score = [?SOV.ASG_casualties_score]    SOV Y Value = [?GLOBAL.ASG_casualties_y_position_red]         "
-	log = "ASG : FRA.ASG_casualties_score = [?FRA.ASG_casualties_score]    FRA Y Value = [?GLOBAL.ASG_casualties_y_position_light_blue]  "
-	log = "ASG : USA.ASG_casualties_score = [?USA.ASG_casualties_score]    USA Y Value = [?GLOBAL.ASG_casualties_y_position_blue]        "
-	log = "ASG : JAP.ASG_casualties_score = [?JAP.ASG_casualties_score]    JAP Y Value = [?GLOBAL.ASG_casualties_y_position_light_white] "
-	log = "ASG : ENG.ASG_casualties_score = [?ENG.ASG_casualties_score]    ENG Y Value = [?GLOBAL.ASG_casualties_y_position_light_Red]   "
-	log = "ASG : GER.ASG_casualties_score = [?GER.ASG_casualties_score]    GER Y Value = [?GLOBAL.ASG_casualties_y_position_grey]        "
-	log = "ASG : END OF casualties GRAPH UPDATE"
+	# log = "ASG : NEW casualties GRAPH UPDATE : [GetDateText]"
+	# log = "ASG : ITA.ASG_casualties_score = [?ITA.ASG_casualties_score]    ITA Y Value = [?GLOBAL.ASG_casualties_y_position_green]       "
+	# log = "ASG : SOV.ASG_casualties_score = [?SOV.ASG_casualties_score]    SOV Y Value = [?GLOBAL.ASG_casualties_y_position_red]         "
+	# log = "ASG : FRA.ASG_casualties_score = [?FRA.ASG_casualties_score]    FRA Y Value = [?GLOBAL.ASG_casualties_y_position_light_blue]  "
+	# log = "ASG : USA.ASG_casualties_score = [?USA.ASG_casualties_score]    USA Y Value = [?GLOBAL.ASG_casualties_y_position_blue]        "
+	# log = "ASG : JAP.ASG_casualties_score = [?JAP.ASG_casualties_score]    JAP Y Value = [?GLOBAL.ASG_casualties_y_position_light_white] "
+	# log = "ASG : ENG.ASG_casualties_score = [?ENG.ASG_casualties_score]    ENG Y Value = [?GLOBAL.ASG_casualties_y_position_light_Red]   "
+	# log = "ASG : GER.ASG_casualties_score = [?GER.ASG_casualties_score]    GER Y Value = [?GLOBAL.ASG_casualties_y_position_grey]        "
+	# log = "ASG : END OF casualties GRAPH UPDATE"
 	# The y position offset is the inverse of the y position
 	set_temp_variable = {
 		casualties_offset_green = GLOBAL.ASG_casualties_last_y_position_green
@@ -5673,15 +5673,15 @@ ASG_manpower_add_point_to_line = {
 	set_variable = {
 		GLOBAL.ASG_manpower_y_position_light_white = ASG_manpower_light_white_pixel_value
 	}
-	log = "ASG : NEW manpower GRAPH UPDATE : [GetDateText]"
-	log = "ASG : ITA.ASG_manpower_score = [?ITA.ASG_manpower_score]    ITA Y Value = [?GLOBAL.ASG_manpower_y_position_green]       "
-	log = "ASG : SOV.ASG_manpower_score = [?SOV.ASG_manpower_score]    SOV Y Value = [?GLOBAL.ASG_manpower_y_position_red]         "
-	log = "ASG : FRA.ASG_manpower_score = [?FRA.ASG_manpower_score]    FRA Y Value = [?GLOBAL.ASG_manpower_y_position_light_blue]  "
-	log = "ASG : USA.ASG_manpower_score = [?USA.ASG_manpower_score]    USA Y Value = [?GLOBAL.ASG_manpower_y_position_blue]        "
-	log = "ASG : JAP.ASG_manpower_score = [?JAP.ASG_manpower_score]    JAP Y Value = [?GLOBAL.ASG_manpower_y_position_light_white] "
-	log = "ASG : ENG.ASG_manpower_score = [?ENG.ASG_manpower_score]    ENG Y Value = [?GLOBAL.ASG_manpower_y_position_light_Red]   "
-	log = "ASG : GER.ASG_manpower_score = [?GER.ASG_manpower_score]    GER Y Value = [?GLOBAL.ASG_manpower_y_position_grey]        "
-	log = "ASG : END OF manpower GRAPH UPDATE"
+	# log = "ASG : NEW manpower GRAPH UPDATE : [GetDateText]"
+	# log = "ASG : ITA.ASG_manpower_score = [?ITA.ASG_manpower_score]    ITA Y Value = [?GLOBAL.ASG_manpower_y_position_green]       "
+	# log = "ASG : SOV.ASG_manpower_score = [?SOV.ASG_manpower_score]    SOV Y Value = [?GLOBAL.ASG_manpower_y_position_red]         "
+	# log = "ASG : FRA.ASG_manpower_score = [?FRA.ASG_manpower_score]    FRA Y Value = [?GLOBAL.ASG_manpower_y_position_light_blue]  "
+	# log = "ASG : USA.ASG_manpower_score = [?USA.ASG_manpower_score]    USA Y Value = [?GLOBAL.ASG_manpower_y_position_blue]        "
+	# log = "ASG : JAP.ASG_manpower_score = [?JAP.ASG_manpower_score]    JAP Y Value = [?GLOBAL.ASG_manpower_y_position_light_white] "
+	# log = "ASG : ENG.ASG_manpower_score = [?ENG.ASG_manpower_score]    ENG Y Value = [?GLOBAL.ASG_manpower_y_position_light_Red]   "
+	# log = "ASG : GER.ASG_manpower_score = [?GER.ASG_manpower_score]    GER Y Value = [?GLOBAL.ASG_manpower_y_position_grey]        "
+	# log = "ASG : END OF manpower GRAPH UPDATE"
 	# The y position offset is the inverse of the y position
 	set_temp_variable = {
 		manpower_offset_green = GLOBAL.ASG_manpower_last_y_position_green
@@ -6027,15 +6027,15 @@ ASG_equipment_add_point_to_line = {
 	set_variable = {
 		GLOBAL.ASG_equipment_y_position_light_white = ASG_equipment_light_white_pixel_value
 	}
-	log = "ASG : NEW equipment GRAPH UPDATE : [GetDateText]"
-	log = "ASG : ITA.ASG_equipment_score = [?ITA.ASG_equipment_score]    ITA Y Value = [?GLOBAL.ASG_equipment_y_position_green]       "
-	log = "ASG : SOV.ASG_equipment_score = [?SOV.ASG_equipment_score]    SOV Y Value = [?GLOBAL.ASG_equipment_y_position_red]         "
-	log = "ASG : FRA.ASG_equipment_score = [?FRA.ASG_equipment_score]    FRA Y Value = [?GLOBAL.ASG_equipment_y_position_light_blue]  "
-	log = "ASG : USA.ASG_equipment_score = [?USA.ASG_equipment_score]    USA Y Value = [?GLOBAL.ASG_equipment_y_position_blue]        "
-	log = "ASG : JAP.ASG_equipment_score = [?JAP.ASG_equipment_score]    JAP Y Value = [?GLOBAL.ASG_equipment_y_position_light_white] "
-	log = "ASG : ENG.ASG_equipment_score = [?ENG.ASG_equipment_score]    ENG Y Value = [?GLOBAL.ASG_equipment_y_position_light_Red]   "
-	log = "ASG : GER.ASG_equipment_score = [?GER.ASG_equipment_score]    GER Y Value = [?GLOBAL.ASG_equipment_y_position_grey]        "
-	log = "ASG : END OF equipment GRAPH UPDATE"
+	# log = "ASG : NEW equipment GRAPH UPDATE : [GetDateText]"
+	# log = "ASG : ITA.ASG_equipment_score = [?ITA.ASG_equipment_score]    ITA Y Value = [?GLOBAL.ASG_equipment_y_position_green]       "
+	# log = "ASG : SOV.ASG_equipment_score = [?SOV.ASG_equipment_score]    SOV Y Value = [?GLOBAL.ASG_equipment_y_position_red]         "
+	# log = "ASG : FRA.ASG_equipment_score = [?FRA.ASG_equipment_score]    FRA Y Value = [?GLOBAL.ASG_equipment_y_position_light_blue]  "
+	# log = "ASG : USA.ASG_equipment_score = [?USA.ASG_equipment_score]    USA Y Value = [?GLOBAL.ASG_equipment_y_position_blue]        "
+	# log = "ASG : JAP.ASG_equipment_score = [?JAP.ASG_equipment_score]    JAP Y Value = [?GLOBAL.ASG_equipment_y_position_light_white] "
+	# log = "ASG : ENG.ASG_equipment_score = [?ENG.ASG_equipment_score]    ENG Y Value = [?GLOBAL.ASG_equipment_y_position_light_Red]   "
+	# log = "ASG : GER.ASG_equipment_score = [?GER.ASG_equipment_score]    GER Y Value = [?GLOBAL.ASG_equipment_y_position_grey]        "
+	# log = "ASG : END OF equipment GRAPH UPDATE"
 	# The y position offset is the inverse of the y position
 	set_temp_variable = {
 		equipment_offset_green = GLOBAL.ASG_equipment_last_y_position_green
@@ -6381,15 +6381,15 @@ ASG_military_add_point_to_line = {
 	set_variable = {
 		GLOBAL.ASG_military_y_position_light_white = ASG_military_light_white_pixel_value
 	}
-	log = "ASG : NEW MILITARY GRAPH UPDATE : [GetDateText]"
-	log = "ASG : ITA.ASG_industrial_score = [?ITA.ASG_industrial_score]    ITA Y Value = [?GLOBAL.ASG_military_y_position_green]       "
-	log = "ASG : SOV.ASG_industrial_score = [?SOV.ASG_industrial_score]    SOV Y Value = [?GLOBAL.ASG_military_y_position_red]         "
-	log = "ASG : FRA.ASG_industrial_score = [?FRA.ASG_industrial_score]    FRA Y Value = [?GLOBAL.ASG_military_y_position_light_blue]  "
-	log = "ASG : USA.ASG_industrial_score = [?USA.ASG_industrial_score]    USA Y Value = [?GLOBAL.ASG_military_y_position_blue]        "
-	log = "ASG : JAP.ASG_industrial_score = [?JAP.ASG_industrial_score]    JAP Y Value = [?GLOBAL.ASG_military_y_position_light_white] "
-	log = "ASG : ENG.ASG_industrial_score = [?ENG.ASG_industrial_score]    ENG Y Value = [?GLOBAL.ASG_military_y_position_light_Red]   "
-	log = "ASG : GER.ASG_industrial_score = [?GER.ASG_industrial_score]    GER Y Value = [?GLOBAL.ASG_military_y_position_grey]        "
-	log = "ASG : END OF MILITARY GRAPH UPDATE"
+	# log = "ASG : NEW MILITARY GRAPH UPDATE : [GetDateText]"
+	# log = "ASG : ITA.ASG_industrial_score = [?ITA.ASG_industrial_score]    ITA Y Value = [?GLOBAL.ASG_military_y_position_green]       "
+	# log = "ASG : SOV.ASG_industrial_score = [?SOV.ASG_industrial_score]    SOV Y Value = [?GLOBAL.ASG_military_y_position_red]         "
+	# log = "ASG : FRA.ASG_industrial_score = [?FRA.ASG_industrial_score]    FRA Y Value = [?GLOBAL.ASG_military_y_position_light_blue]  "
+	# log = "ASG : USA.ASG_industrial_score = [?USA.ASG_industrial_score]    USA Y Value = [?GLOBAL.ASG_military_y_position_blue]        "
+	# log = "ASG : JAP.ASG_industrial_score = [?JAP.ASG_industrial_score]    JAP Y Value = [?GLOBAL.ASG_military_y_position_light_white] "
+	# log = "ASG : ENG.ASG_industrial_score = [?ENG.ASG_industrial_score]    ENG Y Value = [?GLOBAL.ASG_military_y_position_light_Red]   "
+	# log = "ASG : GER.ASG_industrial_score = [?GER.ASG_industrial_score]    GER Y Value = [?GLOBAL.ASG_military_y_position_grey]        "
+	# log = "ASG : END OF MILITARY GRAPH UPDATE"
 	# The y position offset is the inverse of the y position
 	set_temp_variable = {
 		military_offset_green = GLOBAL.ASG_military_last_y_position_green

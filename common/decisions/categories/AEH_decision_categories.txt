@@ -23,3 +23,16 @@ AEH_peace_category = {
 		always = yes
 	}
 }
+
+AEH_debug_category = {
+	icon = generic_political_actions
+	
+	priority = 1000
+
+	allowed = {
+		is_debug = yes
+	}
+	visible = {
+		is_debug = yes
+	}
+}

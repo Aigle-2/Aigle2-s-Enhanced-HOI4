@@ -635,18 +635,31 @@ on_actions = {
 			}
 			GER = {
 				set_country_flag = AEH_designer_ger
+				set_technology = {
+					support_weapons = 1
+					paratroopers = 1
+					popup = no
+				}
 			}
 			ENG = {
 				set_country_flag = AEH_designer_eng
 			}
 			JAP = {
 				set_country_flag = AEH_designer_jap
+				set_technology = {
+					support_weapons = 1
+					popup = no
+				}
 			}
 			FRA = {
 				set_country_flag = AEH_designer_fra
 			}
 			SOV = {
 				set_country_flag = AEH_designer_sov
+				set_technology = {
+					support_weapons = 1
+					popup = no
+				}
 			}
 		}
 	}

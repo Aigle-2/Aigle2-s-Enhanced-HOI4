@@ -129,8 +129,8 @@ ideas = {
 		
 			available = {
 				OR = {
-					has_country_flag = AEH_designer_ita
 					AND = {
+						has_country_flag = AEH_designer_ita
 						tag = ITA
 						any_allied_country = {
 							OR = {
@@ -141,8 +141,12 @@ ideas = {
 							}
 						}
 					}
-				}
 
+					AND = {
+						has_country_flag = AEH_designer_ita
+						NOT = {tag = ITA}
+					}
+				}
 			}
 			
 			removal_cost = -1

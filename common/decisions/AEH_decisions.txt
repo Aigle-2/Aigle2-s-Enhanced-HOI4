@@ -87,3 +87,65 @@ AEH_peace_category = {
 		}
 	}
 }
+
+AEH_debug_category = {
+	AEH_test_transfer = {
+		icon = generic_political_actions
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			always = yes
+			
+			# has_war = yes
+		}
+		complete_effect = {
+			USA = {
+				send_equipment = {
+					equipment = infantry_equipment_1
+					amount = 10000
+					target = ROOT
+				}
+			}
+
+		}
+	}
+
+	AEH_test_add_usa = {
+		icon = generic_political_actions
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			always = yes
+			
+			# has_war = yes
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 10000
+				producer = USA
+			}
+		}
+	}
+
+	AEH_test_add_SOV = {
+		icon = generic_political_actions
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			always = yes
+			
+			# has_war = yes
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 10000
+				producer = SOV
+			}
+		}
+	}
+}
