@@ -32,7 +32,7 @@ AEH_peace_category = {
 							every_controlled_state = {
 								limit = {
 									OWNER = {
-										tag = ROOT
+										tag = PREV.PREV
 									}
 								}
 								PREV = {

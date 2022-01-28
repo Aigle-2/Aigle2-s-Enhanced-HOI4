@@ -6,6 +6,11 @@ JAP_war_on_USA_fix = {
 		AND = {
 			is_historical_focus_on = yes
 			date < 1941.12.1
+			NOT = {
+				USA = {
+					has_war_with = GER
+				}
+			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -23,6 +28,36 @@ JAP_war_on_USA_fix = {
 	ai_strategy = {
 		type = declare_war
 		id = ENG			
+		value = -2000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = INS			
+		value = -2000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = MAL			
+		value = -2000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = RAJ			
+		value = -2000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = SOV			
+		value = -2000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = AST			
+		value = -2000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = FRA			
 		value = -2000 
 	}
 }
