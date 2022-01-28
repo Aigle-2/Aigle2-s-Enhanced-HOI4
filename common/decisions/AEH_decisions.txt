@@ -25,7 +25,7 @@ AEH_peace_category = {
 			hidden_effect = {
 				every_other_country = {
 					limit = {
-						is_ally_with = PREV
+						is_ally_with = ROOT
 					}
 					every_enemy_country = {
 						PREV = {
@@ -40,13 +40,9 @@ AEH_peace_category = {
 								}
 							}
 						}
-						white_peace = PREV
-						set_truce = {
-							target = PREV
-							days = 365
-						}
 					}
 				}
+
 				every_enemy_country = {
 					ROOT = {
 						every_controlled_state = {
@@ -60,10 +56,43 @@ AEH_peace_category = {
 							}
 						}
 					}
-					white_peace = PREV
-					set_truce = {
-						target = PREV
-						days = 365
+
+				}
+
+				every_country = {
+					limit = {
+						OR = {
+							is_ally_with = ROOT
+							tag = ROOT
+						}
+					}
+					every_enemy_country = {
+						every_controlled_state = {
+							limit = {
+								OWNER = {
+									tag = PREV.PREV.PREV
+								}
+							}
+							PREV = {
+								transfer_state = PREV
+							}
+						}
+					}
+				}
+
+				every_country = {
+					limit = {
+						OR = {
+							is_ally_with = ROOT
+							tag = ROOT
+						}
+					}
+					every_enemy_country = {
+						white_peace = PREV
+						set_truce = {
+							target = PREV
+							days = 365
+						}
 					}
 				}
 			}

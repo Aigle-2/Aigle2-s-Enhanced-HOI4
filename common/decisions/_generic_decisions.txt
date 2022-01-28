@@ -1961,11 +1961,12 @@ war_measures = {
 		visible = {
 			has_war = yes
 			NOT = { tag = SPC }
+			NOT = { tag = GER }
 		}
 
 		fire_only_once = no
 
-		days_remove = 180
+		days_remove = 1500
 
 		cost = GER_war_bonds_var?50
 

@@ -143,6 +143,45 @@ scripted_diplomatic_actions = {
 						}
 			add = 300
 			}
+
+			#exceptions 
+
+			modifier = {
+				factor = 0
+				ROOT = {
+					tag = SWE
+					NOT = {
+						any_allied_country = {
+							has_war_with = PREV.PREV
+						}
+					}
+					NOT = {
+						has_war_with = PREV
+					}
+				}
+				THIS = {
+					tag = GER
+				}
+			}
+
+			modifier = {
+				factor = 0
+				ROOT = {
+					tag = SOV
+					NOT = {
+						any_allied_country = {
+							has_war_with = PREV.PREV
+						}
+					}
+					NOT = {
+						has_war_with = PREV
+					}
+				}
+				THIS = {
+					tag = GER
+				}
+				has_global_flag = sov_yes_pact
+			}
 		}
 	}
 
