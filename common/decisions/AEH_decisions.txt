@@ -32,7 +32,7 @@ AEH_peace_category = {
 							every_controlled_state = {
 								limit = {
 									OWNER = {
-										tag = PREV.PREV
+										tag = PREV.PREV.PREV
 									}
 								}
 								PREV = {
@@ -48,11 +48,11 @@ AEH_peace_category = {
 					}
 				}
 				every_enemy_country = {
-					PREV = {
+					ROOT = {
 						every_controlled_state = {
 							limit = {
 								OWNER = {
-									tag = ROOT
+									tag = PREV.PREV.PREV
 								}
 							}
 							PREV = {
