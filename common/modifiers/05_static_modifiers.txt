@@ -222,7 +222,7 @@ compliance_effect_base = {
 }
 
 compliance_effect = {
-	local_factories = 0.65
+	local_factories = 0.20
 	local_non_core_manpower = 0.18
 	local_resources = 0.60
 }
@@ -235,7 +235,7 @@ non_core = {
 non_core_controller = {
 	local_building_slots_factor = -0.5
 
-	local_factories = -0.75
+	local_factories = -0.80
 	#local_manpower = -0.75
 	local_resources = -0.65
 }

@@ -142,7 +142,6 @@ ideas = {
 			
 			modifier = {
 				production_speed_arms_factory_factor = -0.1
-				production_speed_industrial_complex_factor = -0.1
 				consumer_goods_factor = 0.35
 			}
 			
@@ -215,7 +214,7 @@ ideas = {
 			
 				production_speed_arms_factory_factor = 0.1
 				conversion_cost_civ_to_mil_factor = -0.1
-				production_speed_industrial_complex_factor = -0.3
+				production_speed_industrial_complex_factor = -0.2
 				consumer_goods_factor = 0.25
 			}
 			
@@ -320,7 +319,7 @@ ideas = {
 			
 				stability_weekly = -0.0005
 				war_support_weekly = -0.001
-				production_speed_industrial_complex_factor = -0.4
+				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = 0.2
 				conversion_cost_civ_to_mil_factor = -0.2
 				
@@ -438,7 +437,7 @@ ideas = {
 				political_power_gain = -0.25
 				stability_weekly = -0.001
 				war_support_weekly = -0.002
-				production_speed_industrial_complex_factor = -0.5
+				production_speed_industrial_complex_factor = -0.4
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor = -0.3
 				

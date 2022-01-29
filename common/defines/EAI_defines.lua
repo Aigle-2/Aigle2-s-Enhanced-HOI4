@@ -55,6 +55,8 @@ NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 30000
 
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.3 	--Higher value = more shot down planes / was 0.1
 
+-- NDefines.NCountry.STATE_VALUE_NON_CORE_STATE_FRACTION = 0.35		-- If a state is not a core we assume we will get 50% of the factory slots (was 0.5)
+
 
 -- EAI Defines 
 

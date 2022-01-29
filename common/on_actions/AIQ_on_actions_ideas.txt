@@ -14,9 +14,11 @@ on_actions = {
 			
 			CHI = {				
 				add_ideas = AIQ_industrial_policy_quantity
+				# add_ideas = AIQ_industrial_policy_balanced
 			}
 			SOV = {				
 				add_ideas = AIQ_industrial_policy_quantity
+				# add_ideas = AIQ_industrial_policy_balanced
 			}
 		}
 	}
