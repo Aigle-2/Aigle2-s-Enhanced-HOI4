@@ -1,0 +1,500 @@
+add_namespace = AEH
+country_event = {
+	id = AEH.1
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		##### INDUSTRY BOOSTS
+		log = "Industry Balance Init"
+		set_temp_variable = {
+			loop = 0
+		}
+		set_temp_variable = {
+			USA_debug = 0
+		}
+		# log = "USA init civs number = [?USA.num_of_civilian_factories]"
+		while_loop_effect = {
+			limit = {
+				check_variable = {
+					loop < 20
+				}
+			}
+			USA = {
+				random_owned_state = {
+					limit = {
+						# is_fully_controlled_by = PREV
+						NOT = {
+							has_state_flag = AEH_industry_balance
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_to_temp_variable = {
+						USA_debug = 2
+					}
+					# log = "State = [?THIS.GetID]"
+					set_state_flag = AEH_industry_balance
+				}
+			}
+			set_temp_variable = {
+				moduloVariable = loop
+			}
+			modulo_temp_variable = {
+				moduloVariable = 2
+			}
+			if = {
+				limit = {
+					check_variable = {
+						moduloVariable = 0
+					}
+				}
+				SOV = {
+					random_owned_state = {
+						limit = {
+							# is_fully_controlled_by = PREV
+							distance_to = {
+								value < 8000
+								target = 408
+							}
+							NOT = {
+								has_state_flag = AEH_industry_balance
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+						# log = "One added SOV"
+						set_state_flag = AEH_industry_balance
+					}
+				}
+				JAP = {
+					random_owned_state = {
+						limit = {
+							NOT = {
+								has_state_flag = AEH_industry_balance
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+						# log = "One added JAP"
+						set_state_flag = AEH_industry_balance
+					}
+				}
+			}
+			add_to_temp_variable = {
+				loop = 1
+			}
+		}
+		# log = "USA final civs number = [?USA.num_of_civilian_factories]"
+		# log = "USA number added : [?USA_debug]"
+		log = "Industry Balance Completed"
+		### Designers
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = AEH.2
+	fire_only_once = yes
+	
+	hidden = yes
+	mean_time_to_happen = {
+		days = 15
+	}
+	trigger = {
+		OR = {
+			has_global_flag = AEH_historical_ww2_peace_init
+			# has_global_flag = had_yalta_conference
+			# AND = {
+			# 	has_global_flag = had_yalta_conference
+			# 	GER = {
+			# 		has_capitulated = yes
+			# 	}
+			# 	ITA = {
+			# 		is_in_faction_with = GER
+			# 		has_capitulated = yes
+			# 	}
+			# 	HUN = {
+			# 		is_in_faction_with = GER
+			# 		has_capitulated = yes
+			# 	}
+			# }
+		}
+		
+	}
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = FRA
+				NOT = {
+					is_owned_by = FRA
+				}
+			}
+			FRA = {
+				transfer_state = PREV
+			}
+		}
+		##French colonial empire 
+		FRA = {
+			transfer_state = 665
+			transfer_state = 458
+			transfer_state = 460
+			transfer_state = 513
+			transfer_state = 459
+			transfer_state = 461
+			transfer_state = 462
+			transfer_state = 514
+			transfer_state = 786
+			transfer_state = 272
+			transfer_state = 556
+			transfer_state = 557
+			transfer_state = 782
+			transfer_state = 778
+			transfer_state = 779
+			transfer_state = 780
+			transfer_state = 781
+			transfer_state = 776
+			transfer_state = 777
+			transfer_state = 775
+			transfer_state = 515
+			transfer_state = 268
+			transfer_state = 741
+			transfer_state = 670
+			transfer_state = 671
+			transfer_state = 286
+
+		}
+
+		SYR = {
+			transfer_state = 554
+			transfer_state = 677
+			transfer_state = 680
+		}
+
+		LEB = {
+			transfer_state = 553
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = DEN
+				NOT = {
+					is_owned_by = DEN
+				}
+			}
+			DEN = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = BEL
+				NOT = {
+					is_owned_by = BEL
+				}
+			}
+			BEL = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = HOL
+				NOT = {
+					is_owned_by = HOL
+				}
+			}
+			HOL = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = AUS
+				NOT = {
+					is_owned_by = AUS
+				}
+				NOT = {
+					state = 39
+				}
+			}
+			AUS = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ITA
+				NOT = {
+					is_owned_by = ITA
+				}
+			}
+			ITA = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = NOR
+				NOT = {
+					is_owned_by = NOR
+				}
+			}
+			NOR = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = POL
+				NOT = {
+					is_owned_by = POL
+				}
+				NOT = {
+					state = 784
+					state = 96
+					state = 95
+					state = 94
+					state = 93
+					state = 91
+					state = 89
+				}
+			}
+			POL = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = CZE
+				NOT = {
+					is_owned_by = CZE
+				}
+			}
+			CZE = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROM
+				NOT = {
+					is_owned_by = ROM
+				}
+				NOT = {
+					state = 78
+					state = 766
+				}
+			}
+			ROM = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROM
+				NOT = {
+					is_owned_by = ROM
+				}
+				NOT = {
+					state = 78
+					state = 766
+				}
+			}
+			ROM = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = HUN
+				NOT = {
+					is_owned_by = HUN
+				}
+				NOT = {
+					state = 45
+					state = 83
+					state = 84
+					state = 764
+					state = 76
+				}
+			}
+			HUN = {
+				transfer_state = PREV
+			}
+		}
+		SOV = {
+			transfer_state = 73
+			transfer_state = 188
+			transfer_state = 763
+		}
+		ALB = {
+			transfer_state = 44
+			transfer_state = 805
+		}
+		every_state = {
+			limit = {
+				is_core_of = GRE
+				NOT = {
+					is_owned_by = GRE
+				}
+			}
+			GRE = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = YUG
+				NOT = {
+					is_owned_by = YUG
+				}
+			}
+			YUG = {
+				transfer_state = PREV
+			}
+		}
+		YUG = {
+			transfer_state = 102
+			transfer_state = 106
+		}
+		every_state = {
+			limit = {
+				is_core_of = WGR
+				NOT = {
+					is_owned_by = WGR
+				}
+			}
+			WGR = {
+				transfer_state = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = DDR
+				NOT = {
+					is_owned_by = DDR
+				}
+				NOT = {
+					state = 66
+					state = 67
+				}
+			}
+			DDR = {
+				transfer_state = PREV
+			}
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = PER
+				NOT = {
+					is_owned_by = PER
+				}
+			}
+			PER = {
+				transfer_state = PREV
+			}
+		}
+
+		SOV = {
+			puppet = POL
+			puppet = HUN
+			puppet = ROM
+			puppet = CZE
+			puppet = BUL
+		}
+
+		YUG = {
+			set_political_party = {
+				ideology = communism
+				popularity = 50
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		ALB = {
+			set_political_party = {
+				ideology = communism
+				popularity = 50
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		POL = {
+			set_political_party = {
+				ideology = communism
+				popularity = 50
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		HUN = {
+			set_political_party = {
+				ideology = communism
+				popularity = 50
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		CZE = {
+			set_political_party = {
+				ideology = communism
+				popularity = 50
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		BUL = {
+			set_political_party = {
+				ideology = communism
+				popularity = 50
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+
+		PER = {
+			set_political_party = {
+				ideology = democratic
+				popularity = 60
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+        		election_frequency = 48
+			}
+		}
+
+
+		set_global_flag = AEH_historical_ww2_peace_done
+	}
+	option = {
+	}
+}
