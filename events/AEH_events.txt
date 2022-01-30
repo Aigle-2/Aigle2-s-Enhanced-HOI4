@@ -81,6 +81,7 @@ country_event = {
 							NOT = {
 								has_state_flag = AEH_industry_balance
 							}
+							is_core_of = PREV
 						}
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
