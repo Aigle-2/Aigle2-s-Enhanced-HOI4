@@ -92,6 +92,24 @@ on_actions = {
 					set_country_flag = AEH_designer_usa
 				}
 			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = BEL
+					}
+					FROM = {
+						tag = GER
+					}
+					BEL = {
+						is_in_faction_with = ENG
+					}
+				}
+				ENG = {
+					set_state_controller = 718
+					set_state_controller = 295
+					set_state_controller = 738
+				}
+			}
 		}
 	}
 	on_annex = {
@@ -627,6 +645,12 @@ on_actions = {
 	}
 	on_startup = {
 		effect = {
+			set_global_flag = EAI_free_convoys
+			set_variable = {
+				global.EAI_sino_japanese_war = 2
+			}
+			EAI_refresh_gui = yes
+			
 			USA = {
 				set_country_flag = AEH_designer_usa
 				country_event = { id = AEH.1 hours = 1 }

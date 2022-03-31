@@ -1,0 +1,102 @@
+ITA_historical_war_joining = {
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		AND = {
+			is_historical_focus_on = yes
+			OR = {
+				date < 1940.9.1
+				AND = {
+					any_state = {
+						AND = {
+							OWNER = {
+								original_tag = FRA
+							}
+							CONTROLLER = {
+								original_tag = GER
+							}
+						}
+					}
+					GER = {
+						has_war_with = FRA
+					}
+				}
+				FRA = {
+					surrender_progress > 0.4
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = declare_war
+		id = ENG
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = FRA
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = CAN
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = RAJ
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = AST
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = MAL
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = SAF
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = POL
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = NOR
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = LUX
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = BEL
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = HOL
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = INS
+		value = -2000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = NZL
+		value = -2000
+	}
+}

@@ -338,6 +338,9 @@ country_event = {
 				transfer_state = PREV
 			}
 		}
+		POL = {
+			transfer_state = 5
+		}
 		SOV = {
 			transfer_state = 73
 			transfer_state = 188
