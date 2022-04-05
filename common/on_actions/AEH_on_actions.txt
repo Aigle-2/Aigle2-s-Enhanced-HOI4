@@ -688,7 +688,38 @@ on_actions = {
 			}
 		}
 	}
+	on_war = {
+		effect = {
+			THIS = {
+				IF = {
+					limit = {
+						has_idea = AEH_mandatory_army_service
+					}
+					swap_ideas = {
+						remove_idea = AEH_mandatory_army_service
+						add_idea = AEH_national_mobilization
+					}
+				}
 
+			}
+		}
+	}
+
+	on_peace = {
+		effect = {
+			THIS = {
+				IF = {
+					limit = {
+						has_idea = AEH_national_mobilization
+					}
+					swap_ideas = {
+						remove_idea = AEH_national_mobilization
+						add_idea = AEH_mandatory_army_service
+					}
+				}
+			}
+		}
+	}
 	on_peaceconference_ended = {
 		effect = {
 			IF = {

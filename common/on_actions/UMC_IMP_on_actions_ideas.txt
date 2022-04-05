@@ -213,21 +213,21 @@ on_actions = {
 			LIT = {
 				add_ideas = {
 					army_situation_b3
-					industrial_situation_b1
+					industrial_situation_b3
 					
 				}
 			}
 			LAT = {
 				add_ideas = {
 					army_situation_b3
-					industrial_situation_b1
+					industrial_situation_b3
 					
 				}
 			}
 			EST = {
 				add_ideas = {
 					army_situation_b2
-					industrial_situation_b1
+					industrial_situation_b3
 					
 				}
 			}
