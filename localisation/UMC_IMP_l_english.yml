@@ -78,16 +78,22 @@
  
  GIP_is_improve_good_2_dec:0 "Improve Industrial Situation"
  GIP_is_improve_good_2_dec_desc:0 ""
+ GIP_is_improve_good_2_ttt:0 "Has more than §Y120 Factories§!"
  GIP_is_improve_good_1_dec:0 "Improve Industrial Situation"
  GIP_is_improve_good_1_dec_desc:0 ""
+ GIP_is_improve_good_1_ttt:0 "Has more than §Y100 Factories§!"
  GIP_is_improve_neutral_0_dec:0 "Improve Industrial Situation"
  GIP_is_improve_neutral_0_dec_desc:0 ""
+ GIP_is_improve_neutral_0_ttt:0 "Has more than §Y80 Factories§!"
  GIP_is_improve_bad_1_dec:0 "Improve Industrial Situation"
  GIP_is_improve_bad_1_dec_desc:0 ""
+ GIP_is_improve_bad_1_ttt:0 "Has more than §Y60 Factories§!"
  GIP_is_improve_bad_2_dec:0 "Improve Industrial Situation"
  GIP_is_improve_bad_2_dec_desc:0 ""
+ GIP_is_improve_bad_2_ttt:0 "Has more than §Y40 Factories§!"
  GIP_is_improve_bad_3_dec:0 "Improve Industrial Situation"
  GIP_is_improve_bad_3_dec_desc:0 ""
+ GIP_is_improve_bad_3_ttt:0 "Has more than §Y20 Factories§!"
  
  GIP_is_neutral_or_better_TRIG:0 "Has §HIndustrial Situation§! level (§H0§!) or better."
  

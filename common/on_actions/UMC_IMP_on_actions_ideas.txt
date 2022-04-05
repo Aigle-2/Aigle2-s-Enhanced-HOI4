@@ -458,14 +458,14 @@ on_actions = {
 			VEN = {
 				add_ideas = {
 					army_situation_b4
-					industrial_situation_b1
+					industrial_situation_b3
 					
 				}
 			}
 			COL = {
 				add_ideas = {
 					army_situation_b4
-					industrial_situation_b1
+					industrial_situation_b3
 					
 				}
 			}

@@ -681,7 +681,12 @@ political_actions = {
 				has_tech = streamlined_line
 			}
 			has_tech = construction5
-			
+			custom_trigger_tooltip = {
+				tooltip = GIP_is_improve_good_2_ttt
+				check_variable = {
+					num_of_factories > 120
+				}
+			}
 			NOT = { 
 				has_idea = tot_economic_mobilisation
 			}
@@ -735,7 +740,12 @@ political_actions = {
 		available = {
 			has_tech = assembly_line_production
 			has_tech = construction4
-			
+			custom_trigger_tooltip = {
+				tooltip = GIP_is_improve_good_1_ttt
+				check_variable = {
+					num_of_factories > 100
+				}
+			}
 			NOT = { 
 				has_idea = tot_economic_mobilisation
 			}
@@ -790,7 +800,12 @@ political_actions = {
 		available = {
 			has_tech = advanced_machine_tools
 			has_tech = construction3
-			
+			custom_trigger_tooltip = {
+				tooltip = GIP_is_improve_neutral_0_ttt
+				check_variable = {
+					num_of_factories > 80
+				}
+			}
 			NOT = { 
 				has_idea = tot_economic_mobilisation
 			}
@@ -845,7 +860,12 @@ political_actions = {
 		available = {
 			has_tech = advanced_machine_tools
 			has_tech = construction3
-			
+			custom_trigger_tooltip = {
+				tooltip = GIP_is_improve_bad_1_ttt
+				check_variable = {
+					num_of_factories > 60
+				}
+			}
 			NOT = { 
 				has_idea = tot_economic_mobilisation
 			}
@@ -898,7 +918,12 @@ political_actions = {
 		available = {
 			has_tech = improved_machine_tools
 			has_tech = construction2
-			
+			custom_trigger_tooltip = {
+				tooltip = GIP_is_improve_bad_2_ttt
+				check_variable = {
+					num_of_factories > 40
+				}
+			}
 			NOT = { 
 				has_idea = tot_economic_mobilisation
 			}
@@ -951,7 +976,12 @@ political_actions = {
 		available = {
 			has_tech = basic_machine_tools
 			has_tech = construction1
-			
+			custom_trigger_tooltip = {
+				tooltip = GIP_is_improve_bad_3_ttt
+				check_variable = {
+					num_of_factories > 20
+				}
+			}
 			NOT = { 
 				has_idea = tot_economic_mobilisation
 			}
