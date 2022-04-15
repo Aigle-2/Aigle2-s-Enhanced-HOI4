@@ -364,9 +364,9 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				army_commando_2
+				army_armored_3
 			}
-			cost = 100
+			cost = 200
 			ai_will_do = {
 				factor = 10 #EAI
 			}
@@ -442,7 +442,7 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				army_logistics_1
+				army_infantry_1
 			}
 			cost =  50
 			ai_will_do = {
@@ -1094,7 +1094,7 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				army_cavalry_2
+				army_CombinedArms_2
 			}
 			cost = 100
 			ai_will_do = {
