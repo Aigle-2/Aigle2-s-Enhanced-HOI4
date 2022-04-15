@@ -330,9 +330,10 @@ ideas = {
 
 				army_attack_factor = -0.75
 				army_defence_factor = -0.75
-				army_org_factor = -0.75
+				# army_org_factor = -0.75
 				
 				training_time_factor = -0.95
+				experience_gain_army = 0.01 #because of training_time_factor affecting xp gain during army exercices
 			}
 			
 			cancel_if_invalid = no

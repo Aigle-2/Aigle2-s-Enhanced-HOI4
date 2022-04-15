@@ -20,10 +20,10 @@ NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 10
 NDefines.NMilitary.UNIT_EXP_LEVELS = {0.10, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2, 0.25, 0.3, 0.35, 0.4,
                                       0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95} -- Experience needed to progress to the next level
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.03 -- Combat modifier given by xp ? Was 0.25 / modded 0.5
--- NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 62.0
-NDefines.NMilitary.TRAINING_ATTRITION = 0.12
+NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 300
+NDefines.NMilitary.TRAINING_ATTRITION = 0.10
 NDefines.NMilitary.TRAINING_MIN_STRENGTH = 0.95 -- if strength is less than this, the unit will pause training until it's been reinforced
-NDefines.NMilitary.UNIT_EXPERIENCE_SCALE = 0.015 -- Experience gain while training
+NDefines.NMilitary.UNIT_EXPERIENCE_SCALE = 0.008 -- Experience gain while training
 NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 10
 NDefines.NMilitary.PARACHUTE_COMPLETE_ORG = 0.5 -- Organisation value (in %) after unit being dropped, regardless if failed, disrupted, or successful.
 NDefines.NMilitary.PARACHUTE_ORG_REGAIN_PENALTY_DURATION = 48 -- penalty in org regain after being parachuted. Value is in hours.

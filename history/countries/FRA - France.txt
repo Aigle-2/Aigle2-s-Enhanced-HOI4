@@ -327,9 +327,9 @@ add_ideas = {
 give_guarantee = CZE
 give_guarantee = YUG
 give_guarantee = ROM
-add_equipment_to_stockpile = {
+add_equipment_to_stockpile = {  #historical stocks : 80% of French rifles in use in 1940 were WW1 left-overs.
 	type = infantry_equipment_0
-	amount = 50000
+	amount = 100000
 	producer = FRA
 }
 
