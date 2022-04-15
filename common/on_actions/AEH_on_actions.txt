@@ -302,8 +302,14 @@ on_actions = {
 			}
 		}
 	}
+	# on_release_as_free = {
+	# 	add_ideas = AIQ_industrial_policy_balanced
+	# }
 	on_release_as_puppet = {
 		effect = {
+			ROOT = {
+				add_ideas = AIQ_industrial_policy_balanced
+			}
 			if = {
 				limit = {
 					ROOT = {
@@ -640,7 +646,6 @@ on_actions = {
 					value = 1
 				}
 			}
-
 		}
 	}
 	on_startup = {
@@ -650,10 +655,12 @@ on_actions = {
 				global.EAI_sino_japanese_war = 2
 			}
 			EAI_refresh_gui = yes
-			
 			USA = {
 				set_country_flag = AEH_designer_usa
-				country_event = { id = AEH.1 hours = 1 }
+				country_event = {
+					id = AEH.1
+					hours = 1
+				}
 			}
 			ITA = {
 				set_country_flag = AEH_designer_ita
@@ -700,11 +707,9 @@ on_actions = {
 						add_idea = AEH_national_mobilization
 					}
 				}
-
 			}
 		}
 	}
-
 	on_peace = {
 		effect = {
 			THIS = {
@@ -740,7 +745,57 @@ on_actions = {
 						}
 					}
 				}
-				set_global_flag = AEH_historical_ww2_peace_init
+				set_global_flag = AEH_historical_ww2_europe_peace_init
+			}
+		}
+		effect = {
+			IF = {
+				limit = {
+					FROM = {
+						tag = JAP
+					}
+					ROOT = {
+						OR = {
+							AND = {
+								OR = {
+									tag = ENG
+									tag = FRA
+									tag = USA
+								}
+								has_government = democratic
+								NOT = {
+									has_war_with = USA
+								}
+							}
+							AND = {
+								tag = SOV
+								NOT = {
+									has_war_with = USA
+								}
+							}
+						}
+					}
+					USA = {
+						has_government = democratic
+					}
+				}
+				set_global_flag = AEH_historical_ww2_asia_peace_init
+			}
+		}
+		effect = {
+			FROM = {
+				# loser scope; works for multiple losers
+				# has_added_tension_amount seems to reset between peace conferences, regardless if annexed, puppeted, or white peaced
+				set_temp_variable = {
+					FLT_threat_neg = 0
+				}
+				subtract_from_temp_variable = {
+					FLT_threat_neg = has_added_tension_amount
+				}
+				add_named_threat = {
+					threat = FLT_threat_neg
+					name = AEH_FLT_lost
+				}
 			}
 		}
 	}

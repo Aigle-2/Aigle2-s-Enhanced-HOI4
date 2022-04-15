@@ -42,7 +42,6 @@ AEH_peace_category = {
 						}
 					}
 				}
-
 				every_enemy_country = {
 					ROOT = {
 						every_controlled_state = {
@@ -56,9 +55,7 @@ AEH_peace_category = {
 							}
 						}
 					}
-
 				}
-
 				every_country = {
 					limit = {
 						OR = {
@@ -79,7 +76,6 @@ AEH_peace_category = {
 						}
 					}
 				}
-
 				every_country = {
 					limit = {
 						OR = {
@@ -108,7 +104,6 @@ AEH_peace_category = {
 		}
 		allowed = {
 			always = yes
-			
 			# has_war = yes
 		}
 		complete_effect = {
@@ -125,21 +120,18 @@ AEH_debug_category = {
 		}
 		allowed = {
 			always = yes
-			
 			# has_war = yes
 		}
 		complete_effect = {
-			USA = {
+			GER = {
 				send_equipment = {
-					equipment = infantry_equipment_1
-					amount = 10000
+					equipment = light_tank_chassis_3
+					amount = 5000
 					target = ROOT
 				}
 			}
-
 		}
 	}
-
 	AEH_test_add_usa = {
 		icon = generic_political_actions
 		visible = {
@@ -147,14 +139,31 @@ AEH_debug_category = {
 		}
 		allowed = {
 			always = yes
-			
 			# has_war = yes
 		}
 		complete_effect = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 10000
-				producer = USA
+				type = light_tank_chassis_3 #light_tank_equipment_3
+				amount = 5000
+				producer = GER
+			}
+		}
+	}
+
+	AEH_test_remove_ger = {
+		icon = generic_political_actions
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			always = yes
+			# has_war = yes
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis_3 #light_tank_equipment_3
+				amount = -15000
+				producer = GER
 			}
 		}
 	}
@@ -166,7 +175,6 @@ AEH_debug_category = {
 		}
 		allowed = {
 			always = yes
-			
 			# has_war = yes
 		}
 		complete_effect = {
@@ -175,6 +183,118 @@ AEH_debug_category = {
 				amount = 10000
 				producer = SOV
 			}
+		}
+	}
+}
+
+demobilization = {
+	AEH_demobilization_decision = {
+		icon = generic_political_actions
+		activation = {
+			has_war = no
+			has_manpower > 9999
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+				has_idea = AEH_national_mobilization
+			}
+		}
+		available = {
+			hidden_trigger = {
+				has_war = yes
+				has_manpower < 10000
+			}
+			custom_trigger_tooltip = {
+				tooltip = AEH_demobilization_decision_trigger_tt
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 7
+		timeout_effect = {
+		}
+		complete_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						ROOT = {
+							has_war = no
+						}
+					}
+					random_state = {
+						limit = {
+							ROOT = {
+								divisions_in_state = {
+									state = PREV
+									size > 0
+								}
+							}
+						}
+						ROOT = {
+							delete_unit = {
+								state = PREV
+								disband = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	AEH_demobilization_decision2 = {
+		icon = revolt
+		activation = {
+			has_war = no
+			has_manpower < 10000
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+				has_idea = AEH_national_mobilization
+			}
+		}
+		available = {
+			hidden_trigger = {
+				has_war = yes
+				has_manpower > 9999
+			}
+			custom_trigger_tooltip = {
+				tooltip = AEH_demobilization_decision2_trigger_tt
+			}
+		}
+		is_good = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						ROOT = {
+							has_war = no
+						}
+					}
+					random_state = {
+						limit = {
+							ROOT = {
+								divisions_in_state = {
+									state = PREV
+									size > 0
+								}
+							}
+						}
+						ROOT = {
+							delete_unit = {
+								state = PREV
+								disband = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
 		}
 	}
 }

@@ -36,3 +36,16 @@ AEH_debug_category = {
 		is_debug = yes
 	}
 }
+
+AEH_generic_category = {
+	icon = generic_political_actions
+	
+	priority = 800
+
+	allowed = {
+		is_debug = yes
+	}
+	visible = {
+		is_debug = yes
+	}
+}

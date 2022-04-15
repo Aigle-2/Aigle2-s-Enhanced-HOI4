@@ -110,14 +110,13 @@ country_event = {
 country_event = {
 	id = AEH.2
 	fire_only_once = yes
-	
 	hidden = yes
 	mean_time_to_happen = {
 		days = 15
 	}
 	trigger = {
 		OR = {
-			has_global_flag = AEH_historical_ww2_peace_init
+			has_global_flag = AEH_historical_ww2_europe_peace_init
 			# has_global_flag = had_yalta_conference
 			# AND = {
 			# 	has_global_flag = had_yalta_conference
@@ -134,9 +133,7 @@ country_event = {
 			# 	}
 			# }
 		}
-		
 	}
-
 	immediate = {
 		every_state = {
 			limit = {
@@ -177,19 +174,15 @@ country_event = {
 			transfer_state = 670
 			transfer_state = 671
 			transfer_state = 286
-
 		}
-
 		SYR = {
 			transfer_state = 554
 			transfer_state = 677
 			transfer_state = 680
 		}
-
 		LEB = {
 			transfer_state = 553
 		}
-
 		every_state = {
 			limit = {
 				is_core_of = DEN
@@ -246,6 +239,30 @@ country_event = {
 			}
 			ITA = {
 				transfer_state = PREV
+			}
+		}
+		ITA = {
+			overlord = {
+				end_puppet = ITA
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = SPR
+				NOT = {
+					is_owned_by = SPR
+				}
+				NOT = {
+					state = 118
+				}
+			}
+			SPR = {
+				transfer_state = PREV
+			}
+		}
+		SPR = {
+			overlord = {
+				end_puppet = SPR
 			}
 		}
 		every_state = {
@@ -402,7 +419,6 @@ country_event = {
 				transfer_state = PREV
 			}
 		}
-
 		every_state = {
 			limit = {
 				is_core_of = PER
@@ -414,6 +430,11 @@ country_event = {
 				transfer_state = PREV
 			}
 		}
+		PER = {
+			overlord = {
+				end_puppet = PER
+			}
+		}
 
 		SOV = {
 			puppet = POL
@@ -422,7 +443,6 @@ country_event = {
 			puppet = CZE
 			puppet = BUL
 		}
-
 		YUG = {
 			set_political_party = {
 				ideology = communism
@@ -483,7 +503,6 @@ country_event = {
 				elections_allowed = no
 			}
 		}
-
 		PER = {
 			set_political_party = {
 				ideology = democratic
@@ -492,12 +511,117 @@ country_event = {
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = yes
-        		election_frequency = 48
+				election_frequency = 48
 			}
 		}
 
+		set_truce = {
+			target = GER
+			days = 90
+		}
 
-		set_global_flag = AEH_historical_ww2_peace_done
+		every_country = {
+			limit = {
+				OR = {
+					is_ally_with = USA
+					tag = USA
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_ally_with = SOV
+						tag = SOV
+					}
+				}
+				set_truce = {
+					target = PREV
+					days = 720
+				}
+			}
+		}
+
+		add_named_threat = {
+			threat = -75
+			name = AEH_peace_treaty_tension_reduction_europe
+		}
+		
+
+		set_global_flag = AEH_historical_ww2_europe_peace_done
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = AEH.3
+	fire_only_once = yes
+	hidden = yes
+	mean_time_to_happen = {
+		days = 15
+	}
+	trigger = {
+		has_global_flag = AEH_historical_ww2_asia_peace_init
+	}
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = CHI
+				NOT = {
+					is_owned_by = CHI
+				}
+				NOT = {
+					owner = {
+						tag = PRC
+					}
+				}
+				NOT = {
+					state = 326
+				}
+				NOT = {
+					state = 729
+				}
+			}
+			CHI = {
+				transfer_state = PREV
+			}
+		}
+		#JAP controlled islands
+		USA = {
+			transfer_state = 646
+			transfer_state = 648
+			transfer_state = 684
+			transfer_state = 647
+			transfer_state = 633
+		}
+		#Japanese islands
+		every_state = {
+			limit = {
+				is_core_of = JAP
+				NOT = {
+					is_owned_by = JAP
+				}
+			}
+			JAP = {
+				transfer_state = PREV
+			}
+		}
+		JAP = {
+			set_political_party = {
+				ideology = democratic
+				popularity = 60
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 48
+			}
+		}
+		add_named_threat = {
+			threat = -50
+			name = AEH_peace_treaty_tension_reduction_asia
+		}
+		set_global_flag = AEH_historical_ww2_asia_peace_done
 	}
 	option = {
 	}
