@@ -1,0 +1,134 @@
+SWE = {
+	light_tank_chassis_0 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_0_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_0_2.dds"
+			 }
+		}
+	}
+
+	light_tank_chassis_1 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_1_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_1_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_1_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_1_4.dds"
+			 }
+		}
+	}
+
+	light_tank_chassis_2 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_2_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_2_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_2_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_2_4.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_2_5.dds"
+			 }
+		}
+	}
+
+	light_tank_chassis_3 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_3_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_3_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_3_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_lt_3_4.dds"
+			 }
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_4.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_5.dds"
+			 }
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_4.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_1_5.dds"
+			 }
+		}
+	}
+
+	medium_tank_chassis_2 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_2_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_2_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_2_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_2_4.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_2_5.dds"
+			 }
+		}
+	}
+
+	medium_tank_chassis_3 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_3_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_3_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_3_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_3_4.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_mt_3_5.dds"
+			 }
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_1_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_1_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_1_3.dds"
+			 }
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_1_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_1_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_1_3.dds"
+			 }
+		}
+	}
+
+	heavy_tank_chassis_2 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_2_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_2_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_2_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_2_4.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_2_5.dds"
+			 }
+		}
+	}
+
+	heavy_tank_chassis_3 = {
+		pool = {
+			icons = { 
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_3_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_3_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_3_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_3_4.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/SWE/swe_ht_3_5.dds"
+			 }
+
+		}
+	}
+}
+	

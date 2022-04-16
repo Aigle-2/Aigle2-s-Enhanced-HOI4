@@ -1505,3 +1505,20 @@ PRC_PUPPET = {
 	color = rgb { 205 5 21 }
 	color_ui = rgb { 255 255 255 }
 }
+
+##BETTER SWEDEN##
+
+SWE_KALMAR = {
+	color = rgb { 255 148 81 }
+	color_ui = rgb { 80  165  10 }
+}
+
+SWE_KALMAR_fascism = {
+	color = rgb { 255 148 81 }
+	color_ui = rgb { 80  165  10 }
+}
+
+SWE_KALMAR_communism = {
+	color = rgb { 255 148 81 }
+	color_ui = rgb { 80  165  10 }
+}

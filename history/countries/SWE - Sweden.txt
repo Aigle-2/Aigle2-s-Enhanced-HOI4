@@ -14,7 +14,7 @@ set_research_slots = 3
 add_ideas = {
 	en_svensk_tiger
 	neutrality_idea
-	AEH_mandatory_army_service
+	SWE_loud_minorities
 }
 set_stability = 0.9
 set_war_support = 0.1
