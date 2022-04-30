@@ -233,9 +233,11 @@ recruit_character = SWE_axel_rappe
 recruit_character = SWE_oscar_nygren
 recruit_character = SWE_axel_ljungdahl
 recruit_character = SWE_archibald_douglas
-recruit_character = SWE_ernst_wigforss
+# recruit_character = SWE_ernst_wigforss
 recruit_character = SWE_thorwald_bergquist
 recruit_character = SWE_osten_unden
+recruit_character = SWE_per_edvin_skold
+recruit_character = SWE_fritiof_domo
 
 
 ### VARIANTS ###

@@ -332,7 +332,7 @@ ideas = {
 				army_defence_factor = -0.75
 				# army_org_factor = -0.75
 				
-				training_time_factor = -0.95
+				training_time_factor = -0.3
 				experience_gain_army = 0.1 #because of training_time_factor affecting xp gain during army exercices
 			}
 			
@@ -371,7 +371,7 @@ ideas = {
 				
 				army_org_factor = -0.05
 				
-				training_time_factor = -0.95
+				training_time_factor = -0.3
 				experience_gain_army = 0.1 #because of training_time_factor affecting xp gain during army exercices
 				
 				conscription = 0.1

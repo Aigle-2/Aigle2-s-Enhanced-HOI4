@@ -1,0 +1,12 @@
+spriteTypes = {	
+	spriteType = {
+		name = GFX_portrait_Olof_Thörnell
+		texturefile = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	}
+	
+	spriteType = {
+		name = GFX_portrait_Oscar_Nygren
+		texturefile = "gfx/leaders/Europe/portrait_Europe_Generic_6.dds"
+	}
+	
+}

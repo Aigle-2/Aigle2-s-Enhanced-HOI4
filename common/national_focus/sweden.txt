@@ -27,9 +27,9 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 15
 			add_manpower = 5000
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -221,9 +221,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 5
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -344,6 +344,24 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
+			add_field_marshal_role = {
+				Character = SWE_Olof_Thornell
+				traits = { politically_connected infantry_officer skilled_staffer}
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 5
+			  }
+			  add_corps_commander_role = {
+				Character = SWE_Oscar_Nygren
+				traits = { old_guard }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 4
+			  }
 		}
 	}
 	focus = {
@@ -616,6 +634,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -2630,12 +2649,13 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
+			
 		}
 		completion_reward = {
 			air_experience = 25
@@ -2687,9 +2707,9 @@ focus_tree = {
 					}
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -3307,9 +3327,9 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = fleet_in_being_bonus
-				bonus = 1
+				cost_reduction = 0.25
 				uses = 2
 				category = fleet_in_being_tree
 			}
@@ -3679,7 +3699,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = nuclear_effort
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = nuclear
 			}
 		}
