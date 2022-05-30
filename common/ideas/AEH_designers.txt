@@ -116,6 +116,9 @@ ideas = {
 					hard_attack = 0.05
 					ap_attack = 0.1
 				}
+				rocket_artillery_equipment = {
+					hard_attack = 0.1
+				}
 			}
 
 			research_bonus = {
@@ -255,6 +258,9 @@ ideas = {
 				}
 				armor = {
 					reliability = 0.05
+				}
+				rocket_artillery_equipment = {
+					soft_attack = 0.1
 				}
 			}
 			
