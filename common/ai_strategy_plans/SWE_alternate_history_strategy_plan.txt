@@ -1,0 +1,352 @@
+SWE_fascist_vscommunists_plan = {
+	name = "SWE_fascist_vscommunists_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = SWE
+	}
+	enable = {
+		NOT = { has_country_flag = EAI_pause_national_focuses } #EAI
+		SWE = {
+			has_government = fascism
+		}
+		OR = {
+			FIN = {
+				has_government = communism
+			}
+			AND = {
+				FIN = {
+					is_subject = yes
+				}
+				FIN = {
+					OVERLORD = {
+						has_government = communism
+					}
+				}
+			}
+		}
+
+		OR = {
+			NOR = {
+				has_government = communism
+			}
+			AND = {
+				NOR = {
+					is_subject = yes
+				}
+				NOR	= {
+					OVERLORD = {
+						has_government = communism
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_country_flag = EAI_pause_national_focuses #EAI
+
+			is_subject = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#DO ASAP
+		SWE_form_unity_gov
+		SWE_swedish_interests
+
+		#GO fascist
+		SWE_stabilize_the_government
+		SWE_domestic_affairs
+		SWE_rally_the_people
+		SWE_swedish_nationalism
+		SWE_foreign_affairs
+
+
+		#INDUSTRY
+		SWE_boost_the_industry
+		SWE_swedish_highways
+		SWE_research_efforts
+		SWE_our_science
+		SWE_covert_investigations
+		SWE_the_geheimschreiber
+		SWE_swedish_national_research_institute
+		SWE_svenska_marinen
+		SWE_preparing_for_war
+		SWE_build_the_north
+		SWE_the_swedish_military_industrial_complex
+		SWE_gotland_oil_surveys
+
+		#ARMY
+		SWE_prepare_for_the_storm
+		SWE_gather_materiel
+		SWE_rethink_our_defenses
+		SWE_we_need_to_draft
+		SWE_reinforce_the_draft
+		SWE_the_home_guard
+		SWE_swedish_brains
+		SWE_infantry_focus
+		SWE_svenska_flygvapnet
+		SWE_fighters_first
+		SWE_sverige_rules_the_waves
+		#and the rest is not important
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_fascist_vscommunists_plan = {
+	name = "SWE_fascist_vscommunists_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = SWE
+	}
+	enable = {
+		NOT = { has_country_flag = EAI_pause_national_focuses } #EAI
+		SWE = {
+			has_government = communism
+		}
+		OR = {
+			FIN = {
+				has_government = fascism
+			}
+			AND = {
+				FIN = {
+					is_subject = yes
+				}
+				FIN = {
+					OVERLORD = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+
+		OR = {
+			NOR = {
+				has_government = fascism
+			}
+			AND = {
+				NOR = {
+					is_subject = yes
+				}
+				NOR	= {
+					OVERLORD = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_country_flag = EAI_pause_national_focuses #EAI
+
+			is_subject = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#DO ASAP
+		SWE_form_unity_gov
+		SWE_swedish_interests
+
+		#GO communist
+		SWE_stabilize_the_government
+		SWE_domestic_affairs
+		SWE_rally_the_people
+		SWE_swedish_communism
+		SWE_foreign_affairs
+
+
+		#INDUSTRY
+		SWE_boost_the_industry
+		SWE_swedish_highways
+		SWE_research_efforts
+		SWE_our_science
+		SWE_covert_investigations
+		SWE_the_geheimschreiber
+		SWE_swedish_national_research_institute
+		SWE_svenska_marinen
+		SWE_preparing_for_war
+		SWE_build_the_north
+		SWE_the_swedish_military_industrial_complex
+		SWE_gotland_oil_surveys
+
+		#ARMY
+		SWE_prepare_for_the_storm
+		SWE_gather_materiel
+		SWE_rethink_our_defenses
+		SWE_we_need_to_draft
+		SWE_reinforce_the_draft
+		SWE_the_home_guard
+		SWE_swedish_brains
+		SWE_infantry_focus
+		SWE_svenska_flygvapnet
+		SWE_fighters_first
+		SWE_sverige_rules_the_waves
+		#and the rest is not important
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_democratic_vscommunistsandfascists_plan = {
+	name = "SWE_democratic_vscommunistsandfascists_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = SWE
+	}
+	enable = {
+		NOT = { has_country_flag = EAI_pause_national_focuses } #EAI
+		SWE = {
+			has_government = democratic
+		}
+		OR = {
+			AND = {
+				OR = {
+					FIN = {
+						has_government = fascism
+					}
+					AND = {
+						FIN = {
+							is_subject = yes
+						}
+						FIN = {
+							OVERLORD = {
+								has_government = fascism
+							}
+						}
+					}
+				}
+				OR = {
+					NOR = {
+						has_government = fascism
+					}
+					AND = {
+						NOR = {
+							is_subject = yes
+						}
+						NOR	= {
+							OVERLORD = {
+								has_government = fascism
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				OR = {
+					FIN = {
+						has_government = communism
+					}
+					AND = {
+						FIN = {
+							is_subject = yes
+						}
+						FIN = {
+							OVERLORD = {
+								has_government = communism
+							}
+						}
+					}
+				}
+				OR = {
+					NOR = {
+						has_government = communism
+					}
+					AND = {
+						NOR = {
+							is_subject = yes
+						}
+						NOR	= {
+							OVERLORD = {
+								has_government = communism
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_country_flag = EAI_pause_national_focuses #EAI
+
+			is_subject = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#DO ASAP
+		SWE_form_unity_gov
+		SWE_swedish_interests
+
+		#REMAIN DEMOCRATIC
+		SWE_stabilize_the_government
+		SWE_domestic_affairs
+		SWE_absolute_neutrality
+		SWE_political_pacification
+		SWE_defend_our_democracy
+		SWE_foreign_affairs
+
+		#INDUSTRY
+		SWE_boost_the_industry
+		SWE_swedish_highways
+		SWE_research_efforts
+		SWE_our_science
+		SWE_covert_investigations
+		SWE_the_geheimschreiber
+		SWE_swedish_national_research_institute
+		SWE_svenska_marinen
+		SWE_preparing_for_war
+		SWE_build_the_north
+		SWE_the_swedish_military_industrial_complex
+		SWE_gotland_oil_surveys
+
+		#ARMY
+		SWE_prepare_for_the_storm
+		SWE_gather_materiel
+		SWE_rethink_our_defenses
+		SWE_we_need_to_draft
+		SWE_reinforce_the_draft
+		SWE_the_home_guard
+		SWE_swedish_brains
+		SWE_infantry_focus
+		SWE_svenska_flygvapnet
+		SWE_fighters_first
+		SWE_sverige_rules_the_waves
+		#and the rest is not important
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

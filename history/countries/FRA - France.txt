@@ -55,6 +55,8 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 	basic_train = 1
+	FRA_support_weapons = 1
+	marines = 1
 }
 
 if = {
@@ -330,6 +332,16 @@ give_guarantee = ROM
 add_equipment_to_stockpile = {  #historical stocks : 80% of French rifles in use in 1940 were WW1 left-overs.
 	type = infantry_equipment_0
 	amount = 100000
+	producer = FRA
+}
+add_equipment_to_stockpile = {  #WW1 stocks
+	type = artillery_equipment_1
+	amount = 1000
+	producer = FRA
+}
+add_equipment_to_stockpile = {  #WW1 stocks
+	type = support_equipment_1
+	amount = 2000
 	producer = FRA
 }
 

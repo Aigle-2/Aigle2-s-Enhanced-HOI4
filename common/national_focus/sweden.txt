@@ -791,7 +791,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = SWE_assert_our_position
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -2343,7 +2343,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SWE_appease_germans
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}

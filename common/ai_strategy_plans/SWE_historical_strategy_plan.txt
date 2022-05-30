@@ -48,6 +48,12 @@ SWE_pause_focuses = {
 		SWE_svenska_flygvapnet = 0
 		SWE_fighters_first = 0
 		SWE_sverige_rules_the_waves = 0
+
+		#AHISTORICAL
+		SWE_rally_the_people = 0
+		SWE_swedish_nationalism = 0
+		SWE_foreign_affairs = 0
+		SWE_swedish_communism = 0
 	}
 }
 
@@ -61,7 +67,7 @@ SWE_historical_plan = {
 	enable = {
 		NOT = { has_country_flag = EAI_pause_national_focuses } #EAI
 		is_historical_focus_on = yes
-		
+
 		# OR = {
 		# 	AND = {
 		# 		is_historical_focus_on = yes
