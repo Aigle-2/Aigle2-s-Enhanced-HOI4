@@ -1,0 +1,143 @@
+SWE_pause_focuses = {
+	name = "Pause focuses"
+	
+	allowed = {
+		original_tag = SWE
+	}
+
+	enable = {
+		has_country_flag = EAI_pause_national_focuses
+	}
+	
+	abort_when_not_enabled = yes
+	
+	focus_factors = {
+		SWE_form_unity_gov = 0
+		SWE_swedish_interests = 0
+
+		#REMAIN DEMOCRATIC
+		SWE_stabilize_the_government = 0
+		SWE_domestic_affairs = 0
+		SWE_absolute_neutrality = 0
+		SWE_political_pacification = 0
+		SWE_protect_the_status_quo = 0
+		SWE_defend_our_democracy = 0
+		#INDUSTRY
+		SWE_boost_the_industry = 0
+		SWE_swedish_highways = 0
+		SWE_research_efforts = 0
+		SWE_our_science = 0
+		SWE_covert_investigations = 0
+		SWE_the_geheimschreiber = 0
+		SWE_swedish_national_research_institute = 0
+		SWE_svenska_marinen = 0
+		SWE_preparing_for_war = 0
+		SWE_build_the_north = 0
+		SWE_the_swedish_military_industrial_complex = 0
+		SWE_gotland_oil_surveys = 0
+
+		#ARMY
+		SWE_prepare_for_the_storm = 0
+		SWE_gather_materiel = 0
+		SWE_rethink_our_defenses = 0
+		SWE_we_need_to_draft = 0
+		SWE_reinforce_the_draft = 0
+		SWE_the_home_guard = 0
+		SWE_swedish_brains = 0
+		SWE_infantry_focus = 0
+		SWE_svenska_flygvapnet = 0
+		SWE_fighters_first = 0
+		SWE_sverige_rules_the_waves = 0
+	}
+}
+
+SWE_historical_plan = {
+	name = "SWE historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = SWE
+	}
+	enable = {
+		NOT = { has_country_flag = EAI_pause_national_focuses } #EAI
+		is_historical_focus_on = yes
+		
+		# OR = {
+		# 	AND = {
+		# 		is_historical_focus_on = yes
+		# 		has_game_rule = {
+		# 			rule = SWE_ai_behavior
+		# 			option = DEFAULT
+		# 		}
+		# 	}
+		# 	has_game_rule = {
+		# 		rule = SWE_ai_behavior
+		# 		option = HISTORICAL
+		# 	}
+		# }
+	}
+	abort = {
+		OR = {
+			has_country_flag = EAI_pause_national_focuses #EAI
+
+			is_subject = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#DO ASAP
+		SWE_form_unity_gov
+		SWE_swedish_interests
+
+		#REMAIN DEMOCRATIC
+		SWE_stabilize_the_government
+		SWE_domestic_affairs
+		SWE_absolute_neutrality
+		SWE_political_pacification
+		SWE_protect_the_status_quo
+		SWE_defend_our_democracy
+
+		#INDUSTRY
+		SWE_boost_the_industry
+		SWE_swedish_highways
+		SWE_research_efforts
+		SWE_our_science
+		SWE_covert_investigations
+		SWE_the_geheimschreiber
+		SWE_swedish_national_research_institute
+		SWE_svenska_marinen
+		SWE_preparing_for_war
+		SWE_build_the_north
+		SWE_the_swedish_military_industrial_complex
+		SWE_gotland_oil_surveys
+
+		#ARMY
+		SWE_prepare_for_the_storm
+		SWE_gather_materiel
+		SWE_rethink_our_defenses
+		SWE_we_need_to_draft
+		SWE_reinforce_the_draft
+		SWE_the_home_guard
+		SWE_swedish_brains
+		SWE_infantry_focus
+		SWE_svenska_flygvapnet
+		SWE_fighters_first
+		SWE_sverige_rules_the_waves
+		#and the rest is not important
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+##################
+### FOCUS KEYS ###
+##################

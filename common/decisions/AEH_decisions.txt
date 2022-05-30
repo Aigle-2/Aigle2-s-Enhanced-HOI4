@@ -199,22 +199,22 @@ AEH_debug_category = {
 			army_experience = 100
 		}
 	}
-	AEH_chracters_debug = {
-		icon = generic_political_actions
-		visible = {
-			is_debug = yes
-		}
-		allowed = {
-			always = yes
-			# has_war = yes
-		}
-		complete_effect = {
-			SWE = {
-				recruit_character = SWE_per_edvin_skold
-				recruit_character = SWE_fritiof_domo
-			}
-		}
-	}
+	# AEH_chracters_debug = {
+	# 	icon = generic_political_actions
+	# 	visible = {
+	# 		is_debug = yes
+	# 	}
+	# 	allowed = {
+	# 		always = yes
+	# 		# has_war = yes
+	# 	}
+	# 	complete_effect = {
+	# 		SWE = {
+	# 			recruit_character = SWE_per_edvin_skold
+	# 			recruit_character = SWE_fritiof_domo
+	# 		}
+	# 	}
+	# }
 }
 
 demobilization = {
