@@ -621,6 +621,16 @@ country_event = {
 			threat = -50
 			name = AEH_peace_treaty_tension_reduction_asia
 		}
+		PRC = {
+			overlord = {
+				end_puppet = PRC
+			}
+		}
+		CHI = {
+			overlord = {
+				end_puppet = CHI
+			}
+		}
 		set_global_flag = AEH_historical_ww2_asia_peace_done
 	}
 	option = {
