@@ -631,6 +631,19 @@ country_event = {
 				end_puppet = CHI
 			}
 		}
+		every_state = {
+			limit = {
+				is_core_of = KOR
+				# NOT = {
+				# 	CONTROLLER = {
+				# 		is_in_faction_with = SOV
+				# 	}
+				# }
+			}
+			KOR = {
+				transfer_state = PREV
+			}
+		}
 		set_global_flag = AEH_historical_ww2_asia_peace_done
 	}
 	option = {
