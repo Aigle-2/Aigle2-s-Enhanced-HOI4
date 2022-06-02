@@ -435,7 +435,6 @@ country_event = {
 				end_puppet = PER
 			}
 		}
-
 		SOV = {
 			puppet = POL
 			puppet = HUN
@@ -514,12 +513,10 @@ country_event = {
 				election_frequency = 48
 			}
 		}
-
 		set_truce = {
 			target = GER
 			days = 90
 		}
-
 		every_country = {
 			limit = {
 				OR = {
@@ -540,13 +537,10 @@ country_event = {
 				}
 			}
 		}
-
 		add_named_threat = {
 			threat = -75
 			name = AEH_peace_treaty_tension_reduction_europe
 		}
-		
-
 		set_global_flag = AEH_historical_ww2_europe_peace_done
 	}
 	option = {
@@ -645,6 +639,306 @@ country_event = {
 			}
 		}
 		set_global_flag = AEH_historical_ww2_asia_peace_done
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = AEH.4
+	fire_only_once = yes
+	hidden = yes
+	mean_time_to_happen = {
+		days = 15
+	}
+	trigger = {
+		ENG = {
+			surrender_progress > 0.85
+		}
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				is_subject_of = ENG
+			}
+			end_puppet = ENG
+			if = {
+				limit = {
+					tag = CAN
+				}
+				set_major = yes
+			}
+		}
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = AEH.5
+	fire_only_once = yes
+	hidden = yes
+	mean_time_to_happen = {
+		days = 15
+	}
+	trigger = {
+		any_state = {
+			is_core_of = MEX
+			CONTROLLER = {
+				NOT = {
+					is_ally_with = USA
+				}
+				NOT = {
+					tag = USA
+				}
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+		MEX = {
+			NOT = {
+				has_war_with = USA
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						MEX = {
+							has_government = democratic
+						}
+						USA = {
+							has_government = democratic
+						}
+					}
+					AND = {
+						MEX = {
+							has_government = communism
+						}
+						USA = {
+							has_government = communism
+						}
+					}
+					AND = {
+						MEX = {
+							has_government = fascism
+						}
+						USA = {
+							has_government = fascism
+						}
+					}
+					AND = {
+						MEX = {
+							has_government = neutrality
+						}
+						USA = {
+							has_government = neutrality
+						}
+					}
+					AND = {
+						MEX = {
+							has_government = neutrality
+						}
+						USA = {
+							has_government = democratic
+						}
+					}
+					AND = {
+						MEX = {
+							has_government = democratic
+						}
+						USA = {
+							has_government = neutrality
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					MEX = {
+						is_faction_leader = yes
+					}
+				}
+				MEX = {
+					add_to_faction = USA
+				}
+			}
+			else = {
+				every_country = {
+					limit = {
+						is_ally_with = MEX
+						is_faction_leader = yes
+					}
+					THIS = {
+						add_to_faction = USA
+					}
+				}
+			}
+		}
+		# else_if = {
+		# 	limit = {
+		# 		any_state = {
+		# 			is_core_of = MEX
+		# 			CONTROLLER = {
+		# 				NOT = {
+		# 					is_ally_with = USA
+		# 				}
+		# 				NOT = {
+		# 					tag = USA
+		# 				}
+		# 				NOT = {
+		# 					has_government = democratic
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+
+		# }
+		# else = {
+		# 	USA = {
+		# 		declare_war_on = {
+		# 			target = MEX
+		# 		}
+		# 	}
+		# }
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = AEH.6
+	fire_only_once = yes
+	hidden = yes
+	mean_time_to_happen = {
+		days = 15
+	}
+	trigger = {
+		any_state = {
+			is_core_of = CAN
+			CONTROLLER = {
+				NOT = {
+					is_ally_with = USA
+				}
+				NOT = {
+					tag = USA
+				}
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+		CAN = {
+			NOT = {
+				has_war_with = USA
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						CAN = {
+							has_government = democratic
+						}
+						USA = {
+							has_government = democratic
+						}
+					}
+					AND = {
+						CAN = {
+							has_government = communism
+						}
+						USA = {
+							has_government = communism
+						}
+					}
+					AND = {
+						CAN = {
+							has_government = fascism
+						}
+						USA = {
+							has_government = fascism
+						}
+					}
+					AND = {
+						CAN = {
+							has_government = neutrality
+						}
+						USA = {
+							has_government = neutrality
+						}
+					}
+					AND = {
+						CAN = {
+							has_government = neutrality
+						}
+						USA = {
+							has_government = democratic
+						}
+					}
+					AND = {
+						CAN = {
+							has_government = democratic
+						}
+						USA = {
+							has_government = neutrality
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					CAN = {
+						is_faction_leader = yes
+					}
+				}
+				CAN = {
+					add_to_faction = USA
+				}
+			}
+			else = {
+				every_country = {
+					limit = {
+						is_ally_with = CAN
+						is_faction_leader = yes
+					}
+					THIS = {
+						add_to_faction = USA
+					}
+				}
+			}
+		}
+		# else_if = {
+		# 	limit = {
+		# 		any_state = {
+		# 			is_core_of = CAN
+		# 			CONTROLLER = {
+		# 				NOT = {
+		# 					is_ally_with = USA
+		# 				}
+		# 				NOT = {
+		# 					tag = USA
+		# 				}
+		# 				NOT = {
+		# 					has_government = democratic
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+
+		# }
+		# else = {
+		# 	USA = {
+		# 		declare_war_on = {
+		# 			target = CAN
+		# 		}
+		# 	}
+		# }
 	}
 	option = {
 	}
