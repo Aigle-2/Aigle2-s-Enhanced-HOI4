@@ -669,6 +669,40 @@ country_event = {
 				set_major = yes
 			}
 		}
+		if = {
+			limit= {
+				USA = {
+					is_in_faction_with = ENG
+				}
+			}
+			ENG = {
+				transfer_navy = {
+					target = USA
+				}
+			}
+		} else_if = {
+			limit= {
+				CAN = {
+					is_in_faction_with = ENG
+				}
+			}
+			ENG = {
+				transfer_navy = {
+					target = CAN
+				}
+			}
+		} else_if = {
+			limit= {
+				CAN = {
+					is_in_faction_with = AST
+				}
+			}
+			AST = {
+				transfer_navy = {
+					target = CAN
+				}
+			}
+		}
 	}
 	option = {
 	}
