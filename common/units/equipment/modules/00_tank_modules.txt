@@ -1230,18 +1230,18 @@ equipment_modules = {
 		}
 	}
 
-	stabilizer = {
-		abbreviation = "stab"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
+	# stabilizer = {
+	# 	abbreviation = "stab"
+	# 	category = tank_special_module
+	# 	sfx = sfx_ui_sd_module_turret
 
-		add_stats = {
-			build_cost_ic = 2
-			breakthrough = 5
-		}
-		xp_cost = 1
+	# 	add_stats = {
+	# 		build_cost_ic = 2
+	# 		breakthrough = 5
+	# 	}
+	# 	xp_cost = 1
 
-	}
+	# }
 
 	smoke_launchers = {
 		abbreviation = "smok"
@@ -1382,7 +1382,7 @@ equipment_modules = {
 
 	###AEH additions
 
-	tank_high_velocity_cannon_4 = {
+	tank_high_velocity_cannon_3b = {
 		abbreviation = "hv4"
 		category = tank_medium_main_armament
 		sfx = sfx_ui_sd_module_turret

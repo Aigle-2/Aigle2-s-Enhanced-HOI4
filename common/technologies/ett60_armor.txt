@@ -1,0 +1,61 @@
+technologies = {
+
+	@1947 = 12
+	@1950 = 14
+	@1955 = 16
+	@1960 = 18
+	
+	main_battle_tank_chassis = {
+
+		path = {
+			leads_to_tech = main_battle_tank_chassis_2
+			research_cost_coeff = 1
+		}
+		
+	}
+	
+	main_battle_tank_chassis_2 = { #E-50
+
+		enable_equipments = {
+			modern_tank_chassis_2
+			modern_tank_destroyer_chassis_2
+			modern_tank_artillery_chassis_2
+			modern_tank_aa_chassis_2
+		}
+		enable_subunits = {
+			modern_armor
+		}
+
+		research_cost = 2.5
+		start_year = 1947
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = @1947 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1946.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1947.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1948.1.1"
+			}
+		}
+
+		categories = {
+			armor
+			cat_medium_armor
+		}
+	}
+}
