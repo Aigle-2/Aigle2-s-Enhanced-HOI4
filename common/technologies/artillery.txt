@@ -381,6 +381,10 @@ technologies = {
 		}
 	}
 	artillery5 = {
+		path = {
+			leads_to_tech = artillery6
+			research_cost_coeff = 1
+		}
 		artillery = {
 			soft_attack = 0.1
 		}
@@ -649,6 +653,10 @@ technologies = {
 		}
 	}
 	rocket_artillery4 = {
+		path = {
+			leads_to_tech = rocket_artillery5
+			research_cost_coeff = 1
+		}
 		enable_equipments = {
 			rocket_artillery_equipment_2
 		}
@@ -992,6 +1000,10 @@ technologies = {
 			tank_heavy_cannon_3
 			tank_anti_air_cannon_3
 			auto_loader
+		}
+		path = {
+			leads_to_tech = antiair6
+			research_cost_coeff = 1
 		}
 		research_cost = 1
 		start_year = 1943
@@ -1486,6 +1498,10 @@ technologies = {
 			tank_high_velocity_cannon_3b
 			tank_heavy_cannon_3
 			auto_loader
+		}
+		path = {
+			leads_to_tech = antitank6
+			research_cost_coeff = 1
 		}
 		research_cost = 1
 		start_year = 1943

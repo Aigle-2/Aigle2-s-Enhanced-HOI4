@@ -351,6 +351,10 @@ technologies = {
 			hard_attack = 0.25
 			ap_attack = 1
 		}
+		path = {
+			leads_to_tech = infantry_at3
+			research_cost_coeff = 1
+		}
 		research_cost = 1.5
 		start_year = 1943
 		folder = {
@@ -444,6 +448,10 @@ technologies = {
 		}
 	}
 	advanced_infantry_weapons2 = {
+		path = {
+			leads_to_tech = infantry_equipment_4
+			research_cost_coeff = 1
+		}
 		category_light_infantry = {
 			soft_attack = 0.05
 		}
@@ -1278,7 +1286,7 @@ technologies = {
 		folder = {
 			name = infantry_folder
 			position = {
-				x = 0
+				x = -1
 				y = @1943
 			}
 		}
@@ -1316,9 +1324,13 @@ technologies = {
 		folder = {
 			name = infantry_folder
 			position = {
-				x = 0
+				x = -1
 				y = @1946
 			}
+		}
+		path = {
+			leads_to_tech = night_vision3
+			research_cost_coeff = 1
 		}
 		categories = {
 			night_vision
@@ -1621,6 +1633,10 @@ technologies = {
 		}
 	}
 	support_weapons4 = {
+		path = {
+			leads_to_tech = support_weapons5
+			research_cost_coeff = 1
+		}
 		infantry = {
 			defense = 0.05
 			breakthrough = 0.05
@@ -1886,6 +1902,10 @@ technologies = {
 		enable_equipments = {
 			armored_car_equipment_2
 		}
+		path = {
+			leads_to_tech = armored_car4
+			research_cost_coeff = 1
+		}
 		research_cost = 2
 		start_year = 1942
 		folder = {
@@ -2089,6 +2109,10 @@ technologies = {
 		enable_equipments = {
 			mechanized_equipment_3
 		}
+		path = {
+			leads_to_tech = mechanised_infantry4
+			research_cost_coeff = 1
+		}
 		mechanized = {
 			soft_attack = 0.15
 			hard_attack = 0.15
@@ -2227,12 +2251,7 @@ technologies = {
 	}
 	night_vision3 = {
 
-		land_night_attack = 0.15	
-
-		path = {
-			leads_to_tech = night_vision3
-			research_cost_coeff = 1
-		}
+		land_night_attack = 0.15
 		
 		research_cost = 2
 		start_year = 1955
@@ -2265,7 +2284,10 @@ technologies = {
 		}
 	}
 	support_weapons5 = {
-
+		path = {
+			leads_to_tech = support_weapons6
+			research_cost_coeff = 1
+		}
 		infantry = {
 			defense = 0.05
 			breakthrough = 0.05
@@ -2484,8 +2506,7 @@ technologies = {
 
 		enable_equipments = {
 			infantry_equipment_5
-		}	
-		
+		}
 
 		research_cost = 2
 		start_year = 1960
@@ -2657,7 +2678,7 @@ technologies = {
 		}
 	}
 
-	rmored_car4 = {
+	armored_car4 = {
 
 		enable_equipments = {
 			armored_car_equipment_3
