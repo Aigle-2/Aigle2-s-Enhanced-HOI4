@@ -1,8 +1,10 @@
 technologies = {
 	early_fighter = {
+
 		enable_equipments = {
 			fighter_equipment_0
 		}
+	
 		path = {
 			leads_to_tech = fighter1
 			research_cost_coeff = 1
@@ -15,330 +17,564 @@ technologies = {
 			leads_to_tech = naval_bomber1
 			research_cost_coeff = 1
 		}
+		
 		research_cost = 2
 		start_year = 1933
 		folder = {
 			name = air_techs_folder
-			position = {
-				x = 0
-				y = 2
-			}
+			position = { x = 0 y = 2 }
 		}
+		
 		categories = {
 			light_air
 			light_fighter
 			air_equipment
 		}
+		
 		sub_technologies = {
 			cv_early_fighter
 		}
-		ai_will_do = {
+		
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
+
+			#WEIGHT
+			modifier = { factor = 150 EAI_FTR_tech_focus = yes }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
 		}
 	}
+	
 	cv_early_fighter = {
+
 		enable_equipments = {
 			cv_fighter_equipment_0
 		}
-		research_cost = 1		#Carrier Variant
+	
+		research_cost = 1.0 #Carrier Variant
 		start_year = 1933
+		
 		categories = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_tech = fighter1
-			}
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+		
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
+	
 	fighter1 = {
+	
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_FTR = yes }
+			}
+		}
+
 		enable_equipments = {
 			fighter_equipment_1
 		}
+	
 		path = {
 			leads_to_tech = fighter2
 			research_cost_coeff = 1
 		}
+		
 		research_cost = 2
 		start_year = 1936
+
 		folder = {
 			name = air_techs_folder
-			position = {
-				x = 0
-				y = 4
-			}
+			position = { x = 0 y = 4 }
 		}
+		
 		categories = {
 			light_air
 			light_fighter
 			air_equipment
 		}
+		
 		sub_technologies = {
 			cv_fighter1
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			modifier = {
-				factor = 15
-				AND = {
-					is_major = yes
-					date > "1936.6.1"
-				}
-			}
-			modifier = {
-				factor = 50
-				AND = {
-					is_major = yes
-					date > "1938.6.1"
-				}
-			}
+		
+		ai_will_do = { #EAI
+			factor = 10
+
+			#WEIGHT
+			modifier = { factor = 10 date > 1936.6.1 }
+			modifier = { factor = 15 OR = { is_major = yes num_of_military_factories > 25 date > 1940.1.1 } }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0.01 NOT = { EAI_FTR_tech_focus = yes } }
 		}
 	}
+	
 	cv_fighter1 = {
+	
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVFTR = yes }
+			}
+		}
+
 		enable_equipments = {
 			cv_fighter_equipment_1
 		}
-		research_cost = 1		#Carrier Variant
+	
+		research_cost = 1 #Carrier Variant
 		start_year = 1936
+		
 		categories = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
+		
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 2.5
-				tag = USA
-			}
-			modifier = {
-				factor = 2.5
-				tag = JAP
-			}
-			modifier = {
-				factor = 0
-				has_tech = fighter2
-			}
-			modifier = {
-				factor = 2.5
-				has_navy_size = {
-					type = carrier
-					size > 3
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_CV_tech_focus = yes }
+			modifier = { factor = 4 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
+			
+			modifier = { factor = 0 has_tech = fighter2 }
+			
+			modifier = { factor = 0 original_tag = JAP } #jap gets a free cvftr2
 		}
 	}
+	
 	fighter2 = {
+	
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_FTR = yes }
+			}
+		}
+
 		enable_equipments = {
 			fighter_equipment_2
 		}
+	
 		path = {
 			leads_to_tech = fighter3
 			research_cost_coeff = 1
 		}
+				
+
 		research_cost = 2
 		start_year = 1940
 		folder = {
 			name = air_techs_folder
-			position = {
-				x = 0
-				y = 6
-			}
+			position = { x = 0 y = 6 }
 		}
+		folder = {
+			name = secret_weapons_folder
+			position = { x = 6 y = 8 }
+		}
+		
 		categories = {
 			light_air
 			light_fighter
 			air_equipment
 		}
+		
 		sub_technologies = {
 			cv_fighter2
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 50
-				AND = {
-					is_major = yes
-					date > "1942.6.1"
-				}
-			}
+		
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1939.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1938.6.1 } NOT = { EAI_fighter_tech_bonus = yes } }
+			modifier = { factor = 0 OR = { AND = { date < 1938.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1937.6.1 } EAI_fighter_tech_bonus = yes }
+			
+			#WEIGHT
+			modifier = { factor = 30 OR = { is_major = yes num_of_military_factories > 25 date > 1940.1.1 } }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0.01 NOT = { EAI_FTR_tech_focus = yes } }
 		}
 	}
+	
 	cv_fighter2 = {
+	
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVFTR = yes }
+			}
+		}
+
 		enable_equipments = {
 			cv_fighter_equipment_2
 		}
-		research_cost = 1		#Carrier Variant
+	
+		research_cost = 1.0 #Carrier Variant
 		start_year = 1940
+		
 		categories = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
+		
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 2.5
-				tag = USA
-			}
-			modifier = {
-				factor = 2.5
-				tag = JAP
-			}
-			modifier = {
-				factor = 10
-				AND = {
-					is_historical_focus_on = yes
-					tag = JAP
-				}
-			}
-			modifier = {
-				factor = 1.5
-				date > "1941.6.1"
-			}
-			modifier = {
-				factor = 0
-				has_tech = fighter3
-			}
-			modifier = {
-				factor = 2.5
-				has_navy_size = {
-					type = carrier
-					size > 3
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+			
+			#DATE
+			modifier = { factor = 0 date < 1940.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_CV_tech_focus = yes }
+			modifier = { factor = 4 num_of_military_factories > 25 }
+			modifier = { factor = 4 has_navy_size = { size > 6 unit = carrier } }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
+
+			modifier = { factor = 0 has_tech = fighter3 date < 1943.6.1 }
+			
+			modifier = { factor = 0 original_tag = JAP } #jap gets a free cvftr2
 		}
 	}
+	
 	fighter3 = {
+
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_FTR = yes }
+			}
+		}
+	
 		enable_equipments = {
 			fighter_equipment_3
 		}
+		
 		path = {
 			leads_to_tech = jet_fighter1
 			research_cost_coeff = 1
 		}
+		
 		research_cost = 2
-		start_year = 1943
+		start_year = 1944
+
 		folder = {
 			name = air_techs_folder
-			position = {
-				x = 0
-				y = 8
-			}
+			position = { x = 0 y = 8 }
 		}
+		
 		categories = {
 			light_air
 			light_fighter
 			air_equipment
 		}
+		
 		sub_technologies = {
 			cv_fighter3
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 50
-				AND = {
-					is_major = yes
-					date > "1944.6.1"
-				}
-			}
+		
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1943.6.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1943.1.1 } NOT = { EAI_fighter_tech_bonus = yes } }
+			modifier = { factor = 0 OR = { AND = { date < 1942.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1941.6.1 } EAI_fighter_tech_bonus = yes }
+			
+			#WEIGHT
+			modifier = { factor = 30 OR = { is_major = yes num_of_military_factories > 25 date > 1940.1.1 } }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0.01 NOT = { EAI_FTR_tech_focus = yes } }
 		}
 	}
+	
 	cv_fighter3 = {
+	
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVFTR = yes }
+			}
+		}
+
 		enable_equipments = {
 			cv_fighter_equipment_3
 		}
-		research_cost = 1		#Carrier Variant
-		start_year = 1943
+	
+		research_cost = 1.0 #Carrier Variant
+		start_year = 1944
+		
 		categories = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
+		
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 2.5
-				tag = USA
-			}
-			modifier = {
-				factor = 2.5
-				tag = JAP
-			}
-			modifier = {
-				factor = 1.5
-				date > "1945.1.1"
-			}
-			modifier = {
-				factor = 2.5
-				has_navy_size = {
-					type = carrier
-					size > 3
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+			
+			#DATE
+			modifier = { factor = 0 date < 1944.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_CV_tech_focus = yes }
+			modifier = { factor = 4 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
+
+	jet_fighter1 = {
+	
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JFTR = yes }
+			}
+		}
+
+		enable_equipments = {
+				jet_fighter_equipment_1
+		}
+			
+		path = {
+			leads_to_tech = jet_fighter2
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			jet_engines = 1
+		}
+		
+		research_cost = 2
+		start_year = 1945
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		categories = {
+			light_air
+			jet_technology
+		}
+
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1945.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1944.6.1 } }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_FTR_tech_focus = yes } }
+		}
+	}
+
+	cv_fighter4 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVFTR = yes }
+			}
+		}
+		enable_equipments = {
+			cv_fighter_equipment_4
+		}
+		research_cost = 1		#Carrier Variant
+		start_year = 1945
+		categories = {
+			naval_air
+			air_equipment
+		}
+		ai_will_do = { #EAI
+			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1945.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_CV_tech_focus = yes }
+			modifier = { factor = 4 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
+		}
+	}
+
+	jet_fighter2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JFTR = yes }
+			}
+		}
+		enable_equipments = {
+			jet_fighter_equipment_2
+		}
+		path = {
+			leads_to_tech = jet_fighter3
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1947
+		sub_technologies = {
+			cv_jet_fighter1
+		}
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 14
+			}
+		}
+		categories = {
+			light_air
+			jet_technology
+		}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1947.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1946.1.1 } }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_FTR_tech_focus = yes } }
+		}
+	}
+	jet_fighter3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JFTR = yes }
+			}
+		}
+		enable_equipments = {
+			jet_fighter_equipment_3
+		}
+		path = {
+			leads_to_tech = jet_fighter4
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1950
+		sub_technologies = {
+			cv_jet_fighter2
+		}
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 16
+			}
+		}
+		categories = {
+			light_air
+			jet_technology
+		}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1950.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1948.1.1 } }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_FTR_tech_focus = yes } }
+		}
+	}
+	jet_fighter4 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JFTR = yes }
+			}
+		}
+		enable_equipments = {
+			jet_fighter_equipment_4
+		}
+		path = {
+			leads_to_tech = jet_fighter5
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1955
+		sub_technologies = {
+			cv_jet_fighter3
+		}
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 18
+			}
+		}
+		categories = {
+			light_air
+			jet_technology
+		}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1955.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1953.1.1 } }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_FTR_tech_focus = yes } }
+		}
+	}
+	jet_fighter5 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JFTR = yes }
+			}
+		}
+		enable_equipments = {
+			jet_fighter_equipment_5
+		}
+		research_cost = 2
+		start_year = 1960
+		sub_technologies = {
+			cv_jet_fighter4
+		}
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 20
+			}
+		}
+		categories = {
+			light_air
+			jet_technology
+		}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1960.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1958.1.1 } }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_FTR_tech_focus = yes } }
+		}
+	}
+
 	CAS1 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CAS = yes }
+			}
+		}
 		enable_equipments = {
 			CAS_equipment_1
 		}
@@ -363,16 +599,16 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				tag = GER
-			}
-			modifier = {
-				factor = 5
-				tag = SOV
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#WEIGHT
+			modifier = { factor = 10 num_of_military_factories > 25 date > 1937.1.1 }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_CAS_tech_focus = yes } }
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter1 is_researching_technology = fighter1 } }
 		}
 	}
 	cv_CAS1 = {
@@ -385,43 +621,17 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_tech = CAS2
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					has_war_with = USA
-					has_war_with = JAP
-				}
-			}
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	CAS2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CAS = yes }
+			}
+		}
 		enable_equipments = {
 			CAS_equipment_2
 		}
@@ -446,16 +656,20 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				tag = GER
-			}
-			modifier = {
-				factor = 5
-				tag = SOV
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 num_of_military_factories > 25 }
+			modifier = { factor = 2 date > 1940.1.1 }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_CAS_tech_focus = yes } }
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter1 is_researching_technology = fighter1 } }
 		}
 	}
 	cv_CAS2 = {
@@ -468,43 +682,17 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_tech = CAS3
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					has_war_with = USA
-					has_war_with = JAP
-				}
-			}
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	CAS3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CAS = yes }
+			}
+		}
 		enable_equipments = {
 			CAS_equipment_3
 		}
@@ -529,16 +717,19 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				tag = GER
-			}
-			modifier = {
-				factor = 5
-				tag = SOV
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1944.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1943.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 num_of_military_factories > 25 }
+			modifier = { factor = 2 date > 1944.1.1 }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_CAS_tech_focus = yes } }
 		}
 	}
 	cv_CAS3 = {
@@ -551,39 +742,18 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					has_war_with = USA
-					has_war_with = JAP
-				}
-			}
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	naval_bomber1 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_NAV = yes }
+			}
+		}
+
 		enable_equipments = {
 			nav_bomber_equipment_1
 		}
@@ -608,19 +778,32 @@ technologies = {
 			naval_bomber
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#WEIGHT
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = 10
+				OR = {
+					EAI_CV_tech_focus = yes 
+					EAI_NAV_tech_focus = yes
+				}
 			}
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS 
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier EAI_NAV_tech_focus = yes } }
+			
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter1 is_researching_technology = fighter1 } }
 		}
 	}
 	cv_naval_bomber1 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVNAV = yes }
+			}
+		}
 		enable_equipments = {
 			cv_nav_bomber_equipment_1
 		}
@@ -630,43 +813,26 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 0
-				has_tech = naval_bomber2
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					has_war_with = USA
-					has_war_with = JAP
-				}
-			}
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+			
+			#WEIGHT
+			modifier = { factor = 20 EAI_CV_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
+
+			modifier = { factor = 0 has_tech = naval_bomber2 is_researching_technology = naval_bomber2 }
 		}
 	}
 	naval_bomber2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_NAV = yes }
+			}
+		}
+
 		enable_equipments = {
 			nav_bomber_equipment_2
 		}
@@ -691,19 +857,35 @@ technologies = {
 			air_equipment
 			naval_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } }
+			
+			#WEIGHT
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = 10
+				OR = {
+					EAI_CV_tech_focus = yes 
+					EAI_NAV_tech_focus = yes
+				}
 			}
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier EAI_NAV_tech_focus = yes } }
+			
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter1 is_researching_technology = fighter1 } }
 		}
 	}
 	cv_naval_bomber2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVNAV = yes }
+			}
+		}
 		enable_equipments = {
 			cv_nav_bomber_equipment_2
 		}
@@ -713,43 +895,30 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 0
-				has_tech = naval_bomber3
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					has_war_with = USA
-					has_war_with = JAP
-				}
-			}
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+			
+			#DATE
+			modifier = { factor = 0 date < 1940.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 20 EAI_CV_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
+
+			modifier = { factor = 0 has_tech = naval_bomber3 is_researching_technology = naval_bomber3 }
 		}
 	}
+
 	naval_bomber3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_NAV = yes }
+			}
+		}
+
 		enable_equipments = {
 			nav_bomber_equipment_3
 		}
@@ -774,19 +943,35 @@ technologies = {
 			naval_bomber
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1944.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1943.6.1 } }
+			
+			#WEIGHT
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = 10
+				OR = {
+					EAI_CV_tech_focus = yes 
+					EAI_NAV_tech_focus = yes
+				}
 			}
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier EAI_NAV_tech_focus = yes } }
+			
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter2 is_researching_technology = fighter2 } }
 		}
 	}
 	cv_naval_bomber3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVNAV = yes }
+			}
+		}
 		enable_equipments = {
 			cv_nav_bomber_equipment_3
 		}
@@ -796,36 +981,17 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 2
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					has_war_with = USA
-					has_war_with = JAP
-				}
-			}
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+			
+			#DATE
+			modifier = { factor = 0 date < 1944.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 20 EAI_CV_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
 	early_bomber = {
@@ -862,11 +1028,23 @@ technologies = {
 			tactical_bomber
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#WEIGHT
+			modifier = { factor = 20 num_of_military_factories > 25 date > 1937.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes EAI_TAC_tech_focus = yes EAI_STR_tech_focus = yes } date < 1944.1.1 }
 		}
 	}
 	heavy_fighter1 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_HFTR = yes }
+			}
+		}
 		enable_equipments = {
 			heavy_fighter_equipment_1
 		}
@@ -892,15 +1070,24 @@ technologies = {
 			air_equipment
 			cat_heavy_fighter
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 7
-				is_major = yes
-			}
+
+			#WEIGHT
+			modifier = { factor = 10 date > 1937.1.1 }
+			modifier = { factor = 3 num_of_military_factories > 25 }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes } }
 		}
 	}
 	heavy_fighter2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_HFTR = yes }
+			}
+		}
 		enable_equipments = {
 			heavy_fighter_equipment_2
 		}
@@ -926,15 +1113,26 @@ technologies = {
 			air_equipment
 			cat_heavy_fighter
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 7
-				is_major = yes
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 3 num_of_military_factories > 25 }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes } }
 		}
 	}
 	heavy_fighter3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_HFTR = yes }
+			}
+		}
 		enable_equipments = {
 			heavy_fighter_equipment_3
 		}
@@ -960,15 +1158,26 @@ technologies = {
 			air_equipment
 			cat_heavy_fighter
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 7
-				is_major = yes
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1944.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1943.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes } }
 		}
 	}
 	heavy_fighter4 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_HFTR = yes }
+			}
+		}
 		enable_equipments = {
 			heavy_fighter_equipment_4
 		}
@@ -995,15 +1204,26 @@ technologies = {
 			air_equipment
 			cat_heavy_fighter
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 7
-				is_major = yes
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1945.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1944.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes } }
 		}
 	}
 	heavy_fighter5 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_HFTR = yes }
+			}
+		}
 		enable_equipments = {
 			jet_heavy_fighter_equipment_1
 		}
@@ -1033,15 +1253,26 @@ technologies = {
 			air_equipment
 			cat_heavy_fighter
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 7
-				is_major = yes
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1947.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1946.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes } }
 		}
 	}
 	tactical_bomber1 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_TAC = yes }
+			}
+		}
 		enable_equipments = {
 			tac_bomber_equipment_1
 		}
@@ -1063,26 +1294,25 @@ technologies = {
 			tactical_bomber
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1936.1.1"
-			}
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1938.1.1"
-			}
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1940.1.1"
-			}
+			
+			#WEIGHT
+			modifier = { factor = 50 EAI_major_country = yes date > 1937.1.1 }
+			modifier = { factor = 2 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_TAC_tech_focus = yes } }
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter1 is_researching_technology = fighter1 } }
 		}
 	}
 	tactical_bomber2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_TAC = yes }
+			}
+		}
 		enable_equipments = {
 			tac_bomber_equipment_2
 		}
@@ -1104,26 +1334,29 @@ technologies = {
 			tactical_bomber
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1940.1.1"
-			}
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1941.1.1"
-			}
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1944.1.1"
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 5 EAI_major_country = yes }
+			modifier = { factor = 2 date > 1941.1.1 }
+			modifier = { factor = 10 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_TAC_tech_focus = yes } }
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter1 is_researching_technology = fighter1 } }
 		}
 	}
 	tactical_bomber3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_TAC = yes }
+			}
+		}
 		enable_equipments = {
 			tac_bomber_equipment_3
 		}
@@ -1145,18 +1378,20 @@ technologies = {
 			tactical_bomber
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1944.1.1"
-			}
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1945.1.1"
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1944.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1943.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 5 EAI_major_country = yes }
+			modifier = { factor = 10 num_of_military_factories > 25 }
+			modifier = { factor = 2 date > 1945.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_TAC_tech_focus = yes } }
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter2 is_researching_technology = fighter2 } }
 		}
 	}
 	jet_tactical_bomber1 = {
@@ -1184,12 +1419,17 @@ technologies = {
 			jet_technology
 			tactical_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1945.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1944.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_major_country = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_TAC_tech_focus = yes } }
 		}
 	}
 	jet_tactical_bomber2 = {
@@ -1214,15 +1454,27 @@ technologies = {
 			jet_technology
 			tactical_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1950.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1946.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_major_country = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_TAC_tech_focus = yes } }
 		}
 	}
 	strategic_bomber1 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_STRAT = yes }
+			}
+		}
+
 		enable_equipments = {
 			strat_bomber_equipment_1
 		}
@@ -1244,23 +1496,26 @@ technologies = {
 			air_equipment
 			cat_strategic_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 10
-				tag = ENG
-			}
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+
+			#WEIGHT
+			modifier = { factor = 150 date > 1938.1.1 }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_STR_tech_focus = yes } }
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter1 is_researching_technology = fighter1 } }
 		}
 	}
 	strategic_bomber2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_STRAT = yes }
+			}
+		}
+
 		enable_equipments = {
 			strat_bomber_equipment_2
 		}
@@ -1282,23 +1537,27 @@ technologies = {
 			air_equipment
 			cat_strategic_bomber
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 10
-				tag = ENG
-			}
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+		ai_will_do = { #EAI
+			factor = 150
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1940.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1939.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_STR_tech_focus = yes } }
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter1 is_researching_technology = fighter1 } }
 		}
 	}
 	strategic_bomber3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_STRAT = yes }
+			}
+		}
 		enable_equipments = {
 			strat_bomber_equipment_3
 		}
@@ -1320,27 +1579,27 @@ technologies = {
 			air_equipment
 			cat_strategic_bomber
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 10
-				tag = ENG
-			}
-			modifier = {
-				factor = 10
-				tag = SOV
-			}
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+		ai_will_do = { #EAI
+			factor = 150
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1944.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1943.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_STR_tech_focus = yes } }
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter2 is_researching_technology = fighter2 } }
 		}
 	}
 	jet_strategic_bomber1 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JSTRAT = yes }
+			}
+		}
 		enable_equipments = {
 			jet_strat_bomber_equipment_1
 		}
@@ -1365,24 +1624,17 @@ technologies = {
 			jet_technology
 			cat_strategic_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 10
-				tag = ENG
-			}
-			modifier = {
-				factor = 10
-				tag = SOV
-			}
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1947.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1946.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 EAI_STR_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_STR_tech_focus = yes } date < 1944.1.1 }
 		}
 	}
 	suicide_craft = {
@@ -1404,224 +1656,14 @@ technologies = {
 		}
 		################
 	}
-	jet_fighter1 = {
-		enable_equipments = {
-			jet_fighter_equipment_1
-		}
-		path = {
-			leads_to_tech = jet_fighter2
-			research_cost_coeff = 1
-		}
-		sub_technologies = {
-			cv_fighter4
-		}
-		dependencies = {
-			jet_engines = 1
-		}
-		research_cost = 2
-		start_year = 1945
-		folder = {
-			name = air_techs_folder
-			position = {
-				x = 0
-				y = 12
-			}
-		}
-		categories = {
-			light_air
-			jet_technology
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 50
-				AND = {
-					tag = GER
-					date > "1945.6.1"
-				}
-			}
-			modifier = {
-				factor = 15
-				AND = {
-					is_major = yes
-					date > "1945.6.1"
-				}
-			}
-		}
-	}
-	cv_fighter4 = {
-		enable_equipments = {
-			cv_fighter_equipment_4
-		}
-		research_cost = 1		#Carrier Variant
-		start_year = 1943
-		categories = {
-			naval_air
-			air_equipment
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				tag = USA
-			}
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
-			modifier = {
-				factor = 1.5
-				date > "1945.1.1"
-			}
-			modifier = {
-				factor = 2.5
-				has_navy_size = {
-					type = carrier
-					size > 3
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
-		}
-	}
-	jet_fighter2 = {
-		enable_equipments = {
-			jet_fighter_equipment_2
-		}
-		path = {
-			leads_to_tech = jet_fighter3
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1947
-		sub_technologies = {
-			cv_jet_fighter1
-		}
-		folder = {
-			name = air_techs_folder
-			position = {
-				x = 0
-				y = 14
-			}
-		}
-		categories = {
-			light_air
-			jet_technology
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-		}
-	}
-	jet_fighter3 = {
-		enable_equipments = {
-			jet_fighter_equipment_3
-		}
-		path = {
-			leads_to_tech = jet_fighter4
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1950
-		sub_technologies = {
-			cv_jet_fighter2
-		}
-		folder = {
-			name = air_techs_folder
-			position = {
-				x = 0
-				y = 16
-			}
-		}
-		categories = {
-			light_air
-			jet_technology
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-		}
-	}
-	jet_fighter4 = {
-		enable_equipments = {
-			jet_fighter_equipment_4
-		}
-		path = {
-			leads_to_tech = jet_fighter5
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1955
-		sub_technologies = {
-			cv_jet_fighter3
-		}
-		folder = {
-			name = air_techs_folder
-			position = {
-				x = 0
-				y = 18
-			}
-		}
-		categories = {
-			light_air
-			jet_technology
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-		}
-	}
-	jet_fighter5 = {
-		enable_equipments = {
-			jet_fighter_equipment_5
-		}
-		path = {
-			leads_to_tech = jet_fighter6
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = jump_jet1
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1960
-		sub_technologies = {
-			cv_jet_fighter4
-		}
-		folder = {
-			name = air_techs_folder
-			position = {
-				x = 0
-				y = 20
-			}
-		}
-		categories = {
-			light_air
-			jet_technology
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-		}
-	}
+	
 	jet_tactical_bomber3 = {
+		on_research_complete = { #EAI
+		if = {
+			limit = { is_ai = yes has_air_experience > 130 }
+			hidden_effect = { EAI_variant_upgrade_JTAC = yes }
+		}
+	}
 		enable_equipments = {
 			jet_tac_bomber_equipment_3
 		}
@@ -1643,15 +1685,26 @@ technologies = {
 			jet_technology
 			tactical_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1955.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1950.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_major_country = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_TAC_tech_focus = yes } }
 		}
 	}
 	jet_strategic_bomber2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JSTRAT = yes }
+			}
+		}
 		enable_equipments = {
 			jet_strat_bomber_equipment_2
 		}
@@ -1676,27 +1729,26 @@ technologies = {
 			jet_technology
 			cat_strategic_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 10
-				tag = ENG
-			}
-			modifier = {
-				factor = 10
-				tag = SOV
-			}
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1950.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1947.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 EAI_STR_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_STR_tech_focus = yes } date < 1947.1.1 }
 		}
 	}
 	jet_strategic_bomber3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JSTRAT = yes }
+			}
+		}
 		enable_equipments = {
 			jet_strat_bomber_equipment_3
 		}
@@ -1725,27 +1777,26 @@ technologies = {
 			jet_technology
 			cat_strategic_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 10
-				tag = ENG
-			}
-			modifier = {
-				factor = 10
-				tag = SOV
-			}
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1955.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1950.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 EAI_STR_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_STR_tech_focus = yes } date < 1950.1.1 }
 		}
 	}
 	jet_strategic_bomber4 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JSTRAT = yes }
+			}
+		}
 		enable_equipments = {
 			jet_strat_bomber_equipment_4
 		}
@@ -1770,24 +1821,17 @@ technologies = {
 			jet_technology
 			cat_strategic_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 10
-				tag = ENG
-			}
-			modifier = {
-				factor = 10
-				tag = SOV
-			}
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1960.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1955.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 EAI_STR_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_STR_tech_focus = yes } date < 1955.1.1 }
 		}
 	}
 	mach2stratbomber = {
@@ -1819,71 +1863,27 @@ technologies = {
 			jet_technology
 			cat_strategic_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-			modifier = {
-				factor = 10
-				tag = SOV
-			}
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1960.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1955.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 EAI_STR_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_STR_tech_focus = yes } date < 1955.1.1 }
 		}
 	}
-	# improvedmach2stratbomber = {
-	# enable_equipments = {
-	# mach2stratbomber_equipment_2
-	# }
-	# research_cost = 2
-	# start_year = 1970
-	# path = {
-	# leads_to_tech = jet_strategic_bomber5
-	# research_cost_coeff = 1
-	# }
-	# dependencies = {
-	# jet_engines = 1
-	# }
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = 2 y = 24 }
-	# }
-	# categories = {
-	# heavy_air
-	# jet_technology
-	# cat_strategic_bomber
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
-	# mach3stratbomber = {
-	# enable_equipments = {
-	# mach3stratbomber_equipment_1
-	# }
-	# research_cost = 2
-	# start_year = 1965
-	# dependencies = {
-	# jet_engines = 1
-	# }
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = 4 y = 22 }
-	# }
-	# categories = {
-	# heavy_air
-	# jet_technology
-	# cat_strategic_bomber
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
+
 	CAS4 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CAS = yes }
+			}
+		}
 		enable_equipments = {
 			CAS_equipment_4
 		}
@@ -1908,16 +1908,19 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 6
-				tag = GER
-			}
-			modifier = {
-				factor = 6
-				tag = SOV
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1945.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1944.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 num_of_military_factories > 25 }
+			modifier = { factor = 2 date > 1945.1.1 }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_CAS_tech_focus = yes } }
 		}
 	}
 	cv_CAS4 = {
@@ -1930,39 +1933,17 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					has_war_with = USA
-					has_war_with = JAP
-				}
-			}
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	jet_CAS1 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JCAS = yes }
+			}
+		}
 		enable_equipments = {
 			jet_CAS_equipment_1
 		}
@@ -1990,16 +1971,19 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1947.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1946.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 num_of_military_factories > 25 }
+			modifier = { factor = 2 date > 1947.1.1 }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_CAS_tech_focus = yes } }
 		}
 	}
 	cv_jet_CAS1 = {
@@ -2012,25 +1996,17 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	jet_CAS2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JCAS = yes }
+			}
+		}
 		enable_equipments = {
 			jet_CAS_equipment_2
 		}
@@ -2055,12 +2031,19 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1950.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1949.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 num_of_military_factories > 25 }
+			modifier = { factor = 2 date > 1950.1.1 }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_CAS_tech_focus = yes } }
 		}
 	}
 	cv_jet_CAS2 = {
@@ -2073,25 +2056,17 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	jet_CAS3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JCAS = yes }
+			}
+		}
 		enable_equipments = {
 			jet_CAS_equipment_3
 		}
@@ -2116,12 +2091,19 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1955.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1950.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 num_of_military_factories > 25 }
+			modifier = { factor = 2 date > 1955.1.1 }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_CAS_tech_focus = yes } }
 		}
 	}
 	cv_jet_CAS3 = {
@@ -2134,25 +2116,17 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	jet_CAS4 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_JCAS = yes }
+			}
+		}
 		enable_equipments = {
 			jet_CAS_equipment_4
 		}
@@ -2177,12 +2151,19 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1960.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1955.6.1 } }
+
+			#WEIGHT
+			modifier = { factor = 50 num_of_military_factories > 25 }
+			modifier = { factor = 2 date > 1960.1.1 }
+			modifier = { factor = 3 has_country_flag = EAI_prioritise_aircraft }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_CAS_tech_focus = yes } }
 		}
 	}
 	cv_jet_CAS4 = {
@@ -2195,241 +2176,18 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_navy_size = {
-					type = carrier
-					size > 0
-				}				# if nation has carriers, more likely
-			}
-			modifier = {
-				factor = 0
-				has_navy_size = {
-					type = carrier
-					size < 1
-				}				# if nation has no carriers, don't bother
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
-	# jet_CAS5 = {
-	# enable_equipments = {	jet_CAS_equipment_5
-	# }
-	# path = {
-	# leads_to_tech = jet_CAS6
-	# research_cost_coeff = 1
-	# }
-	# research_cost = 2
-	# start_year = 1965
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = -4 y = 22 }
-	# }
-	# sub_technologies = {
-	# cv_jet_CAS5
-	# }
-	# categories = {
-	# light_air
-	# cas_bomber
-	# air_equipment
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# modifier = {
-	# factor = 2
-	# tag = GER
-	# }
-	# modifier = {
-	# factor = 2
-	# tag = SOV
-	# }
-	# }
-	# }
-	# cv_jet_CAS5 = {
-	# enable_equipments = {	cv_jet_CAS_equipment_5
-	# }
-	# research_cost = 1 #Carrier Variant
-	# start_year = 1965
-	# categories = {
-	# naval_air
-	# air_equipment
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# modifier = {
-	# factor = 2
-	# has_navy_size = { type = carrier size > 0 }# if nation has carriers, more likely
-	# }
-	# modifier = {
-	# factor = 0
-	# has_navy_size = { type = carrier size < 1 }# if nation has no carriers, don't bother
-	# }
-	# }
-	# }
-	# jet_CAS6 = {
-	# enable_equipments = {	jet_CAS_equipment_6
-	# }
-	# path = {
-	# leads_to_tech = jet_CAS7
-	# research_cost_coeff = 1
-	# }
-	# research_cost = 2
-	# start_year = 1970
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = -4 y = 24 }
-	# }
-	# sub_technologies = {
-	# cv_jet_CAS6
-	# }
-	# categories = {
-	# light_air
-	# cas_bomber
-	# air_equipment
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# modifier = {
-	# factor = 2
-	# tag = GER
-	# }
-	# modifier = {
-	# factor = 2
-	# tag = SOV
-	# }
-	# }
-	# }
-	# cv_jet_CAS6 = {
-	# enable_equipments = {	cv_jet_CAS_equipment_6
-	# }
-	# research_cost = 1 #Carrier Variant
-	# start_year = 1970
-	# categories = {
-	# naval_air
-	# air_equipment
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# modifier = {
-	# factor = 2
-	# has_navy_size = { type = carrier size > 0 }# if nation has carriers, more likely
-	# }
-	# modifier = {
-	# factor = 0
-	# has_navy_size = { type = carrier size < 1 }# if nation has no carriers, don't bother
-	# }
-	# }
-	# }
-	# jet_CAS7 = {
-	# enable_equipments = {	jet_CAS_equipment_7
-	# }
-	# path = {
-	# leads_to_tech = jet_CAS8
-	# research_cost_coeff = 1
-	# }
-	# research_cost = 2
-	# start_year = 1975
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = -4 y = 26 }
-	# }
-	# sub_technologies = {
-	# cv_jet_CAS7
-	# }
-	# categories = {
-	# light_air
-	# cas_bomber
-	# air_equipment
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# modifier = {
-	# factor = 2
-	# tag = GER
-	# }
-	# modifier = {
-	# factor = 2
-	# tag = SOV
-	# }
-	# }
-	# }
-	# cv_jet_CAS7 = {
-	# enable_equipments = {	cv_jet_CAS_equipment_7
-	# }
-	# research_cost = 1 #Carrier Variant
-	# start_year = 1975
-	# categories = {
-	# naval_air
-	# air_equipment
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# modifier = {
-	# factor = 2
-	# has_navy_size = { type = carrier size > 0 }# if nation has carriers, more likely
-	# }
-	# modifier = {
-	# factor = 0
-	# has_navy_size = { type = carrier size < 1 }# if nation has no carriers, don't bother
-	# }
-	# }
-	# }
-	# jet_CAS8 = {
-	# enable_equipments = {	jet_CAS_equipment_8
-	# }
-	# research_cost = 2
-	# start_year = 1980
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = -4 y = 28 }
-	# }
-	# path = {
-	# leads_to_tech = cas_stealth
-	# research_cost_coeff = 1
-	# }
-	# sub_technologies = {
-	# cv_jet_CAS8
-	# }
-	# categories = {
-	# light_air
-	# cas_bomber
-	# air_equipment
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# modifier = {
-	# factor = 2
-	# tag = GER
-	# }
-	# modifier = {
-	# factor = 2
-	# tag = SOV
-	# }
-	# }
-	# }
-	# cv_jet_CAS8 = {
-	# enable_equipments = {	cv_jet_CAS_equipment_8
-	# }
-	# research_cost = 1 #Carrier Variant
-	# start_year = 1980
-	# categories = {
-	# naval_air
-	# air_equipment
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# modifier = {
-	# factor = 2
-	# has_navy_size = { type = carrier size > 0 }# if nation has carriers, more likely
-	# }
-	# modifier = {
-	# factor = 0
-	# has_navy_size = { type = carrier size < 1 }# if nation has no carriers, don't bother
-	# }
-	# }
-	# }
+
 	naval_bomber4 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_NAV = yes }
+			}
+		}
 		enable_equipments = {
 			nav_bomber_equipment_4
 		}
@@ -2454,15 +2212,35 @@ technologies = {
 			jet_technology
 			tactical_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1947.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1946.6.1 } }
+			
+			#WEIGHT
 			modifier = {
-				factor = 5
-				is_major = yes
+				factor = 10
+				OR = {
+					EAI_CV_tech_focus = yes 
+					EAI_NAV_tech_focus = yes
+				}
 			}
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier EAI_NAV_tech_focus = yes } }
+			
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter3 is_researching_technology = fighter3 } }
 		}
 	}
 	naval_bomber5 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_NAV = yes }
+			}
+		}
 		enable_equipments = {
 			nav_bomber_equipment_5
 		}
@@ -2490,11 +2268,35 @@ technologies = {
 			jet_technology
 			tactical_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1950.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1949.6.1 } }
+			
+			#WEIGHT
+			modifier = {
+				factor = 10
+				OR = {
+					EAI_CV_tech_focus = yes 
+					EAI_NAV_tech_focus = yes
+				}
+			}
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier EAI_NAV_tech_focus = yes } }
+			
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter3 is_researching_technology = fighter3 } }
 		}
 	}
 	naval_bomber6 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_NAV = yes }
+			}
+		}
 		enable_equipments = {
 			nav_bomber_equipment_6
 		}
@@ -2519,15 +2321,35 @@ technologies = {
 			jet_technology
 			tactical_bomber
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1955.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1950.6.1 } }
+			
+			#WEIGHT
 			modifier = {
-				factor = 5
-				is_major = yes
+				factor = 10
+				OR = {
+					EAI_CV_tech_focus = yes 
+					EAI_NAV_tech_focus = yes
+				}
 			}
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier EAI_NAV_tech_focus = yes } }
+			
+			modifier = { factor = 0 EAI_FTR_tech_focus = yes NOT = { has_tech = fighter3 is_researching_technology = fighter3 } }
 		}
 	}
 	cv_jet_fighter1 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVJFTR = yes }
+			}
+		}
 		enable_equipments = {
 			cv_jet_fighter_equipment_1
 		}
@@ -2537,11 +2359,27 @@ technologies = {
 			naval_air
 			jet_technology
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1947.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_CV_tech_focus = yes }
+			modifier = { factor = 4 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
 	cv_jet_fighter2 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVJFTR = yes }
+			}
+		}
 		enable_equipments = {
 			cv_jet_fighter_equipment_2
 		}
@@ -2551,11 +2389,27 @@ technologies = {
 			naval_air
 			jet_technology
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1950.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_CV_tech_focus = yes }
+			modifier = { factor = 4 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
 	cv_jet_fighter3 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVJFTR = yes }
+			}
+		}
 		enable_equipments = {
 			cv_jet_fighter_equipment_3
 		}
@@ -2565,11 +2419,27 @@ technologies = {
 			naval_air
 			jet_technology
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1955.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_CV_tech_focus = yes }
+			modifier = { factor = 4 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
 	cv_jet_fighter4 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVJFTR = yes }
+			}
+		}
 		enable_equipments = {
 			cv_jet_fighter_equipment_4
 		}
@@ -2579,95 +2449,28 @@ technologies = {
 			naval_air
 			jet_technology
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1960.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 10 EAI_CV_tech_focus = yes }
+			modifier = { factor = 4 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
-	# cv_jet_fighter5 = {
-	# enable_equipments = {
-	# cv_jet_fighter_equipment_5
-	# }
-	# research_cost = 2
-	# start_year = 1965
-	# categories = {
-	# naval_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
-	# cv_jet_fighter6 = {
-	# enable_equipments = {
-	# cv_jet_fighter_equipment_6
-	# }
-	# research_cost = 2
-	# start_year = 1975
-	# categories = {
-	# naval_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
-	# cv_jet_fighter7 = {
-	# enable_equipments = {
-	# cv_jet_fighter_equipment_7
-	# }
-	# research_cost = 2
-	# start_year = 1980
-	# categories = {
-	# naval_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }	
-	# cv_jet_fighter8 = {
-	# enable_equipments = {
-	# cv_jet_fighter_equipment_8
-	# }
-	# research_cost = 2
-	# start_year = 1985
-	# categories = {
-	# naval_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
-	# cv_jet_fighter9 = {
-	# enable_equipments = {
-	# cv_jet_fighter_equipment_9
-	# }
-	# research_cost = 2
-	# start_year = 1990
-	# categories = {
-	# naval_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
-	# cv_stealth_fighter = {
-	# enable_equipments = {
-	# cv_stealth_fighter_equipment_1
-	# }
-	# research_cost = 2
-	# start_year = 1995
-	# categories = {
-	# naval_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
+
 	cv_naval_bomber4 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVNAV = yes }
+			}
+		}
 		enable_equipments = {
 			cv_nav_bomber_equipment_4
 		}
@@ -2677,11 +2480,26 @@ technologies = {
 			naval_air
 			air_equipment
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1947.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 20 EAI_CV_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
 	cv_naval_bomber5 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVNAV = yes }
+			}
+		}
 		enable_equipments = {
 			cv_nav_bomber_equipment_5
 		}
@@ -2691,11 +2509,26 @@ technologies = {
 			naval_air
 			jet_technology
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1950.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 20 EAI_CV_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
 	cv_naval_bomber6 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVNAV = yes }
+			}
+		}
 		enable_equipments = {
 			cv_nav_bomber_equipment_6
 		}
@@ -2705,11 +2538,26 @@ technologies = {
 			naval_air
 			jet_technology
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1955.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 20 EAI_CV_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
 	cv_naval_bomber7 = {
+		on_research_complete = { #EAI
+			if = {
+				limit = { is_ai = yes has_air_experience > 130 }
+				hidden_effect = { EAI_variant_upgrade_CVNAV = yes }
+			}
+		}
 		enable_equipments = {
 			cv_nav_bomber_equipment_7
 		}
@@ -2719,98 +2567,20 @@ technologies = {
 			naval_air
 			jet_technology
 		}
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1975.1.1 }
+			
+			#WEIGHT
+			modifier = { factor = 20 EAI_CV_tech_focus = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { has_tech = basic_carrier has_tech = basic_ship_hull_carrier } }
 		}
 	}
-	# jump_jet1 = {
-	# enable_equipments = {
-	# jump_jet_equipment_1
-	# }
-	# path = {
-	# leads_to_tech = jump_jet2
-	# research_cost_coeff = 1
-	# }
-	# research_cost = 2
-	# start_year = 1970
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = 5 y = 24 }
-	# }
-	# categories = {
-	# light_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
-	# jump_jet2 = {
-	# enable_equipments = {
-	# jump_jet_equipment_2
-	# }
-	# path = {
-	# leads_to_tech = jump_jet3
-	# research_cost_coeff = 1
-	# }
-	# research_cost = 2
-	# start_year = 1975
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = 5 y = 26 }
-	# }
-	# categories = {
-	# light_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
-	# jump_jet3 = {
-	# enable_equipments = {
-	# jump_jet_equipment_3
-	# }
-	# path = {
-	# leads_to_tech = jump_jet4
-	# research_cost_coeff = 1
-	# }
-	# research_cost = 2
-	# start_year = 1980
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = 5 y = 28 }
-	# }
-	# categories = {
-	# light_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
-	# jump_jet4 = {
-	# enable_equipments = {
-	# jump_jet_equipment_4
-	# }
-	# path = {
-	# leads_to_tech = jump_stealth
-	# research_cost_coeff = 1
-	# }	
-	# research_cost = 2
-	# start_year = 1985
-	# folder = {
-	# name = air_techs_folder
-	# position = { x = 5 y = 30 }
-	# }
-	# categories = {
-	# light_air
-	# jet_technology
-	# }
-	# ai_will_do = {
-	# factor = 1
-	# }
-	# }
+
 	transport1 = {
 		enable_equipments = {
 			transport_plane_equipment_1
@@ -2996,18 +2766,6 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 0			#EAI, was 1
-			modifier = {
-				factor = 0
-				has_tech = heavy_fighter2
-			}
-			modifier = {
-				factor = 10
-				tag = GER
-			}
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
 		}
 	}
 	night_fighter2 = {
@@ -3024,18 +2782,6 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 0			#EAI, was 1
-			modifier = {
-				factor = 0
-				has_tech = heavy_fighter3
-			}
-			modifier = {
-				factor = 10
-				tag = GER
-			}
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
 		}
 	}
 	night_fighter3 = {
@@ -3052,18 +2798,6 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 0			#EAI, was 1
-			modifier = {
-				factor = 0
-				has_tech = heavy_fighter4
-			}
-			modifier = {
-				factor = 10
-				tag = GER
-			}
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
 		}
 	}
 	night_fighter4 = {
@@ -3080,14 +2814,6 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 0			#EAI, was 1
-			modifier = {
-				factor = 10
-				tag = GER
-			}
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
 		}
 	}
 	cv_heavy_fighter = {
@@ -3104,14 +2830,6 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 0			#EAI, was 1
-			modifier = {
-				factor = 10
-				tag = GER
-			}
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
 		}
 	}
 	na1 = {
@@ -3146,26 +2864,8 @@ technologies = {
 			air_equipment
 			cat_scout_plane
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				has_war = yes
-				factor = 1.5
-			}
-			modifier = {
-				has_tech = fighter1
-				has_tech = tactical_bomber1
-				has_tech = CAS1
-				factor = 3
-			}
-			modifier = {
-				factor = 4
-				original_tag = GER
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	scout_plane2 = {
@@ -3190,22 +2890,8 @@ technologies = {
 			air_equipment
 			cat_scout_plane
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				has_war = yes
-				factor = 1.5
-			}
-			modifier = {
-				has_tech = fighter2
-				has_tech = tactical_bomber2
-				has_tech = CAS2
-				factor = 3
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	scout_plane3 = {
@@ -3230,22 +2916,8 @@ technologies = {
 			air_equipment
 			cat_scout_plane
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				has_war = yes
-				factor = 1.5
-			}
-			modifier = {
-				has_tech = fighter2
-				has_tech = tactical_bomber2
-				has_tech = CAS2
-				factor = 3
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	scout_plane4 = {
@@ -3273,22 +2945,8 @@ technologies = {
 		dependencies = {
 			jet_engines = 1
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				has_war = yes
-				factor = 1.5
-			}
-			modifier = {
-				has_tech = fighter2
-				has_tech = tactical_bomber2
-				has_tech = CAS2
-				factor = 3
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	scout_plane5 = {
@@ -3316,22 +2974,8 @@ technologies = {
 		dependencies = {
 			jet_engines = 1
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				has_war = yes
-				factor = 1.5
-			}
-			modifier = {
-				has_tech = fighter2
-				has_tech = tactical_bomber2
-				has_tech = CAS2
-				factor = 3
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	scout_plane6 = {
@@ -3359,22 +3003,8 @@ technologies = {
 		dependencies = {
 			jet_engines = 1
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				has_war = yes
-				factor = 1.5
-			}
-			modifier = {
-				has_tech = fighter2
-				has_tech = tactical_bomber2
-				has_tech = CAS2
-				factor = 3
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	scout_plane7 = {
@@ -3398,22 +3028,8 @@ technologies = {
 		dependencies = {
 			jet_engines = 1
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				has_war = yes
-				factor = 1.5
-			}
-			modifier = {
-				has_tech = fighter2
-				has_tech = tactical_bomber2
-				has_tech = CAS2
-				factor = 3
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 	}
 	volksjaeger_tech = {
