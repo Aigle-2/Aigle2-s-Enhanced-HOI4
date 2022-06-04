@@ -2048,6 +2048,10 @@ technologies = {
 		enable_equipments = {
 			amphibious_mechanized_equipment_2
 		}
+		path = {
+			leads_to_tech = amphibious_mechanized_infantry_3
+			research_cost_coeff = 1
+		}
 		research_cost = 2
 		start_year = 1943
 		folder = {
@@ -2201,18 +2205,30 @@ technologies = {
 			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 1
+			#EAI
+			factor = 20
+			#DATE
 			modifier = {
-				factor = 2
-				date > "1953.1.6"
+				factor = 0
+				OR = {
+					AND = {
+						date < 1953.1.1
+						NOT = {
+							has_country_flag = EAI_unused_research_slots
+						}
+					}
+					date < 1952.6.1
+				}
 			}
+			#WEIGHT
 			modifier = {
 				factor = 2
-				date > "1954.1.1"
+				EAI_infantry_tech_focus = yes
 			}
+			#RESTRICTIONS
 			modifier = {
-				factor = 2
-				date > "1954.1.1"
+				factor = 0
+				EAI_prioritise_main_industry = yes
 			}
 		}
 	}
@@ -2234,18 +2250,30 @@ technologies = {
 			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 1
+			#EAI
+			factor = 20
+			#DATE
 			modifier = {
-				factor = 2
-				date > "1960.1.6"
+				factor = 0
+				OR = {
+					AND = {
+						date < 1960.1.1
+						NOT = {
+							has_country_flag = EAI_unused_research_slots
+						}
+					}
+					date < 1959.6.1
+				}
 			}
+			#WEIGHT
 			modifier = {
 				factor = 2
-				date > "1961.1.1"
+				EAI_infantry_tech_focus = yes
 			}
+			#RESTRICTIONS
 			modifier = {
-				factor = 2
-				date > "1962.1.1"
+				factor = 0
+				EAI_prioritise_main_industry = yes
 			}
 		}
 	}
@@ -2265,22 +2293,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
-			
+			#EAI
+			factor = 10
+			#DATE
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						date < 1955.1.1
+						NOT = {
+							has_country_flag = EAI_unused_research_slots
+						}
+					}
+					date < 1954.6.1
+				}
+			}
+			#WEIGHT
 			modifier = {
 				factor = 2
-				date > "1955.1.9"
+				EAI_infantry_tech_focus = yes
 			}
-			
-			modifier = {
-				factor = 2
-				date > "1956.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1956.1.6"
-			}
+			#RESTRICTIONS
 		}
 	}
 	support_weapons5 = {
@@ -2347,30 +2380,38 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			
+			#EAI
+			factor = 10
+			#DATE
 			modifier = {
-				factor = 2
-				date > "1942.1.6"
+				factor = 0
+				OR = {
+					AND = {
+						date < 1945.1.1
+						NOT = {
+							has_country_flag = EAI_unused_research_slots
+						}
+					}
+					date < 1944.6.1
+				}
 			}
-			
+			#WEIGHT
 			modifier = {
 				factor = 2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1945.1.1"
+				EAI_infantry_tech_focus = yes
 			}
 			modifier = {
-				has_war = yes
 				factor = 2
+				date > 1946.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1947.1.1
+			}
+			#RESTRICTIONS
+			modifier = {
+				factor = 0
+				EAI_prioritise_main_industry = yes
 			}
 		}
 	}
@@ -2432,30 +2473,38 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			
+			#EAI
+			factor = 10
+			#DATE
 			modifier = {
-				factor = 2
-				date > "1942.1.6"
+				factor = 0
+				OR = {
+					AND = {
+						date < 1953.1.1
+						NOT = {
+							has_country_flag = EAI_unused_research_slots
+						}
+					}
+					date < 1952.6.1
+				}
 			}
-			
+			#WEIGHT
 			modifier = {
 				factor = 2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1945.1.1"
+				EAI_infantry_tech_focus = yes
 			}
 			modifier = {
-				has_war = yes
 				factor = 2
+				date > 1954.1.1
+			}
+			modifier = {
+				factor = 2
+				date > 1955.1.1
+			}
+			#RESTRICTIONS
+			modifier = {
+				factor = 0
+				EAI_prioritise_main_industry = yes
 			}
 		}
 	}
@@ -2483,21 +2532,34 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.8
-			
-			
+			#EAI
+			factor = 10
+			#DATE
 			modifier = {
-				tag = GER
-				factor = 2.5
+				factor = 0
+				OR = {
+					AND = {
+						date < 1945.1.1
+						NOT = {
+							has_country_flag = EAI_unused_research_slots
+						}
+					}
+					date < 1945.6.1
+				}
+			}
+			#WEIGHT
+			modifier = {
+				factor = 30
+				EAI_infantry_tech_focus = yes
 			}
 			modifier = {
-				num_of_military_factories > 150
-				factor = 2.5
+				factor = 5
+				date > 1948.1.1
 			}
-			
+			#RESTRICTIONS
 			modifier = {
-				num_of_military_factories < 50
-				factor = 0.5
+				factor = 0
+				EAI_prioritise_main_industry = yes
 			}
 		}
 	}
@@ -2520,21 +2582,34 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.8
-			
-			
+			#EAI
+			factor = 10
+			#DATE
 			modifier = {
-				tag = GER
-				factor = 2.5
+				factor = 0
+				OR = {
+					AND = {
+						date < 1960.1.1
+						NOT = {
+							has_country_flag = EAI_unused_research_slots
+						}
+					}
+					date < 1960.6.1
+				}
+			}
+			#WEIGHT
+			modifier = {
+				factor = 30
+				EAI_infantry_tech_focus = yes
 			}
 			modifier = {
-				num_of_military_factories > 150
-				factor = 2.5
+				factor = 5
+				date > 1960.1.1
 			}
-			
+			#RESTRICTIONS
 			modifier = {
-				num_of_military_factories < 50
-				factor = 0.5
+				factor = 0
+				EAI_prioritise_main_industry = yes
 			}
 		}
 	}
@@ -2564,7 +2639,18 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			#EAI
+			factor = 10
+			#DATE
+			modifier = {
+				factor = 0
+				date < 1947.1.1
+			}
+			#WEIGHT
+			modifier = {
+				factor = 3
+				EAI_motorized_attachment_production = yes
+			}
 		}
 	}
 	
@@ -2593,7 +2679,18 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			#EAI
+			factor = 10
+			#DATE
+			modifier = {
+				factor = 0
+				date < 1950.1.1
+			}
+			#WEIGHT
+			modifier = {
+				factor = 3
+				EAI_motorized_attachment_production = yes
+			}
 		}
 	}
 	
@@ -2622,7 +2719,18 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			#EAI
+			factor = 10
+			#DATE
+			modifier = {
+				factor = 0
+				date < 1953.1.1
+			}
+			#WEIGHT
+			modifier = {
+				factor = 3
+				EAI_motorized_attachment_production = yes
+			}
 		}
 	}
 	
@@ -2647,7 +2755,18 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			#EAI
+			factor = 10
+			#DATE
+			modifier = {
+				factor = 0
+				date < 1960.1.1
+			}
+			#WEIGHT
+			modifier = {
+				factor = 3
+				EAI_motorized_attachment_production = yes
+			}
 		}
 	}
 	
@@ -2674,7 +2793,8 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			#EAI
+			factor = 0
 		}
 	}
 
@@ -2701,26 +2821,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			#EAI
+			factor = 0
 		}
 	}
 
@@ -2751,26 +2853,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			#EAI
+			factor = 0
 		}
 	}
 
@@ -2797,26 +2881,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			#EAI
+			factor = 0
 		}
 	}
 
@@ -2836,26 +2902,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			#EAI
+			factor = 0
 		}
 	}
 
@@ -2875,26 +2923,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			#EAI
+			factor = 0
 		}
 	}
 }
