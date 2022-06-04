@@ -2141,13 +2141,7 @@ technologies = {
 				air_attack = 0.05
 			}
 			
-		category_jet_interceptor = {
-				air_attack = 0.05
-			}
-			
-		jet_heavy_fighter = {
-				air_attack = 0.05
-			}
+
 			
 		research_cost = 1
 		start_year = 1940
@@ -2163,15 +2157,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-					tag = SOV
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 		
 		categories = {
@@ -2192,7 +2178,7 @@ technologies = {
 				air_attack = 0.05
 			}
 			
-		category_jet_interceptor = {
+		category_heavy_fighter = {
 				air_attack = 0.05
 			}
 			
@@ -2235,7 +2221,7 @@ technologies = {
 			# research_cost_coeff = 1
 		# }
 			
-		category_jet_interceptor = {
+		category_heavy_fighter = {
 				air_attack = 0.05
 			}
 			
@@ -2278,8 +2264,8 @@ technologies = {
 			# research_cost_coeff = 1
 		# }
 			
-		category_jet_interceptor = {
-				air_attack = 0.05
+		category_heavy_fighter = {
+			air_attack = 0.05
 		}
 			
 		research_cost = 1
@@ -2321,12 +2307,12 @@ technologies = {
 			# research_cost_coeff = 1
 		# }
 			
-		category_jet_interceptor = {
-				air_attack = 0.05
+		category_heavy_fighter = {
+			air_attack = 0.05
 		}
 			
 		category_jet_fighter = {
-				air_attack = 0.2
+				air_attack = 0.25
 		}
 			
 		research_cost = 1

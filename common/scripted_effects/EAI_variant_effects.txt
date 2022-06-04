@@ -158,8 +158,8 @@ EAI_upgrade_air_equipment = {
 
 	EAI_variant_upgrade_NAV = yes
 	EAI_variant_upgrade_CVNAV = yes
-	EAI_variant_upgrade_JNAV = yes
-	EAI_variant_upgrade_CVJNAV = yes
+	# EAI_variant_upgrade_JNAV = yes
+	# EAI_variant_upgrade_CVJNAV = yes
 
 	EAI_variant_upgrade_STRAT = yes
 	EAI_variant_upgrade_JSTRAT = yes
