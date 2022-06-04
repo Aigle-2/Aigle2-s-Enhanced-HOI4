@@ -24,14 +24,8 @@ technologies = {
 			position = { x = 0 y = 0 }
 		}
 		
-		ai_will_do = {
-			factor = 30
-			
-			
-			modifier = {
-				factor = 3
-				date > "1937.1.1"
-			}
+		ai_will_do = { #EAI
+			factor = 300
 		}
 		
 		categories = {
@@ -64,21 +58,12 @@ technologies = {
 			position = { x = 11 y = 9 } # x = 12 y = 0
 		}
 		
-		ai_will_do = {
-			factor = 3
-			
-			modifier = {
-				factor = 6
-				has_war = yes
-			}
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				factor = 5
-				date > "1939.8.1"
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 date < 1937.1.1 has_war = no }
+			modifier = { factor = 10 OR = { date > 1939.1.1 has_war = yes } }
 		}
 		
 		categories = {
@@ -106,22 +91,18 @@ technologies = {
 			position = { x = -2 y = 4 }
 		}
 		
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				tag = ENG
-				factor = 10
-			}
-			modifier = {
-				tag = USA
-				factor = 10
-			}
-			modifier = {
-				is_major = yes
-				factor = 8
-			}
+
+			#DATE
+			modifier = { factor = 0 date < 1942.1.1 NOT = { EAI_radar_tech_focus = yes } }
+			modifier = { factor = 0 date < 1940.1.1 EAI_radar_tech_focus = yes }
+
+			#WEIGHT
+			modifier = { factor = 20 EAI_radar_tech_focus = yes date > 1939.1.1 }
+			modifier = { factor = 5 EAI_radar_tech_focus = yes date > 1941.1.1 }
+			
 		}
-		
 		categories = {
 			electronics
 			radar_tech
@@ -173,9 +154,27 @@ technologies = {
 			radar_tech
 		}
 		
-		enable_building = {
-			building = radar_station
-			level = 2
+		ai_will_do = { #EAI
+			factor = 1
+
+			#DATE
+			modifier = { factor = 0 date < 1942.1.1 NOT = { EAI_radar_tech_focus = yes } }
+			modifier = { factor = 0 date < 1938.1.1 EAI_radar_tech_focus = yes }
+
+			#WEIGHT
+			modifier = { 
+				factor = 30
+				EAI_radar_tech_focus = yes 
+				OR = {
+					date > 1939.1.1
+					AND = {
+						date > 1938.1.1
+						EAI_radar_tech_focus_2 = yes
+					}
+				}
+			}
+			modifier = { factor = 2 EAI_radar_tech_focus_2 = yes }
+			modifier = { factor = 5 EAI_radar_tech_focus = yes date > 1941.1.1 }
 		}
 	}
 	
@@ -204,23 +203,27 @@ technologies = {
 			position = { x = -2 y = 8 }
 		}
 		
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
+
+			#DATE
+			modifier = { factor = 0 date < 1942.1.1 NOT = { EAI_radar_tech_focus = yes } }
+			modifier = { factor = 0 date < 1939.1.1 EAI_radar_tech_focus = yes }
+
+			#WEIGHT
+			modifier = { 
+				factor = 30
+				EAI_radar_tech_focus = yes 
 				OR = {
-					tag = ENG
-					tag = USA
+					date > 1942.1.1
+					AND = {
+						date > 1941.1.1
+						EAI_radar_tech_focus_2 = yes
+					}
 				}
-				factor = 10
 			}
-			modifier = {
-				date < "1939.1.1"
-				factor = 0.5
-			}
-			modifier = {
-				is_major = yes
-				factor = 8
-			}
+			modifier = { factor = 2 EAI_radar_tech_focus_2 = yes }
+			modifier = { factor = 5 EAI_radar_tech_focus = yes date > 1941.1.1 }
 		}
 		
 		categories = {
@@ -261,23 +264,20 @@ technologies = {
 			position = { x = -2 y = 10 }
 		}
 		
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-				factor = 10
-			}
-			modifier = {
-				date < "1940.1.1"
-				factor = 0.5
-			}
-			modifier = {
-				is_major = yes
-				factor = 8
-			}
+
+			#DATE
+			modifier = { factor = 0 date < 1942.1.1 NOT = { EAI_radar_tech_focus = yes } }
+			modifier = { factor = 0 date < 1940.1.1 EAI_radar_tech_focus = yes }
+
+			#WEIGHT
+			modifier = { factor = 20 EAI_radar_tech_focus = yes date > 1941.1.1 }
+			modifier = { factor = 5 EAI_radar_tech_focus = yes date > 1943.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		
 		categories = {
@@ -311,19 +311,19 @@ technologies = {
 			position = { x = -2 y = 12 }
 		}
 		
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-				factor = 4
-			}
-			modifier = {
-				date < "1941.1.1"
-				factor = 0.5
-			}
+
+			#DATE
+			modifier = { factor = 0 date < 1941.1.1 }
+
+			#WEIGHT
+			modifier = { factor = 20 EAI_radar_tech_focus = yes date > 1942.1.1 }
+			modifier = { factor = 5 EAI_radar_tech_focus = yes date > 1944.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		
 		categories = {
@@ -364,15 +364,19 @@ technologies = {
 			position = { x = -2 y = 14 }
 		}
 		
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-				factor = 5
-			}
+
+			#DATE
+			modifier = { factor = 0 date < 1942.1.1 }
+
+			#WEIGHT
+			modifier = { factor = 20 EAI_radar_tech_focus = yes date > 1943.1.1 }
+			modifier = { factor = 5 EAI_radar_tech_focus = yes date > 1945.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		
 		categories = {
@@ -403,8 +407,8 @@ technologies = {
 			position = { x = 2 y = 2 }
 		}
 		
-		ai_will_do = {
-			factor = 7
+		ai_will_do = { #EAI
+			factor = 300
 		}
 		
 		categories = {
@@ -442,18 +446,11 @@ technologies = {
 			position = { x = 2 y = 6 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 3
-				date > "1938.1.6"
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1939.1.1"
-			}
+		ai_will_do = { #EAI
+			factor = 300
+
+			#DATE
+			modifier = { factor = 0 date < 1938.1.1 }
 		}
 		
 		categories = {
@@ -497,23 +494,11 @@ technologies = {
 			position = { x = 2 y = 10 }
 		}
 		
-		ai_will_do = {
-			factor = 3
-			
-			modifier = {
-				factor = 3
-				date > "1940.1.6"
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1941.1.1"
-			}
+		ai_will_do = { #EAI
+			factor = 300
 
-			modifier = {
-				factor = 2
-				tag = GER
-			}
+			#DATE
+			modifier = { factor = 0 date < 1940.1.1 }
 		}
 		
 		categories = {
@@ -556,18 +541,11 @@ technologies = {
 			position = { x = 2 y = 14 }
 		}
 		
-		ai_will_do = {
-			factor = 3
-			
-			modifier = {
-				factor = 3
-				date > "1942.1.6"
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1943.1.1"
-			}
+		ai_will_do = { #EAI
+			factor = 300
+
+			#DATE
+			modifier = { factor = 0 date < 1942.1.1 }
 		}
 		
 		categories = {
@@ -593,26 +571,14 @@ technologies = {
 			position = { x = 0 y = 6 }
 		}
 		
-		ai_will_do = {
-			factor = 1.75
-			modifier = {
-				has_war = yes
-				factor = 3
-			}
-			modifier = {
-				num_of_military_factories < 50
-				factor = 1.5 # not a major
-			}
-			modifier = {
-				factor = 3
+		ai_will_do = { #EAI
+			factor = 1
 
-				tag = GER
-			}
-			modifier = {
-				factor = 3
+			#DATE
+			modifier = { factor = 0 date < 1938.1.1 }
 
-				tag = SOV
-			}
+			#WEIGHT
+			modifier = { factor = 200 OR = { date > 1939.1.1 has_war = yes } }
 		}
 		
 		categories = {
@@ -636,26 +602,11 @@ technologies = {
 			position = { x = 0 y = 10 }
 		}
 		
-		ai_will_do = {
-			factor = 1.75
-			modifier = {
-				has_war = yes
-				factor = 3
-			}
-			modifier = {
-				num_of_military_factories < 50
-				factor = 1.5 # not a major
-			}
-			modifier = {
-				factor = 3
+		ai_will_do = { #EAI
+			factor = 200
 
-				tag = GER
-			}
-			modifier = {
-				factor = 3
-
-				tag = SOV
-			}
+			#DATE
+			modifier = { factor = 0 date < 1939.6.1 }
 		}
 		
 		categories = {
@@ -679,26 +630,11 @@ technologies = {
 			position = { x = 0 y = 14 }
 		}
 		
-		ai_will_do = {
-			factor = 1.75
-			modifier = {
-				has_war = yes
-				factor = 3
-			}
-			modifier = {
-				num_of_military_factories < 50
-				factor = 1.5 # not a major
-			}
-			modifier = {
-				factor = 3
+		ai_will_do = { #EAI
+			factor = 200
 
-				tag = GER
-			}
-			modifier = {
-				factor = 3
-
-				tag = SOV
-			}
+			#DATE
+			modifier = { factor = 0 date < 1941.6.1 }
 		}
 		
 		categories = {
@@ -722,22 +658,22 @@ technologies = {
 			position = { x = 4 y = 6 }
 		}
 		
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				num_of_military_factories < 50
-				factor = 1.5 # not a major
-			}
-			modifier = {
-				factor = 3
+		ai_will_do = { #EAI
+			factor = 1
 
-				tag = GER
-			}
-			modifier = {
-				factor = 3
+			#DATE
+			modifier = { factor = 0 date < 1938.1.1 }
 
-				tag = SOV
-			}
+			#WEIGHT
+			modifier = { add = 50 date > 1941.1.1 }
+			modifier = { add = 50 date > 1942.1.1 }
+			modifier = { add = 50 date > 1943.1.1 }
+			modifier = { add = 50 date > 1944.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
+			modifier = { factor = 0 EAI_prioritise_main_industry = yes }
 		}
 		
 		categories = {
@@ -761,22 +697,21 @@ technologies = {
 			position = { x = 4 y = 10 }
 		}
 		
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				num_of_military_factories < 50
-				factor = 1.5 # not a major
-			}
-			modifier = {
-				factor = 3
+		ai_will_do = { #EAI
+			factor = 1
 
-				tag = GER
-			}
-			modifier = {
-				factor = 3
+			#DATE
+			modifier = { factor = 0 date < 1940.1.1 }
 
-				tag = SOV
-			}
+			#WEIGHT
+			modifier = { add = 50 date > 1942.1.1 }
+			modifier = { add = 50 date > 1943.1.1 }
+			modifier = { add = 50 date > 1944.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
+			modifier = { factor = 0 EAI_prioritise_main_industry = yes }
 		}
 		
 		categories = {
@@ -800,22 +735,20 @@ technologies = {
 			position = { x = 4 y = 14 }
 		}
 		
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				num_of_military_factories < 50
-				factor = 1.5 # not a major
-			}
-			modifier = {
-				factor = 3
+		ai_will_do = { #EAI
+			factor = 1
 
-				tag = GER
-			}
-			modifier = {
-				factor = 3
+			#DATE
+			modifier = { factor = 0 date < 1942.1.1 }
 
-				tag = SOV
-			}
+			#WEIGHT
+			modifier = { add = 50 date > 1943.1.1 }
+			modifier = { add = 50 date > 1944.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
+			modifier = { factor = 0 EAI_prioritise_main_industry = yes }
 		}
 		
 		categories = {
@@ -841,23 +774,26 @@ technologies = {
 			position = { x = 0 y = 4 }
 		}
 		
-		ai_will_do = {
-			factor = 0.75
-			modifier = {
+		ai_will_do = { #EAI
+			factor = 5
+
+			#DATE
+			modifier = { factor = 0 date < 1938.1.1 }
+
+			#WEIGHT
+			modifier = { factor = 2 EAI_capital_tech_focus = yes }
+
+			#RESTRICTION
+			modifier = {  factor = 0 NOT = { EAI_CA_tech_focus = yes EAI_BC_tech_focus = yes EAI_BB_tech_focus = yes EAI_SHBB_tech_focus = yes } }
+			modifier = { 
+				factor = 0 
 				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
+					has_tech = improved_fire_control_system can_research = improved_fire_control_system is_researching_technology = improved_fire_control_system
+					has_tech = advanced_fire_control_system can_research = advanced_fire_control_system is_researching_technology = advanced_fire_control_system
 				}
-				factor = 3
 			}
-			modifier = {
-				OR = {
-					can_research = improved_fire_control_system
-					has_tech = improved_fire_control_system
-				}
-				factor = 0
-			}
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		
 		categories = {
@@ -882,23 +818,22 @@ technologies = {
 			position = { x = 0 y = 8 }
 		}
 		
-		ai_will_do = {
-			factor = 0.75
-			modifier = {
+		ai_will_do = { #EAI
+			factor = 5
+
+			#WEIGHT
+			modifier = { factor = 2 EAI_capital_tech_focus = yes }
+
+			#RESTRICTION
+			modifier = {  factor = 0 NOT = { EAI_CA_tech_focus = yes EAI_BC_tech_focus = yes EAI_BB_tech_focus = yes EAI_SHBB_tech_focus = yes } }
+			modifier = { 
+				factor = 0 
 				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
+					has_tech = advanced_fire_control_system can_research = advanced_fire_control_system is_researching_technology = advanced_fire_control_system
 				}
-				factor = 3
 			}
-			modifier = {
-				OR = {
-					can_research = advanced_fire_control_system
-					has_tech = advanced_fire_control_system
-				}
-				factor = 0
-			}
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		
 		categories = {
@@ -924,17 +859,16 @@ technologies = {
 			position = { x = 0 y = 12 }
 		}
 		
-		ai_will_do = {
-			factor = 0.75
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
-				}
-				factor = 3
-			}
-			
+		ai_will_do = { #EAI
+			factor = 5
+
+			#WEIGHT
+			modifier = { factor = 2 EAI_capital_tech_focus = yes }
+
+			#RESTRICTION
+			modifier = {  factor = 0 NOT = { EAI_CA_tech_focus = yes EAI_BC_tech_focus = yes EAI_BB_tech_focus = yes EAI_SHBB_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		
 		categories = {
@@ -965,36 +899,18 @@ technologies = {
 			position = { x = 1 y = 0 }
 		}
 	
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+
+			#DATE
+			modifier = { factor = 0 date < 1943.1.1 }
 			
-			
-			modifier = {
-				factor = 50
-				tag = ENG
-				date > "1944.1.1"
-			}
-			
-			modifier = {
-				factor = 50
-				tag = SOV
-				date > "1944.1.1"
-			}
-			modifier = {
-				factor = 50
-				tag = USA
-				date > "1944.1.1"
-			}
-			modifier = {
-				factor = 50
-				tag = GER
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 10
-				is_major = yes
-			}
+			#WEIGHT
+			modifier = { factor = 50 EAI_major_country = yes date > 1945.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		categories = {
 			rocketry
@@ -1057,33 +973,20 @@ technologies = {
 			position = { x = 1 y = 2 }
 		}
 					
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+
+			#DATE
+			modifier = { factor = 0 date < 1944.1.1 }
 			
-			
-			
-			modifier = {
-				factor = 50
-				tag = ENG
-				date > "1945.1.1"
-			}
-			
-			modifier = {
-				factor = 50
-				tag = SOV
-				date > "1945.1.1"
-			}
-			modifier = {
-				factor = 50
-				tag = USA
-				date > "1945.1.1"
-			}
-			modifier = {
-				factor = 50
-				tag = GER
-				date > "1944.1.1"
-			}
+			#WEIGHT
+			modifier = { factor = 50 EAI_major_country = yes date > 1945.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
+		
 		
 		categories = {
 			rocketry
@@ -1127,14 +1030,17 @@ technologies = {
 			position = { x = 1 y = 4 }
 		}
 		
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			
-			modifier = {
-				factor = 10
-				is_major = yes
-			}
+
+			#DATE
+			modifier = { factor = 0 date < 1945.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
+
 		categories = {
 			rocketry
 		}
@@ -1177,13 +1083,15 @@ technologies = {
 			position = { x = 1 y = 6 }
 		}
 		
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+
+			#DATE
+			modifier = { factor = 0 date < 1946.1.1 }
 			
-			modifier = {
-				factor = 10
-				is_major = yes
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		
 		categories = {
@@ -1216,35 +1124,18 @@ technologies = {
 			custom_effect_tooltip = JET_ENGINES_RESEARCHED
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 20
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 50
-				tag = ENG
-				date > "1945.1.1"
-			}
-			
-			modifier = {
-				factor = 50
-				tag = SOV
-				date > "1945.1.1"
-			}
-			modifier = {
-				factor = 50
-				tag = USA
-				date > "1945.1.1"
-			}
-			modifier = {
-				factor = 50
-				tag = GER
-				date > "1944.1.1"
-			}
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 date < 1944.1.1 }
+
+			#WEIGHT
+			modifier = { factor = 5 EAI_major_country = yes }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		
 		categories = {
@@ -1270,28 +1161,20 @@ technologies = {
 			position = { x = 0 y = 0 }
 		}
 		
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1941.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1942.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
+
+			#WEIGHT
+			modifier = { factor = 400 EAI_nuclear_tech_focus = yes }
+
+			#DATE
+			modifier = { factor = 0 EAI_nuclear_tech_focus = yes date < 1940.1.1 }
+			modifier = { factor = 0 NOT = { EAI_nuclear_tech_focus = yes } date < 1944.1.1 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_major_country = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
 		}
 		
 		categories = {
@@ -1318,11 +1201,29 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				tag = USA
-				factor = 2
+		ai_will_do = { #EAI
+			factor = 1
+
+			#WEIGHT
+			modifier = { factor = 400 EAI_nuclear_tech_focus = yes }
+
+			#DATE
+			modifier = { factor = 0 date < 1942.1.1 EAI_nuclear_tech_focus = yes }
+			modifier = { factor = 0 date < 1944.1.1 NOT = { EAI_nuclear_tech_focus = yes } }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_major_country = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					tag = USA
+					has_war_with = JAP
+				}
+				play_warning_to_japan_effect = yes
 			}
 		}
 		
@@ -1330,10 +1231,7 @@ technologies = {
 			nuclear
 		}
 		
-		enable_building = {
-			building = nuclear_reactor
-			level = 1
-		}
+		nuclear_production = 1
 	}
 
 	nukes = {
