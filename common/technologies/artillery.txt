@@ -1581,12 +1581,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1944
+		start_year = 1947
 		folder = {
 			name = artillery_folder
 			position = {
 				x = 0
-				y = 14
+				y = 18
 			}
 		}
 		categories = {
@@ -1596,15 +1596,15 @@ technologies = {
 			factor = 2
 			modifier = {
 				factor = 2
-				date > "1941.1.9"
+				date > "1946.1.9"
 			}
 			modifier = {
 				factor = 2
-				date > "1942.1.1"
+				date > "1947.1.1"
 			}
 			modifier = {
 				factor = 5
-				date > "1942.1.6"
+				date > "1948.1.6"
 			}
 		}
 	}
@@ -2051,11 +2051,11 @@ technologies = {
 		
 		research_cost = 1
 
-		start_year = 1944
+		start_year = 1947
 		
 		folder = {
 			name = artillery_folder
-			position = { x = 7 y = 14 }
+			position = { x = 7 y = 18 }
 		}
 		
 		ai_will_do = {
@@ -2063,7 +2063,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				date > "1942.1.9"
+				date > "1947.1.9"
 			}
 			modifier = {
 				tag = JAP
@@ -2077,12 +2077,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				date > "1943.1.1"
+				date > "1946.1.1"
 			}
 			
 			modifier = {
 				factor = 5
-				date > "1943.1.6"
+				date > "1948.1.6"
 			}
 			modifier = {
 				factor = 10
@@ -2125,11 +2125,11 @@ technologies = {
 		
 		research_cost = 1
 
-		start_year = 1945
+		start_year = 1949
 		
 		folder = {
 			name = artillery_folder
-			position = { x = 7 y = 16 }
+			position = { x = 7 y = 20 }
 		}
 		
 		ai_will_do = {
@@ -2137,7 +2137,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				date > "1942.1.9"
+				date > "1949.1.9"
 			}
 			modifier = {
 				tag = JAP
@@ -2151,12 +2151,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				date > "1943.1.1"
+				date > "1948.1.1"
 			}
 			
 			modifier = {
 				factor = 5
-				date > "1943.1.6"
+				date > "1950.1.6"
 			}
 			modifier = {
 				factor = 10

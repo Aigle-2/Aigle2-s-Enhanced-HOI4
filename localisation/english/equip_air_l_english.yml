@@ -2659,11 +2659,11 @@
  FRA_cv_nav_bomber_equipment_6:0 "Breguet Br.1050 Alizé"
  FRA_cv_nav_bomber_equipment_6_short:0 "Alizé"
  
- FRA_mach2stratbomber_equipment_1:0 "Dassault Mirage IVA"
- FRA_mach2stratbomber_equipment_1_short:0 "Mirage IVA"
+ FRA_mach2stratbomber_equipment_1:0 "Aérospatiale Concorde Militaire"
+ FRA_mach2stratbomber_equipment_1_short:0 "Mirage IVA""Concorde M"
  
- FRA_jet_strat_bomber_equipment_4:0 "Aérospatiale Concorde Militaire"
- FRA_jet_strat_bomber_equipment_4_short:0 "Concorde M"
+ FRA_jet_strat_bomber_equipment_4:0 "Dassault Mirage IVA"
+ FRA_jet_strat_bomber_equipment_4_short:0 "Mirage IVA"
  
  FRA_rocket_interceptor_equipment_3:0 "SNCASO Trident"
  FRA_rocket_interceptor_equipment_3_short:0 "Trident"

@@ -1228,7 +1228,7 @@ technologies = {
 			jet_heavy_fighter_equipment_1
 		}
 		path = {
-			leads_to_tech = heavy_fighter5
+			leads_to_tech = jet_interceptor1
 			research_cost_coeff = 1
 		}
 		# sub_technologies = {
@@ -1266,6 +1266,133 @@ technologies = {
 			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes } }
 		}
 	}
+
+	#Jet Interceptor 3
+	jet_interceptor1 = {
+
+		enable_equipments = {
+			jet_interceptor_equipment_3
+		}
+		
+		path = {
+			leads_to_tech = jet_interceptor2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1950
+
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = -2
+				y = 16
+			}
+		}
+		
+		categories = {
+			light_air
+			jet_technology
+		}
+		
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1950.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1949.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes } }
+		}
+	}
+	
+	#Jet Interceptor 4
+	jet_interceptor2 = {
+
+		enable_equipments = {
+			jet_interceptor_equipment_4
+		}
+		
+		path = {
+			leads_to_tech = jet_interceptor3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1955
+
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = -2
+				y = 18
+			}
+		}
+		
+		categories = {
+			light_air
+			jet_technology
+		}
+		
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1955.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1954.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes } }
+		}
+	}
+	
+	#Jet Interceptor 5
+	jet_interceptor3 = {
+
+		enable_equipments = {
+			jet_interceptor_equipment_5
+		}
+				
+		path = {
+			leads_to_tech = jet_interceptor6
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1960
+
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = -2
+				y = 20
+			}
+		}
+		
+		categories = {
+			light_air
+			jet_technology
+		}
+		
+		ai_will_do = { #EAI
+			factor = 10
+
+			#DATE
+			modifier = { factor = 0 OR = { AND = { date < 1960.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1955.6.1 } }
+			
+			#WEIGHT
+			modifier = { factor = 3 num_of_military_factories > 25 }
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HFTR_tech_focus = yes } }
+		}
+	}
+
 	tactical_bomber1 = {
 		on_research_complete = { #EAI
 			if = {

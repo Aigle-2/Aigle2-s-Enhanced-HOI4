@@ -61,8 +61,6 @@ technologies = {
 			extra_ammo_storage
 			wet_ammo_storage
 			smoke_launchers
-			#covered_top
-			open_top
 		}
 		enable_subunits = {
 			light_armor
@@ -117,28 +115,17 @@ technologies = {
 			position = { x = 2 y = 0 }
 		}
 
-		ai_will_do = {
-			factor = 1
+		ai_will_do = { #EAI
+			factor = 100
 
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
 
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { date > 1937.1.1 EAI_armor_tech_focus = yes } }
+			modifier = { factor = 0 NOT = { EAI_LARM_tech_focus = yes EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 0 NOT = { has_tech = motorised_infantry } OR = { EAI_LARM_tech_focus = yes EAI_MARM_tech_focus = yes } }
 		}
 
 		categories = {
@@ -202,28 +189,17 @@ technologies = {
 			position = { x = -4 y = 2 }
 		}
 
-		ai_will_do = {
-			factor = 1
+		ai_will_do = { #EAI
+			factor = 100
 
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 4 EAI_armor_tech_focus = yes }
 
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { date > 1937.1.1 EAI_armor_tech_focus = yes } }
+			modifier = { factor = 0 NOT = { EAI_LARM_tech_focus = yes EAI_MARM_tech_focus = yes } }
+			modifier = { factor = 0 check_variable = { EAI_FOCUS/LAND/armor_focus = global.EAI_HARM_FOCUS } check_variable = { EAI_FOCUS/LAND/attachment = global.EAI_MARM_ATTACHMENT } }
 		}
 
 		categories = {
@@ -254,42 +230,17 @@ technologies = {
 			position = { x = -4 y = 4 }
 		}
 
-		ai_will_do = {
-			factor = 1
+		ai_will_do = { #EAI
+			factor = 100
 
-			modifier = {
-				factor = 2
-				is_major = yes
-				not = {
-					tag = JAP
-					num_of_military_factories < 50
-				}
-			}
-			modifier = {
-				is_major = yes
-				not = { tag = JAP }
-				has_war = yes
-				factor = 10 #you are embarassing yourself
-			}
-			modifier = {
-				tag = SOV
-				factor = 3
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 4 EAI_armor_tech_focus = yes }
 
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { date > 1937.1.1 EAI_armor_tech_focus = yes } }
+			modifier = { factor = 0 NOT = { EAI_LARM_tech_focus = yes EAI_MARM_tech_focus = yes } }
+			modifier = { factor = 0 check_variable = { EAI_FOCUS/LAND/armor_focus = global.EAI_HARM_FOCUS } check_variable = { EAI_FOCUS/LAND/attachment = global.EAI_MARM_ATTACHMENT } }
 		}
 
 		categories = {
@@ -327,31 +278,8 @@ technologies = {
 			position = { x = -1 y = 5 }
 		}
 
-		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				is_major = yes
-				NOT = {
-					TAG = GER
-				}
-			}
-			modifier = {
-				OR = {
-					original_tag = USA
-					original_tag = JAP
-				}
-				factor = 2
-			}
-			modifier = {
-				not = {
-					any_controlled_state = {
-						is_coastal = yes
-					}
-				}
-				factor = 0
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 
 		categories = {
@@ -390,28 +318,8 @@ technologies = {
 			position = { x = -1 y = 8 }
 		}
 
-		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				OR = {
-					original_tag = USA
-					original_tag = JAP
-				}
-				factor = 2
-			}
-			modifier = {
-				not = {
-					any_controlled_state = {
-						is_coastal = yes
-					}
-				}
-				factor = 0
-			}
+		ai_will_do = { #EAI
+			factor = 0
 		}
 
 		categories = {
@@ -430,11 +338,6 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = main_battle_tank_chassis
-			research_cost_coeff = 1
-		}
-
-		path = {
 			leads_to_tech = modern_light_tank_chassis
 			research_cost_coeff = 1
 		}
@@ -447,26 +350,27 @@ technologies = {
 			position = { x = -4 y = 8 }
 		}
 
-		ai_will_do = {
-			factor = 0.5
-			modifier = {
-				is_major = no
-				factor = 2
-			}
+		ai_will_do = { #EAI
+			factor = 100
 
-			modifier = {
-				factor = 1.1
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
+			#DATE
+			modifier = { factor = 0 date < 1940.6.1 EAI_armor_tech_focus = yes }
+			modifier = { factor = 0 date < 1940.6.1 NOT = { EAI_armor_tech_focus = yes } }
+			
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			
+			#RESTRICTIONS
+			modifier = { 
+				factor = 0 
+				NOT = { 
+					AND = { 
+						EAI_LARM_tech_focus = yes 
+						check_variable = { EAI_FOCUS/LAND/armor_focus = global.EAI_AT_FOCUS } 
+						check_variable = { EAI_FOCUS/LAND/attachment = global.EAI_LARM_ATTACHMENT }
+					}
+				} 
 			}
 		}
 
@@ -533,42 +437,17 @@ technologies = {
 			position = { x = 2 y = @1936 }
 		}
 
-		ai_will_do = {
-			factor = 2
+		ai_will_do = { #EAI
+			factor = 1
 
-			modifier = {
-				factor = 2
-				is_major = yes
-				not = {
-					tag = JAP
-					num_of_military_factories < 50
-				}
-				date > "1938.1.1"
-			}
-			modifier = {
-				tag = SOV
-				factor = 1.5
-			}
-			modifier = {
-				factor = 1.1
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 15.0
-				tag = GER
-				has_opinion_modifier = sov_ger_treaty
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 100 date > 1937.1.1 }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes } }
+			modifier = { factor = 0 check_variable = { EAI_FOCUS/LAND/armor_focus = global.EAI_HARM_FOCUS } check_variable = { EAI_FOCUS/LAND/attachment = global.EAI_MARM_ATTACHMENT } }
 		}
 
 		categories = {
@@ -601,45 +480,21 @@ technologies = {
 			position = { x = 2 y = @1940 }
 		}
 
-		ai_will_do = {
-			factor = 3
+		ai_will_do = { #EAI
+			factor = 150
+			
+			#DATE
+			modifier = { factor = 0 date < 1937.1.1 EAI_armor_tech_focus = yes EAI_armor_tech_bonus = yes }
+			modifier = { factor = 0 date < 1939.1.1 EAI_armor_tech_focus = yes NOT = { EAI_armor_tech_bonus = yes } }
+			modifier = { factor = 0 date < 1939.1.1 NOT = { EAI_armor_tech_focus = yes } EAI_armor_tech_bonus = yes }
+			modifier = { factor = 0 date < 1940.1.1 NOT = { EAI_armor_tech_focus = yes } NOT = { EAI_armor_tech_bonus = yes } }
 
-			modifier = {
-				factor = 2
-				is_major = yes
-				not = {
-					tag = JAP
-					num_of_military_factories < 50
-				}
-			}
-			modifier = {
-				date < "1941.1.1"
-				factor = 0.3
-			}
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes } }
 		}
 
 		categories = {
@@ -662,15 +517,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = imp_stab
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = rangefinder1
-			research_cost_coeff = 1
-		}
 		research_cost = 2
 		start_year = 1943
 
@@ -679,23 +525,19 @@ technologies = {
 			position = { x = 2 y = @1943 }
 		}
 
-		ai_will_do = {
-			factor = 1
+		ai_will_do = { #EAI
+			factor = 100
+			
+			#DATE
+			modifier = { factor = 0 date < 1942.6.1 EAI_armor_tech_focus = yes }
+			modifier = { factor = 0 date < 1943.1.1 NOT = { EAI_armor_tech_focus = yes } }
 
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes } }
 		}
 
 		categories = {
@@ -706,21 +548,20 @@ technologies = {
 
 	main_battle_tank_chassis = { #E-50
 
+		path = {
+			leads_to_tech = main_battle_tank_chassis_2
+			research_cost_coeff = 1
+		}
 		enable_equipments = {
 			modern_tank_chassis_1
 			modern_tank_destroyer_chassis_1
 			modern_tank_artillery_chassis_1
 			modern_tank_aa_chassis_1
-		}		
+		}
 		enable_subunits = {
 			modern_armor
 		}
 
-		path = {
-			leads_to_tech = main_battle_tank_chassis_2
-			research_cost_coeff = 1
-		}
-		
 		research_cost = 2.5
 		start_year = 1945
 
@@ -729,23 +570,18 @@ technologies = {
 			position = { x = 2 y = @1945 }
 		}
 
-		ai_will_do = {
-			factor = 1
+		ai_will_do = { #EAI
+			factor = 100
 
-			modifier = {
-				factor = 2
-				date > "1946.1.1"
-			}
+			#DATE
+			modifier = { factor = 0 date < 1945.1.1 }
 
-			modifier = {
-				factor = 2
-				date > "1947.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1948.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
 		}
 
 		categories = {
@@ -762,7 +598,7 @@ technologies = {
 			heavy_tank_destroyer_chassis_1
 			heavy_tank_artillery_chassis_1
 			heavy_tank_aa_chassis_1
-		}	
+		}
 
 		enable_subunits = {
 			heavy_armor
@@ -779,6 +615,7 @@ technologies = {
 					limit = {
 						has_tech = motorised_infantry
 					}
+
 					load_oob = "unlock_tanks_mot"
 				}
 				if = {
@@ -806,32 +643,16 @@ technologies = {
 			position = { x = 5 y = 2 }
 		}
 
-		ai_will_do = {
-			factor = 0.8
+		ai_will_do = { #EAI
+			factor = 100
 
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
-			modifier = {
-				tag = FRA
-				factor = 3
-			}
-			modifier = {
-				tag = JAP
-				num_of_military_factories < 100
-				factor = 0
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 4 OR = { EAI_armor_tech_focus = yes check_variable = { EAI_FOCUS/LAND/antitank_design = global.EAI_HTD_AT_DESIGN } } }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 0 check_variable = { EAI_FOCUS/LAND/armor_focus = global.EAI_MARM_FOCUS } check_variable = { EAI_FOCUS/LAND/attachment = global.EAI_HARM_ATTACHMENT } }
 		}
 
 		categories = {
@@ -867,27 +688,21 @@ technologies = {
 			position = { x = 5 y = @1940 }
 		}
 
-		ai_will_do = {
-			factor = 0.8
-			modifier = {
-				tag = JAP
-				num_of_military_factories < 100
-				factor = 0
-			}
-			modifier = {
-				factor = 1.2
-				date > "1942.1.1"
-			}
+		ai_will_do = { #EAI
+			factor = 150
+			
+			#DATE
+			modifier = { factor = 0 date < 1939.6.1 EAI_armor_tech_focus = yes NOT = { EAI_armor_tech_bonus = yes } }
+			modifier = { factor = 0 date < 1937.1.1 EAI_armor_tech_focus = yes EAI_armor_tech_bonus = yes }
+			modifier = { factor = 0 date < 1939.1.1 NOT = { EAI_armor_tech_focus = yes } EAI_armor_tech_bonus = yes }
+			modifier = { factor = 0 date < 1940.1.1 NOT = { EAI_armor_tech_focus = yes } NOT = { EAI_armor_tech_bonus = yes } }
 
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HARM_tech_focus = yes } }
 		}
 
 		categories = {
@@ -895,6 +710,7 @@ technologies = {
 			cat_heavy_armor
 		}
 	}
+
 
 	advanced_heavy_tank_chassis = { #King Tiger
 
@@ -923,23 +739,19 @@ technologies = {
 			position = { x = 5 y = @1943 }
 		}
 
-		ai_will_do = {
-			factor = 0.8
+		ai_will_do = { #EAI
+			factor = 100
+			
+			#DATE
+			modifier = { factor = 0 date < 1942.6.1 EAI_armor_tech_focus = yes }
+			modifier = { factor = 0 date < 1943.1.1 NOT = { EAI_armor_tech_focus = yes } }
 
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_HARM_tech_focus = yes } }
 		}
 
 		categories = {
@@ -1004,32 +816,20 @@ technologies = {
 			position = { x = 3 y = @1936 }
 		}
 
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
 
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			#DATE
+			modifier = { factor = 0 date < 1936.6.1 }
 
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 100 OR = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
 
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes EAI_LARM_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_armor_chassis }
 		}
 
 		categories = {
@@ -1059,32 +859,20 @@ technologies = {
 			position = { x = 3 y = @1938 }
 		}
 
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
+			
+			#DATE
+			modifier = { factor = 0 date < 1937.1.1 }
 
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 100 OR = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
 
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes EAI_LARM_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_armor_chassis }
 		}
 
 		categories = {
@@ -1112,84 +900,21 @@ technologies = {
 			position = { x = 3 y = @1941 }
 		}
 
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
 
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			#DATE
+			modifier = { factor = 0 date < 1941.1.1 }
 
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
+			#WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 100 OR = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			modifier = { factor = 0.001 } # AI doesnt need this
 
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	armor_tech_4 = {
-
-		path = {
-			leads_to_tech = armor_tech_5
-			research_cost_coeff = 1
-		}
-		
-		research_cost = 1
-		start_year = 1944
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 3 y = @1944 }
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_4_tt
-		}
-		show_effect_as_desc = yes
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes EAI_LARM_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_armor_chassis }
 		}
 
 		categories = {
@@ -1215,32 +940,20 @@ technologies = {
 			position = { x = 2 y = @1936 }
 		}
 
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
 
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			#DATE
+			modifier = { factor = 0 date < 1936.6.1 }
 
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 100 OR = { EAI_LARM_tech_focus = yes EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
 
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes EAI_LARM_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_armor_chassis }
 		}
 
 		categories = {
@@ -1268,32 +981,20 @@ technologies = {
 			position = { x = 2 y = @1938 }
 		}
 
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
 
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			#DATE
+			modifier = { factor = 0 date < 1937.1.1 }
 
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 100 OR = { EAI_LARM_tech_focus = yes EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
 
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes EAI_LARM_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_armor_chassis }
 		}
 
 		categories = {
@@ -1302,6 +1003,7 @@ technologies = {
 	}
 
 	engine_tech_3 = {
+
 
 		path = {
 			leads_to_tech = engine_tech_4
@@ -1318,32 +1020,21 @@ technologies = {
 			position = { x = 2 y = @1941 }
 		}
 
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
 
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			#DATE
+			modifier = { factor = 0 date < 1941.1.1 }
 
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 100 OR = { EAI_LARM_tech_focus = yes EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			modifier = { factor = 0.001 } # AI doesnt need this
 
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes EAI_LARM_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_armor_chassis }
 		}
 
 		categories = {
@@ -1368,38 +1059,67 @@ technologies = {
 			custom_effect_tooltip = engine_tech_4_tt
 		}
 		show_effect_as_desc = yes
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
 
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			#DATE
+			modifier = { factor = 0 date < 1944.1.1 }
 
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 100 OR = { EAI_LARM_tech_focus = yes EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			modifier = { factor = 0.001 } # AI doesnt need this
 
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes EAI_LARM_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_armor_chassis }
 		}
 
 		categories = {
 			armor
 		}
-	}	
+	}
+
+	armor_tech_4 = {
+		path = {
+			leads_to_tech = armor_tech_5
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1944
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 3 y = @1944 }
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = armor_tech_4_tt
+		}
+		show_effect_as_desc = yes
+
+		ai_will_do = { #EAI
+			factor = 1
+
+			#DATE
+			modifier = { factor = 0 date < 1944.1.1 }
+
+			##WEIGHT
+			modifier = { factor = EAI_RESEARCH_armor_research_factor }
+			modifier = { factor = 100 OR = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes } }
+			modifier = { factor = 2 EAI_armor_tech_focus = yes }
+			modifier = { factor = 0.001 } # AI doesnt need this
+
+			#RESTRICTIONS
+			modifier = { factor = 0 NOT = { EAI_MARM_tech_focus = yes EAI_HARM_tech_focus = yes EAI_LARM_tech_focus = yes } }
+			modifier = { factor = 0 has_country_flag = EAI_prioritise_armor_chassis }
+		}
+
+		categories = {
+			armor
+		}
+	}
+
 	
 	main_battle_tank_chassis_2 = { #E-50
 
@@ -2022,10 +1742,10 @@ technologies = {
 			position = { x = 3 y = @1960 }
 		}
 
-		# on_research_complete = {
-			# custom_effect_tooltip = armor_tech_6_tt
-		# }
-		# show_effect_as_desc = yes
+		on_research_complete = {
+			custom_effect_tooltip = armor_tech_6_tt
+		}
+		show_effect_as_desc = yes
 
 		ai_will_do = {
 			factor = 1
