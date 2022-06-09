@@ -343,18 +343,18 @@ equipment_modules = {
 
 	###Special Modules
 
-	stabilizer = {
-		abbreviation = "stab"
-		category = tank_stabilizer
-		sfx = sfx_ui_sd_module_turret
+	# stabilizer = {
+	# 	abbreviation = "stab"
+	# 	category = tank_stabilizer
+	# 	sfx = sfx_ui_sd_module_turret
 
-		add_stats = {
-			build_cost_ic = 2
-			breakthrough = 5
-			reliability = -0.1
-		}
-		xp_cost = 1
-	}
+	# 	add_stats = {
+	# 		build_cost_ic = 2
+	# 		breakthrough = 5
+	# 		reliability = -0.1
+	# 	}
+	# 	xp_cost = 1
+	# }
 	
 	stabilizer_2 = {
 		abbreviation = "sta2"
