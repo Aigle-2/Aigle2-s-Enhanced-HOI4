@@ -51,6 +51,7 @@ set_technology = {
 	marines = 1
 	basic_train = 1
 	semi_automatic_rifle = 1
+	transport1 = 1
 }
 
 if = {
