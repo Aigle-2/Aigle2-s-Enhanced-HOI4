@@ -2872,6 +2872,10 @@ technologies = {
 				}
 				factor = 5
 			}
+			modifier = {
+				date < 1942.11.1
+				factor = 0
+			}
 		}
 		
 		categories = {

@@ -1,0 +1,96 @@
+Bay_of_biscay_is_a_trap = {
+	enable = {
+		NOT = {
+			OR = {
+				original_tag = SPR
+				tag = FRA
+			}
+		}
+		AND = {
+			14 = { CONTROLLER = { has_war_with = ROOT } }
+			30 = { CONTROLLER = { has_war_with = ROOT } }
+			23 = { CONTROLLER = { has_war_with = ROOT } }
+			19 = { CONTROLLER = { has_war_with = ROOT } }
+			806 = { CONTROLLER = { has_war_with = ROOT } }
+			NOT = { 171 = { CONTROLLER = { is_in_faction_with = ROOT } } }
+			NOT = { 790 = { CONTROLLER = { is_in_faction_with = ROOT } } }
+			NOT = { 792 = { CONTROLLER = { is_in_faction_with = ROOT } } }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 42 #Bay of Biscay
+		value = 2000
+	}
+}
+
+Allies_atlantic_convoy_lines = {
+	enable = {
+		is_in_faction_with = ENG # anyone in allies
+		OR = {
+			has_war_with = FRA
+			has_war_with = GER
+			has_war_with = ITA
+			has_war_with = USA
+			has_war_with = SOV
+		}
+	}
+	abort_when_not_enabled = yes
+
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 49 #
+		value = 2000
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 51 #
+		value = 2000
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 56 #
+		value = 2000
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 58 #
+		value = 2000
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 67 #
+		value = 2000
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 207 #
+		value = 2000
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 57 #
+		value = 50
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 174 #
+		value = 50
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 52 #
+		value = 50
+	}
+}

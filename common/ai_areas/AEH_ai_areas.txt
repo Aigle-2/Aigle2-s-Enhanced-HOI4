@@ -1,0 +1,9 @@
+areas = {
+	britain = {
+		strategic_regions = {
+			1
+			2
+			3
+		}
+	}
+}
