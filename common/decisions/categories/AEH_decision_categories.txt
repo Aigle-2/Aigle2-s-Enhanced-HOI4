@@ -24,6 +24,19 @@ AEH_peace_category = {
 	}
 }
 
+AEH_fall_of_uk = {
+	icon = generic_political_actions
+	
+	priority = 1000
+
+	allowed = {
+		always = yes
+	}
+	visible = {
+		always = yes
+	}
+}
+
 AEH_debug_category = {
 	icon = generic_political_actions
 	

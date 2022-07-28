@@ -110,6 +110,28 @@ on_actions = {
 					set_state_controller = 738
 				}
 			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = ENG
+					}
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ENG
+					}
+					end_puppet = ENG
+					if = {
+						limit = {
+							tag = CAN
+							CAN = {
+								is_in_faction_with = ENG
+							}
+						}
+						set_major = yes
+					}
+				}
+			}
 		}
 	}
 	on_annex = {
@@ -804,6 +826,21 @@ on_actions = {
 				add_named_threat = {
 					threat = FLT_threat_neg
 					name = AEH_FLT_lost
+				}
+			}
+		}
+	}
+	on_weekly_ENG = {
+		effect = {
+			if = {
+				limit = {
+					ENG = {
+						is_ai = yes
+						surrender_progress > 0.45
+					}
+				}
+				ENG = {
+					country_event = { id = AEH.4 days = 1 }
 				}
 			}
 		}

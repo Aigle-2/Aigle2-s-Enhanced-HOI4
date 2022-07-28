@@ -1,0 +1,48 @@
+
+AEH_fall_of_uk = {
+	AEH_evacuate_to_canada = {
+		icon = generic_political_actions
+		fire_only_once = yes
+		visible = {
+			tag = ENG
+			ENG = {
+				surrender_progress > 0.45
+			}
+		}
+		allowed = {
+			always = yes
+			# has_war = yes
+		}
+		complete_effect = {
+			ENG = {
+				country_event = { id = AEH.4 days = 1 }
+			}
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+
+	AEH_join_the_war = {
+		icon = generic_political_actions
+		fire_only_once = yes
+		visible = {
+			tag = USA
+			ENG = {
+				surrender_progress > 0.45
+			}
+		}
+		allowed = {
+			always = yes
+			# has_war = yes
+		}
+		complete_effect = {
+			ENG = {
+				add_to_faction = USA
+			}
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+	}
+}

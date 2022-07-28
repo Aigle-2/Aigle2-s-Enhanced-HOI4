@@ -649,11 +649,11 @@ country_event = {
 	fire_only_once = yes
 	hidden = yes
 	mean_time_to_happen = {
-		days = 2
+		days = 1
 	}
 	trigger = {
 		ENG = {
-			surrender_progress > 0.65
+			surrender_progress > 0.5
 		}
 	}
 	immediate = {
@@ -665,6 +665,27 @@ country_event = {
 			if = {
 				limit = {
 					tag = CAN
+					CAN = {
+						is_in_faction_with = ENG
+					}
+				}
+				set_major = yes
+			}
+			else_if = {
+				limit = {
+					tag = SAF
+					SAF = {
+						is_in_faction_with = ENG
+					}
+				}
+				set_major = yes
+			}
+			else_if = {
+				limit = {
+					tag = AST
+					SAF = {
+						is_in_faction_with = ENG
+					}
 				}
 				set_major = yes
 			}
