@@ -33,6 +33,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 
@@ -63,7 +64,7 @@ technologies = {
 			factor = 250
 
 			#PRIORITISE MAIN INDUSTRY TECHS
-			modifier = { factor = 0 EAI_prioritise_main_industry = yes }
+			modifier = { factor = 0 EAI_prioritise_main_industry_2 = yes }
 
 			#RESTRICTION
 			modifier = { factor = 0 EAI_use_tech_bonus_on_construction_tech = yes }
@@ -71,6 +72,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -98,7 +100,7 @@ technologies = {
 			modifier = { factor = 0 OR = { AND = { date < 1939.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1938.6.1 } }
 
 			#PRIORITISE MAIN INDUSTRY TECHS
-			modifier = { factor = 0 EAI_prioritise_main_industry = yes }
+			modifier = { factor = 0 EAI_prioritise_main_industry_2 = yes }
 
 			#RESTRICTION
 			modifier = { factor = 0 EAI_use_tech_bonus_on_construction_tech = yes }
@@ -106,6 +108,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -144,14 +147,15 @@ technologies = {
 			modifier = { factor = 0 OR = { AND = { date < 1941.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1940.6.1 } }
 
 			#PRIORITISE MAIN INDUSTRY TECHS
-			modifier = { factor = 0 EAI_prioritise_main_industry = yes }
+			modifier = { factor = 0 EAI_prioritise_main_industry_2 = yes }
 		}
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
-	
+
 	flexible_line = {
 
 		production_factory_max_efficiency_factor = 0.1
@@ -164,8 +168,6 @@ technologies = {
 		
 		research_cost = 2.5
 		start_year = 1943
-		
-		
 		
 		XOR = {
 			streamlined_line
@@ -182,6 +184,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -214,11 +217,12 @@ technologies = {
 			modifier = { factor = 0 OR = { AND = { date < 1943.1.1 NOT = { has_country_flag = EAI_unused_research_slots } } date < 1942.6.1 } }
 
 			#PRIORITISE MAIN INDUSTRY TECHS
-			modifier = { factor = 0 EAI_prioritise_main_industry = yes }
+			modifier = { factor = 0 EAI_prioritise_main_industry_2 = yes }
 		}
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 
@@ -236,7 +240,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 1937
 		
 		folder = {
@@ -250,6 +254,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -257,7 +262,7 @@ technologies = {
 		
 		equipment_conversion_speed = 0.40
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 1939
 		
 		folder = {
@@ -271,8 +276,10 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
+
 
 	###############
 	concentrated_industry = {
@@ -1216,6 +1223,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			cat_synth_oil
 		}
 		
 		ai_will_do = { #EAI
@@ -1376,8 +1384,8 @@ technologies = {
 			
 			#WEIGHT
 			modifier = { add = 300 EAI_rubber_processing_tech_focus = yes }
-			modifier = { factor = 1.2 check_variable = { resource@rubber < -25 } }
-			modifier = { factor = 1.2 check_variable = { resource@rubber < -50 } }
+			modifier = { factor = 1.2 OR = { check_variable = { resource@rubber < -25 } check_variable = { resource_imported@rubber > 25 } } }
+			modifier = { factor = 1.2 OR = { check_variable = { resource@rubber < -50 } check_variable = { resource_imported@rubber > 50 } } }
 			
 			modifier = { factor = 0.9 synthetic_refinery < 5 }
 			modifier = { factor = 0.9 synthetic_refinery < 10 }
@@ -1428,8 +1436,8 @@ technologies = {
 			
 			#WEIGHT
 			modifier = { add = 300 EAI_rubber_processing_tech_focus = yes }
-			modifier = { factor = 1.2 check_variable = { resource@rubber < -25 } }
-			modifier = { factor = 1.2 check_variable = { resource@rubber < -50 } }
+			modifier = { factor = 1.2 OR = { check_variable = { resource@rubber < -25 } check_variable = { resource_imported@rubber > 25 } } }
+			modifier = { factor = 1.2 OR = { check_variable = { resource@rubber < -50 } check_variable = { resource_imported@rubber > 50 } } }
 			
 			modifier = { factor = 0.9 synthetic_refinery < 5 }
 			modifier = { factor = 0.9 synthetic_refinery < 10 }
@@ -1438,10 +1446,6 @@ technologies = {
 			#RESTRICTIONS
 			modifier = { factor = 0 EAI_prioritise_main_industry = yes }
 			modifier = { factor = 0 synthetic_refinery < 1 }
-		}
-		
-		ai_research_weights = {
-			rubber = -2.0
 		}
 		
 		show_effect_as_desc = yes
@@ -1484,9 +1488,9 @@ technologies = {
 			
 			#WEIGHT
 			modifier = { add = 300 EAI_rubber_processing_tech_focus = yes }
-			modifier = { factor = 1.2 check_variable = { resource@rubber < -25 } }
-			modifier = { factor = 1.2 check_variable = { resource@rubber < -50 } }
-			
+			modifier = { factor = 1.2 OR = { check_variable = { resource@rubber < -25 } check_variable = { resource_imported@rubber > 25 } } }
+			modifier = { factor = 1.2 OR = { check_variable = { resource@rubber < -50 } check_variable = { resource_imported@rubber > 50 } } }
+		
 			modifier = { factor = 0.9 synthetic_refinery < 5 }
 			modifier = { factor = 0.9 synthetic_refinery < 10 }
 			modifier = { factor = 0.9 synthetic_refinery < 15 }
@@ -1536,9 +1540,9 @@ technologies = {
 			
 			#WEIGHT
 			modifier = { add = 300 EAI_rubber_processing_tech_focus = yes }
-			modifier = { factor = 1.2 check_variable = { resource@rubber < -25 } }
-			modifier = { factor = 1.2 check_variable = { resource@rubber < -50 } }
-			
+			modifier = { factor = 1.2 OR = { check_variable = { resource@rubber < -25 } check_variable = { resource_imported@rubber > 25 } } }
+			modifier = { factor = 1.2 OR = { check_variable = { resource@rubber < -50 } check_variable = { resource_imported@rubber > 50 } } }
+						
 			modifier = { factor = 0.9 synthetic_refinery < 5 }
 			modifier = { factor = 0.9 synthetic_refinery < 10 }
 			modifier = { factor = 0.9 synthetic_refinery < 15 }
@@ -1777,7 +1781,7 @@ technologies = {
 			factor = 400
 
 			#DATE
-			modifier = { factor = 0 date < 1936.10.1 NOT = { EAI_use_tech_bonus_on_construction_tech = yes } }
+			modifier = { factor = 0 date < 1936.6.1 NOT = { EAI_use_tech_bonus_on_construction_tech = yes } }
 			
 			#WEIGHT
 			modifier = { factor = 1.5 num_of_civilian_factories > 25 }

@@ -1,3 +1,4 @@
+#AEH last check 08/07/2023
 technologies = {
 	
 	@1918 = 0
@@ -129,6 +130,18 @@ technologies = {
 			heavy_flame_tank
 		}
 		
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+						original_tag = ITA
+						has_completed_focus = ITA_italian_tankettes
+					}
+					ITA_add_basic_light_flamethrower_template = yes
+				}
+			}
+		}
 		
 		path = {
 			leads_to_tech = tech_engineers3
@@ -234,10 +247,6 @@ technologies = {
 
 		engineer = {
 			entrenchment  = 2
-			mountain = {
-				attack = 0.1	
-				defence = 0.1
-			}
 			urban = {
 				attack = 0.1	
 				defence = 0.1
@@ -253,8 +262,7 @@ technologies = {
 		}
 		medium_flame_tank = {
 			urban = {
-				attack = 0.1
-				 
+				attack = 0.1 
 			}
 			fort = {
 				attack = 0.10
@@ -277,13 +285,6 @@ technologies = {
 		path = {
 			leads_to_tech = tech_engineers5
 			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 1945
-		folder = {
-			name = support_folder
-			position = { x = 0 y = @1945 }
 		}
 		
 		categories = {
@@ -804,8 +805,8 @@ technologies = {
 			}
 		}
 	}
-	tech_military_police6 = {
 
+	tech_military_police6 = {
 		military_police = {
 			suppression_factor = 0.05
 		}
@@ -839,6 +840,19 @@ technologies = {
 				divide_temp_variable = { occupied_factor = 50 }
 				factor = occupied_factor
 			}
+		}
+	}
+	camicie_nere_security_militias = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		military_police = {
+			suppression_factor = 0.05
 		}
 	}
 
@@ -885,11 +899,11 @@ technologies = {
 			reliability_factor = 0.05
 			equipment_capture_factor = 0.05
 		}
-		
 		enable_equipment_modules = {
 			easy_maintenance
 		}
 		
+
 		path = {
 			leads_to_tech = tech_maintenance_company3
 			research_cost_coeff = 1
@@ -1301,6 +1315,14 @@ technologies = {
 			modifier = { factor = 0 NOT = { EAI_hospital_tech_focus = yes } }
 			modifier = { factor = 0 has_country_flag = EAI_prioritise_aircraft }
 			modifier = { factor = 0 has_country_flag = EAI_prioritise_ship_hulls }
+		}
+	}
+
+	SWI_saint_bernard_tech = { #Saint Bernard tech
+		allow = { always = no } #Only obtained through Focus
+		field_hospital = {
+			casualty_trickleback = 0.20 ## REMEMBER TO UPDATE THE TOOLTIP 
+			experience_loss_factor = -0.3
 		}
 	}
 
@@ -1761,7 +1783,7 @@ technologies = {
 			train_tech
 		}
 		
-		ai_will_do = {
+		ai_will_do = { #EAI
 			factor = 1
 			modifier = {
 				num_of_factories > 25

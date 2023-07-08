@@ -31,6 +31,14 @@ AEH_fall_of_uk = {
 			ENG = {
 				surrender_progress > 0.45
 			}
+			AND = {
+				USA = {
+					has_government = democratic
+				}
+				ENG = {
+					has_government = democratic
+				}
+			}
 		}
 		allowed = {
 			always = yes

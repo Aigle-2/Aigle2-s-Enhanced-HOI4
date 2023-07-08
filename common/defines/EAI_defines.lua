@@ -69,6 +69,9 @@ NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.3 	--Higher value = more shot down planes 
 -- NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.012 	-- Modifier for army equipment reinforcement speed
 -- NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 80 		-- Modifier for army manpower reinforcement delivery speed (travel time)
 
+
+	
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.15 -- 0.25
 NDefines.NMilitary.DIG_IN_FACTOR = 0.01 -- 0.02
 
 
@@ -117,7 +120,8 @@ NDefines.NAI.RESEARCH_WITH_XP_AI_WEIGHT_MULT = 1.5 				-- AI will bump score of 
 --------------------------------------------------------------------------------------------------------------
 
 NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_LAND = 50 --50	-- Army XP needed before attempting to create a variant of a type that uses the tank designer (the tank designer DLC feature must be active).
-NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_NAVY = 50 --50	-- Same as above but for the ship designer.
+NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_NAVY = 25 --50	-- Same as above but for the ship designer.
+NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_AIR = 25 --25	-- Same as above but for the ship designer.
 
 -- Land/air handled by EAI
 NDefines.NAI.DEFAULT_LEGACY_VARIANT_CREATION_XP_CUTOFF_LAND = 999 --10	-- Army XP needed before attempting to create a variant of a type that uses the legacy upgrades system. ai_strategy supports land_xp_spend_priority upgrade_xp_cutoff. If none is set this define is used instead.
@@ -126,7 +130,7 @@ NDefines.NAI.DEFAULT_LEGACY_VARIANT_CREATION_XP_CUTOFF_AIR  = 999 --25	-- Same a
 
 NDefines.NAI.VARIANT_CREATION_XP_RESERVE_LAND = 50 --50					-- If the AI lacks army XP to create a variant it will reserve this much XP for variant creation so that it will eventually be able to create a variant.
 NDefines.NAI.VARIANT_CREATION_XP_RESERVE_NAVY = 50 --50					-- Same as above but for navy XP.
-NDefines.NAI.VARIANT_CREATION_XP_RESERVE_AIR  = 0 --50					-- Same as above but for air XP.
+NDefines.NAI.VARIANT_CREATION_XP_RESERVE_AIR  = 50 --50					-- Same as above but for air XP.
 
 -- The AI uses the below values when selecting which design to make among the types that use the tank designer
 -- (the tank designer DLC feature must be active). For each role, the highest priority AI design that can be
@@ -135,9 +139,11 @@ NDefines.NAI.VARIANT_CREATION_XP_RESERVE_AIR  = 0 --50					-- Same as above but 
 -- Weight is calculated as AlternativeFactor * DemandFactor.
 -- An "alternative" is a producible design of the same archetype (each specialized type is its own archetype).
 
-NDefines.NAI.LAND_DESIGN_ALTERNATIVE_ABSENT = 1000000
-NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_LESSER_TECH = 10000
-NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_EQUAL_TECH = 100
+-- EAI: AI delays upgrading the main tank types too much because it wants to create absent types for its templates first
+-- makes sense but I'd rather have it get its most used type upgraded first
+NDefines.NAI.LAND_DESIGN_ALTERNATIVE_ABSENT = 1 --1000000
+NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_LESSER_TECH = 1 --10000
+NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_EQUAL_TECH = 1 --100
 NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_GREATER_TECH = 1
 
 -- If a template may be reinforced with the archetype it's considered to be "demanded". If multiple conditions
@@ -148,6 +154,11 @@ NDefines.NAI.LAND_DESIGN_DEMAND_TRAINING_DIVISION = 50
 NDefines.NAI.LAND_DESIGN_DEMAND_GARRISON_DIVISION = 10
 NDefines.NAI.LAND_DESIGN_DEMAND_UNUSED_TEMPLATE = 10 --1
 NDefines.NAI.LAND_DESIGN_DEMAND_ABSENT = 10 --0
+
+-- NDefines.NAI.AIR_DESIGN_ALTERNATIVE_ABSENT = 1
+-- NDefines.NAI.AIR_DESIGN_ALTERNATIVE_OF_LESSER_TECH = 1
+-- NDefines.NAI.AIR_DESIGN_ALTERNATIVE_OF_EQUAL_TECH = 1
+-- NDefines.NAI.AIR_DESIGN_ALTERNATIVE_OF_GREATER_TECH = 1
 
 -- If a design with a weight when divided by the largest weight falls below this value it's excluded from the
 -- selection. Valid values are in the range [0, 1] inclusive.
@@ -166,8 +177,8 @@ NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_DOCTRINE = 1     -- How quickly is desi
 NDefines.NAI.DESIRE_USE_XP_TO_UPDATE_LAND_TEMPLATE = 100.0 --2.0    -- How quickly is desire to update/create templates accumulated?
 
 NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_LAND_EQUIPMENT = 2.0  -- How quickly is desire to update/create land equipment variants accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_NAVAL_EQUIPMENT = 2.0 -- How quickly is desire to update/create naval equipment variants accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 0.0   -- How quickly is desire to update/create air equipment variants accumulated?
+NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_NAVAL_EQUIPMENT = 100.0 -- How quickly is desire to update/create naval equipment variants accumulated?
+NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 100.0   -- How quickly is desire to update/create air equipment variants accumulated?
 
 NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_ARMY_SPIRIT = 0.4    -- How quickly is desire to unlock army spirits accumulated?
 NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVY_SPIRIT = 0.4   -- How quickly is desire to unlock naval spirits accumulated?
@@ -177,81 +188,15 @@ NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 7       -- Recalculate desired b
 NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 7       -- Recalculate desired best template to upgrade with this many days inbetween.
 NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 7      -- Recalculate desired best equipment to upgrade with this many days inbetween.
 
+NDefines.NAI.GARRISON_TEMPLATE_SCORE_IC_FACTOR = 1.0 -- ai uses these defines while calculating garrison template score of a template.
+NDefines.NAI.GARRISON_TEMPLATE_SCORE_MANPOWER_FACTOR = 0.05 -- formula is (template_ic * ic_factor + template_manpower * manpower_factor ) / template_supression (lower is better)
+
 ---------------
 
 NDefines.NAI.REFIT_SHIP_RELUCTANCE = 5000							-- How often to consider refitting to new equipment variants for ships in the field
 NDefines.NAI.REFIT_SHIP_PERCENTAGE_OF_FORCES = 0.0				-- How big part of the navy that should be considered for refitting
 
 NDefines.NCountry.REINFORCEMENT_DIVISION_PRIORITY_COUNT = 8
-
-NDefines.NAI.DIVISION_DESIGN_WEIGHTS = {							                -- Base values used by AI to evaluate value of a stat
-	-- Army Values
-	0.1, -- default_morale
-	0.1, -- defense
-	0.1, -- breakthrough
-	0.1, -- hardness
-	0.1, -- soft_attack
-	0.1, -- hard_attack
-	0.0, -- recon
-	0.0, -- entrenchment
-	0.0, -- initiative
-	0.0, -- casualty_trickleback
-	0.0, -- supply_consumption_factor
-	0.0, -- supply_consumption
-	0.0, -- suppression
-	0.0, -- suppression_factor
-	0.0, -- experience_loss_factor
-	0.0, -- equipment_capture_factor
-	0.0, -- fuel_capacity
-	-- Navy Values
-	0.0, -- surface_detection
-	0.0, -- sub_detection
-	0.0, -- surface_visibility
-	0.0, -- sub_visibility
-	0.0, -- lg attack
-	0.0, -- lg piercing
-	0.0, -- hg attack
-	0.0, -- hg piercing
-	0.0, -- torpedo
-	0.0, -- sub attack
-	0.0, -- anti air attack
-	0.0, -- amphibious_defense
-	0.0, -- naval_speed
-	0.0, -- range
-	0.0, -- mine plant
-	0.0, -- mine sweep
-	0.0, -- raiding coordination
-	0.0, -- patrol coordination
-	0.0, -- search and destroy coordination
-	-- Air Values
-	0.0, -- air_range
-	0.1, -- air_defence
-	0.1, -- air_attack
-	0.1, -- air_agility
-	0.1, -- air_bombing
-	0.0, -- air_superiority
-	0.1, -- naval_strike_attack
-	0.0, -- naval_strike_targetting
-	0.1, -- air_ground_attack
-	0.0, -- air_visibility_factor
-	-- Common Values
-	0.1, -- max_organisation
-	0.1, -- max_strength
-	0.1, -- maximum_speed
-	0.1, -- armor_value
-	0.1, -- ap_attack
-	0.1, -- reliability
-	0.1, -- reliability_factor
-	0.1, -- weight
-	0.0, -- fuel_consumption
-	0.0, -- fuel_consumption_factor
-	-- Special Values
-	0.1, -- strategic_attack
-	0.1, -- carrier_size
-	0.0, -- acclimatization hot gain
-	0.0, -- acclimatization cold gain
-	0.1, -- build_cost_ic
-}
 
 NDefines.NAI.DIVISION_DESIGN_MANPOWER_WEIGHT = 0 --0.005
 NDefines.NAI.DIVISION_DESIGN_STOCKPILE_WEIGHT = 0 --0.01
@@ -274,45 +219,49 @@ NDefines.NAI.UPGRADES_DEFICIT_LIMIT_DAYS = 365 --180 --50                       
 -- DIVISION PRODUCTION
 --------------------------------------------------------------------------------------------------------------
 
-NDefines.NAI.WANTED_UNITS_INDUSTRY_FACTORY = 0.1 --1 		        			-- How many units a country wants is partially based on how much military industry that is available
+-- NDefines.NAI.WANTED_UNITS_INDUSTRY_FACTORY = 0.1 --1 		        			-- How many units a country wants is partially based on how much military industry that is available
 
-NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.2 				-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during war time
-NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.1     		-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during peace time
+-- NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.2 				-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during war time
+-- NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.1     		-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during peace time
 
-NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.2			-- deployment will try to buffer a ratio of manpower (for reinforcements) during war time
-NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.1		-- deployment will try to buffer a ratio of manpower (for reinforcements) during peace time
+-- NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.2			-- deployment will try to buffer a ratio of manpower (for reinforcements) during war time
+-- NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.1		-- deployment will try to buffer a ratio of manpower (for reinforcements) during peace time
 
 NDefines.NAI.MANPOWER_RATIO_REQUIRED_TO_PRIO_MOBILIZATION_LAW = 0.4		-- percentage of manpower in field is desired to be buffered for AI when it has upcoming wars or already at war. if it has less manpower, it will prio manpower laws
 
 NDefines.NAI.MAX_SUPPLY_DIVISOR = 0.25  --1.75
---NDefines.NAI.MIN_SUPPLY_USE_SANITY_CAP = 100	                                -- Ignore supply cap if below this value when deciding on how many divisions to produce.
+-- NDefines.NAI.MIN_SUPPLY_USE_SANITY_CAP = 100	                                -- Ignore supply cap if below this value when deciding on how many divisions to produce.
 
+-- Should be managed by EAI
 NDefines.NAI.MANPOWER_FREE_USAGE_THRESHOLD = 1 --500000					            -- If AI has this much manpower he doesn't care about the percentage
 NDefines.NAI.MANPOWER_RESERVED_THRESHOLD = 0 --0.25					                -- The AI will not deploy more units if he goes below this percentag
 
-NDefines.NAI.MIN_FIELD_STRENGTH_TO_BUILD_UNITS = 0.01 --0.7			            -- Cancel unit production if below this to get resources out to units in the field
-NDefines.NAI.MIN_MANPOWER_TO_BUILD_UNITS = 0.01 --0.7					        -- Cancel unit production if below this to get resources out to units in the field
+-- NDefines.NAI.MIN_FIELD_STRENGTH_TO_BUILD_UNITS = 0.7 --0.7			            -- Cancel unit production if below this to get resources out to units in the field
+-- NDefines.NAI.MIN_MANPOWER_TO_BUILD_UNITS = 0.7 --0.7					        -- Cancel unit production if below this to get resources out to units in the field
 
 NDefines.NAI.DEPLOY_MIN_TRAINING_SURRENDER_FACTOR = 0.5		-- Required percentage of training (1.0 = 100%) for AI to deploy unit in wartime while surrender progress is higher than 0 
-NDefines.NAI.DEPLOY_MIN_EQUIPMENT_SURRENDER_FACTOR = 0.90	-- Required percentage of equipment (1.0 = 100%) for AI to deploy unit in wartime while surrender progress is higher than 0 
-NDefines.NAI.DEPLOY_MIN_TRAINING_PEACE_FACTOR = 0.7		-- Required percentage of training (1.0 = 100%) for AI to deploy unit in peacetime
-NDefines.NAI.DEPLOY_MIN_EQUIPMENT_PEACE_FACTOR = 0.7	-- Required percentage of equipment (1.0 = 100%) for AI to deploy unit in peacetime
-NDefines.NAI.DEPLOY_MIN_TRAINING_WAR_FACTOR = 0.95		-- Required percentage of training (1.0 = 100%) for AI to deploy unit in wartime
-NDefines.NAI.DEPLOY_MIN_EQUIPMENT_WAR_FACTOR = 0.95		-- Required percentage of equipment (1.0 = 100%) for AI to deploy unit in wartime
+NDefines.NAI.DEPLOY_MIN_EQUIPMENT_SURRENDER_FACTOR = 0.8	-- Required percentage of equipment (1.0 = 100%) for AI to deploy unit in wartime while surrender progress is higher than 0 
+NDefines.NAI.DEPLOY_MIN_TRAINING_PEACE_FACTOR = 0.4		-- Required percentage of training (1.0 = 100%) for AI to deploy unit in peacetime
+NDefines.NAI.DEPLOY_MIN_EQUIPMENT_PEACE_FACTOR = 0.9	-- Required percentage of equipment (1.0 = 100%) for AI to deploy unit in peacetime
+NDefines.NAI.DEPLOY_MIN_TRAINING_WAR_FACTOR = 0.9		-- Required percentage of training (1.0 = 100%) for AI to deploy unit in wartime
+NDefines.NAI.DEPLOY_MIN_EQUIPMENT_WAR_FACTOR = 0.9		-- Required percentage of equipment (1.0 = 100%) for AI to deploy unit in wartime
+NDefines.NAI.DEPLOY_MIN_EQUIPMENT_CAP_DEPLOY_FACTOR = 0.85 -- If training is capped by equipment deficit and we have reached that cap, deploy unit anyway if percentage is above this (reinforce in field instead).
 
-NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.8 --0.9                               -- ai will not start to train if equipment drops below this level
-NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.7 --0.8                                -- ai will not train if equipment drops below this level
+-- NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.8 --0.9                               -- ai will not start to train if equipment drops below this level
+-- NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.7 --0.8                                -- ai will not train if equipment drops below this level
 
 --------------------------------------------------------------------------------------------------------------
 -- EQUIPMENT PRODUCTION
 --------------------------------------------------------------------------------------------------------------
 
--- NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 0.9 -- 0.25	-- Base value for how much of currently used equipment the AI will at least strive to have in stock
--- NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR_GARRISON = 1.0
+NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 1 -- [0.4] -- Base value for how much of currently used equipment the AI will at least strive to have in stock
+-- NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR_GARRISON = -- [0.3]
 
 NDefines.NAI.SHIPS_PRODUCTION_BASE_COST = 1
 NDefines.NAI.NEEDED_NAVAL_FACTORIES_EXPENSIVE_SHIP_BONUS = 1000
-NDefines.NAI.PRODUCTION_MAX_PROGRESS_TO_SWITCH_NAVAL = 0.01
+NDefines.NAI.PRODUCTION_MAX_PROGRESS_TO_SWITCH_NAVAL = 0.001 -- temp fix
+NDefines.NAI.PRODUCTION_WAIT_TO_FINISH_IF_EXPENSIVE = 0.01
+NDefines.NAI.PRODUCTION_WAIT_TO_FINISH_IF_CHEAP = 0.01
 
 NDefines.NAI.NAVAL_DOCKYARDS_SHIP_FACTOR = 1000			-- The extent to which number of dockyards play into amount of sips a nation wants
 NDefines.NAI.NAVAL_BASES_SHIP_FACTOR = 1000				-- The extent to which number of naval bases play into amount of sips a nation wants
@@ -354,6 +303,14 @@ NDefines.NAI.LENDLEASE_FRACTION_OF_STOCKPILE = 0.125 --0.25
 -- ECONOMY
 --------------------------------------------------------------------------------------------------------------
 
+NDefines.NAI.BUILDING_TARGETS_BUILDING_PRIORITIES = { -- buildings in order of pirority when considering building targets strategies. First has the greatest priority, omitted has the lowest. NOTE: not all buildings are supported by building targets strategies.
+	'synthetic_refinery',
+	'fuel_silo',
+	'industrial_complex',
+	'arms_factory',
+	'dockyard',
+}
+
 NDefines.NAI.TRADEABLE_FACTORIES_FRACTION = 1
 --NDefines.NAI.MIN_DELIVERED_TRADE_FRACTION = 0.6
 
@@ -371,10 +328,10 @@ NDefines.NAI.NUM_SILOS_PER_CIVILIAN_FACTORIES = 0.0					-- ai will try to build 
 NDefines.NAI.NUM_SILOS_PER_MILITARY_FACTORIES = 0.0					-- ai will try to build a silo per this ratio of mil factories
 NDefines.NAI.NUM_SILOS_PER_DOCKYARDS = 0.0								-- ai will try to build a silo per this ratio of dockyards
 
-NDefines.NAI.MIN_AI_SCORE_TO_MOBILIZATION_LAW_OVERRIDE_HARD_CODED_SCORE = 0.0
-NDefines.NAI.MIN_AI_SCORE_TO_ECONOMY_LAW_OVERRIDE_HARD_CODED_SCORE = 0.0
-NDefines.NAI.MIN_AI_SCORE_TO_TRADE_LAW_OVERRIDE_HARD_CODED_SCORE = 0.0
-NDefines.NAI.MIN_AI_SCORE_TO_ALL_LAWS_OVERRIDE_HARD_CODED_SCORE = 0.0
+NDefines.NAI.MIN_AI_SCORE_TO_MOBILIZATION_LAW_OVERRIDE_HARD_CODED_SCORE = 1000.0
+NDefines.NAI.MIN_AI_SCORE_TO_ECONOMY_LAW_OVERRIDE_HARD_CODED_SCORE = 1000.0
+NDefines.NAI.MIN_AI_SCORE_TO_TRADE_LAW_OVERRIDE_HARD_CODED_SCORE = 1000.0
+NDefines.NAI.MIN_AI_SCORE_TO_ALL_LAWS_OVERRIDE_HARD_CODED_SCORE = 1000.0
 
 --------------------------------------------------------------------------------------------------------------
 -- PP
@@ -384,9 +341,17 @@ NDefines.NAI.NEW_LEADER_EXTRA_PP_FACTOR = 1 --2.0								 -- Country must have a
 
 NDefines.NAI.DIPLOMACY_IMPROVE_RELATION_COST_FACTOR = 7.0                       -- Desire to boost relations subtracts the cost multiplied by this
 
+NDefines.NAI.COMMAND_POWER_BEFORE_SPEND_ON_TRAITS = 65.0
+
 --------------------------------------------------------------------------------------------------------------
 -- LAND AI
 --------------------------------------------------------------------------------------------------------------
+
+NDefines.NAI.MIN_AI_UNITS_PER_TILE_FOR_STANDARD_COHESION = 2.0	-- How many units should we have for each tile along a front in order to switch to standard cohesion (less moving around)
+NDefines.NAI.MIN_FRONT_SIZE_TO_CONSIDER_STANDARD_COHESION = 2000	-- How long should fronts be before we consider switching to standard cohesion (under this, standard cohesion fronts will switch back to relaxed)
+
+NDefines.NAI.ASSIGN_TANKS_TO_WAR_FRONT = 8.0 --4.0
+NDefines.NAI.ASSIGN_TANKS_TO_NON_WAR_FRONT = 0.2 --0.4
 
 --NDefines.NAI.SUPPLY_CRISIS_LIMIT = 1.0
 
@@ -492,6 +457,23 @@ NDefines.NAI.PLAN_MIN_SIZE_FOR_FALLBACK = 5000					                -- A country 
 --NDefines.NAI.FRONT_BULGE_RATIO_LOWER_CUTOFF = 0.95							-- If local bulginess drops below this, a point of interest is found
 --NDefines.NAI.FRONT_CUTOFF_MIN_EDGE_PROXIMITY = 2								-- Minimum number of provinces to the front edge to determine for cutoff oportunity.
 
+
+-- these are all 3 numbers for min, desired, max unit need weights for area defense
+NDefines.NAI.AREA_DEFENSE_CAPITAL_PEACE_VP_WEIGHT = { 1.0, 1.0, 1.0 }
+NDefines.NAI.AREA_DEFENSE_CAPITAL_VP_WEIGHT = { 0.0, 1.0, 2.0 }
+NDefines.NAI.AREA_DEFENSE_HOME_VP_WEIGHT = { 0.0, 0.5, 1.0 }
+NDefines.NAI.AREA_DEFENSE_OTHER_VP_WEIGHT = { 0.0, 0.0, 1.0 }
+
+NDefines.NAI.AREA_DEFENSE_CAPITAL_PEACE_COAST_WEIGHT = { 0.0, 0.0, 0.0 }
+NDefines.NAI.AREA_DEFENSE_CAPITAL_COAST_WEIGHT = { 0.0, 0.2, 0.7 }
+NDefines.NAI.AREA_DEFENSE_HOME_COAST_WEIGHT = { 0.0, 0.1, 0.5 }
+NDefines.NAI.AREA_DEFENSE_OTHER_COAST_WEIGHT = { 0.0, 0.0, 0.0 }
+
+NDefines.NAI.AREA_DEFENSE_CAPITAL_PEACE_BASE_WEIGHT = { 0.0, 0.0, 0.0 }
+NDefines.NAI.AREA_DEFENSE_CAPITAL_BASE_WEIGHT = { 0.5, 1.0, 1.5 }
+NDefines.NAI.AREA_DEFENSE_HOME_BASE_WEIGHT = { 0.5, 1.0, 1.0 }
+NDefines.NAI.AREA_DEFENSE_OTHER_BASE_WEIGHT = { 0.5, 0.5, 1.0 }
+
 --------------------------------------------------------------------------------------------------------------
 -- NAVY AI
 --------------------------------------------------------------------------------------------------------------
@@ -581,8 +563,8 @@ NDefines.NAI.MAX_MISSION_PER_TASKFORCE = {  -- max mission region/taskforce rati
 --ENEMY_HOME_AREA_RATIO_TO_DISABLE_INVASIONS = --0.3 -- if we are fighting against an enemy home area from our home area and if the enemy area is larger than this ratio, non strategy invasions are disabled
 
 NDefines.NAI.ENEMY_NAVY_STRENGTH_DONT_BOTHER = 1000							-- If the enemy has a navy at least these many times stronger that the own, don't bother invading
--- NDefines.NAI.RELATIVE_STRENGTH_TO_INVADE = 0 --0.08			-- Compares the estimated strength of the country/faction compared to it's enemies to see if it should invade or stay at home to defend.
--- NDefines.NAI.RELATIVE_STRENGTH_TO_INVADE_DEFENSIVE = 0 --0.4	-- Compares the estimated strength of the country/faction compared to it's enemies to see if it should invade or stay at home to defend, but while being a defensive country.
+NDefines.NAI.RELATIVE_STRENGTH_TO_INVADE = 0 --0.08			-- Compares the estimated strength of the country/faction compared to it's enemies to see if it should invade or stay at home to defend.
+NDefines.NAI.RELATIVE_STRENGTH_TO_INVADE_DEFENSIVE = 0 --0.4	-- Compares the estimated strength of the country/faction compared to it's enemies to see if it should invade or stay at home to defend, but while being a defensive country.
 
 -- NDefines.NAI.MAX_SCREEN_FORCES_FOR_INVASION_SUPPORT = 0.0 -- max ratio of screens forces to be used in naval invasion missions
 -- NDefines.NAI.MAX_CAPITAL_FORCES_FOR_INVASION_SUPPORT = 0.05 -- max ratio of capital forces to be used in naval invasion missions
@@ -597,7 +579,7 @@ NDefines.NAI.INVASION_DISTANCE_RANDOMNESS = 300									-- This higher the value
 NDefines.NAI.INVASION_COASTAL_PROVS_PER_ORDER = 12 --24								-- AI will consider one extra invasion per number of provinces stated here (num orders = total coast / this)
 
 --NDefines.NAI.MIN_INVASION_AREA_SIZE_FOR_FLOATING_HARBORS = --15   -- AI will consider using floating harbors for naval invasion if invasion area is larger than this many provinces
-NDefines.NAI.MAX_DISTANCE_NAVAL_INVASION = 300.0				-- AI is extremely unwilling to plan naval invasions above this naval distance limit.
+NDefines.NAI.MAX_DISTANCE_NAVAL_INVASION = 600.0				-- AI is extremely unwilling to plan naval invasions above this naval distance limit.
 
 -- NDefines.NAI.MAX_UNIT_RATIO_FOR_INVASIONS = --0.4                         -- countries won't use armies more than this ratio of total units for invasions
 -- NDefines.NAI.MIN_UNIT_RATIO_FOR_INVASIONS = --0.1                         -- don't allocate more divisions than this for naval invasions
@@ -611,7 +593,7 @@ NDefines.NAI.MAX_DISTANCE_NAVAL_INVASION = 300.0				-- AI is extremely unwilling
 -- NDefines.NAI.MIN_INVASION_PLAN_VALUE_TO_EXECUTE = --0.2				-- ai will only activate invasions if it is above this
 -- NDefines.NAI.MIN_INVASION_ORG_FACTOR_TO_EXECUTE = --0.75				-- ai will only activate invasions if average org factor is above this
 
-NDefines.NAI.MAX_INVASION_SIZE = 6 --24									-- max invasion group size
+NDefines.NAI.MAX_INVASION_SIZE = 18 --24									-- max invasion group size
 
 --NDefines.NAI.ENEMY_HOME_AREA_RATIO_TO_DISABLE_INVASIONS = 0.3
 
@@ -619,8 +601,10 @@ NDefines.NAI.MAX_INVASION_SIZE = 6 --24									-- max invasion group size
 -- convoy escorts
 -------------------------
 
--- NDefines.NAI.REGION_THREAT_LEVEL_TO_BLOCK_REGION = 25 * 200
-NDefines.NAI.REGION_CONVOY_DANGER_DAILY_DECAY = 2
+-- NDefines.NAI.REGION_THREAT_PER_SUNK_CONVOY = 25					-- Threat value per convoy sunk in a region. Decays over time.
+-- NDefines.NAI.REGION_THREAT_LEVEL_TO_AVOID_REGION = 25 * 10		-- How much threat must be generated in region ( by REGION_THREAT_PER_SUNK_CONVOY ) so the AI will decide to mark the region as avoid
+NDefines.NAI.REGION_THREAT_LEVEL_TO_BLOCK_REGION = 25 * 200		-- How much threat must be generated in region ( by REGION_THREAT_PER_SUNK_CONVOY ) so the AI will decide to mark the region as avoid
+NDefines.NAI.REGION_CONVOY_DANGER_DAILY_DECAY = 2				-- When convoys are sunk it generates threat in the region which the AI uses to prio nalval missions
 
 -- NDefines.NAI.CONVOY_ESCORT_SCORE_FROM_CONVOYS = 15 -- score for each convoy you have in area
 NDefines.NAI.CONVOY_ESCORT_MUL_FROM_NO_CONVOYS = 0 -- score multiplier when no convoys are around
@@ -649,81 +633,81 @@ NDefines.NAI.MAX_SCREEN_TASKFORCES_FOR_CONVOY_DEFENSE_MAX_CONVOY_THREAT = 500 --
 -- AIR AI
 --------------------------------------------------------------------------------------------------------------
 
-NDefines.NAI.PRODUCTION_CARRIER_PLANE_BUFFER_RATIO = 3				-- in additiona to total deck size of carriers, we want at list this ratio to buffer it
--- NDefines.NAI.PRODUCTION_CARRIER_PLANE_PRODUCTION_BOOST_TO_BUFFER = 4.0  -- production of carrier planes will go up by this ratio if we lack buffers
-
+-- NDefines.NAI.PRODUCTION_CARRIER_PLANE_BUFFER_RATIO = 0.75 --1.5				-- in additiona to total deck size of carriers, we want at list this ratio to buffer it
+-- -- NDefines.NAI.PRODUCTION_CARRIER_PLANE_PRODUCTION_BOOST_TO_BUFFER = 4.0  -- production of carrier planes will go up by this ratio if we lack buffers
 NDefines.NAI.MAX_FUEL_CONSUMPTION_RATIO_FOR_AIR_TRAINING = 1
 
-NDefines.NAI.AIR_WING_REINFORCEMENT_LIMIT = 400
+-- NDefines.NAI.DAYS_BETWEEN_AIR_PRIORITIES_UPDATE = 1                              -- [4]    -- Amount of days between air ai updates priorities for air wings ( from 1 to N )
+-- NDefines.NAI.AIR_SCORE_DISTANCE_IMPACT = 0.3					-- Effect of distance applied to the score calculations
 
---NDefines.NAI.AIR_SUPERIORITY_FACTOR = 2.5                                        -- [2.5]  -- Factor for air superiority score
---NDefines.NAI.AIR_SCORE_DISTANCE_IMPACT = 0.3                                     -- [0.3]  -- Effect of distance applied to the score calculations
---NDefines.NAI.DAYS_BETWEEN_AIR_PRIORITIES_UPDATE = 4                              -- [4]    -- Amount of days between air ai updates priorities for air wings ( from 1 to N )
---NDefines.NAI.NUM_HOURS_SINCE_LAST_COMBAT_TO_SUPPORT_UNITS_VIA_AIR = 72           -- [72]   -- units will be considered in combat if they are just out of their last combat for air supporting
+-------------------------
+-- Land combat
+-------------------------
 
-NDefines.NAI.NAVAL_AIR_SUPERIORITY_IMPORTANCE = 1.0                             -- [0.10] -- Strategic importance of air superiority ( amount of enemy planes in area )
---NDefines.NAI.NAVAL_SHIP_AIR_IMPORTANCE = 2.0                                       -- [2.0]  -- Naval ship air importance
-NDefines.NAI.NAVAL_SHIP_IN_PORT_AIR_IMPORTANCE = 20.0                             -- [6.0]  -- Naval ship in the port air importance
-NDefines.NAI.NAVAL_COMBAT_AIR_IMPORTANCE = 500.0                                     -- [12.0] -- Naval combat air importance
---NDefines.NAI.NAVAL_TRANSFER_AIR_IMPORTANCE = 0.0                                 -- [0.0]  -- Naval transfer air importance
---NDefines.NAI.NAVAL_COMBAT_TRANSFER_AIR_IMPORTANCE = 50.0                         -- [50.0] -- Naval combat involving enemy land units
-NDefines.NAI.NAVAL_IMPORTANCE_SCALE = 10.0                                        -- [1.0]  -- Naval total importance scale (every naval score get's multiplied by it)
-NDefines.NAI.NAVAL_FIGHTERS_PER_PLANE = 1.0                                        -- [1.1]  -- Amounts of air superiority planes requested per enemy plane
---NDefines.NAI.NAVAL_STRIKE_PLANES_PER_ARMY = 0                                    -- [0]    -- Amount of planes requested per enemy army
-NDefines.NAI.NAVAL_STRIKE_PLANES_PER_SHIP = 40                                   -- [20]   -- Amount of bombers requested per enemy ship
--- NDefines.NAI.NAVAL_MIN_EXCORT_WINGS = 1                                         -- [0]    -- Min amount of airwings requested to excort operations
+-- NDefines.NAI.LAND_COMBAT_AIR_SUPERIORITY_IMPORTANCE = 0.40		-- Strategic importance of air superiority ( amount of enemy planes in area )
+-- NDefines.NAI.LAND_COMBAT_OUR_ARMIES_AIR_IMPORTANCE = 20			-- Strategic importance of our armies
+NDefines.NAI.LAND_COMBAT_OUR_COMBATS_AIR_IMPORTANCE = 1000		-- Strategic importance of our armies in the combats
+-- NDefines.NAI.LAND_COMBAT_FRIEND_ARMIES_AIR_IMPORTANCE = 10		-- Strategic importance of friendly armies
+-- NDefines.NAI.LAND_COMBAT_FRIEND_COMBATS_AIR_IMPORTANCE = 8		-- Strategic importance of friendly armies in the combat
+-- NDefines.NAI.LAND_COMBAT_ENEMY_ARMIES_AIR_IMPORTANCE = 12		-- Strategic importance of our armies
+-- NDefines.NAI.LAND_COMBAT_ENEMY_LAND_FORTS_AIR_IMPORTANCE = 5	-- Strategic importance of enemy land forts in the region
+-- NDefines.NAI.LAND_COMBAT_ENEMY_COASTAL_FORTS_AIR_IMPORTANCE = 3	-- Strategic importance of enemy coastal fronts in the region
+-- NDefines.NAI.LAND_COMBAT_IMPORTANCE_SCALE = 5.0					-- Lend combat total importance scale (every land combat score get's multiplied by it)
 
--- NDefines.NAI.MINES_SWEEPING_PLANES_PER_MAX_MINES = 0 			-- Amount of air wings request for mines sweeping when there is max amount of mines planted by enemy in certain region
--- NDefines.NAI.MINES_PLANTING_PLANES_PER_MAX_DESIRE = 0			-- Amount of air wings request for mines planting when there is max desire for it.
--- NDefines.NAI.MINES_PLANTING_DESIRE_PER_HOME_STATE = 0.0			-- Scoring for how much do we want to plant naval mines with our air wings if the naval region is adjacent to a home state. Multiple adjacent states increases the score. Max sum of score is 1.0.
--- NDefines.NAI.MINES_PLANTING_DESIRE_PER_ENEMY_STATE = 0.0		-- Scoring for how much do we want to plant naval mines with our air wings if the naval region is adjacent to the enemy state. Multiple adjacent states increases the score. Max sum of score is 1.0.
--- NDefines.NAI.MINES_PLANTING_DESIRE_PER_NAVAL_THREAT = 0		-- How much threat must be generated in the naval region, in order to get the maximum desire to plant naval mines in there.
+-------------------------
+-- Defense
+-------------------------
 
-NDefines.NAI.PORT_STRIKE_PLANES_PER_SHIP = 20                                    -- [10]   -- Amount of bombers request per enemy ship in the port
+NDefines.NAI.LAND_DEFENSE_FIGHERS_PER_PLANE = 1				-- Amount of air superiority planes requested per enemy plane
+NDefines.NAI.LAND_DEFENSE_INTERSEPTORS_PER_BOMBERS = 1		-- Amount of air interceptor planes requested per enemy bomber
+-- NDefines.NAI.LAND_DEFENSE_INTERSEPTORS_PER_PLANE = 0.1				-- Amount of air interceptor planes requested per enemy plane (non bomber)
 
---NDefines.NAI.LAND_DEFENSE_AIR_SUPERIORITY_IMPORTANCE = 0.10                      -- [0.10] -- Strategic importance of air superiority ( amount of enemy planes in area )
-NDefines.NAI.LAND_DEFENSE_CIVIL_FACTORY_IMPORTANCE = 100                           -- [50]   -- Strategic importance of civil factories
-NDefines.NAI.LAND_DEFENSE_MILITARY_FACTORY_IMPORTANCE = 120                        -- [70]   -- Strategic importance of military factories
-NDefines.NAI.LAND_DEFENSE_NAVAL_FACTORY_IMPORTANCE = 80                            -- [30]   -- Strategic importance of naval factories
---NDefines.NAI.LAND_DEFENSE_AA_IMPORTANCE_FACTOR = 1.0                             -- [1.0]  -- Factor of AA influence on strategic importance ( 0.0 - 1.0 )
---NDefines.NAI.LAND_DEFENSE_INFRA_IMPORTANCE_FACTOR = 0.5                          -- [0.5]  -- Factor of infrastructure influence on strategic importance ( 0.0 - 1.0 )
---NDefines.NAI.LAND_DEFENSE_IMPORTANCE_SCALE = 1.5                                 -- [1.5]  -- Lend defence total importance scale (every land defence score get's multiplied by it)
---NDefines.NAI.LAND_DEFENSE_MIN_FACTORIES_FOR_AIR_IMPORTANCE = 6                   -- [6]    -- If amount of factories is less importance of factories won't apply
-NDefines.NAI.LAND_DEFENSE_FIGHERS_PER_PLANE = 0.1                                -- [1.0]  -- Amount of air superiority planes requested per enemy plane
-NDefines.NAI.LAND_DEFENSE_INTERSEPTORS_PER_BOMBERS = 2                           -- [2.0]  -- Amount of air interceptor planes requested per enemy bomber
-NDefines.NAI.LAND_DEFENSE_INTERSEPTORS_PER_PLANE = 0.0                             -- [1.0]  -- Amount of air interceptor planes requested per enemy plane (non bomber)
+-- NDefines.NAI.LAND_DEFENSE_AIR_SUPERIORITY_IMPORTANCE = 1.0		-- Strategic importance of air superiority ( amount of enemy planes in area )
+NDefines.NAI.LAND_DEFENSE_CIVIL_FACTORY_IMPORTANCE = 800 -- 50			-- Strategic importance of civil factories
+NDefines.NAI.LAND_DEFENSE_MILITARY_FACTORY_IMPORTANCE = 880 -- 70		-- Strategic importance of military factories
+NDefines.NAI.LAND_DEFENSE_NAVAL_FACTORY_IMPORTANCE = 420 -- 30			-- Strategic importance of naval factories
+-- NDefines.NAI.LAND_DEFENSE_SUPPLY_HUB_IMPORTANCE = 4             -- Strategic importance of supply hubs
+-- NDefines.NAI.LAND_DEFENSE_AA_IMPORTANCE_FACTOR = 1.0			-- Factor of AA influence on strategic importance ( 0.0 - 1.0 )
+-- NDefines.NAI.LAND_DEFENSE_INFRA_IMPORTANCE_FACTOR = 0.5			-- Factor of infrastructure influence on strategic importance ( 0.0 - 1.0 )
+-- NDefines.NAI.LAND_DEFENSE_IMPORTANCE_SCALE = 3.0				-- Lend defence total importance scale (every land defence score get's multiplied by it)
 
---NDefines.NAI.LAND_COMBAT_AIR_SUPERIORITY_IMPORTANCE = 1.0                          -- [0.20] -- Strategic importance of air superiority ( amount of enemy planes in area )
---NDefines.NAI.LAND_COMBAT_OUR_ARMIES_AIR_IMPORTANCE = 100                           -- [12]   -- Strategic importance of our armies
---NDefines.NAI.LAND_COMBAT_OUR_COMBATS_AIR_IMPORTANCE = 100                          -- [55]   -- Strategic importance of our armies in the combats
---NDefines.NAI.LAND_COMBAT_FRIEND_ARMIES_AIR_IMPORTANCE = 12                       -- [12]   -- Strategic importance of friendly armies
---NDefines.NAI.LAND_COMBAT_FRIEND_COMBATS_AIR_IMPORTANCE = 6                       -- [6]    -- Strategic importance of friendly armies in the combat
---NDefines.NAI.LAND_COMBAT_ENEMY_ARMIES_AIR_IMPORTANCE = 8                         -- [8]    -- Strategic importance of our armies
---NDefines.NAI.LAND_COMBAT_ENEMY_LAND_FORTS_AIR_IMPORTANCE = 5                     -- [5]    -- Strategic importance of enemy land forts in the region
---NDefines.NAI.LAND_COMBAT_ENEMY_COASTAL_FORTS_AIR_IMPORTANCE = 3                  -- [3]    -- Strategic importance of enemy coastal fronts in the region
---NDefines.NAI.LAND_COMBAT_IMPORTANCE_SCALE = 2                                     -- [1.5]  -- Lend combat total importance scale (every land combat score get's multiplied by it)
-NDefines.NAI.LAND_COMBAT_FIGHTERS_PER_PLANE = 2                                    -- [1.1]  -- Amount of air superiority planes requested per enemy plane
---NDefines.NAI.LAND_COMBAT_CAS_WINGS_PER_ENEMY_ARMY_LIMIT = 4                      -- [4]    -- Limit of CAS wings requested by enemy armies
-NDefines.NAI.LAND_COMBAT_CAS_PER_ENEMY_ARMY = 0                                 -- [20]   -- Amount of CAS planes requested per enemy army
---NDefines.NAI.LAND_COMBAT_CAS_PER_COMBAT = 150                                    -- [150]  -- Amount of CAS requested per combat 
---NDefines.NAI.LAND_COMBAT_BOMBERS_PER_LAND_FORT_LEVEL = 15                        -- [15]   -- Amount of bomber planes requested per enemy land fort level
---NDefines.NAI.LAND_COMBAT_BOMBERS_PER_COASTAL_FORT_LEVEL = 10                     -- [10]   -- Amount of bomber planes requested per enemy coastal fort level
---NDefines.NAI.LAND_COMBAT_MIN_EXCORT_WINGS = 2                                    -- [2]    -- Min amount of airwings requested to excort operations
---NDefines.NAI.LAND_COMBAT_INTERCEPT_PER_PLANE = 0                                   -- [0.4]  -- Amount of interception planes requested per enemy plane
+-------------------------
+-- Str bombing
+-------------------------
 
---NDefines.NAI.STR_BOMB_AIR_SUPERIORITY_IMPORTANCE = 0.10                          -- [0.10] -- Strategic importance of air superiority ( amount of enemy planes in area )
---NDefines.NAI.STR_BOMB_CIVIL_FACTORY_IMPORTANCE = 50                              -- [50]   -- Strategic importance of enemy civil factories
---NDefines.NAI.STR_BOMB_MILITARY_FACTORY_IMPORTANCE = 70                           -- [70]   -- Strategic importance of enemy military factories
---NDefines.NAI.STR_BOMB_NAVAL_FACTORY_IMPORTANCE = 30                              -- [30]   -- Strategic importance of enemy naval factories
---NDefines.NAI.STR_BOMB_AA_IMPORTANCE_FACTOR = 0.5                                 -- [0.5]  -- Factor of AA influence on strategic importance ( 0.0 - 1.0 )
---NDefines.NAI.STR_BOMB_INFRA_IMPORTANCE_FACTOR = 0.25                             -- [0.25] -- Factor of infrastructure influence on strategic importance ( 0.0 - 1.0 )
---NDefines.NAI.STR_BOMB_IMPORTANCE_SCALE = 1.0                                     -- [1.0]  -- str bombing total importance scale (every str bombing score get's multiplied by it)
-NDefines.NAI.STR_BOMB_MIN_ENEMY_FIGHTERS_IN_AREA = 400                            -- [300]  -- If amount of enemy fighters is higher than this mission won't perform
---NDefines.NAI.STR_BOMB_FIGHTERS_PER_PLANE = 1.1                                   -- [1.1]  -- Amount of air superiority planes requested per enemy plane
---NDefines.NAI.STR_BOMB_PLANES_PER_CIV_FACTORY = 20                                -- [20]   -- Amount of planes requested per enemy civ factory
---NDefines.NAI.STR_BOMB_PLANES_PER_MIL_FACTORY = 25                                -- [25]   -- Amount of planes requested per enemy military factory
---NDefines.NAI.STR_BOMB_PLANES_PER_NAV_FACTORY = 15                                -- [15]   -- Amount of planes requested per enemy naval factory
---NDefines.NAI.STR_BOMB_MIN_EXCORT_WINGS = 2                                       -- [2]    -- Min amount of airwings requested to excort operations
+NDefines.NAI.STR_BOMB_PLANES_PER_CIV_FACTORY = 200				-- Amount of planes requested per enemy civ factory
+NDefines.NAI.STR_BOMB_PLANES_PER_MIL_FACTORY = 205				-- Amount of planes requested per enemy military factory
+NDefines.NAI.STR_BOMB_PLANES_PER_NAV_FACTORY = 105				-- Amount of planes requested per enemy naval factory
+NDefines.NAI.STR_BOMB_PLANES_PER_SUPPLY_HUB = 30                 -- Amount of planes requested per enemy supply node
+NDefines.NAI.STR_BOMB_MIN_EXCORT_PLANES = 200					-- Min amount of planes requested to excort operations
+	
+-------------------------
+-- Naval air
+-------------------------
 
---NDefines.NAI.MAX_CARRIER_OVERFILL = 1.85                                         -- [1.85] -- Carriers will be overfilled to this amount if there are doctrines to justify it
+-- NDefines.NAI.NAVAL_FIGHTERS_PER_PLANE = 1.0						-- Amounts of air superiority planes requested per enemy plane
+-- NDefines.NAI.NAVAL_STRIKE_PLANES_PER_ARMY = 0					-- Amount of planes requested per enemy army
+NDefines.NAI.NAVAL_STRIKE_PLANES_PER_SHIP = 40					-- Amount of bombers requested per enemy ship
+-- NDefines.NAI.PORT_STRIKE_PLANES_PER_SHIP = 10					-- Amount of bombers request per enemy ship in the port
+-- NDefines.NAI.NAVAL_MIN_EXCORT_PLANES = 100 --0						-- Min amount of planes requested to excort operations
 
+-- NDefines.NAI.NAVAL_AIR_SUPERIORITY_IMPORTANCE = 0.10			-- Strategic importance of air superiority ( amount of enemy planes in area )
+NDefines.NAI.NAVAL_SHIP_AIR_IMPORTANCE = 10000 --2.0					-- Naval ship air importance
+-- NDefines.NAI.NAVAL_SHIP_IN_PORT_AIR_IMPORTANCE = 6.0			-- Naval ship in the port air importance
+-- NDefines.NAI.NAVAL_COMBAT_AIR_IMPORTANCE = 8.0					-- Naval combat air importance
+-- NDefines.NAI.NAVAL_TRANSFER_AIR_IMPORTANCE = 0.0				-- Naval transfer air importance
+-- NDefines.NAI.NAVAL_COMBAT_TRANSFER_AIR_IMPORTANCE = 50.0		-- Naval combat involving enemy land units
+NDefines.NAI.NAVAL_IMPORTANCE_SCALE = 2 --0.65						-- Naval total importance scale (every naval score get's multiplied by it)
+-- NDefines.NAI.NAVAL_COMBAT_OUR_NAVY_MULT_ON_IMPORTANCE = 0.35	-- Naval region importance are scaled by our ships as well
+-- NDefines.NAI.NAVAL_COMBAT_ALLY_NAVY_MULT_ON_IMPORTANCE = 0.15	-- Naval region importance are scaled by our ships as well
+-- NDefines.NAI.NAVAL_COMBAT_MIN_OUR_NAVY_MULT_ON_IMPORTANCE = 0.5 -- Min scale factor for naval region importance from our ships
+-- NDefines.NAI.NAVAL_COMBAT_MAX_OUR_NAVY_MULT_ON_IMPORTANCE = 1.0 -- Max scale factor for naval region importance from our ships
+
+NDefines.NAI.NAVAL_PATROL_PLANES_PER_SHIP_PATROLLING = 20 --10.0		-- Amount of naval patrol planes per ship on a patrol mission
+NDefines.NAI.NAVAL_PATROL_PLANES_PER_SHIP_RAIDING = 40 --10.0		-- Amount of naval patrol planes per ship on a convoy raid mission
+NDefines.NAI.NAVAL_PATROL_PLANES_PER_SHIP_ESCORTING = 20 --10.0		-- Amount of naval patrol planes per ship on a convoy escort mission
+
+-- NDefines.NAI.ENEMY_PASSING_THROUGH_PLANES_PER_BOMBER_NAVAL_REGION = 0.15		-- Amount of planes we assign to intercept enemies en-route to a location over a sea region
+-- NDefines.NAI.ENEMY_PASSING_THROUGH_PLANES_PER_FIGHTER_NAVAL_REGION = 0.15		-- Amount of planes we assign to intercept enemies en-route to a location over a sea region
+-- NDefines.NAI.ENEMY_PASSING_THROUGH_PLANES_PER_SUPPORT_NAVAL_REGION = 0.15		-- Amount of planes we assign to intercept enemies en-route to a location over a sea region
+-- NDefines.NAI.NAVAL_DEFENSE_INTERCEPTION_IMPORTANCE_FACTOR = 30	-- Factor on added planes passing through region to strategic importance
