@@ -1,43 +1,51 @@
+#AEH changes :
+# Attaches don't give war support anymore
+# compliance local_factories from 0.65 to 0.20
+# STABILITY
+# stability_good_modifier = {
+# 	political_power_factor = 0.15
+# 	industrial_capacity_factory = 0.25
+# 	industrial_capacity_dockyard = 0.25
+# 	production_speed_buildings_factor = 0.15
+# 	MONTHLY_POPULATION = 0.15
+# 	consumer_goods_factor = -0.05
+# }
+
+# stability_bad_modifier = {
+# 	political_power_factor = -0.25
+# 	industrial_capacity_factory = -0.5
+# 	industrial_capacity_dockyard = -0.5
+# 	production_speed_buildings_factor = -0.5
+# 	surrender_limit = -0.5
+# 	consumer_goods_factor = 0.15
+# 	research_speed_factor = -0.15
+# }
+
+# # WAR SUPPORT
+# war_support_good_modifier = {
+# 	mobilization_speed = 0.3
+# 	army_core_attack_factor = 0.1
+# 	army_core_defence_factor = 0.1
+# 	resistance_growth_on_our_occupied_states = 0.15
+# 	command_power_gain_mult = 0.5
+# }
+
+# war_support_bad_modifier = {
+# 	mobilization_speed = -0.5
+# 	army_attack_factor = -0.15
+# 	army_speed_factor = -0.05
+# 	command_power_gain_mult = -0.95
+# 	conscription_factor = -0.25
+# 	surrender_limit = -0.5
+# }
+
+
 # All global modifiers are here. They are applied from certain game-features.
 # Effects are fully scriptable here.
 # These names can NOT be removed or changes, as the code uses them....
-### CHANGED
-# STABILITY
-stability_good_modifier = {
-	political_power_factor = 0.15
-	industrial_capacity_factory = 0.25
-	industrial_capacity_dockyard = 0.25
-	production_speed_buildings_factor = 0.15
-	MONTHLY_POPULATION = 0.15
-	consumer_goods_factor = -0.05
-}
 
-stability_bad_modifier = {
-	political_power_factor = -0.25
-	industrial_capacity_factory = -0.5
-	industrial_capacity_dockyard = -0.5
-	production_speed_buildings_factor = -0.5
-	surrender_limit = -0.5
-	consumer_goods_factor = 0.15
-	research_speed_factor = -0.15
-}
-
-# WAR SUPPORT
-war_support_good_modifier = {
-	mobilization_speed = 0.3
-	army_core_attack_factor = 0.1
-	army_core_defence_factor = 0.1
-	resistance_growth_on_our_occupied_states = 0.15
-	command_power_gain_mult = 0.5
-}
-
-war_support_bad_modifier = {
-	mobilization_speed = -0.5
-	army_attack_factor = -0.15
-	army_speed_factor = -0.05
-	command_power_gain_mult = -0.95
-	conscription_factor = -0.25
-	surrender_limit = -0.5
+_test_power_balance_mod = {
+	power_balance_daily = 0.02
 }
 
 weather_rain_light = { # on Region
@@ -200,6 +208,7 @@ night = { # On province. Multiplied by amount of darkness.
 	carrier_traffic = -1.0
 	naval_hit_chance = -0.25
 	naval_retreat_speed = 0.1
+	air_attack_factor = -0.50
 }
 
 # The following is multiplied by local resistance strength.
@@ -222,7 +231,7 @@ compliance_effect_base = {
 }
 
 compliance_effect = {
-	local_factories = 0.20
+	local_factories = 0.65
 	local_non_core_manpower = 0.18
 	local_resources = 0.60
 }
@@ -235,7 +244,7 @@ non_core = {
 non_core_controller = {
 	local_building_slots_factor = -0.5
 
-	local_factories = -0.80
+	local_factories = -0.75
 	#local_manpower = -0.75
 	local_resources = -0.65
 }
@@ -341,6 +350,18 @@ free_license = {
 	license_purchase_cost = 0 #no base cost
 }
 
+ITA_military_agreements = {
+	valid_relation_trigger = {
+		FROM = {
+			is_in_faction_with = ROOT
+		}
+	}
+	license_purchase_cost = 0 #base cost reduction
+	ai_license_acceptance = 20 #more to AI acceptance value.
+	license_production_speed = 0.25 #speed  increase for being a license
+	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level
+}
+
 # applies when stability > 50%
 stability_good_modifier = {
 	industrial_capacity_factory = 0.20
@@ -368,12 +389,16 @@ war_support_bad_modifier = {
 	#army_noncore_attack_factor = -0.50  # Attacking or defending on non-core takes a huge penalty.
 	#army_noncore_defence_factor = -0.50
 	command_power_gain_mult = -0.95
-	surrender_limit = -0.3
+	surrender_limit = -0.3	
+}
+
+war_support_during_war = { #Applied during war, scaled from 0-100% with war support, not split.
+	stability_factor = -0.3
 }
 
 
 attache_sent = {
-	# war_support_factor = 0.1
+	war_support_factor = 0.1
 }
 
 # Difficulty modifiers
@@ -423,10 +448,12 @@ diff_very_hard_player = {
 
 
 diff_very_easy_ai = {
+	peace_score_ratio_transferred_to_players = 0.25
 }
 
 diff_easy_ai = {
 	no_supply_grace = 24
+	peace_score_ratio_transferred_to_players = 0.1
 }
 
 diff_normal_ai = {
@@ -594,7 +621,7 @@ intel_network_state_level_bonus = {
 # modifiers applied to enemy divisions in an intel network
 intel_network_state_level_penalty = {
 	max_planning_factor = -1
-	max_dig_in = -1
+	max_dig_in = -5
 }
 
 # modifiers enabled by the creation of the intelligence agency
@@ -693,4 +720,16 @@ SOV_for_the_common_good_relation = { #For Right Oppo allies
 	ai_license_acceptance = 20 #more to AI acceptance value.
 	license_production_speed = 0.25 #speed  increase for being a license
 	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level
+}
+
+ETH_league_of_nations_volunteer_resolution = {
+	send_volunteers_tension = -0.5
+	send_volunteer_divisions_required = -0.75
+	send_volunteer_factor = 0.25
+}
+
+ETH_support_spain_static_modifier = {
+	send_volunteers_tension = -0.5
+	send_volunteer_divisions_required = -0.75
+	send_volunteer_factor = 0.5
 }

@@ -1,3 +1,9 @@
+#AEH changes : 
+# - mobility : minimum_training_level = 0.6
+# - Superior firepower : minimum_training_level = 0.6 / supply_consumption_factor = 0.05
+# - Grand battleplan : minimum_training_level = 0.4
+# - Mass assault : minimum_training_level = 0.2
+
 technologies = {
 
 	mobile_warfare = { on_research_complete = { add_to_variable = { EAI_land_doctrines_researched = 1 } }

@@ -11,7 +11,6 @@ Features :
 - A lot of Quality of life improvements
 - Industrial policy and produciton quality
 - Army quality
-- Possiblity to create embargoes (fully integrated with AI)
 - Scripted and dynamic peace deals to prevent eternal wars
 - Laws complete rework
 - Subject rework

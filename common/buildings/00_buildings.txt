@@ -1,3 +1,5 @@
+#AEH changes : forts price 3x increase
+
 buildings = {
 
 	# show_on_map:
@@ -37,7 +39,7 @@ buildings = {
 		base_cost_conversion = 9000
 		general_production = 1
 		icon_frame = 1
-		max_level = 100 #for Aigle2's Weapon Market System compatibility
+		max_level = 20
 		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
@@ -99,8 +101,8 @@ buildings = {
 	bunker = {
 		show_on_map = 1
 		has_destroyed_mesh = yes
-		base_cost = 500
-		per_level_extra_cost = 500
+		base_cost = 1500
+		per_level_extra_cost = 1500
 		provincial = yes
 		disabled_in_dmz = yes
 		icon_frame = 7

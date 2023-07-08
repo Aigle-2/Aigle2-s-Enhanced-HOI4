@@ -1,3 +1,5 @@
+#AEH changes : chinese army corruption ideas effect halved
+
 ideas = {
 	country = {
 		german_advisors = {
