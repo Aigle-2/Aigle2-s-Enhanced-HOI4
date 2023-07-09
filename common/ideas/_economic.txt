@@ -6,6 +6,7 @@ ideas = {
 
 		undisturbed_isolation = {
 			
+
 			allowed = {
 				always = no
 			}
@@ -41,8 +42,6 @@ ideas = {
 		
 		isolation = {
 			
-			
-			
 			allowed = {
 				always = no
 			}
@@ -58,11 +57,15 @@ ideas = {
 				join_faction_tension = 0.20
 				send_volunteers_tension = 0.20
 				guarantee_tension = 0.5
+				max_fuel_factor = -0.35
+				fuel_gain_factor = -0.5
+				agency_upgrade_time = 0.8
 			}
 			allowed_to_remove = {
 				OR = {
 					has_war_support > 0.75
-					has_war = yes					
+					has_war = yes
+					has_completed_focus = USA_limited_intervention				
 				}
 			}
 			
@@ -86,6 +89,10 @@ ideas = {
 				MONTHLY_POPULATION = 0.15
 				
 				consumer_goods_factor = 0.45
+
+				conversion_cost_mil_to_civ_factor = 0.3
+				max_fuel_factor = -0.25
+				fuel_gain_factor = -0.4
 			}
 			
 			default = yes
@@ -125,24 +132,25 @@ ideas = {
 						}
 					}
 				}
-				
-				##### COUNTRY SPECIFIC
-				### FRA
-				# NAPOLEONIC Post-CW Reorganization
-				# if = {
-				# 	limit = {
-				# 		original_tag = FRA
-				# 	}
-				# 	NOT = { has_idea = FRA_state_reorganization_I }
-				# }
+			}
+			on_add = {
+				if = {
+					limit = {
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					USA_congress_large_opposition = yes
+				}
 			}
 			
 			cost = 150
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_arms_factory_factor = -0.1
 				consumer_goods_factor = 0.35
+				production_speed_arms_factory_factor = -0.1
+				fuel_gain_factor = -0.25
 			}
 			
 			cancel_if_invalid = no
@@ -154,6 +162,16 @@ ideas = {
 					factor = 20
 					
 					is_major = yes
+				}
+				modifier = {
+					has_war_support > 0.25
+					factor = 0 #don't even look at it if you could be taking partial mob
+				}
+				modifier = {
+					tag = ENG
+					has_war = no
+					date < 1937.6.1
+					factor = 0
 				}
    			}
 		}
@@ -194,16 +212,6 @@ ideas = {
 						}
 					}
 				}
-				
-				##### COUNTRY SPECIFIC
-				### FRA
-				# NAPOLEONIC Post-CW Reorganization
-				# if = {
-				# 	limit = {
-				# 		original_tag = FRA
-				# 	}
-				# 	NOT = { has_idea = FRA_state_reorganization_I }
-				# }
 			}
 
 			cost = 150
@@ -216,10 +224,20 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.1
 				production_speed_industrial_complex_factor = -0.2
 				consumer_goods_factor = 0.25
+				fuel_gain_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
-
+			on_add = {
+				if = {
+					limit = {
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					USA_congress_large_opposition = yes
+				}
+			}
 			ai_will_do = {
    				factor = 2
 
@@ -228,24 +246,12 @@ ideas = {
 					
 					is_major = yes
 				}
-				
-				modifier = {	### NOT select this if you have less than 40% STABILITY
-					factor = 25
-					
-					OR = {
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
-					
-					OR = {
-						has_stability < 0.35
-						has_war_support < 0.35
-					}
-				}
    			}
 		}
 		
 		war_economy = {
+
+
 			available = {
 				has_war_support > 0.5
 				OR = {
@@ -292,16 +298,6 @@ ideas = {
 					}
 				}
 
-				##### COUNTRY SPECIFIC
-				### FRA
-				# NAPOLEONIC Post-CW Reorganization
-				# if = {
-				# 	limit = {
-				# 		original_tag = FRA
-				# 	}
-				# 	NOT = { has_idea = FRA_state_reorganization_I }
-				# }
-				
 				### RKs
 				if = {
 					limit = {
@@ -361,6 +357,8 @@ ideas = {
 		}
 		
 		tot_economic_mobilisation = {
+
+
 			available = {
 				has_war = yes
 				has_war_support > 0.8
@@ -398,18 +396,7 @@ ideas = {
 							has_active_mission = TUR_etatism_crisis_3
 						}
 					}
-				}
-				
-				##### COUNTRY SPECIFIC
-				### FRA
-				# NAPOLEONIC Post-CW Reorganization
-				# if = {
-				# 	limit = {
-				# 		original_tag = FRA
-				# 	}
-				# 	NOT = { has_idea = FRA_state_reorganization_I }
-				# }
-				
+				}			
 				### RKs
 				if = {
 					limit = {
@@ -418,7 +405,6 @@ ideas = {
 					always = no
 				}
 			}
-			
 			on_add = {
 				if = {
 					limit = {
@@ -429,38 +415,19 @@ ideas = {
 					USA_congress_large_opposition = yes
 				}
 			}
-
-			cost = 150
-			removal_cost = -1
-			
-			modifier = {
-				political_power_gain = -0.25
-				stability_weekly = -0.001
-				war_support_weekly = -0.002
-				production_speed_industrial_complex_factor = -0.4
-				production_speed_arms_factory_factor = 0.3
-				conversion_cost_civ_to_mil_factor = -0.3
-				
-				conscription = -0.03
-				
-				consumer_goods_factor = 0.15
-			}
-			
-			cancel_if_invalid = no
-			
 			ai_will_do = {
    				factor = 1
 
 				modifier = {
 					factor = 25
 					#Prio this if nation has a lot of manpower compared to MIC
-					manpower_per_military_factory >  10000
+					manpower_per_military_factory > 15000
 				}
 
 				modifier = {
 					#Block  unless nation has a lot of manpower
 					factor = 0
-					manpower_per_military_factory <  3000
+					manpower_per_military_factory <  10000
 				}
 
 				
@@ -470,6 +437,31 @@ ideas = {
 					OR = {
 						has_idea = volunteer_only
 						has_idea = limited_conscription
+					}
+				}
+
+				# Germany needs to be careful
+				modifier = {
+					factor = 0
+
+					tag = GER
+					NOT = { has_tech = volkssturm }
+					has_war = yes
+					date < 1944.01.01
+				}
+				modifier = {
+					factor = 0
+
+					tag = SOV
+					has_war = yes
+					OR = {
+						has_manpower < 2000000
+						NOT = {
+							OR = {
+								has_idea = all_adults_serve
+								has_idea = service_by_requirement
+							}
+						}
 					}
 				}
 				
@@ -484,6 +476,22 @@ ideas = {
 					has_war_support < 0.4
 				}
    			}
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = 0.15
+			conscription = -0.03
+			political_power_gain = -0.25
+			stability_weekly = -0.001
+			war_support_weekly = -0.002
+			production_speed_industrial_complex_factor = -0.4
+			production_speed_arms_factory_factor = 0.3
+			conversion_cost_civ_to_mil_factor = -0.3
+			
+			}
+
+			cancel_if_invalid = no
 		}
 
 		new_economic_policy = {
@@ -584,14 +592,35 @@ ideas = {
 					}
 				}
 			}
+
+			on_remove = {
+				effect_tooltip =  {
+					remove_dynamic_modifier = { modifier = international_city }
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							tag = POL
+							85 = { is_demilitarized_zone = no }
+							has_civil_war = no 
+						}
+						85 = {
+							if = {
+								limit = {
+									has_dynamic_modifier = { modifier = international_city }
+								}
+								remove_dynamic_modifier = { modifier = international_city }
+							}
+						}
+					}
+				}
+			}
 			
 			cancel_if_invalid = no
 		}
 
 		free_trade = {
-			cost = 150
-			removal_cost = -1
-			
+		
 			available = {
 				if = {
 					limit = {
@@ -604,12 +633,13 @@ ideas = {
 					has_government = democratic
 					has_government = neutrality
 				}
-				
 			}
+
+			cost = 150
+			removal_cost = -1
 			
 			modifier = {
 				political_power_gain = 0.1
-			
 				min_export = 0.8
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
@@ -620,11 +650,40 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 1
+
+				modifier = {
+				 factor = 300
+
+				 OR = {
+					 tag = PER
+					 tag = IRQ
+				 }
+				 is_in_faction = no
+			 }
+
+			 modifier = {
+				 factor = 300
+
+				 tag = BRA
+				 date > 1943.1.1 # at this point we can probably cash in on rubber lack in the world
+			 }
+
+			 # Oil for hitlers oil throne!
+			 modifier = {
+				 factor = 600
+				 tag = ROM
+				 is_in_faction_with = GER
+			 }
+			}
 		}
 		
 		export_focus = {
 			
 			available = {
+
 				if = {
 					limit = {
 						original_tag = CHI
@@ -647,7 +706,6 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = 0.05
-			
 				min_export = 0.5
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
@@ -672,9 +730,18 @@ ideas = {
 					has_war = no
 					is_in_faction = no
 					OR = {
+						# portugal and sweden are special tungsten snowflakes
 						tag = POR
 						tag = SWE
+
+						# Iraq & Iran are special oil snowflakes
+						tag = PER
+						tag = IRQ
 					}
+				}
+				modifier = {
+					factor = 1000
+					has_idea = uncontrolled_exports #Poland should try and escape this as soon as they can
 				}
    			}
 		}
@@ -724,7 +791,6 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = -0.1
-
 				min_export = 0.25
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
@@ -737,27 +803,37 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 1
+				factor = 1
 
-   				modifier = {
-					factor = 0
-					
-					is_major = no
-					is_in_faction = yes
-					has_war = yes
-				}
-
-				# minors not at war should want to get the bonuses from free trade
 				modifier = {
-					factor = 0
-					
-					is_major = no
-					has_war = no
-				}
-   			}
+				 add = -1
+
+				 is_major = no
+				 is_in_faction = yes
+				 has_war = yes
+			 }
+
+			 # minors not at war should want to get the bonuses from free trade
+			 modifier = {
+				 add = -1
+
+				 is_major = no
+				 has_war = no
+			 }
+
+			 modifier = {
+				 add = 1500
+
+				 # revert from closed_economy if we have large allies
+				 has_idea = closed_economy
+				 has_large_ally_not_pick_closed_economy = yes
+			 }
+			}
 		}
 		
 		closed_economy = {
+
+
 			available = {
 				has_war = yes
 				OR = { 
@@ -785,10 +861,8 @@ ideas = {
 			cost = 150
 			removal_cost = -1
 			
-			
 			modifier = {
 				political_power_gain = -0.25
-			
 				min_export = 0
 			}
 			
@@ -815,6 +889,14 @@ ideas = {
 					
 					is_major = no
 					has_war = no
+				}
+
+				modifier = {
+					factor = 0
+
+					# don't take if we have a reasonable sized ally
+					# since they will require our trades
+					has_large_ally_not_pick_closed_economy = yes
 				}
    			}
 		}

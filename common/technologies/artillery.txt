@@ -327,7 +327,6 @@ technologies = {
 	}
 
 	artillery5 = {
-
 		path = {
 			leads_to_tech = artillery6
 			research_cost_coeff = 1
@@ -959,7 +958,7 @@ technologies = {
 
 		start_year = 1939
 
-folder = {
+		folder = {
 			name = artillery_folder
 			position = { x = 7 y = 4 }
 		}
