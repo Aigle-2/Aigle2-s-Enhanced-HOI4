@@ -552,9 +552,9 @@ soundeffect = {
 	name = distance_airplane_crash
 	falloff = "falloff_distance"
 	sounds = {
-		sound = distance_airplane_burn
-		sound = distance_airplane_burn_02
-		sound = distance_airplane_burn_03
+		sound = airplane_burn
+		sound = airplane_burn_02
+		sound = airplane_burn_03
 	} 
 	max_audible = 2
 	max_audible_behaviour = fail
