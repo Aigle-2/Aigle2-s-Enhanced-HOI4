@@ -62,10 +62,10 @@ spriteTypes = {
 		# texturefile = "gfx/interface/technologies/FRA_jet_strategic_bomber2.dds"
 	# }	
 	
-	# SpriteType = {
-		# name = "GFX_FRA_jet_strategic_bomber3_medium"
-		# texturefile = "gfx/interface/technologies/FRA_jet_strategic_bomber3.dds"
-	# }	
+	SpriteType = {
+		name = "GFX_FRA_jet_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/FRA_jet_strategic_bomber3.dds"
+	}	
 	
 	SpriteType = {
 		name = "GFX_FRA_jet_tactical_bomber1_medium"
@@ -311,9 +311,20 @@ spriteTypes = {
 	}	
 	
 	SpriteType = {
+		name = "GFX_FRA_rocket_interceptor_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/FRA_rocket_interceptor_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_FRA_rocket_interceptor_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_rocket_interceptor_2.dds"
+	}	
+	
+	SpriteType = {
 		name = "GFX_FRA_rocket_interceptor_equipment_3_medium"
 		texturefile = "gfx/interface/technologies/FRA_rocket_interceptor_3.dds"
-	}	
+	}			
+		
 
 #NAVAL
 
@@ -583,12 +594,12 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_FRA_armored_car_at_equipment_1_medium"
+		name = "GFX_FRA_armored_car_at_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/FRA_armored_car_at_equipment_1.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_FRA_armored_car_at_equipment_2_medium"
+		name = "GFX_FRA_armored_car_at_equipment_3_medium"
 		texturefile = "gfx/interface/technologies/FRA_armored_car_at_equipment_2.dds"
 	}	
 	
@@ -783,7 +794,77 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_FRA_cargo_helicopter_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/FRA_cargo_helicopter_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRA_heavy_fighter4_medium"
+		texturefile = "gfx/interface/technologies/FRA_heavy_fighter4.dds"
+	}			
+			
+	SpriteType = {
+		name = "GFX_FRA_heavy_fighter5_medium"
+		texturefile = "gfx/interface/technologies/FRA_heavy_fighter5.dds"
+	}			
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_small_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/light/fighter_45/so6020espadon.dds"
+	}		
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/light/fighter_47/mystere.dds"
+	}			
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_small_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/light/fighter_50/breguet1002.dds"
 	}	
-					
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_small_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/light/fighter_55/etendardii.dds"
+	}
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_small_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/light/fighter_60/mirageiiic.dds"
+	}
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_medium_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/medium/bomber_45/nc270.dds"
+	}		
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_medium_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/medium/bomber_47/grognard.dds"
+	}			
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_medium_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/medium/bomber_50/vautour.dds"
+	}	
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_medium_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/medium/bomber_55/vautouriib.dds"
+	}
+			
+	SpriteType = {
+		name = "GFX_FRA_modern_medium_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/medium/bomber_60/minerve.dds" 
+	}
+		
+	SpriteType = {
+		name = "GFX_FRA_modern_large_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/FRA/large/strat_60/supermirageiv.dds"
+	}
+		
+	SpriteType = {
+		name = "GFX_FRA_ifv_infantry_medium"
+		texturefile = "gfx/interface/technologies/FRA_ifv_1.dds"
+	}
+	
 }
 

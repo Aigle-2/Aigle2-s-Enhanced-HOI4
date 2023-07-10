@@ -258,15 +258,24 @@ equipments = {
 	}
 
 	armored_car_at_equipment = {
-		#should be closer to a tank than an AT tank/SPG
-		year = 1941
-
-		archetype = armored_car_equipment
-		parent = armored_car_equipment_2
-		priority = 10
-		visual_level = 1
+		year = 1939
+	
+		is_archetype = yes
+		is_buildable = no
 		is_convertable = yes
-
+		picture = archetype_armored_car_equipment			
+		type = motorized
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+		
+		upgrades = {
+			tank_reliability_upgrade
+			ac_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+		
 		#Misc Abilities
 		maximum_speed 	= 16
 		reliability 	= 0.8
@@ -293,14 +302,22 @@ equipments = {
 		fuel_consumption = 1.8
 	}
 
-	
-
 	armored_car_at_equipment_1 = {
+		year = 1934
+		
+		archetype = armored_car_at_equipment
+		priority = 10
+		visual_level = 0
+		is_convertable = yes
+
+		#recon = 2
+	}
+	
+	armored_car_at_equipment_2 = {
 		#should be closer to a tank than an AT tank/SPG
 		year = 1941
 
-		archetype = armored_car_equipment
-		parent = armored_car_equipment_5
+		archetype = armored_car_at_equipment
 		priority = 10
 		visual_level = 1
 		is_convertable = yes
@@ -330,12 +347,12 @@ equipments = {
 		fuel_consumption = 1.8
 	}
 
-	armored_car_at_equipment_2 = {
+	armored_car_at_equipment_3 = {
 		#should be closer to a tank than an AT tank/SPG
 		year = 1941
 
-		archetype = armored_car_equipment
-		parent = armored_car_equipment_6
+		archetype = armored_car_at_equipment
+		parent = armored_car_at_equipment_1
 		priority = 10
 		visual_level = 1
 		is_convertable = yes

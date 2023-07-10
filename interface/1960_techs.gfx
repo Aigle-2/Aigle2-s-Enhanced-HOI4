@@ -1007,35 +1007,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/onboard_radar_5.dds"
 	}		
 		
-	SpriteType = {
-		name = "GFX_guided_missile_equipment_4_medium"
-		texturefile = "gfx/interface/technologies/guided_missile_4.dds"
-	}		
+	# SpriteType = {
+		# name = "GFX_guided_missile_equipment_4_medium"
+		# texturefile = "gfx/interface/technologies/guided_missile_4.dds"
+	# }		
 		
-	SpriteType = {
-		name = "GFX_guided_missile_equipment_5_medium"
-		texturefile = "gfx/interface/technologies/guided_missile_5.dds"
-	}		
+	# SpriteType = {
+		# name = "GFX_guided_missile_equipment_5_medium"
+		# texturefile = "gfx/interface/technologies/guided_missile_5.dds"
+	# }		
 		
-	SpriteType = {
-		name = "GFX_guided_missile_equipment_6_medium"
-		texturefile = "gfx/interface/technologies/guided_missile_6.dds"
-	}		
-		
-	SpriteType = {
-		name = "GFX_rocket_engines_4_medium"
-		texturefile = "gfx/interface/technologies/missile_tech_4.dds"
-	}		
-		
-	SpriteType = {
-		name = "GFX_rocket_engines_5_medium"
-		texturefile = "gfx/interface/technologies/missile_tech_5.dds"
-	}		
-		
-	SpriteType = {
-		name = "GFX_rocket_engines_6_medium"
-		texturefile = "gfx/interface/technologies/missile_tech_6.dds"
-	}		
+	# SpriteType = {
+		# name = "GFX_guided_missile_equipment_6_medium"
+		# texturefile = "gfx/interface/technologies/guided_missile_6.dds"
+	# }		
 			
 	SpriteType = {
 		name = "GFX_air_air_missile_1_medium"
@@ -1406,4 +1391,14 @@ spriteTypes = {
 		name = "GFX_night_vision3_medium"
 		texturefile = "gfx/interface/technologies/night_vision3.dds"
 	}	
+		
+	SpriteType = {
+		name = "GFX_theater_missiles_1_medium"
+		texturefile = "gfx/interface/technologies/theater_missile_equipment_1.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_theater_missiles_2_medium"
+		texturefile = "gfx/interface/technologies/theater_missile_equipment_2.dds"
+	}		
 }

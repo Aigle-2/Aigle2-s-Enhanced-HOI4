@@ -108,17 +108,22 @@ spriteTypes = {
 		name = "GFX_USA_cv_jet_fighter1_medium"
 		texturefile = "gfx/interface/technologies/USA_cv_jet_fighter1.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_USA_cv_jet_fighter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/USA_cv_jet_fighter1.dds"
+	}		
 		
 	SpriteType = {
-		name = "GFX_USA_cv_jet_fighter2_medium"
+		name = "GFX_USA_cv_jet_fighter_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/USA_cv_jet_fighter2.dds"
 	}
 	SpriteType = {
-		name = "GFX_USA_cv_jet_fighter3_medium"
+		name = "GFX_USA_cv_jet_fighter_equipment_3_medium"
 		texturefile = "gfx/interface/technologies/USA_cv_jet_fighter3.dds"
 	}
 	SpriteType = {
-		name = "GFX_USA_cv_jet_fighter4_medium"
+		name = "GFX_USA_cv_jet_fighter_equipment_4_medium"
 		texturefile = "gfx/interface/technologies/USA_cv_jet_fighter4.dds"
 	}		
 	SpriteType = {
@@ -658,13 +663,28 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_USA_light_tank_3_medium"
-		texturefile = "gfx/interface/technologies/USA_light_tank_3.dds"
+		texturefile = "gfx/interface/equipmentdesigner/tanks/designer/lamp_USA/light_4/usa_m41.dds"
 	}	
 	
 	SpriteType = {
 		name = "GFX_USA_amphibious_tank_3_medium"
 		texturefile = "gfx/interface/technologies/USA_amphibious_tank_3.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_USA_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/USA_mechanized_equipment_1.dds"
 	}	
+	 
+	SpriteType = {
+		name = "GFX_USA_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/USA_mechanized_equipment_2.dds"
+	}	 
+	
+	SpriteType = {
+		name = "GFX_USA_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/USA_mechanized_equipment_3.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_USA_mechanised_infantry4_medium"
@@ -688,12 +708,12 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_USA_infantry_equipment_4_medium"
-		texturefile = "gfx/interface/technologies/USA_infantry_equipment_4.dds"
+		texturefile = "gfx/interface/technologies/HIP_infantry_equipment_4.tga"
 	}		
 	
 	SpriteType = {
 		name = "GFX_USA_infantry_equipment_5_medium"
-		texturefile = "gfx/interface/technologies/USA_infantry_equipment_5.dds"
+		texturefile = "gfx/interface/technologies/HIP_infantry_equipment_5.tga"
 	}
 	
 	# SpriteType = {
@@ -853,6 +873,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_USA_armored_car2_medium"
+		texturefile = "gfx/interface/technologies/usa_armored_car_equipment_2.dds"
+	}
+	
+	SpriteType = {
 		name = "GFX_USA_armored_car5_medium"
 		texturefile = "gfx/interface/technologies/usa_armored_car_equipment_5.dds"
 	}
@@ -862,10 +887,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/usa_armored_car_equipment_6.dds"
 	}
 	
-	SpriteType = {
-		name = "GFX_USA_armored_car_at_upgrade_medium"
-		texturefile = "gfx/interface/technologies/USA_armored_car_at_equipment.dds"
-	}
+	# SpriteType = {
+		# name = "GFX_USA_armored_car_at_upgrade_medium"
+		# texturefile = "gfx/interface/technologies/USA_armored_car_at_equipment.dds"
+	# }
 	
 	SpriteType = {
 		name = "GFX_USA_armored_car_at_equipment_1_medium"
@@ -876,7 +901,11 @@ spriteTypes = {
 		name = "GFX_USA_armored_car_at_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/USA_armored_car_at_equipment_2.dds"
 	}	
-	
+
+	SpriteType = {
+		name = "GFX_USA_armored_car_at_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/USA_armored_car_at_equipment_3.dds"
+	}		
 	
 	SpriteType = {
 		name = "GFX_USA_rocket_interceptor_equipment_1_medium"
@@ -1115,6 +1144,187 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_USA_cargo_helicopter_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/USA_cargo_helicopter_1.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_USA_theater_missiles_1_medium"
+		texturefile = "gfx/interface/technologies/USA_theater_missile_equipment_1.dds"
 	}	
-}
+	
+	SpriteType = {
+		name = "GFX_USA_theater_missiles_2_medium"
+		texturefile = "gfx/interface/technologies/USA_theater_missile_equipment_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_theater_missile_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/USA_theater_missile_equipment_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_theater_missile_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/USA_theater_missile_equipment_2.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_USA_rocket_engines_medium"
+		texturefile = "gfx/interface/technologies/USA_guided_missile_1.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_USA_improved_rocket_engines_medium"
+		texturefile = "gfx/interface/technologies/USA_guided_missile_2.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_USA_advanced_rocket_engines_medium"
+		texturefile = "gfx/interface/technologies/USA_guided_missile_3.dds"
+	}	
+		
+	SpriteType = {
+		name = "GFX_USA_rocket_engines_4_medium"
+		texturefile = "gfx/interface/technologies/USA_guided_missile_4.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_USA_rocket_engines_5_medium"
+		texturefile = "gfx/interface/technologies/USA_guided_missile_5.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_USA_rocket_engines_6_medium"
+		texturefile = "gfx/interface/technologies/USA_guided_missile_6.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_motorised_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/USA_motorized_equipment_2.dds"
+	}	
+	
+	# SpriteType = {
+		# name = "GFX_USA_motorised_infantry_3_medium"
+		# texturefile = "gfx/interface/technologies/USA_motorized_equipment_3.dds"
+	# }	
+	
+	SpriteType = {
+		name = "GFX_USA_manpad_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/USA_manpad_equipment_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_infantry_aa_medium"
+		texturefile = "gfx/interface/technologies/USA_manpad_equipment_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_scout_helicopter_1_medium"
+		texturefile = "gfx/interface/technologies/USA_scout_helicopter_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_scout_helicopter_2_medium"
+		texturefile = "gfx/interface/technologies/USA_scout_helicopter_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_scout_helicopter_3_medium"
+		texturefile = "gfx/interface/technologies/USA_scout_helicopter_3.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_scout_helicopter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/USA_scout_helicopter_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_scout_helicopter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/USA_scout_helicopter_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_scout_helicopter_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/USA_scout_helicopter_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_modern_large_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/heavy/strat_45/b-31.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_modern_large_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/heavy/strat_47/b-36.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_modern_large_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/heavy/strat_50/b-47.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_modern_large_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/heavy/strat_55/b-52b.dds"
+	}	
+	 
+	SpriteType = {
+		name = "GFX_USA_modern_large_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/heavy/strat_60/xb-70.dds"
+	}	 
+					
+	SpriteType = {
+		name = "GFX_USA_modern_medium_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/medium/bomber_45/b-43.dds"
+	}		
+					
+	SpriteType = {
+		name = "GFX_USA_modern_medium_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/medium/bomber_47/b-45.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_modern_medium_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/medium/bomber_50/b-59.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_modern_medium_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/medium/bomber_55/b-66.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_modern_medium_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/medium/bomber_60/a-12.dds"
+	}	
+			 
+	SpriteType = {
+		name = "GFX_USA_modern_small_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/light/fighter_45/p-80.dds"
+	}	
+			 
+	SpriteType = {
+		name = "GFX_USA_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/light/fighter_47/f-86.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_modern_small_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/light/fighter_50/f-100.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_modern_small_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/light/fighter_55/f-102.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_USA_modern_small_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/USA/light/fighter_60/f-106.dds"
+	}	
+		
+	SpriteType = {
+		name = "GFX_USA_ifv_infantry_medium"
+		texturefile = "gfx/interface/technologies/USA_ifv_1.dds"
+	}
 
+}
+ 

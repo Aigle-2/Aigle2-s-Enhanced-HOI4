@@ -118,5 +118,70 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_cv_naval_bomber3_medium"
 		texturefile = "gfx/interface/technologies/spr_cv_naval_bomber3.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_theater_missile_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/theater_missile_equipment_1.dds"
 	}	
+	
+	SpriteType = {
+		name = "GFX_theater_missile_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/theater_missile_equipment_2.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_motorised_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/USA_motorized_equipment_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_motorised_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/motorized_equipment_3.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_adv_tank_landing_craft_medium"
+		texturefile = "gfx/interface/technologies/tank_landing_craft.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_mod_tank_landing_craft_medium"
+		texturefile = "gfx/interface/technologies/tank_landing_craft.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_naval_mines_1950_medium"
+		texturefile = "gfx/interface/technologies/improved_naval_mines.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_naval_mines_1950b_medium"
+		texturefile = "gfx/interface/technologies/degaussing.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_naval_mines_1955_medium"
+		texturefile = "gfx/interface/technologies/airdrop_mines.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_naval_mines_1955b_medium"
+		texturefile = "gfx/interface/technologies/airsweep_mines.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_advanced_submarine_mine_laying_medium"
+		texturefile = "gfx/interface/technologies/submarine_mine_laying_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_damage_control_4_medium"
+		texturefile = "gfx/interface/technologies/damage_control_4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_fire_control_methods_4_medium"
+		texturefile = "gfx/interface/technologies/fire_control_methods_4.dds"
+	}
 }

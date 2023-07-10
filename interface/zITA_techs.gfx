@@ -1,29 +1,41 @@
 spriteTypes = {
 	
-	# SpriteType = {
-		# name = "GFX_ITA_CAS4_medium"
-		# texturefile = "gfx/interface/technologies/ITA_CAS4.dds"
-	# }	
-	# SpriteType = {
-		# name = "GFX_ITA_jet_CAS1_medium"
-		# texturefile = "gfx/interface/technologies/ITA_jet_CAS1.dds"
-	# }	
-	# SpriteType = {
-		# name = "GFX_ITA_jet_CAS2_medium"
-		# texturefile = "gfx/interface/technologies/ITA_jet_CAS2.dds"
-	# }	
-	# SpriteType = {
-		# name = "GFX_ITA_jet_CAS3_medium"
-		# texturefile = "gfx/interface/technologies/ITA_jet_CAS3.dds"
-	# }	
-	# SpriteType = {
-		# name = "GFX_ITA_jet_CAS4_medium"
-		# texturefile = "gfx/interface/technologies/ITA_jet_CAS4.dds"
-	# }	
-	# SpriteType = {
-		# name = "GFX_ITA_cv_jet_CAS1_medium"
-		# texturefile = "gfx/interface/technologies/ITA_cv_jet_CAS1.dds"
-	# }	
+	SpriteType = {
+		name = "GFX_ITA_CAS4_medium"
+		texturefile = "gfx/interface/technologies/ITA_cas_4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ITA_jet_CAS1_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_CAS1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ITA_jet_CAS2_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_CAS2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ITA_jet_CAS3_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_CAS3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ITA_jet_CAS4_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_CAS4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ITA_cv_jet_CAS1_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_CAS1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ITA_cv_jet_CAS2_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_CAS2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ITA_cv_jet_CAS3_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_CAS3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ITA_cv_jet_CAS4_medium"
+		texturefile = "gfx/interface/technologies/ITA_cv_jet_CAS4.dds"
+	}	
 	
 	# SpriteType = {
 		# name = "GFX_ITA_naval_bomber4_medium"
@@ -89,10 +101,22 @@ spriteTypes = {
 		name = "GFX_ITA_jet_fighter5_medium"
 		texturefile = "gfx/interface/technologies/ITA_jet_fighter5.dds"
 	}
-	# SpriteType = {
-		# name = "GFX_ITA_cv_jet_fighter1_medium"
-		# texturefile = "gfx/interface/technologies/ITA_cv_jet_fighter1.dds"
-	# }
+	SpriteType = {
+		name = "GFX_ITA_cv_jet_fighter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_fighter2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_cv_jet_fighter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_fighter3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_cv_jet_fighter_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ITA_jet_fighter4.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_cv_jet_fighter_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ITA_cv_jet_fighter4.dds"
+	}
 				
 	SpriteType = {
 		name = "GFX_ITA_jet_interceptor1_medium"
@@ -164,10 +188,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/ITA_fighter3.dds"
 	}
 
-	# SpriteType = {
-		# name = "GFX_ITA_cv_fighter_equipment_4_medium"
-		# texturefile = "gfx/interface/technologies/ITA_fighter4.dds"
-	# }
+	SpriteType = {
+		name = "GFX_ITA_cv_fighter_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ITA_cv_fighter4.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_ITA_cv_fighter_equipment_0_medium"
@@ -500,6 +524,80 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/ITA_transport6.dds"
 	}
 	
+	# SpriteType = {
+		# name = "GFX_ITA_modern_large_airframe_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/large/strat_45/g10n.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_ITA_modern_large_airframe_2_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/large/strat_47/ki180.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_ITA_modern_large_airframe_3_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/large/strat_50/Ki-185.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_ITA_modern_large_airframe_4_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/large/strat_55/tu95m.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_ITA_modern_large_airframe_5_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/large/strat_60/m50.dds"
+	# }	 
+					
+	# SpriteType = {
+		# name = "GFX_ITA_modern_medium_airframe_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/medium/heavy_fighter_45/ki83.dds"
+	# }		
+					
+	# SpriteType = {
+		# name = "GFX_ITA_modern_medium_airframe_2_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/medium/bomber_47/r2y2.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_ITA_modern_medium_airframe_3_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/medium/bomber_50/tu14.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_ITA_modern_medium_airframe_4_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/medium/bomber_55/yak28.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_ITA_modern_medium_airframe_5_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/ITA/medium/bomber_60/r020.dds"
+	# }	
+				 
+	SpriteType = {
+		name = "GFX_ITA_modern_small_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ITA/light/fighter_45/ca.183bis.dds"
+	}	 
+	
+	SpriteType = {
+		name = "GFX_ITA_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ITA/light/fighter_47/sagittario-i.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ITA_modern_small_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ITA/light/fighter_50/mb324.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ITA_modern_small_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ITA/light/fighter_55/mb327.dds" 
+	}	
+	
+	SpriteType = {
+		name = "GFX_ITA_modern_small_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ITA/light/fighter_60/g91.dds"
+	}	
 			
 }
 

@@ -81,23 +81,23 @@ spriteTypes = {
 	
 	
 	SpriteType = {
-		name = "GFX_JAP_main_battle_tank2_medium"
-		texturefile = "gfx/interface/technologies/JAP_main_battle_tank2.dds"
+		name = "GFX_JAP_modern_tank_chassis_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/tanks/designer/lamp_JAP/modern/jap_sta_3.dds"
 	}	
 
 	SpriteType = {
-		name = "GFX_JAP_main_battle_tank3_medium"
-		texturefile = "gfx/interface/technologies/JAP_main_battle_tank3.dds"
+		name = "GFX_JAP_modern_tank_chassis_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/tanks/designer/lamp_JAP/modern_3/jap_sta_4.dds"
 	}	
 
 	SpriteType = {
-		name = "GFX_JAP_main_battle_tank4_medium"
-		texturefile = "gfx/interface/technologies/JAP_main_battle_tank4.dds"
+		name = "GFX_JAP_modern_tank_chassis_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/tanks/designer/lamp_JAP/modern_4/jap_type_61.dds"
 	}		
 	
 	SpriteType = {
 		name = "GFX_JAP_infantry_equipment_4_medium"
-		texturefile = "gfx/interface/technologies/JAP_infantry_equipment_4.dds"
+		texturefile = "gfx/interface/technologies/HIP_infantry_equipment_4.tga"
 	}		
 	
 	SpriteType = {
@@ -429,6 +429,75 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/JAP_transport6.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_JAP_modern_large_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/JAP/large/strat_45/g10n.dds"
+	}	
 	
+	SpriteType = {
+		name = "GFX_JAP_modern_large_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/JAP/large/strat_47/ki180.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_JAP_modern_large_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/JAP/large/strat_50/Ki-185.dds"
+	}	
+	
+	# SpriteType = {
+		# name = "GFX_JAP_modern_large_airframe_4_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/JAP/large/strat_55/tu95m.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_JAP_modern_large_airframe_5_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/JAP/large/strat_60/m50.dds"
+	# }	 
+					
+	SpriteType = {
+		name = "GFX_JAP_modern_medium_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/JAP/medium/heavy_fighter_45/ki83.dds"
+	}		
+					
+	SpriteType = {
+		name = "GFX_JAP_modern_medium_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/JAP/medium/bomber_47/r2y2.dds"
+	}	
+	
+	# SpriteType = {
+		# name = "GFX_JAP_modern_medium_airframe_3_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/JAP/medium/bomber_50/tu14.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_JAP_modern_medium_airframe_4_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/JAP/medium/bomber_55/yak28.dds"
+	# }	
+	
+	# SpriteType = {
+		# name = "GFX_JAP_modern_medium_airframe_5_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/JAP/medium/bomber_60/r020.dds"
+	# }	
+			 
+	SpriteType = {
+		name = "GFX_JAP_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/JAP/light/fighter_47/r2y1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_JAP_modern_small_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/JAP/light/fighter_50/ki252.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_JAP_modern_small_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/JAP/light/fighter_55/ki233.dds" 
+	}	
+	
+	SpriteType = {
+		name = "GFX_JAP_modern_small_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/JAP/light/fighter_60/ki500.dds"
+	}	
+	 
 }
 

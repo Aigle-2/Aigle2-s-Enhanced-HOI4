@@ -715,15 +715,15 @@ on_actions = {
 					popup = no
 				}
 			}
-			every_country = {
-				limit = {
-					always = yes
-				}
-				set_technology = {
-					transport1 = 1
-					popup = no
-				}
-			}
+			# every_country = {
+			# 	limit = {
+			# 		always = yes
+			# 	}
+			# 	set_technology = {
+			# 		transport1 = 1
+			# 		popup = no
+			# 	}
+			# }
 		}
 	}
 	on_war = {

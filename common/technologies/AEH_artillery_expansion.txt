@@ -179,10 +179,10 @@ technologies = {
 		#artillery_brigade = {
 		#	soft_attack = 0.1
 		#}
-		path = {
-			leads_to_tech = artillery5
-			research_cost_coeff = 1
-		}
+		# path = {
+		# 	leads_to_tech = artillery5
+		# 	research_cost_coeff = 1
+		# }
 		research_cost = 2
 		start_year = 1960
 		folder = {

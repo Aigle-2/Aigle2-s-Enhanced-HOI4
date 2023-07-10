@@ -66,29 +66,29 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/GER_jet_strategic_bomber4.dds"
 	}	
 	
-	SpriteType = {
-		name = "GFX_GER_jet_tactical_bomber1_medium"
-		texturefile = "gfx/interface/technologies/GER_jet_tactical_bomber1.dds"
-	}	
+	# SpriteType = {
+		# name = "GFX_GER_jet_tactical_bomber1_medium"
+		# texturefile = "gfx/interface/technologies/GER_jet_tactical_bomber1.dds"
+	# }	
 	
-	SpriteType = {
-		name = "GFX_GER_jet_tactical_bomber2_medium"
-		texturefile = "gfx/interface/technologies/GER_jet_tactical_bomber2.dds"
-	}	
+	# SpriteType = {
+		# name = "GFX_GER_jet_tactical_bomber2_medium"
+		# texturefile = "gfx/interface/technologies/GER_jet_tactical_bomber2.dds"
+	# }	
 	SpriteType = {
 		name = "GFX_GER_jet_tactical_bomber3_medium"
 		texturefile = "gfx/interface/technologies/GER_jet_tactical_bomber3.dds"
 	}	
 			
-	SpriteType = {
-		name = "GFX_GER_jet_fighter1_medium"
-		texturefile = "gfx/interface/technologies/GER_jet_fighter1.dds"
-	}
+	# SpriteType = {
+		# name = "GFX_GER_jet_fighter1_medium"
+		# texturefile = "gfx/interface/technologies/GER_jet_fighter1.dds"
+	# }
 	
-	SpriteType = {
-		name = "GFX_GER_jet_fighter2_medium"
-		texturefile = "gfx/interface/technologies/GER_jet_fighter2.dds"
-	}
+	# SpriteType = {
+		# name = "GFX_GER_jet_fighter2_medium"
+		# texturefile = "gfx/interface/technologies/GER_jet_fighter2.dds"
+	# }
 	SpriteType = {
 		name = "GFX_GER_jet_fighter3_medium"
 		texturefile = "gfx/interface/technologies/GER_jet_fighter3.dds"
@@ -578,7 +578,12 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_GER_mechanised_infantry6_medium"
 		texturefile = "gfx/interface/technologies/GER_mechanized_equipment_6.dds"
-	}			
+	}		
+	
+	SpriteType = {
+		name = "GFX_GER_mechanised_infantry7_medium"
+		texturefile = "gfx/interface/technologies/GER_mechanized_equipment_7.dds"
+	}				
 	
 	SpriteType = {
 		name = "GFX_GER_infantry_equipment_4_medium"
@@ -663,10 +668,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/GER_armored_car_equipment_4.dds"
 	}
 
-	# SpriteType = {
-		# name = "GFX_GER_armored_car5_medium"
-		# texturefile = "gfx/interface/technologies/GER_armored_car_equipment_5.dds"
-	# }
+	SpriteType = {
+		name = "GFX_GER_armored_car5_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_car_equipment_5.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_GER_armored_car6_medium"
@@ -674,18 +679,18 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_GER_armored_car_at_upgrade_medium"
+		name = "GFX_GER_armored_car_at_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/GER_armored_car_at_equipment.dds"
 	}
 	
-	# SpriteType = {
-		# name = "GFX_GER_armored_car_at_upgrade_1_medium"
-		# texturefile = "gfx/interface/technologies/GER_armored_car_at_equipment_1.dds"
-	# }
-
 	SpriteType = {
 		name = "GFX_GER_armored_car_at_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/GER_armored_car_at_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_armored_car_at_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_car_at_equipment_3.dds"
 	}
 		
 	SpriteType = {
@@ -981,4 +986,150 @@ spriteTypes = {
 		# name = "GFX_GER_cargo_helicopter_equipment_1_medium"
 		# texturefile = "gfx/interface/technologies/GER_cargo_helicopter_1.dds"
 	# }	
-}
+			
+		
+	# SpriteType = {
+		# name = "GFX_GER_improved_rocket_engines_medium"
+		# texturefile = "gfx/interface/technologies/GER_guided_missile_2.dds"
+	# }		
+		
+	SpriteType = {
+		name = "GFX_GER_advanced_rocket_engines_medium"
+		texturefile = "gfx/interface/technologies/GER_guided_missile_3.dds"
+	}	
+		
+	SpriteType = {
+		name = "GFX_GER_rocket_engines_4_medium"
+		texturefile = "gfx/interface/technologies/GER_guided_missile_4.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_GER_rocket_engines_5_medium"
+		texturefile = "gfx/interface/technologies/GER_guided_missile_5.dds"
+	}		
+		
+	SpriteType = {
+		name = "GFX_GER_rocket_engines_6_medium"
+		texturefile = "gfx/interface/technologies/GER_guided_missile_6.dds"
+	}	
+		
+	SpriteType = {
+		name = "GFX_GER_amphibious_mechanized_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/ger_amphibious_mech_3.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_GER_cargo_helicopter_1_medium"
+		texturefile = "gfx/interface/technologies/GER_cargo_helicopter_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_scout_helicopter_1_medium"
+		texturefile = "gfx/interface/technologies/GER_scout_helicopter_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_scout_helicopter_2_medium"
+		texturefile = "gfx/interface/technologies/GER_scout_helicopter_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_scout_helicopter_3_medium"
+		texturefile = "gfx/interface/technologies/GER_scout_helicopter_3.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_scout_helicopter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/GER_scout_helicopter_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_scout_helicopter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/GER_scout_helicopter_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_scout_helicopter_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/GER_scout_helicopter_3.dds"
+	}
+		
+	# SpriteType = {
+		# name = "GFX_GER_modern_large_airframe_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/GER/large/strat_45/ar555.dds"
+	# }	
+	
+	SpriteType = {
+		name = "GFX_GER_modern_large_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/large/large_47/hoxviii.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_modern_large_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/large/large_50/juef132.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_modern_large_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/large/large_55/he200.dds"
+	}	
+	 
+	SpriteType = {
+		name = "GFX_GER_modern_large_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/large/large_60/silbervogel.dds"
+	}	 
+					
+	# SpriteType = {
+		# name = "GFX_GER_modern_medium_airframe_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/GER/medium/bomber_45/b-43.dds"
+	# }		
+					
+	SpriteType = {
+		name = "GFX_GER_modern_medium_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/medium/bomber_47/he343.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_modern_medium_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/medium/bomber_50/ju287.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_modern_medium_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/medium/bomber_55/ar560.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_modern_medium_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/medium/bomber_60/sanger2.dds"
+	}	
+			 
+	# SpriteType = {
+		# name = "GFX_GER_modern_small_airframe_medium"
+		# texturefile = "gfx/interface/equipmentdesigner/planes/GER/light/fighter_45/p-80.dds"
+	# }	
+			 
+	SpriteType = {
+		name = "GFX_GER_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/light/fighter_47/ta183.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_modern_small_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/light/fighter_50/me1101.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_modern_small_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/light/fighter_55/ha300.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_GER_modern_small_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/GER/light/fighter_60/he31.dds"
+	}	
+		
+	SpriteType = {
+		name = "GFX_GER_ifv_infantry_medium"
+		texturefile = "gfx/interface/technologies/GER_ifv_1.dds"
+	}
+}  

@@ -22,7 +22,7 @@ spriteTypes = {
 	}	
 	SpriteType = {
 		name = "GFX_ENG_cv_jet_CAS1_medium"
-		texturefile = "gfx/interface/technologies/ENG_cv_jet_CAS1.dds"
+		texturefile = "gfx/interface/technologies/ENG_jet_CAS1.dds"
 	}	
 	
 	SpriteType = {
@@ -119,15 +119,15 @@ spriteTypes = {
 	}
 		
 	SpriteType = {
-		name = "GFX_ENG_cv_jet_fighter2_medium"
+		name = "GFX_ENG_cv_jet_fighter_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/ENG_cv_jet_fighter2.dds"
 	}
 	SpriteType = {
-		name = "GFX_ENG_cv_jet_fighter3_medium"
+		name = "GFX_ENG_cv_jet_fighter_equipment_3_medium"
 		texturefile = "gfx/interface/technologies/ENG_cv_jet_fighter3.dds"
 	}
 	SpriteType = {
-		name = "GFX_ENG_cv_jet_fighter4_medium"
+		name = "GFX_ENG_cv_jet_fighter_equipment_4_medium"
 		texturefile = "gfx/interface/technologies/ENG_cv_jet_fighter4.dds"
 	}		
 	SpriteType = {
@@ -216,7 +216,7 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_ENG_cv_nav_bomber_equipment_3_medium"
-		texturefile = "gfx/interface/technologies/ENG_cv_naval_bomber3.dds"
+		texturefile = "gfx/interface/technologies/ENG_naval_bomber3_cv.dds"
 	}
 	
 	SpriteType = {
@@ -575,6 +575,11 @@ spriteTypes = {
 	}	
 	
 	SpriteType = {
+		name = "GFX_ENG_heavy_tank6_medium"
+		texturefile = "gfx/interface/technologies/ENG_heavy_tank6.dds"
+	}	
+	
+	SpriteType = {
 		name = "GFX_ENG_light_tank_3_medium"
 		texturefile = "gfx/interface/technologies/ENG_light_tank_3.dds"
 	}	
@@ -680,10 +685,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/ENG_armored_car_equipment_6.dds"
 	}
 	
-	SpriteType = {
-		name = "GFX_ENG_armored_car_at_upgrade_medium"
-		texturefile = "gfx/interface/technologies/ENG_armored_car_at_equipment.dds"
-	}
+	# SpriteType = {
+		# name = "GFX_ENG_armored_car_at_upgrade_medium"
+		# texturefile = "gfx/interface/technologies/ENG_armored_car_at_equipment.dds"
+	# }
 	
 	SpriteType = {
 		name = "GFX_ENG_armored_car_at_equipment_1_medium"
@@ -693,6 +698,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ENG_armored_car_at_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/ENG_armored_car_at_equipment_2.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_ENG_armored_car_at_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ENG_armored_car_at_equipment_3.dds"
 	}	
 	
 	SpriteType = {
@@ -839,5 +849,95 @@ spriteTypes = {
 		name = "GFX_ENG_cargo_helicopter_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/ENG_cargo_helicopter_1.dds"
 	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_manpad_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ENG_manpad_equipment_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_infantry_aa_medium"
+		texturefile = "gfx/interface/technologies/ENG_manpad_equipment_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_large_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/large/large_45/sperrin.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_large_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/large/large_47/valiant.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_large_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/large/large_50/vulcan.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_large_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/large/large_55/victor.dds"
+	}	
+	 
+	SpriteType = {
+		name = "GFX_ENG_modern_large_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/large/large_60/concord.dds"
+	}	 
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_medium_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/medium/medium_45/jetmosquito.dds"
+	}		
+					
+	SpriteType = {
+		name = "GFX_ENG_modern_medium_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/medium/medium_47/aw56.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_medium_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/medium/medium_50/canberra.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_medium_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/medium/medium_55/hawkerp1129.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_medium_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/medium/medium_60/tsr2.dds"
+	}	
+			 
+	SpriteType = {
+		name = "GFX_ENG_modern_small_airframe_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/light/light_45/meteor.dds"
+	}	
+			 
+	SpriteType = {
+		name = "GFX_ENG_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/light/light_47/venom.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_small_airframe_3_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/light/light_50/javelin.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_small_airframe_4_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/light/light_55/hunter.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_ENG_modern_small_airframe_5_medium"
+		texturefile = "gfx/interface/equipmentdesigner/planes/ENG/light/light_60/lightning.dds"
+	}	
+		
+	SpriteType = {
+		name = "GFX_ENG_ifv_infantry_medium"
+		texturefile = "gfx/interface/technologies/ENG_ifv_1.dds"
+	}
 }
 

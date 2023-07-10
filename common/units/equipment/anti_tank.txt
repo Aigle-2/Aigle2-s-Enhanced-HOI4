@@ -115,44 +115,45 @@ equipments = {
 		
 		build_cost_ic = 8
 		resources = {
-			tungsten = 2
-			steel = 3
+			aluminium = 1
+			tungsten = 1
+			steel = 0
 		}
 	}
 	
-	anti_tank_equipment_6 = {
-		year = 1943
+	# anti_tank_equipment_6 = {
+		# year = 1943
 
-		archetype = anti_tank_equipment
-		parent = anti_tank_equipment_5
-		priority = 90
-		visual_level = 2
+		# archetype = anti_tank_equipment
+		# parent = anti_tank_equipment_5
+		# priority = 90
+		# visual_level = 2
 		
-		hard_attack = 54
-		ap_attack = 174
+		# hard_attack = 54
+		# ap_attack = 174
 		
-		build_cost_ic = 9
-		resources = {
-			tungsten = 2
-			steel = 3
-		}
-	}
+		# build_cost_ic = 9
+		# resources = {
+			# tungsten = 2
+			# steel = 3
+		# }
+	# }
 	
-	anti_tank_equipment_7 = {
-		year = 1943
+	# anti_tank_equipment_7 = {
+		# year = 1943
 
-		archetype = anti_tank_equipment
-		parent = anti_tank_equipment_6
-		priority = 90
-		visual_level = 2
+		# archetype = anti_tank_equipment
+		# parent = anti_tank_equipment_6
+		# priority = 90
+		# visual_level = 2
 		
-		hard_attack = 62
-		ap_attack = 185
+		# hard_attack = 62
+		# ap_attack = 185
 		
-		build_cost_ic = 9
-		resources = {
-			tungsten = 2
-			steel = 3
-		}
-	}
+		# build_cost_ic = 9
+		# resources = {
+			# tungsten = 2
+			# steel = 3
+		# }
+	# }
 }
