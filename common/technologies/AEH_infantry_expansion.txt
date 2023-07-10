@@ -1,5 +1,6 @@
 ############# New content ###########
 technologies = {
+
 	semi_automatic_rifle = {
 		research_cost = 2
 		start_year = 1939
@@ -9,6 +10,10 @@ technologies = {
 				x = 2
 				y = 6
 			}
+		}
+
+		dependencies = {
+			infantry_weapons1 = 1
 		}
 		categories = {
 			infantry_weapons
@@ -21,10 +26,12 @@ technologies = {
 			modifier = {
 				add = 5
 				tag = FRA
+				date > 1941.1.1
 			}
 		}
 	}
 }
+
 # {
 # 	infantry_at3 = {
 # 		category_all_infantry = {

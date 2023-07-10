@@ -37,3 +37,9 @@ AEH_has_frontline = {
 		}
 	}
 }
+
+DEBUGTR = {
+	ROOT = {
+		has_tech = infantry_weapons1
+	}
+}

@@ -1199,20 +1199,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/SOV_cargo_helicopter_1.dds"
 	}		
 		
-	SpriteType = {
-		name = "GFX_SOV_rocket_engines_medium"
-		texturefile = "gfx/interface/technologies/SOV_guided_missile_1.dds"
-	}		
+	# SpriteType = {
+	# 	name = "GFX_SOV_rocket_engines_medium"
+	# 	texturefile = "gfx/interface/technologies/SOV_guided_missile_1.dds"
+	# }		
 		
-	SpriteType = {
-		name = "GFX_SOV_improved_rocket_engines_medium"
-		texturefile = "gfx/interface/technologies/SOV_guided_missile_2.dds"
-	}		
+	# SpriteType = {
+	# 	name = "GFX_SOV_improved_rocket_engines_medium"
+	# 	texturefile = "gfx/interface/technologies/SOV_guided_missile_2.dds"
+	# }		
 		
-	SpriteType = {
-		name = "GFX_SOV_advanced_rocket_engines_medium"
-		texturefile = "gfx/interface/technologies/SOV_guided_missile_3.dds"
-	}	
+	# SpriteType = {
+	# 	name = "GFX_SOV_advanced_rocket_engines_medium"
+	# 	texturefile = "gfx/interface/technologies/SOV_guided_missile_3.dds"
+	# }	
 		
 	SpriteType = {
 		name = "GFX_SOV_rocket_engines_4_medium"

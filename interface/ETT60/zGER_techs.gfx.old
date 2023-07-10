@@ -982,21 +982,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/GER_utility_helicopter_2.dds"
 	}	
 	
-	# SpriteType = {
-		# name = "GFX_GER_cargo_helicopter_equipment_1_medium"
-		# texturefile = "gfx/interface/technologies/GER_cargo_helicopter_1.dds"
-	# }	
+	SpriteType = {
+		name = "GFX_GER_cargo_helicopter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/GER_cargo_helicopter_1.dds"
+	}	
 			
 		
 	# SpriteType = {
-		# name = "GFX_GER_improved_rocket_engines_medium"
-		# texturefile = "gfx/interface/technologies/GER_guided_missile_2.dds"
+	# 	name = "GFX_GER_improved_rocket_engines_medium"
+	# 	texturefile = "gfx/interface/technologies/GER_guided_missile_2.dds"
 	# }		
 		
-	SpriteType = {
-		name = "GFX_GER_advanced_rocket_engines_medium"
-		texturefile = "gfx/interface/technologies/GER_guided_missile_3.dds"
-	}	
+	# SpriteType = {
+	# 	name = "GFX_GER_advanced_rocket_engines_medium"
+	# 	texturefile = "gfx/interface/technologies/GER_guided_missile_3.dds"
+	# }	
 		
 	SpriteType = {
 		name = "GFX_GER_rocket_engines_4_medium"

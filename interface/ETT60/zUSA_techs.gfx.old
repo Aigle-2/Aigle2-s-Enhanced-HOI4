@@ -1166,20 +1166,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/USA_theater_missile_equipment_2.dds"
 	}		
 		
-	SpriteType = {
-		name = "GFX_USA_rocket_engines_medium"
-		texturefile = "gfx/interface/technologies/USA_guided_missile_1.dds"
-	}		
+	# SpriteType = {
+	# 	name = "GFX_USA_rocket_engines_medium"
+	# 	texturefile = "gfx/interface/technologies/USA_guided_missile_1.dds"
+	# }		
 		
-	SpriteType = {
-		name = "GFX_USA_improved_rocket_engines_medium"
-		texturefile = "gfx/interface/technologies/USA_guided_missile_2.dds"
-	}		
+	# SpriteType = {
+	# 	name = "GFX_USA_improved_rocket_engines_medium"
+	# 	texturefile = "gfx/interface/technologies/USA_guided_missile_2.dds"
+	# }		
 		
-	SpriteType = {
-		name = "GFX_USA_advanced_rocket_engines_medium"
-		texturefile = "gfx/interface/technologies/USA_guided_missile_3.dds"
-	}	
+	# SpriteType = {
+	# 	name = "GFX_USA_advanced_rocket_engines_medium"
+	# 	texturefile = "gfx/interface/technologies/USA_guided_missile_3.dds"
+	# }	
 		
 	SpriteType = {
 		name = "GFX_USA_rocket_engines_4_medium"
