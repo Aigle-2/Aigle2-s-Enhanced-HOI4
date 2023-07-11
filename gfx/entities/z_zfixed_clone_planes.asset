@@ -1,0 +1,2840 @@
+########
+#PLANES#
+########
+
+### Clone entity template ###
+#entity = { 
+#	clone = ""
+#	name = ""
+#}
+
+#Since all planes default to the small/medium/heavy entity, we just need to specify the airframes with unique models (I think)
+
+
+# ----------------------------------------- MAJORS ----------------------------------------- #
+###USA###
+entity = { 
+	clone = "USA_light_plane_8_entity" #P40 Warhawk
+	name = "USA_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "USA_light_plane_8_entity" #P40 Warhawk
+		name = "USA_small_plane_cas_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "USA_medium_plane_1_entity" #PBY Catalina
+	name = "USA_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "USA_light_plane_4_entity" #F4F Wildcat
+	name = "USA_cv_small_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "USA_light_plane_7_entity" #F6F Hellcat
+	name = "USA_cv_small_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "USA_light_plane_7_entity" #F6F Hellcat
+		name = "USA_cv_small_plane_cas_airframe_3_entity"
+	}
+
+	entity = { 
+		clone = "USA_light_plane_7_entity" #F6F Hellcat
+		name = "USA_cv_small_plane_naval_bomber_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "USA_light_plane_5_entity" #SBD Dauntless
+	name = "USA_cv_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "USA_light_plane_6_entity" #TBF Avenger
+	name = "USA_cv_small_plane_naval_bomber_airframe_2_entity"
+}
+
+entity = { 
+	clone = "USA_medium_plane_2_entity" #XB-28 Dragon
+	name = "USA_medium_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "USA_light_plane_2_entity" #P38 Lightning
+	name = "USA_medium_plane_fighter_airframe_1_entity"
+}
+
+entity = { 
+	clone = "USA_light_plane_1_entity" #P47 Thunderbolt
+	name = "USA_medium_plane_fighter_airframe_2_entity"
+}
+
+entity = { 
+	clone = "USA_medium_plane_3_entity" #XP-58 Chain Lightning (I'm not sure about this one, they look similar)
+	name = "USA_medium_plane_fighter_airframe_3_entity"
+}
+
+entity = { 
+	clone = "USA_scout_plane_entity" #default - P51 Mustang
+	name = "USA_medium_plane_scout_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "USA_scout_plane_entity" #default - P51 Mustang
+	name = "USA_medium_plane_scout_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "USA_scout_plane_entity" #default - P51 Mustang
+	name = "USA_medium_plane_scout_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "USA_heavy_plane_2_entity" #B-24 Liberator
+	name = "USA_large_plane_airframe_2_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "USA_heavy_plane_2_entity" #B-24 Liberator
+		name = "USA_large_plane_maritime_patrol_plane_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "USA_heavy_plane_3_entity" #B-29 Superfortress
+	name = "USA_large_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "USA_heavy_plane_3_entity" #B-29 Superfortress
+		name = "USA_large_plane_maritime_patrol_plane_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "USA_jet_plane_1_entity" #Lockheed P80
+	name = "USA_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "USA_jet_plane_1_entity" #Lockheed P80
+		name = "USA_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "USA_jet_plane_1_entity" #Lockheed P80
+		name = "USA_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "USA_jet_plane_1_entity" #Lockheed P80
+	name = "USA_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "USA_jet_plane_1_entity" #Lockheed P80
+		name = "USA_cv_small_plane_cas_airframe_4_entity"
+	}
+	entity = { 
+		clone = "USA_jet_plane_1_entity" #Lockheed P80
+		name = "USA_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "USA_jet_plane_1_entity" #Lockheed P80
+	name = "USA_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = {
+		clone = "USA_jet_plane_1_entity" #Lockheed P80
+		name = "USA_medium_plane_fighter_airframe_4_entity"
+	}
+
+	entity = {
+		clone = "USA_jet_plane_1_entity" #Lockheed P80
+		name = "USA_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "USA_jet_plane_1_entity" #Lockheed P80
+	name = "USA_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "USA_jet_plane_1_entity" #Lockheed P80
+		name = "USA_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+
+
+###ENG###
+entity = { 
+	clone = "RAJ_fighter_equipment_0_entity" #Hawker Fury
+	name = "ENG_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "RAJ_fighter_equipment_0_entity" #Hawker Fury
+		name = "ENG_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "RAJ_fighter_equipment_0_entity" #Hawker Fury
+		name = "ENG_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "RAJ_fighter_equipment_0_entity" #Hawker Fury
+	name = "ENG_cv_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "RAJ_fighter_equipment_0_entity" #Hawker Fury
+		name = "ENG_cv_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "RAJ_fighter_equipment_0_entity" #Hawker Fury
+		name = "ENG_cv_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "ENG_light_plane_1_entity" #Hurricane
+	name = "ENG_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ENG_light_plane_1_entity" #Hurricane
+		name = "ENG_small_plane_cas_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "ENG_light_plane_3_entity" #Tempest
+	name = "ENG_small_plane_cas_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ENG_light_plane_2_entity" #Swordfish
+	name = "ENG_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ENG_light_plane_4_entity" #Not idea waht this plane is
+	name = "ENG_small_plane_naval_bomber_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ENG_light_plane_1_entity" #Hurricane
+	name = "ENG_cv_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ENG_light_plane_1_entity" #Hurricane
+		name = "ENG_cv_small_plane_cas_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "ENG_light_plane_2_entity" #Swordfish
+	name = "ENG_cv_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ENG_medium_plane_2_entity" #Beaufighter
+	name = "ENG_medium_plane_fighter_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ENG_medium_plane_3_entity" #Mosquito
+	name = "ENG_medium_plane_fighter_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ENG_scout_plane_entity" #Spitfire
+	name = "ENG_medium_plane_scout_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ENG_scout_plane_entity" #Spitfire
+	name = "ENG_medium_plane_scout_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ENG_scout_plane_entity" #Spitfire
+	name = "ENG_medium_plane_scout_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ENG_heavy_plane_2_entity" #Short Stirling
+	name = "ENG_large_plane_airframe_2_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ENG_heavy_plane_2_entity" #Short Stirling
+		name = "ENG_large_plane_maritime_patrol_plane_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "ENG_heavy_plane_1_entity" #Short Sunderland
+	name = "ENG_large_plane_maritime_patrol_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ENG_jet_plane_entity" #Meteor
+	name = "ENG_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = {
+		clone = "ENG_jet_plane_entity" #Meteor
+		name = "ENG_small_plane_cas_airframe_4_entity"
+	}
+	
+	entity = {
+		clone = "ENG_jet_plane_entity" #Meteor
+		name = "ENG_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "ENG_jet_plane_entity" #Meteor
+	name = "ENG_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ENG_jet_plane_entity" #Meteor
+		name = "ENG_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "ENG_jet_plane_entity" #Meteor
+		name = "ENG_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "ENG_medium_jet_plane_entity" #No fucking idea what this is
+	name = "ENG_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ENG_medium_jet_plane_entity" #No fucking idea what this is
+		name = "ENG_medium_plane_fighter_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "ENG_medium_jet_plane_entity" #No fucking idea what this is
+		name = "ENG_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "ENG_medium_jet_plane_entity" #No fucking idea what this is
+	name = "ENG_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ENG_medium_jet_plane_entity" #No fucking idea what this is
+		name = "ENG_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+
+
+###FRA###
+entity = { 
+	clone = "FRA_medium_plane_1_entity" #MB.200
+	name = "FRA_medium_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "FRA_medium_plane_1_entity" #MB.200
+		name = "FRA_medium_plane_fighter_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "FRA_medium_plane_1_entity" #MB.200
+		name = "FRA_medium_plane_scout_plane_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "FRA_medium_plane_1_entity" #MB.200
+	name = "FRA_large_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "FRA_medium_plane_1_entity" #MB.200
+		name = "FRA_large_plane_maritime_patrol_plane_airframe_0_entity"
+	}
+	
+entity = { 
+	clone = "FRA_light_plane_2_entity" #MS-406
+	name = "FRA_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "FRA_light_plane_2_entity" #MS-406
+		name = "FRA_small_plane_cas_airframe_1_entity"
+	}
+	entity = { 
+		clone = "FRA_light_plane_2_entity" #MS-406
+		name = "FRA_small_plane_naval_bomber_airframe_1_entity"
+	}
+	
+entity = { 
+	clone = "FRA_light_plane_2_entity" #MS-406
+	name = "FRA_cv_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "FRA_light_plane_2_entity" #MS-406
+		name = "FRA_cv_small_plane_cas_airframe_1_entity"
+	}
+
+	entity = { 
+		clone = "FRA_light_plane_2_entity" #MS-406
+		name = "FRA_cv_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "FRA_light_plane_1_entity" #D.520
+	name = "FRA_small_plane_airframe_2_entity"
+}
+	###derived_entities###
+	entity = { 
+		clone = "FRA_light_plane_1_entity" #D.520
+		name = "FRA_small_plane_naval_bomber_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "FRA_light_plane_3_entity" #LN.401
+	name = "FRA_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "FRA_light_plane_1_entity" #D.520
+	name = "FRA_cv_small_plane_airframe_2_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "FRA_light_plane_1_entity" #D.520
+		name = "FRA_cv_small_plane_cas_airframe_2_entity"
+	}
+
+	entity = { 
+		clone = "FRA_light_plane_1_entity" #D.520
+		name = "FRA_cv_small_plane_naval_bomber_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "FRA_heavy_plane_entity" #Amiot 143
+	name = "FRA_medium_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "FRA_medium_plane_2_entity" #Potez 630
+	name = "FRA_medium_plane_fighter_airframe_1_entity"
+}
+
+entity = { 
+	clone = "FRA_scout_plane_entity" #idk
+	name = "FRA_medium_plane_scout_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "FRA_scout_plane_entity" #idk
+	name = "FRA_medium_plane_scout_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "FRA_scout_plane_entity" #idk
+	name = "FRA_medium_plane_scout_plane_airframe_3_entity"
+}
+
+
+###ITA###
+entity = { 
+	clone = "ITA_fighter_equipment_0_entity" #CR.32
+	name = "ITA_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ITA_fighter_equipment_0_entity" #CR.32
+		name = "ITA_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "ITA_fighter_equipment_0_entity" #CR.32
+		name = "ITA_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "ITA_cv_fighter_equipment_0_entity" #Don't know waht this is
+	name = "ITA_cv_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ITA_cv_fighter_equipment_0_entity" #Don't know waht this is
+		name = "ITA_cv_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "ITA_cv_fighter_equipment_0_entity" #Don't know waht this is
+		name = "ITA_cv_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "ITA_interwar_bomber_entity" #Ca.101
+	name = "ITA_medium_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ITA_interwar_bomber_entity" #Ca.101
+		name = "ITA_medium_plane_fighter_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "ITA_interwar_bomber_entity" #Ca.101
+		name = "ITA_medium_plane_scout_plane_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "ITA_interwar_bomber_entity" #Ca.101
+	name = "ITA_large_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ITA_interwar_bomber_entity" #Ca.101
+		name = "ITA_large_plane_maritime_patrol_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "ITA_fighter_equipment_1_entity" #C.200 Saetta
+	name = "ITA_small_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ITA_fighter_equipment_2_entity" #C.202 Folgore
+	name = "ITA_small_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ITA_fighter_equipment_3_entity" #G.55 Centauro
+	name = "ITA_small_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ITA_CAS_equipment_1_entity" #Ba.65
+	name = "ITA_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ITA_CAS_equipment_2_entity" #Ba.88 Lince
+	name = "ITA_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ITA_CAS_equipment_3_entity" #Ba.201
+	name = "ITA_small_plane_cas_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ITA_nav_1_entity" #SM.79 Sparviero
+	name = "ITA_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ITA_nav_2_entity" #SM.84
+	name = "ITA_small_plane_naval_bomber_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ITA_nav_3_entity" #SM.89
+	name = "ITA_small_plane_naval_bomber_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ITA_cv_fighter_equipment_1_entity" #Macchi IC.200
+	name = "ITA_cv_small_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ITA_cv_fighter_equipment_2_entity" #Macchi IC.202
+	name = "ITA_cv_small_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ITA_cv_fighter_equipment_3_entity" #Fiat G.55S Centauro
+	name = "ITA_cv_small_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ITA_cv_CAS_equipment_1_entity" #Breda Ba.65bis
+	name = "ITA_cv_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ITA_cv_CAS_equipment_2_entity" #Reggiane Re.2001G/H Falco II
+	name = "ITA_cv_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ITA_cv_CAS_equipment_3_entity" #Breda Ba.201bis
+	name = "ITA_cv_small_plane_cas_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ITA_cv_nav_bomber_equipment_1_entity" #Savoia-Marchetti SM.79-II Sparviero
+	name = "ITA_cv_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ITA_cv_nav_bomber_equipment_2_entity" #Savoia-Marchetti SM.84-II
+	name = "ITA_cv_small_plane_naval_bomber_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ITA_cv_nav_bomber_equipment_3_entity" #Savoia-Marchetti SM.89-II
+	name = "ITA_cv_small_plane_naval_bomber_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ITA_tac_bomber_1_entity" #BR.20 Cicogna
+	name = "ITA_medium_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ITA_tac_bomber_2_entity" #Z.1007bis Alcione
+	name = "ITA_medium_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ITA_tac_bomber_3_entity" #Z.1018 Leone
+	name = "ITA_medium_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ITA_heavy_fighter_equipment_1_entity" #Ro.57
+	name = "ITA_medium_plane_fighter_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ITA_heavy_fighter_2_entity" #Ro.58
+	name = "ITA_medium_plane_fighter_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ITA_heavy_fighter_3_entity" #SM.92
+	name = "ITA_medium_plane_fighter_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ITA_scout_plane_entity" #No idea
+	name = "ITA_medium_plane_scout_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ITA_scout_plane_entity" #No idea
+	name = "ITA_medium_plane_scout_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "ITA_scout_plane_entity" #No idea
+	name = "ITA_medium_plane_scout_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "ITA_strat_bomber_1_entity" #P.50
+	name = "ITA_large_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ITA_strat_bomber_1_entity" #P.50
+		name = "ITA_large_plane_maritime_patrol_plane_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "ITA_strat_bomber_equipment_2_entity" #P.108
+	name = "ITA_large_plane_airframe_2_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ITA_strat_bomber_equipment_2_entity" #P.108
+		name = "ITA_large_plane_maritime_patrol_plane_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "ITA_strat_bomber_equipment_3_entity" #P.133
+	name = "ITA_large_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ITA_strat_bomber_equipment_3_entity" #P.133
+		name = "ITA_large_plane_maritime_patrol_plane_airframe_3_entity"
+	}
+
+
+###GER###
+entity = { 
+	clone = "GER_fighter_equipment_0_entity" #He 51
+	name = "GER_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_fighter_equipment_0_entity" #He 51
+		name = "GER_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "GER_fighter_equipment_0_entity" #He 51
+		name = "GER_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "GER_fighter_equipment_0_entity" #He 51
+	name = "GER_cv_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_fighter_equipment_0_entity" #He 51
+		name = "GER_cv_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "GER_fighter_equipment_0_entity" #He 51
+		name = "GER_cv_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "GER_tac_bomber_equipment_0_entity" #Dornier Do 23
+	name = "GER_medium_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_tac_bomber_equipment_0_entity" #Dornier Do 23
+		name = "GER_medium_plane_fighter_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "GER_tac_bomber_equipment_0_entity" #Dornier Do 23
+		name = "GER_medium_plane_scout_plane_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "GER_tac_bomber_equipment_0_entity" #Dornier Do 23
+	name = "GER_large_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_tac_bomber_equipment_0_entity" #Dornier Do 23
+		name = "GER_large_plane_maritime_patrol_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "GER_fighter_equipment_1_entity" #Bf 109
+	name = "GER_small_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_fighter_equipment_2_entity" #Fw 190
+	name = "GER_small_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_fighter_equipment_3_entity" #Ta 152
+	name = "GER_small_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "GER_CAS_equipment_1_entity" #Ju 87
+	name = "GER_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_CAS_equipment_2_entity" #Ju 87 G
+	name = "GER_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_CAS_equipment_3_entity" #Ju 187
+	name = "GER_small_plane_cas_airframe_3_entity"
+}
+
+entity = { 
+	clone = "GER_nav_bomber_equipment_1_entity" #Do 22
+	name = "GER_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_nav_bomber_equipment_2_entity" #Ar 196
+	name = "GER_small_plane_naval_bomber_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_nav_bomber_equipment_3_entity" #Fw 300
+	name = "GER_small_plane_naval_bomber_airframe_3_entity"
+}
+
+entity = { 
+	clone = "GER_cv_fighter_equipment_1_entity" #Ar 197
+	name = "GER_cv_small_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_fighter_equipment_2_entity" #Fw 190
+	name = "GER_cv_small_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_cv_fighter_equipment_3_entity" #BV 155
+	name = "GER_cv_small_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_cv_fighter_equipment_3_entity" #BV 155
+		name = "GER_cv_small_plane_cas_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "GER_cv_CAS_equipment_1_entity" #Ju 87 C
+	name = "GER_cv_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_CAS_equipment_2_entity"
+	name = "GER_cv_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_cv_nav_bomber_equipment_1_entity" #Fi 167
+	name = "GER_cv_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_nav_bomber_equipment_2_entity" #Ar 196
+	name = "GER_cv_small_plane_naval_bomber_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_nav_bomber_equipment_3_entity" #Fw 300
+	name = "GER_cv_small_plane_naval_bomber_airframe_3_entity"
+}
+
+entity = { 
+	clone = "GER_tac_bomber_equipment_1_entity" # He 111
+	name = "GER_medium_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_tac_bomber_equipment_2_entity" #Ju 88 A
+	name = "GER_medium_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_tac_bomber_equipment_3_entity" #Ju 188
+	name = "GER_medium_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "GER_heavy_fighter_equipment_1_entity" #Bf 110
+	name = "GER_medium_plane_fighter_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_heavy_fighter_equipment_2_entity" #Me 410
+	name = "GER_medium_plane_fighter_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_heavy_fighter_equipment_3_entity" #Ju 388
+	name = "GER_medium_plane_fighter_airframe_3_entity"
+}
+
+entity = { 
+	clone = "GER_scout_plane_entity"
+	name = "GER_medium_plane_scout_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_scout_plane_entity"
+	name = "GER_medium_plane_scout_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_scout_plane_entity"
+	name = "GER_medium_plane_scout_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "GER_strat_bomber_equipment_1_entity" #Do 19
+	name = "GER_large_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_strat_bomber_equipment_2_entity" #177 Greif
+	name = "GER_large_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_strat_bomber_equipment_3_entity" #Ta 400
+	name = "GER_large_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_strat_bomber_equipment_3_entity" #Ta 400
+		name = "GER_large_plane_maritime_patrol_plane_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "GER_medium_plane_1_entity" #FW 200 Condor
+	name = "GER_large_plane_maritime_patrol_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "GER_medium_plane_2_entity" #Dont know what is this
+	name = "GER_large_plane_maritime_patrol_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "GER_jet_plane_entity"
+	name = "GER_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_jet_plane_entity"
+		name = "GER_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "GER_jet_plane_entity"
+		name = "GER_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "GER_jet_plane_entity"
+	name = "GER_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_jet_plane_entity"
+		name = "GER_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "GER_jet_plane_entity"
+		name = "GER_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "GER_medium_jet_plane_1_entity" #Dont know what this is
+	name = "GER_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_medium_jet_plane_1_entity" #Dont know what this is
+		name = "GER_medium_plane_fighter_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "GER_medium_jet_plane_1_entity" #Dont know what this is
+		name = "GER_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "GER_rocket_plane_1_entity" #Komet
+	name = "GER_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "GER_rocket_plane_1_entity" #Komet
+		name = "GER_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+
+
+###SOV###
+entity = { 
+	clone = "SOV_fighter_equipment_0_entity" #P. I-15
+	name = "SOV_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_fighter_equipment_0_entity" #P. I-15
+		name = "SOV_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "SOV_fighter_equipment_0_entity" #P. I-15
+		name = "SOV_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "SOV_fighter_equipment_0_entity" #P. I-15
+	name = "SOV_cv_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_fighter_equipment_0_entity" #P. I-15
+		name = "SOV_cv_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "SOV_fighter_equipment_0_entity" #P. I-15
+		name = "SOV_cv_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "SOV_tac_bomber_equipment_0_entity" #I. DB-3
+	name = "SOV_medium_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_tac_bomber_equipment_0_entity" #I. DB-3
+		name = "SOV_medium_plane_fighter_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "SOV_tac_bomber_equipment_0_entity" #I. DB-3
+		name = "SOV_medium_plane_scout_plane_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "SOV_tac_bomber_equipment_0_entity" #I. DB-3
+	name = "SOV_large_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_tac_bomber_equipment_0_entity" #I. DB-3
+		name = "SOV_large_plane_maritime_patrol_plane_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "SOV_fighter_equipment_1_entity" #P. I-16
+	name = "SOV_small_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "SOV_fighter_equipment_2_entity" #LaGG - 3
+	name = "SOV_small_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "SOV_fighter_equipment_3_entity" #Yak-3
+	name = "SOV_small_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "SOV_CAS_equipment_1_entity" #LBSh
+	name = "SOV_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "SOV_CAS_equipment_2_entity" #IL-2
+	name = "SOV_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "SOV_CAS_equipment_3_entity" #IL-10
+	name = "SOV_small_plane_cas_airframe_3_entity"
+}
+
+entity = { 
+	clone = "SOV_nav_bomber_equipment_1_entity" #IL-4
+	name = "SOV_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "SOV_nav_bomber_equipment_2_entity" #ANT-62T
+	name = "SOV_small_plane_naval_bomber_airframe_2_entity"
+}
+
+entity = { 
+	clone = "SOV_nav_bomber_equipment_3_entity" #IL-6
+	name = "SOV_small_plane_naval_bomber_airframe_3_entity"
+}
+
+entity = { 
+	clone = "SOV_fighter_equipment_1_entity" #P. I-16
+	name = "SOV_cv_small_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "SOV_fighter_equipment_2_entity" #LaGG - 3
+	name = "SOV_cv_small_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "SOV_fighter_equipment_3_entity" #Yak-3
+	name = "SOV_cv_small_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "SOV_CAS_equipment_1_entity" #LBSh
+	name = "SOV_cv_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "SOV_CAS_equipment_2_entity" #IL-2
+	name = "SOV_cv_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "SOV_CAS_equipment_3_entity" #IL-10
+	name = "SOV_cv_small_plane_cas_airframe_3_entity"
+}
+
+entity = { 
+	clone = "SOV_nav_bomber_equipment_1_entity" #IL-4
+	name = "SOV_cv_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "SOV_nav_bomber_equipment_2_entity" #ANT-62T
+	name = "SOV_cv_small_plane_naval_bomber_airframe_2_entity"
+}
+
+entity = { 
+	clone = "SOV_nav_bomber_equipment_3_entity" #IL-6
+	name = "SOV_cv_small_plane_naval_bomber_airframe_3_entity"
+}
+
+entity = { 
+	clone = "SOV_tac_bomber_equipment_1_entity" #SB-2M
+	name = "SOV_medium_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "SOV_tac_bomber_equipment_2_entity" #Tu-2
+	name = "SOV_medium_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "SOV_tac_bomber_equipment_3_entity" #Tu-8
+	name = "SOV_medium_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "SOV_heavy_fighter_equipment_1_entity" #Pe-2
+	name = "SOV_medium_plane_fighter_airframe_1_entity"
+}
+
+entity = { 
+	clone = "SOV_heavy_fighter_equipment_2_entity" #Pe-2
+	name = "SOV_medium_plane_fighter_airframe_2_entity"
+}
+
+entity = { 
+	clone = "SOV_heavy_fighter_equipment_3_entity" #Tu-2
+	name = "SOV_medium_plane_fighter_airframe_3_entity"
+}
+
+entity = { 
+	clone = "SOV_scout_plane_entity"
+	name = "SOV_medium_plane_scout_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "SOV_scout_plane_entity"
+	name = "SOV_medium_plane_scout_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "SOV_scout_plane_entity"
+	name = "SOV_medium_plane_scout_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "SOV_strat_bomber_equipment_1_entity" #Pe-8
+	name = "SOV_large_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_strat_bomber_equipment_1_entity" #Pe-8
+		name = "SOV_large_plane_maritime_patrol_plane_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "SOV_strat_bomber_equipment_2_entity" #Pe-10
+	name = "SOV_large_plane_airframe_2_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_strat_bomber_equipment_2_entity" #Pe-10
+		name = "SOV_large_plane_maritime_patrol_plane_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "SOV_strat_bomber_equipment_3_entity" #Tu-4
+	name = "SOV_large_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_strat_bomber_equipment_3_entity" #Tu-4
+		name = "SOV_large_plane_maritime_patrol_plane_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "SOV_jet_plane_1_entity"
+	name = "SOV_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_jet_plane_1_entity"
+		name = "SOV_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "SOV_jet_plane_1_entity"
+		name = "SOV_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "SOV_jet_plane_1_entity"
+	name = "SOV_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_jet_plane_1_entity"
+		name = "SOV_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "SOV_jet_plane_1_entity"
+		name = "SOV_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "SOV_jet_plane_1_entity"
+	name = "SOV_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_jet_plane_1_entity"
+		name = "SOV_medium_plane_fighter_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "SOV_jet_plane_1_entity"
+		name = "SOV_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "SOV_jet_plane_1_entity"
+	name = "SOV_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "SOV_jet_plane_1_entity"
+		name = "SOV_large_plane_maritime_patrol_airframe_4_entity"
+	}
+
+
+###JAP###
+entity = { 
+	clone = "JAP_medium_plane_2_entity" #G3M-Rikko
+	name = "JAP_medium_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "JAP_medium_plane_2_entity" #G3M-Rikko
+		name = "JAP_medium_plane_fighter_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "JAP_medium_plane_2_entity" #G3M-Rikko
+		name = "JAP_medium_plane_scout_plane_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "JAP_medium_plane_2_entity" #G3M-Rikko
+	name = "JAP_large_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "JAP_medium_plane_2_entity" #G3M-Rikko
+		name = "JAP_large_plane_maritime_patrol_plane_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "JAP_light_plane_3_entity" #Ki-43 Hayabusa
+	name = "JAP_small_plane_airframe_2_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "JAP_light_plane_3_entity" #Ki-43 Hayabusa
+		name = "JAP_small_plane_cas_airframe_2_entity"
+	}
+
+	entity = { 
+		clone = "JAP_light_plane_3_entity" #Ki-43 Hayabusa
+		name = "JAP_small_plane_naval_bomber_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "JAP_light_plane_6_entity" #Ki-84 Hayate
+	name = "JAP_small_plane_airframe_3_entity"
+}
+	###derived_entities###
+	entity = { 
+		clone = "JAP_light_plane_6_entity" #Ki-84 Hayate
+		name = "JAP_small_plane_cas_airframe_3_entity"
+	}
+
+	entity = { 
+		clone = "JAP_light_plane_6_entity" #Ki-84 Hayate
+		name = "JAP_small_plane_naval_bomber_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "JAP_light_plane_6_entity" #Ki-84 Hayate
+	name = "JAP_cv_small_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "JAP_light_plane_6_entity" #Ki-84 Hayate
+		name = "JAP_cv_small_plane_cas_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "JAP_light_plane_1_entity" #Aichi D3A
+	name = "JAP_cv_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "JAP_light_plane_2_entity" #Nakajima B5N
+	name = "JAP_cv_small_plane_naval_bomber_airframe_1_entity"
+}
+
+entity = { 
+	clone = "JAP_light_plane_2_entity" #Nakajima B5N and B6N look alike
+	name = "JAP_cv_small_plane_naval_bomber_airframe_2_entity"
+}
+
+entity = { 
+	clone = "JAP_light_plane_4_entity" #D4Y Suisei
+	name = "JAP_cv_small_plane_naval_bomber_airframe_3_entity"
+}
+
+entity = { 
+	clone = "JAP_medium_plane_3_entity" #Ki-67 Hiryu
+	name = "JAP_medium_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "JAP_medium_plane_3_entity" #Ki-67 Hiryu
+		name = "JAP_medium_plane_fighter_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "JAP_medium_plane_4_entity" #Ki-45 Toryu
+	name = "JAP_medium_plane_fighter_airframe_2_entity"
+}
+
+entity = { 
+	clone = "JAP_scout_plane_entity"
+	name = "JAP_medium_plane_scout_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "JAP_scout_plane_entity"
+	name = "JAP_medium_plane_scout_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "JAP_scout_plane_entity"
+	name = "JAP_medium_plane_scout_plane_airframe_3_entity"
+}
+
+entity = { 
+	clone = "JAP_heavy_plane_1_entity" #Kawanishi H6K
+	name = "JAP_large_plane_maritime_patrol_plane_airframe_1_entity"
+}
+
+entity = { 
+	clone = "JAP_heavy_plane_2_entity" #Kawanishi H8K
+	name = "JAP_large_plane_maritime_patrol_plane_airframe_2_entity"
+}
+
+entity = { 
+	clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+	name = "JAP_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+		name = "JAP_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+		name = "JAP_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+	name = "JAP_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+		name = "JAP_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+		name = "JAP_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+	name = "JAP_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+		name = "JAP_medium_plane_fighter_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+		name = "JAP_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+	name = "JAP_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "JAP_jet_plane_1_entity" #Nakajima Kikka
+		name = "JAP_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+
+
+
+# ----------------------------------------- DEATH OR DISHONOR ----------------------------------------- #
+###HUN###
+entity = { 
+	clone = "HUN_fighter_equipment_0_entity" #AVIS III
+	name = "HUN_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "HUN_fighter_equipment_0_entity" #AVIS III
+		name = "HUN_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "HUN_fighter_equipment_0_entity" #AVIS III
+		name = "HUN_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "HUN_fighter_equipment_0_entity" #AVIS III
+	name = "HUN_cv_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "HUN_fighter_equipment_0_entity" #AVIS III
+		name = "HUN_cv_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "HUN_fighter_equipment_0_entity" #AVIS III
+		name = "HUN_cv_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "HUN_fighter_equipment_1_entity" #WM-23
+	name = "HUN_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "HUN_fighter_equipment_1_entity" #WM-23
+		name = "HUN_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "HUN_CAS_equipment_1_entity" #WM-16
+	name = "HUN_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "HUN_fighter_equipment_1_entity" #WM-23
+	name = "HUN_cv_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "HUN_fighter_equipment_1_entity" #WM-23
+		name = "HUN_cv_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "HUN_CAS_equipment_1_entity" #WM-16
+	name = "HUN_cv_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "HUN_heavy_fighter_equipment_2_entity" #DDR 210C
+	name = "HUN_medium_plane_fighter_airframe_2_entity"
+}
+
+entity = { 
+	clone = "HUN_heavy_fighter_equipment_3_entity" #RMI-8 X/V
+	name = "HUN_medium_plane_fighter_airframe_3_entity"
+}
+
+
+###YUG###
+entity = { 
+	clone = "YUG_fighter_equipment_0_entity" #BH-33
+	name = "YUG_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "YUG_fighter_equipment_0_entity" #BH-33
+		name = "YUG_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "YUG_fighter_equipment_0_entity" #BH-33
+		name = "YUG_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "YUG_fighter_equipment_0_entity" #BH-33
+	name = "YUG_cv_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "YUG_fighter_equipment_0_entity" #BH-33
+		name = "YUG_cv_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "YUG_fighter_equipment_0_entity" #BH-33
+		name = "YUG_cv_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "YUG_fighter_equipment_1_entity" #IK-2
+	name = "YUG_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "YUG_fighter_equipment_1_entity" #IK-2
+		name = "YUG_small_plane_cas_airframe_1_entity"
+	}
+
+	entity = { 
+		clone = "YUG_fighter_equipment_1_entity" #IK-2
+		name = "YUG_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "YUG_fighter_equipment_3_entity" #S-49
+	name = "YUG_small_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "YUG_fighter_equipment_3_entity" #S-49
+		name = "YUG_small_plane_cas_airframe_3_entity"
+	}
+
+	entity = { 
+		clone = "YUG_fighter_equipment_3_entity" #S-49
+		name = "YUG_small_plane_naval_bomber_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "YUG_fighter_equipment_1_entity" #IK-2
+	name = "YUG_cv_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "YUG_fighter_equipment_1_entity" #IK-2
+		name = "YUG_cv_small_plane_cas_airframe_1_entity"
+	}
+
+	entity = { 
+		clone = "YUG_fighter_equipment_1_entity" #IK-2
+		name = "YUG_cv_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "YUG_fighter_equipment_3_entity" #S-49
+	name = "YUG_cv_small_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "YUG_fighter_equipment_3_entity" #S-49
+		name = "YUG_cv_small_plane_cas_airframe_3_entity"
+	}
+
+	entity = { 
+		clone = "YUG_fighter_equipment_3_entity" #S-49
+		name = "YUG_cv_small_plane_naval_bomber_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "YUG_heavy_fighter_equipment_2_entity" #R-313
+	name = "YUG_medium_plane_fighter_airframe_2_entity"
+}
+
+
+###ROM###
+entity = { 
+	clone = "ROM_fighter_equipment_0_entity" #IAR-12
+	name = "ROM_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ROM_fighter_equipment_0_entity" #IAR-12
+		name = "ROM_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "ROM_fighter_equipment_0_entity" #IAR-12
+		name = "ROM_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "ROM_fighter_equipment_0_entity" #IAR-12
+	name = "ROM_cv_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ROM_fighter_equipment_0_entity" #IAR-12
+		name = "ROM_cv_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "ROM_fighter_equipment_0_entity" #IAR-12
+		name = "ROM_cv_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "ROM_fighter_equipment_1_entity" #IAR-14
+	name = "ROM_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ROM_fighter_equipment_1_entity" #IAR-14
+		name = "ROM_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "ROM_fighter_equipment_3_entity" #Romanian Bf109
+	name = "ROM_small_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ROM_fighter_equipment_3_entity" #Romanian Bf109
+		name = "ROM_small_plane_cas_airframe_3_entity"
+	}
+
+	entity = { 
+		clone = "ROM_fighter_equipment_3_entity" #Romanian Bf109
+		name = "ROM_small_plane_naval_bomber_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "ROM_CAS_equipment_1_entity" #IAR-37
+	name = "ROM_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "ROM_fighter_equipment_1_entity" #IAR-14
+	name = "ROM_cv_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ROM_fighter_equipment_1_entity" #IAR-14
+		name = "ROM_cv_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "ROM_fighter_equipment_3_entity" #Romanian Bf109
+	name = "ROM_cv_small_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "ROM_fighter_equipment_3_entity" #Romanian Bf109
+		name = "ROM_cv_small_plane_cas_airframe_3_entity"
+	}
+
+	entity = { 
+		clone = "ROM_fighter_equipment_3_entity" #Romanian Bf109
+		name = "ROM_cv_small_plane_naval_bomber_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "ROM_CAS_equipment_1_entity" #IAR-37
+	name = "ROM_cv_small_plane_cas_airframe_1_entity"
+}
+
+
+
+# ----------------------------------------- POLAND UAR ----------------------------------------- #
+###POL###
+entity = { 
+	clone = "POL_fighter_equipment_0_entity" #PZL.11
+	name = "POL_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_fighter_equipment_0_entity" #PZL.11
+		name = "POL_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "POL_fighter_equipment_0_entity" #PZL.11
+		name = "POL_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "POL_fighter_equipment_0_entity" #PZL.11
+	name = "POL_cv_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_fighter_equipment_0_entity" #PZL.11
+		name = "POL_cv_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "POL_fighter_equipment_0_entity" #PZL.11
+		name = "POL_cv_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "POL_tac_bomber_equipment_0_entity" #LWS-6
+	name = "POL_medium_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_tac_bomber_equipment_0_entity" #LWS-6
+		name = "POL_medium_plane_fighter_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "POL_tac_bomber_equipment_0_entity" #LWS-6
+		name = "POL_medium_plane_scout_plane_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "POL_tac_bomber_equipment_0_entity" #LWS-6
+	name = "POL_large_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_tac_bomber_equipment_0_entity" #LWS-6
+		name = "POL_large_plane_maritime_patrol_airframe_0_entity"
+	}
+
+entity = { 
+	clone = "POL_fighter_equipment_1_entity" #PZL.50
+	name = "POL_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_fighter_equipment_1_entity" #PZL.50
+		name = "POL_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "POL_fighter_equipment_2_entity" #PZL.56
+	name = "POL_small_plane_airframe_2_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_fighter_equipment_2_entity" #PZL.56
+		name = "POL_small_plane_naval_bomber_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "POL_fighter_equipment_3_entity" #PZL.62
+	name = "POL_small_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_fighter_equipment_3_entity" #PZL.62
+		name = "POL_small_plane_cas_airframe_3_entity"
+	}
+
+	entity = { 
+		clone = "POL_fighter_equipment_3_entity" #PZL.62
+		name = "POL_small_plane_naval_bomber_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "POL_CAS_equipment_1_entity" #PZL.23
+	name = "POL_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "POL_CAS_equipment_2_entity" #PZL.46
+	name = "POL_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "POL_fighter_equipment_1_entity" #PZL.50
+	name = "POL_cv_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_fighter_equipment_1_entity" #PZL.50
+		name = "POL_cv_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "POL_fighter_equipment_2_entity" #PZL.56
+	name = "POL_cv_small_plane_airframe_2_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_fighter_equipment_2_entity" #PZL.56
+		name = "POL_cv_small_plane_naval_bomber_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "POL_fighter_equipment_3_entity" #PZL.62
+	name = "POL_cv_small_plane_airframe_3_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_fighter_equipment_3_entity" #PZL.62
+		name = "POL_cv_small_plane_cas_airframe_3_entity"
+	}
+
+	entity = { 
+		clone = "POL_fighter_equipment_3_entity" #PZL.62
+		name = "POL_cv_small_plane_naval_bomber_airframe_3_entity"
+	}
+
+entity = { 
+	clone = "POL_CAS_equipment_1_entity" #PZL.23
+	name = "POL_cv_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "POL_CAS_equipment_2_entity" #PZL.46
+	name = "POL_cv_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "POL_tac_bomber_equipment_1_entity" #PZL.37
+	name = "POL_medium_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_tac_bomber_equipment_1_entity" #PZL.37
+		name = "POL_medium_plane_scout_plane_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "POL_tac_bomber_equipment_2_entity" #PZL.49
+	name = "POL_medium_plane_airframe_2_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "POL_tac_bomber_equipment_2_entity" #PZL.49
+		name = "POL_medium_plane_scout_plane_airframe_2_entity"
+	}
+
+entity = { 
+	clone = "POL_heavy_fighter_equipment_1_entity" #PZL.38
+	name = "POL_medium_plane_fighter_airframe_1_entity"
+}
+
+entity = { 
+	clone = "POL_heavy_fighter_equipment_1_entity" #PZL.38
+	name = "POL_medium_plane_fighter_airframe_2_entity"
+}
+
+
+
+# ----------------------------------------- TOGHETER FOR VICTORY ----------------------------------------- #
+###AST###
+entity = { 
+	clone = "AST_fighter_equipment_1_entity" #CA-12
+	name = "AST_small_plane_airframe_1_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "AST_fighter_equipment_1_entity" #CA-12
+		name = "AST_small_plane_naval_bomber_airframe_1_entity"
+	}
+
+entity = { 
+	clone = "AST_CAS_equipment_entity"
+	name = "AST_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "AST_CAS_equipment_entity"
+	name = "AST_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "AST_CAS_equipment_entity"
+	name = "AST_small_plane_cas_airframe_3_entity"
+}
+
+entity = { 
+	clone = "AST_CAS_equipment_entity"
+	name = "AST_cv_small_plane_cas_airframe_1_entity"
+}
+
+entity = { 
+	clone = "AST_CAS_equipment_entity"
+	name = "AST_cv_small_plane_cas_airframe_2_entity"
+}
+
+entity = { 
+	clone = "AST_CAS_equipment_entity"
+	name = "AST_cv_small_plane_cas_airframe_3_entity"
+}
+
+###RAJ###
+entity = { 
+	clone = "RAJ_fighter_equipment_0_entity" #Hawker something idk
+	name = "RAJ_small_plane_airframe_0_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "RAJ_fighter_equipment_0_entity" #Hawker something idk
+		name = "RAJ_small_plane_cas_airframe_0_entity"
+	}
+
+	entity = { 
+		clone = "RAJ_fighter_equipment_0_entity" #Hawker something idk
+		name = "RAJ_small_plane_naval_bomber_airframe_0_entity"
+	}
+
+
+# ----------------------------------------- DEFAULT ----------------------------------------- #
+entity = { 
+	clone = "jet_plane_entity"
+	name = "small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+# ----------------------------------------- DEFAULT JET FIX ----------------------------------------- #
+#every nation with its own light/medium/heavy entity needs to be given its own jet entity manually, because paradox are fucking pieces of shit swedish cunts
+
+# ----------------------------------------- WTT ----------------------------------------- #
+
+###CHI
+#Only ligh plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "CHI_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CHI_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CHI_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "CHI_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CHI_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CHI_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+	
+###GXC
+#Only ligh plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "GXC_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GXC_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GXC_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "GXC_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GXC_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GXC_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+	
+###YUN
+#Only ligh plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "YUN_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUN_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUN_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "YUN_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUN_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUN_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+	
+###SHX
+#Only ligh plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "SHX_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SHX_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SHX_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "SHX_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SHX_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SHX_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+	
+###PRC
+#Only ligh plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "PRC_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "PRC_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "PRC_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "PRC_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "PRC_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "PRC_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+	
+###XSM
+#Only ligh plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "XSM_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "XSM_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "XSM_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "XSM_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "XSM_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "XSM_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+# ----------------------------------------- DOD ----------------------------------------- #
+
+###ROM
+#Only light and medium plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ROM_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ROM_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ROM_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ROM_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ROM_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ROM_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ROM_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ROM_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ROM_medium_plane_scout_plane_airframe_4_entity"
+	}
+	
+###HUN
+#Only light and medium plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "HUN_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HUN_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HUN_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "HUN_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HUN_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HUN_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "HUN_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HUN_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HUN_medium_plane_scout_plane_airframe_4_entity"
+	}
+	
+###YUG
+#Only light and medium plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "YUG_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUG_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUG_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "YUG_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUG_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUG_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "YUG_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUG_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "YUG_medium_plane_scout_plane_airframe_4_entity"
+	}
+	
+###CZE
+#Only light and medium plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "CZE_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CZE_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CZE_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "CZE_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CZE_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CZE_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "CZE_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CZE_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "CZE_medium_plane_scout_plane_airframe_4_entity"
+	}
+	
+# ----------------------------------------- BFTB ----------------------------------------- #
+	
+###GRE
+entity = { 
+	clone = "jet_plane_entity"
+	name = "GRE_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GRE_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GRE_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "GRE_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GRE_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GRE_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "GRE_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GRE_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GRE_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "GRE_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "GRE_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+###BUL
+entity = { 
+	clone = "jet_plane_entity"
+	name = "BUL_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "BUL_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "BUL_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "BUL_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "BUL_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "BUL_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "BUL_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "BUL_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "BUL_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "BUL_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "BUL_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+###TUR
+entity = { 
+	clone = "jet_plane_entity"
+	name = "TUR_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "TUR_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "TUR_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "TUR_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "TUR_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "TUR_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "TUR_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "TUR_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "TUR_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "TUR_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "TUR_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+# ----------------------------------------- MTG ----------------------------------------- #
+	
+###HOL
+entity = { 
+	clone = "jet_plane_entity"
+	name = "HOL_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HOL_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HOL_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "HOL_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HOL_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HOL_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "HOL_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HOL_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HOL_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "HOL_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "HOL_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+###MEX
+entity = { 
+	clone = "jet_plane_entity"
+	name = "MEX_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "MEX_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "MEX_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "MEX_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "MEX_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "MEX_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "MEX_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "MEX_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "MEX_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "MEX_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "MEX_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+# ----------------------------------------- LAR ----------------------------------------- #
+	
+###SPR
+#Only ligh plane
+entity = { 
+	clone = "jet_plane_entity"
+	name = "SPR_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SPR_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SPR_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "SPR_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SPR_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SPR_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+	
+###FRA
+entity = { 
+	clone = "jet_plane_entity"
+	name = "FRA_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "FRA_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "FRA_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "FRA_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "FRA_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "FRA_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "FRA_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "FRA_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "FRA_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "FRA_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "FRA_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+# ----------------------------------------- BBA ----------------------------------------- #
+	
+###SWI
+entity = { 
+	clone = "jet_plane_entity"
+	name = "SWI_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SWI_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SWI_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "SWI_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SWI_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SWI_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "SWI_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SWI_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SWI_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "SWI_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "SWI_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+###ETH
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ETH_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ETH_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ETH_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ETH_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ETH_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ETH_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ETH_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ETH_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ETH_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ETH_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ETH_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+# ----------------------------------------- ### ----------------------------------------- #

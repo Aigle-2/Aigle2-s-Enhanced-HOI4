@@ -1,0 +1,74 @@
+########
+#PLANES#
+########
+
+### Clone entity template ###
+#entity = { 
+#	clone = ""
+#	name = ""
+#}
+
+#Since all planes default to the small/medium/heavy entity, we just need to specify the airframes with unique models (I think)
+
+# ----------------------------------------- DEFAULT JET FIX ----------------------------------------- #
+#every nation with its own light/medium/heavy entity needs to be given its own jet entity manually, because paradox are fucking pieces of shit swedish cunts
+
+# ----------------------------------------- BBA ----------------------------------------- #
+	
+###ITA
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ITA_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ITA_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ITA_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ITA_cv_small_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ITA_cv_small_plane_cas_airframe_4_entity"
+	}
+
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ITA_cv_small_plane_naval_bomber_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ITA_medium_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ITA_medium_plane_fighter_airframe_4_entity"
+	}
+	
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ITA_medium_plane_scout_plane_airframe_4_entity"
+	}
+
+entity = { 
+	clone = "jet_plane_entity"
+	name = "ITA_large_plane_airframe_4_entity"
+}
+	###derived entities###
+	entity = { 
+		clone = "jet_plane_entity"
+		name = "ITA_large_plane_maritime_patrol_plane_airframe_4_entity"
+	}
+	
+# ----------------------------------------- ### ----------------------------------------- #
