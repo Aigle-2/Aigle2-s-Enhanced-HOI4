@@ -27,6 +27,11 @@ ideas = {
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
 				agency_upgrade_time = 1.0
+
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				research_speed_factor = 0.03			
+				MONTHLY_POPULATION = 0.05
 			}
 			
 			allowed_to_remove = {
@@ -51,6 +56,7 @@ ideas = {
 				consumer_goods_factor = 0.55
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.4
 				conversion_cost_civ_to_mil_factor= 0.4
 				conversion_cost_mil_to_civ_factor = 0.4
 				generate_wargoal_tension = 1.00
@@ -60,6 +66,11 @@ ideas = {
 				max_fuel_factor = -0.35
 				fuel_gain_factor = -0.5
 				agency_upgrade_time = 0.8
+
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				research_speed_factor = 0.03			
+				MONTHLY_POPULATION = 0.05
 			}
 			allowed_to_remove = {
 				OR = {
@@ -79,20 +90,18 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.15
-				stability_factor = 0.05
-				production_speed_arms_factory_factor = -0.3
-				conversion_cost_civ_to_mil_factor = 0.3
-				production_speed_industrial_complex_factor = 0.1
-				research_speed_factor = 0.05
-				
-				MONTHLY_POPULATION = 0.15
-				
 				consumer_goods_factor = 0.45
-
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor= 0.3
 				conversion_cost_mil_to_civ_factor = 0.3
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
+
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				research_speed_factor = 0.03			
+				MONTHLY_POPULATION = 0.05
 			}
 			
 			default = yes
@@ -311,50 +320,61 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.2
+
 				political_power_gain = -0.15
-			
 				stability_weekly = -0.0005
 				war_support_weekly = -0.001
 				production_speed_industrial_complex_factor = -0.3
-				production_speed_arms_factory_factor = 0.2
-				conversion_cost_civ_to_mil_factor = -0.2
-				
-				# conscription_factor = -0.05
-				
-				consumer_goods_factor = 0.20
+				# conscription_factor = -0.05	
 			}
 			
 			cancel_if_invalid = no
-			
+			on_add = {
+				if = {
+					limit = {
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					USA_congress_large_opposition = yes
+				}
+			}
 			ai_will_do = {
-   				factor = 5
+				factor = 3
 
-				modifier = {
-					#High prio on production
-					factor = 20
-					manpower_per_military_factory >  1000
-				}
-				
-				modifier = {	### NOT select this if you have less than 40% STABILITY
-					factor = 0
-					
-					has_stability < 0.4
-				}
-				modifier = {	### NOT select this if you have less than 40% WAR SUPPORT
-					factor = 0
-					
-					has_war_support < 0.4
-				}
-				
-				# modifier = {	### NOT select if you are GER and not completed focus
-				# 	factor = 0
-					
-				# 	tag = GER
-				# 	has_government = fascism
-				# 	NOT = { has_completed_focus = GER_fuel_the_deutsche_militarwirtschaft }
-				# }
-   			}
-		}
+			 modifier = {
+				 #High prio on production
+				 factor = 20
+				 manpower_per_military_factory >  1000
+			 }
+
+			 modifier = {
+				 # If we CAN go for total mobilization and have enough manpower for it, skip war economy, it's only a waste of PP
+				 factor = 0
+
+				 manpower_per_military_factory > 15000
+				 has_war = yes
+				 has_war_support > 0.8
+				 any_enemy_country = {
+					 ic_ratio = {
+						 tag = ROOT
+						 ratio > 0.5
+					 }
+				 }
+			 }
+
+			 modifier = {
+				 add = 1800
+
+				 # revert from closed_economy if we have large allies
+				 has_idea = closed_economy
+				 has_large_ally_not_pick_closed_economy = yes
+			 }
+			}
+	 }
 		
 		tot_economic_mobilisation = {
 
@@ -464,7 +484,6 @@ ideas = {
 						}
 					}
 				}
-				
 				modifier = {	### NOT select this if you have less than 40% STABILITY
 					factor = 0
 					
@@ -487,8 +506,7 @@ ideas = {
 			war_support_weekly = -0.002
 			production_speed_industrial_complex_factor = -0.4
 			production_speed_arms_factory_factor = 0.3
-			conversion_cost_civ_to_mil_factor = -0.3
-			
+			conversion_cost_civ_to_mil_factor= -0.3
 			}
 
 			cancel_if_invalid = no
@@ -722,7 +740,6 @@ ideas = {
 			ai_will_do = {
    				factor = 1
 
-				# portugal and sweden are special tungsten snowflakes
 				modifier = {
 					factor = 0
 					
@@ -862,8 +879,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = -0.25
+				political_power_gain = -0.2
 				min_export = 0
+				#civilian_intel_to_others = 0.0
 			}
 			
 			on_add = {

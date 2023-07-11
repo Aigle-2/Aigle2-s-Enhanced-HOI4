@@ -1,5 +1,7 @@
 #AEH changes :
 
+#new law : AEH_mandatory_army_service
+
 #new technologies : 	
 # support_weapons = 1
 # marines = 1
@@ -191,6 +193,21 @@ if = {
 		armored_car1 = 1
 	}
 }
+add_equipment_to_stockpile = {  #historical stocks : 80% of French rifles in use in 1940 were WW1 left-overs.
+type = infantry_equipment_0
+amount = 100000
+producer = FRA
+}
+add_equipment_to_stockpile = {  #WW1 stocks
+	type = artillery_equipment_1
+	amount = 1000
+	producer = FRA
+}
+add_equipment_to_stockpile = {  #WW1 stocks
+	type = support_equipment_1
+	amount = 2000
+	producer = FRA
+}
 1939.1.1 = {
 
 	add_political_power = 899
@@ -228,21 +245,6 @@ if = {
 	give_guarantee = POL
 	ENG = { add_to_faction = FRA }
 
-	add_equipment_to_stockpile = {  #historical stocks : 80% of French rifles in use in 1940 were WW1 left-overs.
-	type = infantry_equipment_0
-	amount = 100000
-	producer = FRA
-	}
-	add_equipment_to_stockpile = {  #WW1 stocks
-		type = artillery_equipment_1
-		amount = 1000
-		producer = FRA
-	}
-	add_equipment_to_stockpile = {  #WW1 stocks
-		type = support_equipment_1
-		amount = 2000
-		producer = FRA
-	}
 
 
 	if = {
@@ -390,7 +392,7 @@ add_ideas = {
 	FRA_victors_of_wwi
 	FRA_disjointed_government
 	FRA_protected_by_the_maginot_line
-	limited_conscription
+	AEH_mandatory_army_service
 	FRA_full_employment
 	FRA_political_violence
 	FRA_inefficient_economy_2

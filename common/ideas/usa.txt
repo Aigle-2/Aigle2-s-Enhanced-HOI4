@@ -103,6 +103,7 @@ ideas = {
 				send_volunteers_tension = 0.5
 				guarantee_tension = 0.5
 				defensive_war_stability_factor = 0.3
+				embargo_threshold_factor = 1.5
 			}
 		}
 		# version if player went down limited intervention
@@ -147,6 +148,7 @@ ideas = {
 				send_volunteers_tension = 0.5
 				guarantee_tension = 0.5
 				defensive_war_stability_factor = 0.3
+				embargo_threshold_factor = 1.5
 			}
 		}
 		USA_lend_lease_act_dummy = { #dummy version to show effects
@@ -783,7 +785,7 @@ ideas = {
 			picture = generic_air_bonus
 			
 			equipment_bonus = {
-				strat_bomber_equipment = {
+				large_plane_airframe = {
 					air_range = 0.1 instant = yes
 				}	
 			}
@@ -917,10 +919,10 @@ ideas = {
 			removal_cost = -1
 		
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				heavy_fighter_equipment = {
+				medium_plane_fighter_airframe = {
 					build_cost_ic = -0.1 instant = yes
 				}
 			}
@@ -939,10 +941,10 @@ ideas = {
 			removal_cost = -1
 			
 			equipment_bonus = {
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					build_cost_ic = -0.1 instant = yes
 				}
 			}
@@ -961,7 +963,7 @@ ideas = {
 			removal_cost = -1
 			
 			equipment_bonus = {
-				strat_bomber_equipment = {
+				large_plane_airframe = {
 					build_cost_ic = -0.1 instant = yes
 				}
 			}
@@ -1007,6 +1009,7 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.2
 				ai_badass_factor = 0.03 # cares for 3% of normal threat
+				ai_desired_divisions_factor = 0.5
 			}
 		}
 
@@ -1203,6 +1206,7 @@ ideas = {
 	
 	}
 
+	
 	tank_manufacturer = { 
 	
 		designer = yes

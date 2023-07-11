@@ -1,4 +1,4 @@
-ITA_historical_war_joining = {
+AEH_ITA_historical_war_joining = {
 	allowed = {
 		original_tag = ITA
 	}

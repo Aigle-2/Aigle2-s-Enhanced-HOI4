@@ -1,4 +1,4 @@
-JAP_war_on_USA_fix = {
+AEH_JAP_war_on_USA_fix = {
 	allowed = {
 		original_tag = JAP
 	}
