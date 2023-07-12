@@ -1401,6 +1401,13 @@ EAI_can_take_free_trade = { # 80% resources to market
 		date > 1942.1.1
 	}
 
+	NOT = {
+		has_government = communism
+	}
+	NOT = {
+		has_government = fascism
+	}
+
 	# Prioritize war economy from SCW
 	if = { limit = { original_tag = SOV }
 		
