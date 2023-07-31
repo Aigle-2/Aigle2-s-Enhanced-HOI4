@@ -91,6 +91,7 @@ war_support_bad_modifier = {
 }
 
 attache_sent = {
+	war_support_factor = 0.05
 }
 
 compliance_effect = {

@@ -151,7 +151,7 @@ EAI_can_take_civilian_economy = {
 
 	### Downgrade due to crisis event
 
-	EAI_stability_event_trigger = yes
+		EAI_stability_event_trigger = yes
 
 	OR = {
 		has_idea = low_economic_mobilisation
@@ -204,10 +204,10 @@ EAI_can_take_low_economic_mobilisation = {
 EAI_can_take_partial_economic_mobilisation = {
 
 	# Special cases
-	if = { limit = { original_tag = SOV }
+	# if = { limit = { original_tag = SOV }
 
-		date > 1937.6.1 # Try to get war eco with an attache
-	}
+	# 	date > 1937.6.1 # Try to get war eco with an attache
+	# }
 
 	if = { limit = { original_tag = JAP is_historical_focus_on = yes }
 

@@ -185,7 +185,27 @@ EAI_upgrade_economy_law = {
 
             subtract_from_variable = { EAI_stored_PP = EAI_eco_law_cost }
 
-			if = { limit = { EAI_can_take_low_economic_mobilisation = yes } 
+			if = { limit = { EAI_can_take_civilian_economy = yes } 
+            
+				add_ideas = civilian_economy
+
+				### on_add
+
+				if = {
+					limit = {
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					USA_congress_large_opposition = yes
+				}
+
+				###
+
+				if = { limit = { has_country_flag = EAI_law_logging } log = "[GetYear] [GetMonth] | AI | [Root.GetName] | ECONOMY LAW: low_economic_mobilisation (script)" }
+			}
+
+			else_if = { limit = { EAI_can_take_low_economic_mobilisation = yes } 
             
                 add_ideas = low_economic_mobilisation
 
