@@ -848,4 +848,31 @@ on_actions = {
 			}
 		}
 	}
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { 
+					is_ai = no
+				}
+				if = {
+					limit = {
+						has_country_flag = EAI_land_doctrine_progress_limit 
+					}
+					clr_country_flag = EAI_land_doctrine_progress_limit	
+				}
+				if = {
+					limit = {
+						has_country_flag = EAI_air_doctrine_progress_limit 
+					}
+					clr_country_flag = EAI_air_doctrine_progress_limit	
+				}
+				if = {
+					limit = {
+						has_country_flag = EAI_naval_doctrine_progress_limit 
+					}
+					clr_country_flag = EAI_naval_doctrine_progress_limit	
+				}	
+			}
+		}
+	}
 }

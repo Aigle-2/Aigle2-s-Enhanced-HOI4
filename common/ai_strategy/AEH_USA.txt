@@ -1,0 +1,182 @@
+USA_stop_uk_from_falling = {
+	allowed = {
+		tag = USA
+	}
+	enable = {
+		ENG = { 
+			has_war = yes
+			surrender_progress > 0.15
+			has_capitulated = no
+		}
+		is_in_faction_with = ENG
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = "ENG"
+		value = 500
+	}
+
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = "ENG"
+		value = 500
+	}
+
+	ai_strategy = {
+		type = support
+		id = "FIN"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "HOL"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "BEL"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "LUX"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "POL"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "LUX"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "YUG"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "GRE"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "HON"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "PHI"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "DEN"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "NOR"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "LUX"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "FRA"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "GUA"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "COL"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "VEN"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "BOL"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "PRU"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "BRA"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "ARG"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "DOM"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "HAI"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "ECU"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "GUA"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = "ELS"
+		value = -1000
+	}
+}
