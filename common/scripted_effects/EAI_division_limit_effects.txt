@@ -195,7 +195,7 @@ EAI_special_infantry_division_limits = {
 			NOT = { EAI_player_intervening = yes }
 		}
 
-		clamp_variable = { var = EAI_division_cap min = 0 max = 100 }
+		clamp_variable = { var = EAI_division_cap min = 0 max = 70 }
 	}
 
 	else_if = { # low countries: limit ai
@@ -283,7 +283,7 @@ EAI_special_infantry_division_limits = {
 				is_subject = no
 			}
 
-			clamp_variable = { var = EAI_division_cap min = 0 max = 30 }
+			clamp_variable = { var = EAI_division_cap min = 0 max = 100 }
 		}
 	}
 

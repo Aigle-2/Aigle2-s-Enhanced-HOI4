@@ -180,32 +180,33 @@ EAI_upgrade_economy_law = {
 		add_to_temp_variable = { EAI_eco_law_cost = 1 }
 		multiply_temp_variable = { EAI_eco_law_cost = 150 }
 
-		if = {
-			limit = { NOT = { check_variable = { EAI_stored_PP < EAI_eco_law_cost } } }
+		# if = {
+		# 	limit = { NOT = { check_variable = { EAI_stored_PP < EAI_eco_law_cost } } }
 
-            subtract_from_variable = { EAI_stored_PP = EAI_eco_law_cost }
+        #     subtract_from_variable = { EAI_stored_PP = EAI_eco_law_cost }
 
-			if = { limit = { EAI_can_take_civilian_economy = yes } 
+		# 	if = { limit = { EAI_can_take_civilian_economy = yes } 
             
-				add_ideas = civilian_economy
+		# 		add_ideas = civilian_economy
 
-				### on_add
+		# 		### on_add
 
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
+		# 		if = {
+		# 			limit = {
+		# 				tag = USA
+		# 				has_completed_focus = USA_limited_intervention
+		# 				has_defensive_war = no
+		# 			}
+		# 			USA_congress_large_opposition = yes
+		# 		}
 
-				###
+		# 		###
 
-				if = { limit = { has_country_flag = EAI_law_logging } log = "[GetYear] [GetMonth] | AI | [Root.GetName] | ECONOMY LAW: low_economic_mobilisation (script)" }
-			}
+		# 		if = { limit = { has_country_flag = EAI_law_logging } log = "[GetYear] [GetMonth] | AI | [Root.GetName] | ECONOMY LAW: low_economic_mobilisation (script)" }
+		# 	}
 
-			else_if = { limit = { EAI_can_take_low_economic_mobilisation = yes } 
+		# 	else_if = { limit = { EAI_can_take_low_economic_mobilisation = yes } 
+			if = { limit = { EAI_can_take_low_economic_mobilisation = yes }
             
                 add_ideas = low_economic_mobilisation
 
