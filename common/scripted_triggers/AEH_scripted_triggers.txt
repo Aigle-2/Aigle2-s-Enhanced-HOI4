@@ -38,8 +38,11 @@ AEH_has_frontline = {
 	}
 }
 
-DEBUGTR = {
-	ROOT = {
-		has_tech = infantry_weapons1
+AEH_AI_has_minimim_training_time_fix = {
+	OR = {
+		has_idea = AEH_AI_minimum_training_time_fix_60
+		has_idea = AEH_AI_minimum_training_time_fix_40
+		has_idea = AEH_AI_minimum_training_time_fix_20
 	}
 }
+

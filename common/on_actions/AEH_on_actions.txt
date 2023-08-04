@@ -871,7 +871,21 @@ on_actions = {
 						has_country_flag = EAI_naval_doctrine_progress_limit 
 					}
 					clr_country_flag = EAI_naval_doctrine_progress_limit	
-				}	
+				}
+				if = {
+					limit = {
+						AEH_AI_has_minimim_training_time_fix = yes
+					}
+					AEH_AI_remove_minimim_training_time_fix = yes
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						NOT = {AEH_AI_has_minimim_training_time_fix = yes}
+					}
+					AEH_AI_set_minimim_training_time_fix = yes
+				}
 			}
 		}
 	}

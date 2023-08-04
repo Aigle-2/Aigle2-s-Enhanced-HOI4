@@ -388,7 +388,7 @@ ideas = {
 				political_power_gain = -0.25
 
 				stability_weekly = -0.001
-				war_support_weekly = -0.002
+				war_support_weekly = -0.001
 				
 				industrial_capacity_factory = -0.1
 				industrial_capacity_dockyard = -0.1
@@ -560,7 +560,7 @@ ideas = {
 				political_power_gain = -0.25
 
 				stability_weekly = -0.001
-				war_support_weekly = -0.002
+				war_support_weekly = -0.001
 				
 				industrial_capacity_factory = -0.1
 				industrial_capacity_dockyard = -0.1
@@ -713,7 +713,7 @@ ideas = {
 				political_power_gain = -0.5
 
 				stability_weekly = -0.002
-				war_support_weekly = -0.003
+				war_support_weekly = -0.002
 				
 				industrial_capacity_factory = -0.25
 				industrial_capacity_dockyard = -0.25
@@ -840,8 +840,8 @@ ideas = {
 			modifier = {
 				political_power_gain = -1
 
-				stability_weekly = -0.01
-				war_support_weekly = -0.01
+				stability_weekly = -0.005
+				war_support_weekly = -0.003
 				
 				industrial_capacity_factory = -0.4
 				industrial_capacity_dockyard = -0.4

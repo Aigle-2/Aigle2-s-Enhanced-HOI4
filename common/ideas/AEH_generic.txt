@@ -23,4 +23,36 @@ ideas = {
 			}
 		}
 	}
+	hidden_ideas = {
+		
+		AEH_AI_minimum_training_time_fix_20 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				minimum_training_level = -0.2
+			}
+			picture = received_attache
+		}
+
+		AEH_AI_minimum_training_time_fix_40 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				minimum_training_level = -0.4
+			}
+			picture = received_attache
+		}
+
+		AEH_AI_minimum_training_time_fix_60 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				minimum_training_level = -0.6
+			}
+			picture = received_attache
+		}
+	}
 }

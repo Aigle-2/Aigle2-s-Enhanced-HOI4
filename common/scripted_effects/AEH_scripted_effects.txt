@@ -27,3 +27,48 @@ AEH_has_frontline_log = {
 		}
 	}
 }
+
+AEH_AI_set_minimim_training_time_fix = {
+	if = {
+		limit = {
+			OR = {
+				has_tech = superior_firepower
+				has_tech = mobile_warfare
+			}
+		}
+		add_ideas = AEH_AI_minimum_training_time_fix_60
+	}
+	if = {
+		limit = {
+			has_tech = trench_warfare
+		}
+		add_ideas = AEH_AI_minimum_training_time_fix_40
+	}
+	if = {
+		limit = {
+			has_tech = mass_assault
+		}
+		add_ideas = AEH_AI_minimum_training_time_fix_20
+	}
+}
+
+AEH_AI_remove_minimim_training_time_fix = {
+	if = {
+		limit = {
+			has_idea = AEH_AI_minimum_training_time_fix_60
+		}
+		remove_ideas = AEH_AI_minimum_training_time_fix_60
+	}
+	if = {
+		limit = {
+			has_idea = AEH_AI_minimum_training_time_fix_40
+		}
+		remove_ideas = AEH_AI_minimum_training_time_fix_40
+	}
+	if = {
+		limit = {
+			has_idea = AEH_AI_minimum_training_time_fix_20
+		}
+		remove_ideas = AEH_AI_minimum_training_time_fix_20
+	}
+}
