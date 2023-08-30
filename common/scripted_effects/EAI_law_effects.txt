@@ -180,10 +180,10 @@ EAI_upgrade_economy_law = {
 		add_to_temp_variable = { EAI_eco_law_cost = 1 }
 		multiply_temp_variable = { EAI_eco_law_cost = 150 }
 
-		# if = {
-		# 	limit = { NOT = { check_variable = { EAI_stored_PP < EAI_eco_law_cost } } }
+		if = {
+			limit = { NOT = { check_variable = { EAI_stored_PP < EAI_eco_law_cost } } }
 
-        #     subtract_from_variable = { EAI_stored_PP = EAI_eco_law_cost }
+            subtract_from_variable = { EAI_stored_PP = EAI_eco_law_cost }
 
 		# 	if = { limit = { EAI_can_take_civilian_economy = yes } 
             
