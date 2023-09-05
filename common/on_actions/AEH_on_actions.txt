@@ -826,6 +826,9 @@ on_actions = {
 				subtract_from_temp_variable = {
 					FLT_threat_neg = has_added_tension_amount
 				}
+				multiply_temp_variable = {
+					FLT_threat_neg = 0.5
+				}
 				add_named_threat = {
 					threat = FLT_threat_neg
 					name = AEH_FLT_lost

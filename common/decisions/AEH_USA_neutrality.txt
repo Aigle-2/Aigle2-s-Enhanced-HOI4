@@ -48,7 +48,7 @@ AEH_USA_neutrality_category = {
 			}
 		}
 		is_good = yes
-		days_mission_timeout = 1825
+		days_mission_timeout = 2190
 		timeout_effect = {
 			# What happens when we fail the mission?
 			add_political_power = 25

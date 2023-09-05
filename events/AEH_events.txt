@@ -537,10 +537,10 @@ country_event = {
 				}
 			}
 		}
-		add_named_threat = {
-			threat = -75
-			name = AEH_peace_treaty_tension_reduction_europe
-		}
+		# add_named_threat = {
+		# 	threat = -75
+		# 	name = AEH_peace_treaty_tension_reduction_europe
+		# }
 		set_global_flag = AEH_historical_ww2_europe_peace_done
 	}
 	option = {
@@ -611,10 +611,10 @@ country_event = {
 				election_frequency = 48
 			}
 		}
-		add_named_threat = {
-			threat = -50
-			name = AEH_peace_treaty_tension_reduction_asia
-		}
+		# add_named_threat = {
+		# 	threat = -50
+		# 	name = AEH_peace_treaty_tension_reduction_asia
+		# }
 		PRC = {
 			overlord = {
 				end_puppet = PRC
